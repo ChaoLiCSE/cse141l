@@ -14,9 +14,9 @@
 
 // TODO: Edit the file names below to match your Assembler output files.
 // read from assembled files and store in buffers
-`define hex_i_file "./miner_i_good.hex"
-`define hex_r_file "./miner_r_good.hex"
-`define hex_d_file "./miner_d.hex"
+`define hex_i_file "../../assembler/lab2/src/miner_i.hex"
+`define hex_r_file "../../assembler/lab2/src/miner_r.hex"
+`define hex_d_file "../../assembler/lab2/src/miner_d.hex"
 
 module miner_tb();
 
