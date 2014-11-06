@@ -386,16 +386,14 @@ WLOOP:
     SUBU $R14, $R20 // W_j - 16
     ADDU $R14, %W_BASE
     LW   $R14, $R14
-    MOV  $R1,  $R16
-    //JALR $R30, %SMSIG1
-    //MOV  $R16, $R2
-	 SS1  $R16, $R1
-	 
-    MOV  $R1,  $R18
-    //JALR $R30, %SMSIG0
-    //MOV  $R18, $R2
-	 SS0  $R18, $R1
-	 
+    MOV  $R1, $R16
+    JALR $R30, %SMSIG1
+    MOV  $R16, $R2
+
+    MOV  $R1, $R18
+    JALR $R30, %SMSIG0
+    MOV  $R18, $R2
+
     ADDU $R16, $R18
     ADDU $R16, $R17
     ADDU $R16, $R14 
@@ -419,9 +417,8 @@ SHAROUND:
     // Compute T1
     MOV  $R19, $R28
     MOV  $R1, $R25
-    //JALR $R30, %BIGSIG1
-    BS1  $R2, $R1
-	 ADDU $R19, $R2  // Add BigSig1(e)
+    JALR $R30, %BIGSIG1
+    ADDU $R19, $R2  // Add BigSig1(e)
     MOV  $R1, $R25
     MOV  $R2, $R26
     MOV  $R3, $R27
@@ -438,12 +435,9 @@ SHAROUND:
 
     // Compute T2
     MOV  $R1, $R21
-    //JALR $R30, %BIGSIG0
-    //MOV  $R20, $R2 
-    BS0	$R20, $R1
-	 
-	 
-	 MOV  $R1, $R21
+    JALR $R30, %BIGSIG0
+    MOV  $R20, $R2 
+    MOV  $R1, $R21
     MOV  $R2, $R22
     MOV  $R3, $R23
     JALR $R30, %MAJ

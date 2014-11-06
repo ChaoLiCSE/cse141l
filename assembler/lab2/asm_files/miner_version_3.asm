@@ -63,12 +63,6 @@ K:
 .const %H_BASE, H
 .const %IV_BASE, IV
 .const %K_BASE, K
-.const %XOR, XOR
-.const %ROR, ROR
-.const %SMSIG0, SMSIG0
-.const %SMSIG1, SMSIG1
-.const %BIGSIG0, BIGSIG0
-.const %BIGSIG1, BIGSIG1
 .const %MAJ, MAJ
 .const %CH, CH
 .const %SHAROUND, SHAROUND
@@ -469,51 +463,17 @@ SHAROUND:
 SHAROUND_done:
     JALR  $R31, $R17
 
-// right rotate subroutine
-// $R7 : data to be rotated
-// $R8 : rotate amount
-// $R9 : return value
-ROR:
-    MOV  $R9, $R7
-    MOV  $R10, %S32
-    SUBU $R10, $R8
-    SRLV $R7, $R8
-    SLLV $R9, $R10
-    OR   $R9, $R7 
-    JALR $R7, $R31
-
-// xor subroutine
-// $R7 : A
-// $R8 : B
-// $R9 : return value
-XOR:
-    MOV $R9, $R7
-    MOV $R10, $R8
-    NOR $R9, $R9 // ~A
-    NOR $R10, $R10 // ~B
-    NOR $R9, $R10 // ~A NOR ~B
-    NOR $R7, $R8 // A NOR B
-    NOR $R9, $R7
-    JALR $R7, $R31
-
-    
-
 // CH function from SHA-256
 // $R1 : X value
 // $R2 : Y value
 // $R3 : Z value
 // $R4 : return value
 CH:
-    MOV  $R5, $R1
-    NOR  $R5, $R5  // ~X
-    AND  $R1, $R2  // X and Y
-    AND  $R5, $R3  // ~X and Z
-    //MOV  $R7, $R1
-    //MOV  $R8, $R5
-    //JALR $R31, %XOR 
-	 //MOV  $R4, $R9
-    XOR  $R1, $R5
-	 MOV  $R4, $R1
+    MOV  $R4, $R1
+    NOR  $R4, $R4  	// ~X
+    AND  $R1, $R2  	// X and Y
+    AND  $R4, $R3  	// ~X and Z
+    XOR  $R4, $R1
 	 JALR $R31, $R30
 
 // MAJ function from SHA-256
@@ -522,163 +482,13 @@ CH:
 // $R3 : Z value
 // $R4 : return value
 MAJ:
-   MOV  $R5, $R1
+   MOV  $R4, $R1
    MOV  $R6, $R2
-   AND  $R5, $R2 // X and Y
-   AND  $R6, $R3 // Y and Z
-   AND  $R1, $R3 // X and Z
-   //MOV  $R7, $R1
-   //MOV  $R8, $R5
-   //JALR $R31, %XOR 
-	//MOV  $R7, $R9
-   //MOV  $R8, $R6
-   //JALR $R31, %XOR
-   //MOV  $R4, $R9
-   XOR  $R5, $R6
-	XOR  $R5, $R1
-	MOV  $R4, $R5
+   AND  $R4, $R2 		// X and Y
+   AND  $R6, $R3 		// Y and Z
+   AND  $R1, $R3 		// X and Z
+   XOR  $R4, $R6
+	XOR  $R4, $R1
 	JALR $R31, $R30
-
-// Big sigma 0 function from SHA-256 
-// $R1 : X value
-// $R2 : return value
-BIGSIG0:
-    MOV  $R7, $R1
-    MOV  $R8, %S2
-    //JALR $R31, %ROR
-    //MOV  $R3, $R9  // term 1
-    ROR  $R7, $R8
-	 MOV  $R3, $R7
-	 
-	 MOV  $R7, $R1
-    MOV  $R8, %S3
-    ADDU $R8, %S3
-    ADDU $R8, %S7
-    //JALR $R31, %ROR
-    //MOV  $R4, $R9 // term 2
-    ROR  $R7, $R8
-	 MOV  $R4, $R7
-	 
-	 MOV  $R7, $R1
-    MOV  $R8, %S11
-    ADDU $R8, %S11
-    //JALR $R31, %ROR
-    //MOV  $R7, $R9 // term 3
-    ROR  $R7, $R8
-	 
-	 //MOV  $R8, $R4
-    //JALR $R31, %XOR
-    //MOV  $R7, $R9
-    //MOV  $R8, $R3
-    //JALR $R31, %XOR
-    //MOV  $R2, $R9
-    XOR  $R3, $R4
-	 XOR  $R3, $R7
-	 MOV  $R2, $R3
-	 
-	 JALR $R31, $R30
-
-    
-// Big sigma 1 function from SHA-256 
-// $R1 : X value
-// $R2 : return value
-BIGSIG1:
-    MOV  $R7, $R1
-    MOV  $R8, %S3
-    ADDU $R8, %S3
-    //JALR $R31, %ROR
-    //MOV  $R3, $R9 // term 1
-    ROR  $R7, $R8
-	 MOV  $R3, $R7
-	 
-	 MOV  $R7, $R1
-    MOV  $R8, %S11
-    //JALR $R31, %ROR
-    //MOV  $R4, $R9 // term 2
-    ROR  $R7, $R8
-	 MOV  $R4, $R7
-	 
-	 MOV  $R7, $R1
-    MOV  $R8, %S18
-    ADDU $R8, %S7
-    //JALR $R31, %ROR
-    //MOV  $R7, $R9 // term 3
-    ROR  $R7, $R8
-	 
-	 
-	 //MOV  $R8, $R4
-    //JALR $R31, %XOR
-    //MOV  $R7, $R9
-    //MOV  $R8, $R3
-    //JALR $R31, %XOR
-    //MOV  $R2, $R9
-    XOR  $R3, $R4
-	 XOR  $R3, $R7
-	 MOV  $R2, $R3
-	 
-	 JALR $R31, $R30
-
-// Small sigma 0 function from SHA-256
-// $R1 : X value
-// $R2 : return value
-SMSIG0:
-    MOV  $R7, $R1
-    MOV  $R8, %S7
-    //JALR $R31, %ROR
-    //MOV  $R3, $R9  // term 1
-    ROR  $R7, $R8
-	 MOV  $R3, $R7
-	 
-	 MOV  $R7, $R1
-    MOV  $R8, %S18
-    //JALR $R31, %ROR
-    //MOV  $R7, $R9  // term 2
-    ROR  $R7, $R8
-	 
-	 //MOV  $R8, $R3
-    //JALR $R31, %XOR
-    //MOV  $R7, $R9
-    XOR  $R7, $R3
-	 
-	 MOV  $R8, $R1
-    SRLV $R8, %S3
-    //JALR $R31, %XOR
-    //MOV  $R2, $R9
-	 XOR  $R7, $R8
-	 MOV  $R2, $R7
-	 
-	 JALR $R31, $R30
-
-
-// Small sigma 1 function from SHA-256
-// $R1 : X value
-// $R2 : return value
-SMSIG1:
-    MOV  $R7, $R1
-    MOV  $R8, %S17
-    //JALR $R31, %ROR
-    //MOV  $R3, $R9  // term 1
-    ROR  $R7, $R8
-	 MOV  $R3, $R7
-	 
-	 MOV  $R7, $R1
-    MOV  $R8, %S19
-    //JALR $R31, %ROR
-    //MOV  $R7, $R9  // term 2
-    ROR  $R7, $R8
-	 
-	 //MOV  $R8, $R3
-    //JALR $R31, %XOR
-    //MOV  $R7, $R9
-    XOR  $R7, $R3
-	 
-	 MOV  $R8, $R1
-    SRLV $R8, %S10
-    //JALR $R31, %XOR
-    //MOV  $R2, $R9
-    XOR  $R7, $R8
-	 MOV  $R2, $R7
-	 
-	 JALR $R31, $R30
 
 // EOF

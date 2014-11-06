@@ -48,44 +48,42 @@ always_comb
 		// exclusive or
 		`kXOR:	result_o	  = (rd_i | rs_i) & ~ (rd_i & rs_i);
 		// rotate right
-		`kROR:	result_o	  = (rd_i >> rs_i[4:0]) | (rd_i << 32'd32 - rs_i[4:0]);	
+		`kROR:	result_o	  = (rd_i >> rs_i[4:0]) | (rd_i << (32'd32 - rs_i[4:0]));	
 		// rotate left
-		`kROL:	result_o   = (rd_i << rs_i[4:0]) | (rd_i >> 32'd32 - rs_i[4:0]);
+		`kROL:	result_o   = (rd_i << rs_i[4:0]) | (rd_i >> (32'd32 - rs_i[4:0]));
 
-		
-		
-		`kBS0: 
+		`kBS0:
 			begin
-				A 	= (rs_i >> 2) | (rs_i << 30);
-				B 	= (rs_i >> 13) | (rs_i << 19);
-				C 	= (rs_i >> 22) | (rs_i << 10);
+				A = {rs_i[1:0], rs_i[31:2]}; 
+				B = {rs_i[12:0], rs_i[31:13]};
+				C = {rs_i[21:0], rs_i[31:22]};
 				D 	= (A | B) & ~(A & B);
 				result_o = (D | C) & ~(D & C); 
 			end
-			
-		`kBS1: 
+		
+		`kBS1:
 			begin
-				A 	= (rs_i >> 6) | (rs_i << 26);
-				B 	= (rs_i >> 11) | (rs_i << 21);
-				C 	= (rs_i >> 25) | (rs_i << 7);
+				A = {rs_i[5:0], rs_i[31:6]}; 
+				B = {rs_i[10:0], rs_i[31:11]};
+				C = {rs_i[24:0], rs_i[31:25]};
 				D 	= (A | B) & ~(A & B);
 				result_o = (D | C) & ~(D & C); 
 			end
 		
 		`kSS0: 
 			begin
-				A 	= (rs_i >> 7) | (rs_i << 25);
-				B 	= (rs_i >> 18) | (rs_i << 14);
-				C 	= rs_i >> 3;
+				A = {rs_i[6:0], rs_i[31:7]}; 
+				B = {rs_i[17:0], rs_i[31:18]};
+				C = {rs_i[31:3]};
 				D 	= (A | B) & ~(A & B);
 				result_o = (D | C) & ~(D & C); 
 			end
 		
 		`kSS1: 
 			begin
-				A 	= (rs_i >> 17) | (rs_i << 15);
-				B 	= (rs_i >> 19) | (rs_i << 13);
-				C 	= rs_i >> 10;
+				A = {rs_i[16:0], rs_i[31:17]}; 
+				B = {rs_i[18:0], rs_i[31:19]};
+				C = {rs_i[31:10]};
 				D 	= (A | B) & ~(A & B);
 				result_o = (D | C) & ~(D & C); 
 			end

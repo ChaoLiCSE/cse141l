@@ -62,14 +62,6 @@ Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
 Top level modules:
 	network_packet_s_logger
 
-} {} {}} C:/cygwin64/home/Admin/cse141l_project/core/lab2/alu.sv {1 {vlog -work work -sv C:/cygwin64/home/Admin/cse141l_project/core/lab2/alu.sv
-Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
--- Compiling package alu_sv_unit
--- Compiling module alu
-
-Top level modules:
-	alu
-
 } {} {}} C:/cygwin64/home/Admin/cse141l_project/core/lab2/core_flattened.sv {1 {vlog -work work -sv C:/cygwin64/home/Admin/cse141l_project/core/lab2/core_flattened.sv
 Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
 -- Compiling package core_flattened_sv_unit
@@ -77,6 +69,14 @@ Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
 
 Top level modules:
 	core_flattened
+
+} {} {}} C:/cygwin64/home/Admin/cse141l_project/core/lab2/miner_tb.sv {1 {vlog -work work -sv C:/cygwin64/home/Admin/cse141l_project/core/lab2/miner_tb.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package miner_tb_sv_unit
+-- Compiling module miner_tb
+
+Top level modules:
+	miner_tb
 
 } {} {}} C:/cygwin64/home/Admin/cse141l_project/core/lab2/data_mem.sv {1 {vlog -work work -sv C:/cygwin64/home/Admin/cse141l_project/core/lab2/data_mem.sv
 Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
