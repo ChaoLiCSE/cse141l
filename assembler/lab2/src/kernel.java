@@ -71,8 +71,9 @@ class kernel{
     public static enum opcodes {
 		ADDU, SUBU,  SLLV, SRAV, SRLV, AND, OR, NOR, SLT, SLTU, MOV, LW, LBU, SW, SB, JALR,
       BEQZ, BNEQZ, BGTZ, BLTZ,
-      DONE, BAR,   NOTVALID,
-		XOR,  ROR,   ROL;
+      DONE, BAR, NOTVALID,
+		XOR, ROR, ROL,
+		BS0, BS1, SS0, SS1;
   
     /** gets an String as opcode and outputs the corresponding opcode in form of the used enumeration. */
 		public static opcodes toOpcode(String str)
@@ -99,21 +100,25 @@ class kernel{
 		opcodeTable.put("NOR"  , "00111");
 		opcodeTable.put("SLT"  , "01000");
 		opcodeTable.put("SLTU" , "01001");
-		opcodeTable.put("JALR" , "10111");
 		opcodeTable.put("MOV"  , "01010");
-		opcodeTable.put("LW"   , "11000");
-		opcodeTable.put("LBU"  , "11001");
-		opcodeTable.put("SW"   , "11010");
-		opcodeTable.put("SB"   , "11011");
+		opcodeTable.put("XOR"  , "01011");	// XOR
+		opcodeTable.put("BAR"  , "01100");
+		opcodeTable.put("ROL"  , "01110");	// ROL
+		opcodeTable.put("ROR"  , "01111");	// ROR
 		opcodeTable.put("BEQZ" , "10000");
 		opcodeTable.put("BNEQZ", "10001");
 		opcodeTable.put("BGTZ" , "10010");
 		opcodeTable.put("BLTZ" , "10011");
+		opcodeTable.put("JALR" , "10111");
+		opcodeTable.put("LW"   , "11000");
+		opcodeTable.put("LBU"  , "11001");
+		opcodeTable.put("SW"   , "11010");
+		opcodeTable.put("SB"   , "11011");
+		opcodeTable.put("BS0"  , "11100");	// big sigma 0	
+		opcodeTable.put("BS1"  , "11101");	// big sigma 1
+		opcodeTable.put("SS0"  , "11110");	// small sigma 0
+		opcodeTable.put("SS1"  , "11111");	// small sigma 1
 		opcodeTable.put("DONE" , "01100");
-		opcodeTable.put("BAR"  , "01100");
-		opcodeTable.put("ROL"  , "11101");
-		opcodeTable.put("ROR"  , "11110");
-		opcodeTable.put("ROL"  , "11111");
 	}
 
 
@@ -149,6 +154,10 @@ class kernel{
 			case XOR:
 			case ROR:
 			case ROL:
+			case BS0:
+			case BS1:
+			case SS0:
+			case SS1:
 				if (instruction.operands.length!=2){
                     System.out.println("invalid number of operands in the following instruction");
                     instruction.print();
