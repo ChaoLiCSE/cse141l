@@ -33,10 +33,10 @@ Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
 
 } {} {}} C:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv {1 {vlog -work work -sv C:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv
 Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
--- Compiling module reg_file2
+-- Compiling module reg_file
 
 Top level modules:
-	reg_file2
+	reg_file
 
 } {} {}} C:/cygwin64/home/Admin/cse141l_project/core/lab2/core_tb.sv {1 {vlog -work work -sv C:/cygwin64/home/Admin/cse141l_project/core/lab2/core_tb.sv
 Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013

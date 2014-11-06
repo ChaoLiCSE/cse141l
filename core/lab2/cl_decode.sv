@@ -26,7 +26,8 @@ always_comb
   unique casez (instruction_i)
     `kADDU, `kSUBU, `kSLLV, `kSRAV, `kSRLV,
     `kAND,  `kOR,   `kNOR,  `kSLT,  `kSLTU, 
-    `kMOV,  `kJALR, `kLW,   `kLBU,	`kROL:
+    `kMOV,  `kJALR, `kLW,   `kLBU,	`kXOR,
+	 `kROR,  `kROL,  `kBS0,	 `kBS1,	`kSS0,	`kSS1:
       op_writes_rf_o = 1'b1; 
     
     default:

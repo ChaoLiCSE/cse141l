@@ -283,7 +283,36 @@ SRLV  $R7,%ONE
 MOV   $R6,%SRLV_ANS
 JALR  $R1,%CHECK
 
-// Test for SLC
+
+// Test for XOR
+.const %XOR_VAL1	,	0xAABBCCDD	
+.const %XOR_VAL2	,	0xFF998877
+.const %XOR_ANS	,	0x552244AA
+ADDU	$R5, %ONE
+MOV	$R7, %XOR_VAL1
+MOV	$R2, %XOR_VAL2
+XOR	$R7, $R2
+MOV	$R6, %XOR_ANS
+JALR	$R1, %CHECK
+
+// Test 1 for ROR (rotate with constant value)
+.const %ROR_VAL	,	0x76543210
+.const %ROR_ANS	,	0x65432107
+ADDU	$R5, %ONE
+MOV	$R7, %ROR_VAL
+ROL	$R7, %FOUR
+MOV	$R6, %ROR_ANS
+JALR	$R1, %CHECK
+
+// Test 2 for ROR (rotate with register value)
+ADDU	$R5, %ONE
+MOV	$R7, %ROR_VAL
+MOV	$R2, %FOUR
+ROL	$R7, $R2
+MOV	$R6, %ROR_ANS
+JALR	$R1, %CHECK
+
+// Test 1 for ROL (rotate with contant value)
 .const %ROL_INP	,	0XAAF00000
 .const %ROL_ANS	,	0x55E00001
 ADDU	$R5, %ONE
@@ -291,6 +320,21 @@ MOV	$R7, %ROL_INP
 ROL	$R7, %ONE
 MOV	$R6, %ROL_ANS
 JALR	$R1, %CHECK
+
+// Test 2 for ROL (rotate with register value)
+ADDU	$R5, %ONE
+MOV	$R7, %ROL_INP
+MOV	$R2, %ONE
+ROL	$R7, $R2
+MOV	$R6, %ROL_ANS
+JALR	$R1, %CHECK
+
+.const %BS0_ANS	,	0x22210003
+.const %BS1_ANS	,	0xD6316D8A
+.const %SS0_ANS	,	0x3D5DCC4C
+.const %SS1_ANS	,	0x9F685F13
+
+
 
 // We can check the correctness of BAR instrution 
 // through the output barrier signal.
