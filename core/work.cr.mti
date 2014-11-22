@@ -1,0 +1,269 @@
+C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv(6): Cannot open `include file "definitions.sv".
+-- Compiling module network_packet_s_logger
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv(12): near "net_packet_i": syntax error, unexpected IDENTIFIER, expecting ')'
+
+} {3.0 4.0 5.0 6.0} {}} C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(2): Cannot open `include file "definitions.sv".
+-- Compiling module alu
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(6): near "op_i": syntax error, unexpected IDENTIFIER, expecting ')'
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(27): (vlog-2163) Macro `kADDU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(28): (vlog-2163) Macro `kSUBU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(29): (vlog-2163) Macro `kSLLV is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(30): (vlog-2163) Macro `kSRAV is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(31): (vlog-2163) Macro `kSRLV is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(32): (vlog-2163) Macro `kAND is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(33): (vlog-2163) Macro `kOR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(34): (vlog-2163) Macro `kNOR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(35): (vlog-2163) Macro `kSLT is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(36): (vlog-2163) Macro `kSLTU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(37): (vlog-2163) Macro `kBEQZ is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(38): (vlog-2163) Macro `kBNEQZ is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(39): (vlog-2163) Macro `kBGTZ is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(40): (vlog-2163) Macro `kBLTZ is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(42): (vlog-2163) Macro `kMOV is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(42): (vlog-2163) Macro `kLW is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(42): (vlog-2163) Macro `kLBU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(42): (vlog-2163) Macro `kJALR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(42): (vlog-2163) Macro `kBAR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(44): (vlog-2163) Macro `kSW is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(44): (vlog-2163) Macro `kSB is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(49): (vlog-2163) Macro `kXOR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(51): (vlog-2163) Macro `kROR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(53): (vlog-2163) Macro `kROL is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(55): (vlog-2163) Macro `kBS0 is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(64): (vlog-2163) Macro `kBS1 is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(73): (vlog-2163) Macro `kSS0 is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv(82): (vlog-2163) Macro `kSS1 is undefined.
+
+
+} {3.0 4.0 5.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 34.0 35.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 48.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0 58.0 59.0 60.0 61.0} {}} C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(1): Cannot open `include file "definitions.sv".
+-- Compiling module core_flattened
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(8): (vlog-2730) Undefined variable: 'net_packet_s'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(9): 'net_packet_flat_i' already declared in this scope (core_flattened).
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(11): (vlog-2730) Undefined variable: 'mem_out_s'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(12): 'from_mem_flat_i' already declared in this scope (core_flattened).
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(12): (vlog-2730) Undefined variable: 'mem_in_s'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(14): 'to_mem_flat_o' already declared in this scope (core_flattened).
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(14): (vlog-2730) Undefined variable: 'mask_length_gp'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(15): 'barrier_o' already declared in this scope (core_flattened).
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(16): (vlog-2730) Undefined variable: 'debug_s'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(17): 'debug_flat_o' already declared in this scope (core_flattened).
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(8): Identifier must be declared with a port mode: net_packet_flat_i.
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(11): Identifier must be declared with a port mode: from_mem_flat_i.
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(12): Identifier must be declared with a port mode: to_mem_flat_o.
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(14): Identifier must be declared with a port mode: barrier_o.
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv(16): Identifier must be declared with a port mode: debug_flat_o.
+
+} {3.0 4.0 5.0 6.0 7.0 9.0 10.0 12.0 13.0 15.0 16.0 18.0 19.0 25.0} {}} C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv(1): Cannot open `include file "definitions.sv".
+-- Compiling module data_mem
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv(14): (vlog-2730) Undefined variable: 'mem_in_s'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv(15): 'port_flat_i' already declared in this scope (data_mem).
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv(16): (vlog-2730) Undefined variable: 'mem_out_s'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv(17): 'port_flat_o' already declared in this scope (data_mem).
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv(14): Identifier must be declared with a port mode: port_flat_i.
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv(16): Identifier must be declared with a port mode: port_flat_o.
+
+} {3.0 4.0 5.0 6.0 7.0 9.0 10.0 13.0} {}} C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(5): Cannot open `include file "definitions.sv".
+-- Compiling module miner_tb
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(27): (vlog-2730) Undefined variable: 'rd_size_gp'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(27): (vlog-2730) Undefined variable: 'rs_imm_size_gp'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(179): (vlog-2730) Undefined variable: 'INSTR'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(191): (vlog-2730) Undefined variable: 'REG'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(203): (vlog-2730) Undefined variable: 'BAR'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(216): (vlog-2730) Undefined variable: 'REG'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(224): (vlog-2730) Undefined variable: 'REG'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(234): (vlog-2730) Undefined variable: 'REG'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(242): (vlog-2730) Undefined variable: 'PC'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv(251): (vlog-2730) Undefined variable: 'NULL'.
+
+
+} {3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0} {}} C:/cygwin64/home/jack/cse141L/core/lab2/core.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/core.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core.sv(1): Cannot open `include file "definitions.sv".
+-- Compiling module core
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core.sv(8): near "net_packet_i": syntax error, unexpected IDENTIFIER, expecting ')'
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core.sv(144): (vlog-2163) Macro `kJALR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core.sv(166): (vlog-2163) Macro `kJALR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core.sv(169): (vlog-2163) Macro `kBNEQZ is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core.sv(169): (vlog-2163) Macro `kBEQZ is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core.sv(169): (vlog-2163) Macro `kBLTZ is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core.sv(169): (vlog-2163) Macro `kBGTZ is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core.sv(305): (vlog-2163) Macro `kBAR is undefined.
+
+
+} {3.0 4.0 5.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0} {}} C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(1): Cannot open `include file "definitions.sv".
+-- Compiling module cl_decode
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(4): near "instruction_i": syntax error, unexpected IDENTIFIER, expecting ')'
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(16): (vlog-2163) Macro `kLW is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(16): (vlog-2163) Macro `kLBU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(27): (vlog-2163) Macro `kADDU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(27): (vlog-2163) Macro `kSUBU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(27): (vlog-2163) Macro `kSLLV is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(27): (vlog-2163) Macro `kSRAV is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(27): (vlog-2163) Macro `kSRLV is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(28): (vlog-2163) Macro `kAND is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(28): (vlog-2163) Macro `kOR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(28): (vlog-2163) Macro `kNOR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(28): (vlog-2163) Macro `kSLT is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(28): (vlog-2163) Macro `kSLTU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(29): (vlog-2163) Macro `kMOV is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(29): (vlog-2163) Macro `kJALR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(29): (vlog-2163) Macro `kLW is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(29): (vlog-2163) Macro `kLBU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(29): (vlog-2163) Macro `kXOR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(30): (vlog-2163) Macro `kROR is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(30): (vlog-2163) Macro `kROL is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(30): (vlog-2163) Macro `kBS0 is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(30): (vlog-2163) Macro `kBS1 is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(30): (vlog-2163) Macro `kSS0 is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(30): (vlog-2163) Macro `kSS1 is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(40): (vlog-2163) Macro `kLW is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(40): (vlog-2163) Macro `kLBU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(40): (vlog-2163) Macro `kSW is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(40): (vlog-2163) Macro `kSB is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(50): (vlog-2163) Macro `kSW is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(50): (vlog-2163) Macro `kSB is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(61): (vlog-2163) Macro `kLBU is undefined.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv(61): (vlog-2163) Macro `kSB is undefined.
+
+
+} {3.0 4.0 5.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 34.0 35.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 48.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0 58.0 59.0 60.0 61.0 62.0 63.0 64.0 65.0 66.0 67.0} {}} C:/cygwin64/home/jack/cse141L/core/lab2/cl_state_machine.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/cl_state_machine.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_state_machine.sv(1): Cannot open `include file "definitions.sv".
+-- Compiling module cl_state_machine
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_state_machine.sv(3): near "instruction_i": syntax error, unexpected IDENTIFIER, expecting ')'
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/cl_state_machine.sv(29): (vlog-2163) Macro `kWAIT is undefined.
+
+
+} {3.0 4.0 5.0 7.0} {}} C:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv {1 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+
+Top level modules:
+	--none--
+
+} {} {}} C:/cygwin64/home/jack/cse141L/core/lab2/disassemble.sv {1 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/disassemble.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+
+} {} {}} C:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv {1 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling module reg_file
+
+Top level modules:
+	reg_file
+
+} {} {}} C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv(1): Cannot open `include file "definitions.sv".
+-- Compiling module core_tb
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv(23): (vlog-2730) Undefined variable: 'rd_size_gp'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv(23): (vlog-2730) Undefined variable: 'rs_imm_size_gp'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv(163): (vlog-2730) Undefined variable: 'INSTR'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv(175): (vlog-2730) Undefined variable: 'REG'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv(186): (vlog-2730) Undefined variable: 'BAR'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv(194): (vlog-2730) Undefined variable: 'PC'.
+
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv(202): (vlog-2730) Undefined variable: 'NULL'.
+
+
+} {3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0} {}} C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv {0 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv(1): Cannot open `include file "definitions.sv".
+-- Compiling module instr_mem
+** Error: C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv(8): near "instruction_i": syntax error, unexpected IDENTIFIER, expecting ')'
+
+} {3.0 4.0 5.0 6.0} {}}

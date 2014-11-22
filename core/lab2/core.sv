@@ -97,6 +97,21 @@ instr_mem #(.addr_width_p(imem_addr_width_p)) imem
 // Since imem has one cycle delay and we send next cycle's address, PC_n,
 // if the PC is not written, the instruction must not change
 assign instruction = (PC_wen_r) ? imem_out : instruction_r;
+logic [2:0] count = 0;
+logic STOP = 0;
+always @ (posedge clk)
+begin
+if (count == 4)
+begin
+STOP = 0;
+count = 0;
+end
+else
+begin
+STOP = 1;
+count = count +1;
+end
+end
 
 // Register file
 reg_file #(.addr_width_p($bits(instruction.rs_imm))) rf
@@ -121,6 +136,35 @@ alu alu_1 (.rd_i(rd_val_or_zero)
           ,.jump_now_o(jump_now)
           );
 
+///*** insert XM pipeline register***/
+// must cut a cross alu_result, instruction to ALU, is_lop_op_c
+// may not want to cut across jump_now ... 
+
+xm_pipeline_s xm_pipeline;
+logic [31:0]  xm_alu_result_p;
+logic         xm_is_load_c_p;
+logic [4:0]   xm_opcode_p;
+logic [4:0]   xm_rf_wb_addr_p;
+
+assign xm_alu_result_p = alu_result;
+assign xm_is_load_c_p  = dx_pipeline.is_load_op_c;
+assign xm_opcode_p     = dx_pipeline.opcode;
+assign xm_rf_wb_addr_p = dx_pipeline.rf_wb_addr;
+
+always_ff @(posedge clk, negedge reset) begin
+	if(!reset)
+		xm_pipeline <= 0;
+	else if(!stall_xm) begin
+		xm_pipeline.alu_result   <= xm_alu_result_p;
+		xm_pipeline.is_load_op_c <= xm_is_load_c_p
+		xm_pipeline.opcode       <= xm_opcode_p;
+		xm_pipeline.rf_wb_addr   <= xm_rf_wb_addr_p;
+	end
+end		  
+		  
+		  
+		  
+		  
 // select the input data for Register file, from network, the PC_plus1 for JALR,
 // Data Memory or ALU result
 always_comb
@@ -195,7 +239,7 @@ always_ff @ (posedge clk)
 // stall and memory stages signals
 // rf structural hazard and imem structural hazard (can't load next instruction)
 assign stall_non_mem = (net_reg_write_cmd && op_writes_rf_c)
-                    || (net_imem_write_cmd);
+                    || (net_imem_write_cmd) || STOP;
 // Stall if LD/ST still active; or in non-RUN state
 assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN);
 

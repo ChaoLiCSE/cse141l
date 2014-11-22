@@ -143,4 +143,14 @@ typedef struct packed {
         logic [mask_length_gp-1:0] barrier_r_f;
 } debug_s;
 
+
+// a struct for EX/MA pipeline
+typedef struct packed {
+	logic [31:0] alu_result;
+	logic        is_load_op_c;
+	logic [4:0]  instruction;
+	logic [4:0]  rf_wb_addr;
+} xm_pipeline_s;
+
+
 `endif
