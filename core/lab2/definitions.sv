@@ -145,43 +145,52 @@ typedef struct packed {
 
 typedef struct packed {
 	logic is_load_op_c;
-	logic op_writes_rf_c;
 	logic is_store_op_c;
+	logic op_writes_rf_c;
 	logic is_mem_op_c;
 	logic is_byte_op_c;
 	logic jump_now_c;
-	logic [5:0] rd_addr_c;
 	logic rs_imm_c;
 	logic PC_wen_r_c;
+	
+	logic net_reg_write_cmd_c;
 } control_pipeline_s;
 
 typedef struct packed {
-	instruction_s    fd_instruction;
-	logic [9:0]	 fd_pc_r;
+	instruction_s   instruction;
+	net_packet_s    net_packet;
+	logic [9:0]	 	pc_r;
+	logic [5:0] 	rd_addr; 
+	state_e			state_r;
+	logic 			net_PC_write_cmd_IDLE;
+	logic 			exception_o;
+	logic 			stall;
+
+	
 } fd_pipeline_s;
 
 typedef struct packed {
-	control_pipeline_s dx_control;
-	logic [31:0]       dx_rs_val;
-	logic [31:0]	   dx_rd_val;
-	instruction_s       dx_instruction;
-	logic [4:0] 	   dx_rf_wb_addr;
+	control_pipeline_s	control;
+	instruction_s       instruction;
+	logic [31:0]       	rs_val;
+	logic [31:0]	   	rd_val;
+	logic [4:0] 	   	rf_wb_addr;
 } dx_pipeline_s;
 
 // a struct for EX/MA pipeline
 typedef struct packed {
-	control_pipeline_s    xm_control;
-	logic [31:0] 		  xm_alu_result;
-	logic [4:0]  		  xm_opcode;
-	logic [4:0]           xm_rf_wb_addr;
+	control_pipeline_s	control;
+	logic [31:0] 		alu_result;
+	logic [4:0]  		opcode;
+	logic [4:0]         rf_wb_addr;
 } xm_pipeline_s;
 
 typedef struct packed {
-	control_pipeline_s    mw_control;
-	logic [31:0]          mw_alu_result;
-	logic [4:0]  		  mw_opcode;
-	logic [4:0]           mw_rf_wb_addr;
-	logic [31:0]          mw_pc_plus1; 
+	control_pipeline_s	control;
+	logic [31:0]        alu_result;
+	logic [4:0]  		opcode;
+	logic [4:0]         rf_wb_addr;
+	logic [31:0]        pc_plus1; 
 } mw_pipeline_s;
 
 

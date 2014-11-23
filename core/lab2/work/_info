@@ -5,7 +5,7 @@ cModel Technology
 Z0 dC:\cygwin64\home\Admin\cse141l_project\core\lab2
 valu
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z2 DXx4 work 11 alu_sv_unit 0 22 Jz3ic6j>ih4zVUKU9=NGc1
+Z2 DXx4 work 11 alu_sv_unit 0 22 Z=Q7diHeY<HnkaVJXe@oh2
 Z3 VI7lk`SQ8Za@A6?2c<@gWI2
 r1
 31
@@ -19,7 +19,7 @@ Z9 8C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv
 Z10 FC:/cygwin64/home/jack/cse141L/core/lab2/alu.sv
 L0 4
 Z11 OV;L;10.1e;51
-Z12 !s108 1416720112.831000
+Z12 !s108 1416731814.123000
 Z13 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv|
 Z14 !s90 -reportprogress|300|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/alu.sv|
 Z15 o-work work -O0
@@ -29,16 +29,17 @@ Z16 tSvlog 1
 !s101 -O0
 Xalu_sv_unit
 R1
-Z17 VJz3ic6j>ih4zVUKU9=NGc1
+Z17 VZ=Q7diHeY<HnkaVJXe@oh2
 r1
 31
-Z18 IJz3ic6j>ih4zVUKU9=NGc1
+Z18 !s100 LOENzSNh^4EUFNd6ET5V@3
+Z19 IZ=Q7diHeY<HnkaVJXe@oh2
 S1
 R7
-Z19 w1416719229
+Z20 w1416729602
 R9
 R10
-Z20 Fdefinitions.sv
+Z21 Fdefinitions.sv
 L1 66
 R11
 R12
@@ -46,14 +47,13 @@ R13
 R14
 R15
 R16
-Z21 !s100 Q[2<hZKWS_OP]zW0^`9EK0
 !s85 0
 !i10b 1
 !i103 1
 !s101 -O0
 vcl_decode
 R1
-Z22 DXx4 work 17 cl_decode_sv_unit 0 22 2Fhaea;M_ab9HaVfELMSm0
+Z22 DXx4 work 17 cl_decode_sv_unit 0 22 P:S?b;DhGBe^ozO@oAieQ2
 Z23 Vj2XdPkIgM0O^Hn@`n`AWZ1
 r1
 31
@@ -67,7 +67,7 @@ Z27 8C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv
 Z28 FC:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv
 L0 4
 R11
-Z29 !s108 1416720113.393000
+Z29 !s108 1416731814.508000
 Z30 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv|
 Z31 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/cl_decode.sv|
 R15
@@ -77,16 +77,17 @@ R16
 !s101 -O0
 Xcl_decode_sv_unit
 R1
-Z32 V2Fhaea;M_ab9HaVfELMSm0
+Z32 VP:S?b;DhGBe^ozO@oAieQ2
 r1
 31
-Z33 I2Fhaea;M_ab9HaVfELMSm0
+Z33 !s100 nmP5Fjo1h^_jL2i^>Pbl<0
+Z34 IP:S?b;DhGBe^ozO@oAieQ2
 S1
 R7
-R19
+R20
 R27
 R28
-R20
+R21
 L1 66
 R11
 R29
@@ -94,14 +95,13 @@ R30
 R31
 R15
 R16
-Z34 !s100 VV^HCY5ZaoY4WJV:iSFFZ0
 !s85 0
 !i10b 1
 !i103 1
 !s101 -O0
 vcl_state_machine
 R1
-Z35 DXx4 work 24 cl_state_machine_sv_unit 0 22 ^GmHHJmPAgTgL0:iIedoI1
+Z35 DXx4 work 24 cl_state_machine_sv_unit 0 22 AmA2WN]hk`h:0[Ko>h0B_1
 Z36 V_HO6g@<O=0IE^>?5Z5=h`1
 r1
 31
@@ -115,7 +115,7 @@ Z40 8C:/cygwin64/home/jack/cse141L/core/lab2/cl_state_machine.sv
 Z41 FC:/cygwin64/home/jack/cse141L/core/lab2/cl_state_machine.sv
 L0 3
 R11
-Z42 !s108 1416720114.016000
+Z42 !s108 1416731814.799000
 Z43 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/cl_state_machine.sv|
 Z44 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/cl_state_machine.sv|
 R15
@@ -125,16 +125,17 @@ R16
 !s101 -O0
 Xcl_state_machine_sv_unit
 R1
-Z45 V^GmHHJmPAgTgL0:iIedoI1
+Z45 VAmA2WN]hk`h:0[Ko>h0B_1
 r1
 31
-Z46 I^GmHHJmPAgTgL0:iIedoI1
+Z46 !s100 okOdLi3Dk^0AVEa===VXZ2
+Z47 IAmA2WN]hk`h:0[Ko>h0B_1
 S1
 R7
-R19
+R20
 R40
 R41
-R20
+R21
 L1 66
 R11
 R42
@@ -142,54 +143,53 @@ R43
 R44
 R15
 R16
-Z47 !s100 j4of2C9c6]n@^13Qm;BkZ2
 !s85 0
 !i10b 1
 !i103 1
 !s101 -O0
 vcore
 R1
-Z48 DXx4 work 12 core_sv_unit 0 22 C6CY<KM44`K9gDQ?T=cFF1
-Z49 V8g;U8en<PLBg@@AL4CL>f3
+DXx4 work 12 core_sv_unit 0 22 `B80:MUdKkJbUTWOHkJ]A1
+Z48 V8g;U8en<PLBg@@AL4CL>f3
 r1
 !s85 0
 31
 !i10b 1
-!s100 nS<U6TBhZ0GeA=KlH[bRZ3
-I8UcUCII23TbZ6FYAVZ]K^1
-Z50 !s105 core_sv_unit
+!s100 eaO]Jin:Y5b5:fIWaL]3]3
+IeNJoHW6EhSlbGjiUd6?^U0
+Z49 !s105 core_sv_unit
 S1
 R7
-Z51 w1416720383
-Z52 8C:/cygwin64/home/jack/cse141L/core/lab2/core.sv
-Z53 FC:/cygwin64/home/jack/cse141L/core/lab2/core.sv
+Z50 w1416751457
+Z51 8C:/cygwin64/home/jack/cse141L/core/lab2/core.sv
+Z52 FC:/cygwin64/home/jack/cse141L/core/lab2/core.sv
 L0 3
 R11
-Z54 !s108 1416720389.048000
-Z55 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/core.sv|
-Z56 !s90 -reportprogress|300|-work|work|-O0|C:/cygwin64/home/jack/cse141L/core/lab2/core.sv|
+Z53 !s108 1416751466.256000
+Z54 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/core.sv|
+Z55 !s90 -reportprogress|300|-work|work|-O0|C:/cygwin64/home/jack/cse141L/core/lab2/core.sv|
 !s101 -O0
 R15
 R16
 vcore_flattened
 R1
-Z57 DXx4 work 22 core_flattened_sv_unit 0 22 L]7f]B^cH=hTljISB^1V43
-Z58 V2R0=69R;zAfBGzKl1Q]2X0
+Z56 DXx4 work 22 core_flattened_sv_unit 0 22 b:0D1XmfI>@cYAHCHMj]A2
+Z57 V2R0=69R;zAfBGzKl1Q]2X0
 r1
 31
-Z59 !s100 B2J69ADYLc;F[Tm5YKbP:2
-Z60 Ih9^koYZBDBZ96m5b`WjJA0
-Z61 !s105 core_flattened_sv_unit
+Z58 !s100 B2J69ADYLc;F[Tm5YKbP:2
+Z59 Ih9^koYZBDBZ96m5b`WjJA0
+Z60 !s105 core_flattened_sv_unit
 S1
 R7
 R8
-Z62 8C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv
-Z63 FC:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv
+Z61 8C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv
+Z62 FC:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv
 L0 4
 R11
-Z64 !s108 1416720115.008000
-Z65 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv|
-Z66 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv|
+Z63 !s108 1416731815.533000
+Z64 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv|
+Z65 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/core_flattened.sv|
 R15
 R16
 !s85 0
@@ -197,94 +197,94 @@ R16
 !s101 -O0
 Xcore_flattened_sv_unit
 R1
-Z67 VL]7f]B^cH=hTljISB^1V43
+Z66 Vb:0D1XmfI>@cYAHCHMj]A2
 r1
 31
-Z68 IL]7f]B^cH=hTljISB^1V43
+Z67 !s100 z5oC38TRB?A]b0An6AP072
+Z68 Ib:0D1XmfI>@cYAHCHMj]A2
 S1
 R7
-R19
-R62
-R63
 R20
+R61
+R62
+R21
 L1 66
 R11
+R63
 R64
 R65
-R66
 R15
 R16
-Z69 !s100 lN245kG<:]X3Meg6LzJKn0
 !s85 0
 !i10b 1
 !i103 1
 !s101 -O0
 Xcore_sv_unit
 R1
-Z70 VC6CY<KM44`K9gDQ?T=cFF1
+V`B80:MUdKkJbUTWOHkJ]A1
 r1
 !s85 0
 31
 !i10b 1
-Z71 !s100 Ig4?WgCTg8QChd;YL>kBm1
-Z72 IC6CY<KM44`K9gDQ?T=cFF1
+!s100 02:ZmhMGh<F=eAV:YNJ_Z2
+I`B80:MUdKkJbUTWOHkJ]A1
 !i103 1
 S1
 R7
+R50
 R51
 R52
-R53
-R20
+R21
 L1 66
 R11
+R53
 R54
 R55
-R56
 !s101 -O0
 R15
 R16
 vcore_tb
 R1
-Z73 DXx4 work 15 core_tb_sv_unit 0 22 khT=7jX4`BHUV[VBgzgel2
-Z74 VlN3iUPNV?OYGNgj@DJaoE2
+Z69 DXx4 work 15 core_tb_sv_unit 0 22 7VhnK0I@;FaTJK5h`i88c3
+Z70 VlN3iUPNV?OYGNgj@DJaoE2
 r1
 31
-Z75 !s100 cLe`@X]8z1DX<=<:iOzJK3
-Z76 Ij5kT:zXRUaTVWB7jQ5W]f2
-Z77 !s105 core_tb_sv_unit
+Z71 IKB2?H0VHl<SY_:fRT_zK_3
+Z72 !s105 core_tb_sv_unit
 S1
 R7
-R8
-Z78 8C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv
-Z79 FC:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv
+Z73 w1416748366
+Z74 8C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv
+Z75 FC:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv
 L0 17
 R11
-Z80 !s108 1416720198.386000
-Z81 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv|
-Z82 !s90 -reportprogress|300|-work|work|-O0|C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv|
+Z76 !s108 1416748427.102000
+Z77 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv|
+Z78 !s90 -reportprogress|300|-work|work|-O0|C:/cygwin64/home/jack/cse141L/core/lab2/core_tb.sv|
 R15
 R16
+Z79 !s100 n>Ne6<@<8:d:F8iIAg@oU0
 !s85 0
 !i10b 1
 !s101 -O0
 Xcore_tb_sv_unit
 R1
-Z83 VkhT=7jX4`BHUV[VBgzgel2
+Z80 V7VhnK0I@;FaTJK5h`i88c3
 r1
 31
-Z84 !s100 ZTJA5Sig1W0CB7l2l7_Kj2
-Z85 IkhT=7jX4`BHUV[VBgzgel2
+Z81 !s100 jn2dK[[6fiCifC9LCTogQ3
+Z82 I7VhnK0I@;FaTJK5h`i88c3
 S1
 R7
-R19
-R78
-R79
-R20
+R73
+R74
+R75
+R21
 L1 66
 R11
-R80
-R81
-R82
+R76
+R77
+R78
 R15
 R16
 !s85 0
@@ -293,23 +293,23 @@ R16
 !s101 -O0
 vdata_mem
 R1
-Z86 DXx4 work 16 data_mem_sv_unit 0 22 ;n?JPOS@md^d3mbKZ1T8A0
-Z87 VJTgBNdnj9c=zg80[gUozo3
+Z83 DXx4 work 16 data_mem_sv_unit 0 22 YLdh7CcOIZ72Fcj=UTQYj3
+Z84 VJTgBNdnj9c=zg80[gUozo3
 r1
 31
-Z88 !s100 N`jC6U84gfz7oiUB`Q8Nh2
-Z89 ICf8hoDC<m3a^mj]jklaaN3
-Z90 !s105 data_mem_sv_unit
+Z85 !s100 N`jC6U84gfz7oiUB`Q8Nh2
+Z86 ICf8hoDC<m3a^mj]jklaaN3
+Z87 !s105 data_mem_sv_unit
 S1
 R7
 R8
-Z91 8C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv
-Z92 FC:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv
+Z88 8C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv
+Z89 FC:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv
 L0 11
 R11
-Z93 !s108 1416720115.967000
-Z94 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv|
-Z95 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv|
+Z90 !s108 1416731816.325000
+Z91 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv|
+Z92 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/data_mem.sv|
 R15
 R16
 !s85 0
@@ -317,70 +317,70 @@ R16
 !s101 -O0
 Xdata_mem_sv_unit
 R1
-Z96 V;n?JPOS@md^d3mbKZ1T8A0
+Z93 VYLdh7CcOIZ72Fcj=UTQYj3
 r1
 31
-Z97 I;n?JPOS@md^d3mbKZ1T8A0
+Z94 !s100 bQ`?FEfL_`VYdT[F;BQ1j1
+Z95 IYLdh7CcOIZ72Fcj=UTQYj3
 S1
 R7
-R19
-R91
-R92
 R20
+R88
+R89
+R21
 L1 66
 R11
-R93
-R94
-R95
+R90
+R91
+R92
 R15
 R16
-Z98 !s100 iYIb8YV1?6^m4jDJc>MU<1
 !s85 0
 !i10b 1
 !i103 1
 !s101 -O0
 Xdefinitions_sv_unit
 R1
-Z99 IjSdVNHENS[C1VXiDILg6A1
-Z100 VjSdVNHENS[C1VXiDILg6A1
+Z96 IBlN18lEJ6GgGDSFGfo_Cl3
+Z97 VBlN18lEJ6GgGDSFGfo_Cl3
 S1
 R7
-R19
-Z101 8C:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv
-Z102 FC:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv
+Z98 w1416751369
+Z99 8C:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv
+Z100 FC:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv
 L0 66
 R11
 r1
 31
-Z103 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv|
+Z101 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv|
 R15
 R16
-Z104 !s100 Gk8l_?HfC4gAWWMojlcjY1
-Z105 !s108 1416720116.381000
-Z106 !s107 C:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv|
 !i10b 1
+Z102 !s100 7KX[GE1ZBR<IN?3511GTc2
 !i103 1
 !s85 0
+Z103 !s108 1416751373.517000
+Z104 !s107 C:/cygwin64/home/jack/cse141L/core/lab2/definitions.sv|
 !s101 -O0
 vinstr_mem
 R1
-Z107 DXx4 work 17 instr_mem_sv_unit 0 22 2mhH43mEGUh7lUJ<HVNd@0
-Z108 VFbL0l?mC^hD9I>mmSWaGQ0
+Z105 DXx4 work 17 instr_mem_sv_unit 0 22 ^]LzoUVEnz`[kVmom4E;R0
+Z106 VFbL0l?mC^hD9I>mmSWaGQ0
 r1
 31
-Z109 !s100 P^jl6iQ14zboMfTR:TL2E1
-Z110 I4:2@Mi4j1N5>FE9ATSNO21
-Z111 !s105 instr_mem_sv_unit
+Z107 !s100 P^jl6iQ14zboMfTR:TL2E1
+Z108 I4:2@Mi4j1N5>FE9ATSNO21
+Z109 !s105 instr_mem_sv_unit
 S1
 R7
-Z112 w1416548002
-Z113 8C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv
-Z114 FC:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv
+Z110 w1416548002
+Z111 8C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv
+Z112 FC:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv
 L0 5
 R11
-Z115 !s108 1416720116.829000
-Z116 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv|
-Z117 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv|
+Z113 !s108 1416731816.987000
+Z114 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv|
+Z115 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/instr_mem.sv|
 R15
 R16
 !s85 0
@@ -388,47 +388,47 @@ R16
 !s101 -O0
 Xinstr_mem_sv_unit
 R1
-Z118 V2mhH43mEGUh7lUJ<HVNd@0
+Z116 V^]LzoUVEnz`[kVmom4E;R0
 r1
 31
-Z119 I2mhH43mEGUh7lUJ<HVNd@0
+Z117 !s100 gEe0A65`]^W=iKQ:bG<e]1
+Z118 I^]LzoUVEnz`[kVmom4E;R0
 S1
 R7
-R19
-R113
-R114
 R20
+R111
+R112
+R21
 L1 66
 R11
+R113
+R114
 R115
-R116
-R117
 R15
 R16
-Z120 !s100 k_E_UU2=Az;@=nZ^C;[=^0
 !s85 0
 !i10b 1
 !i103 1
 !s101 -O0
 vminer_tb
 R1
-Z121 DXx4 work 16 miner_tb_sv_unit 0 22 eLiIWQO4Rl`:Xb@0WO09Y3
-Z122 VmUcjK`[BR2I4D=oC[X9C`0
+Z119 DXx4 work 16 miner_tb_sv_unit 0 22 eWabn8<E3nh>2FceIZbHF0
+Z120 VmUcjK`[BR2I4D=oC[X9C`0
 r1
 31
-Z123 !s100 @Ria5D?fk`eSVd`mBG;3l2
-Z124 IZhAPo88G<TH9=gOHYU2]G1
-Z125 !s105 miner_tb_sv_unit
+Z121 !s100 @Ria5D?fk`eSVd`mBG;3l2
+Z122 IZhAPo88G<TH9=gOHYU2]G1
+Z123 !s105 miner_tb_sv_unit
 S1
 R7
-R112
-Z126 8C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv
-Z127 FC:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv
+R110
+Z124 8C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv
+Z125 FC:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv
 L0 21
 R11
-Z128 !s108 1416720117.200000
-Z129 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv|
-Z130 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv|
+Z126 !s108 1416731817.312000
+Z127 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv|
+Z128 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/miner_tb.sv|
 R15
 R16
 !s85 0
@@ -436,71 +436,71 @@ R16
 !s101 -O0
 Xminer_tb_sv_unit
 R1
-Z131 VeLiIWQO4Rl`:Xb@0WO09Y3
+Z129 VeWabn8<E3nh>2FceIZbHF0
 r1
 31
-Z132 IeLiIWQO4Rl`:Xb@0WO09Y3
+Z130 !s100 ?e@3PLTmcz]R;Y7=o<FX91
+Z131 IeWabn8<E3nh>2FceIZbHF0
 S1
 R7
-R19
-R126
-R127
 R20
+R124
+R125
+R21
 L1 66
 R11
+R126
+R127
 R128
-R129
-R130
 R15
 R16
-Z133 !s100 nA0aa]Y<CSd<N7ZDj4W^V3
 !s85 0
 !i10b 1
 !i103 1
 !s101 -O0
 Xnet_packet_logger_s_sv_unit
 R1
-Z134 V5PE=:aE=[CeWhDd@HXC571
+Z132 V;kFmAg>MEgoAU^0k7A`Yi3
 r1
 31
-Z135 I5PE=:aE=[CeWhDd@HXC571
+Z133 !s100 T[g`8QcTJ>9`gVSYVkOLa0
+Z134 I;kFmAg>MEgoAU^0k7A`Yi3
 S1
 R7
-R19
-Z136 8C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv
-Z137 FC:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv
 R20
+Z135 8C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv
+Z136 FC:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv
+R21
 L1 66
 R11
-Z138 !s108 1416720117.659000
-Z139 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv|
-Z140 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv|
+Z137 !s108 1416731817.653000
+Z138 !s107 definitions.sv|C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv|
+Z139 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/net_packet_logger_s.sv|
 R15
 R16
-Z141 !s100 <D?a;]Rl4Ld]BcL]h7:;E1
 !s85 0
 !i10b 1
 !i103 1
 !s101 -O0
 vnetwork_packet_s_logger
 R1
-Z142 DXx4 work 27 net_packet_logger_s_sv_unit 0 22 5PE=:aE=[CeWhDd@HXC571
-Z143 VPlgif>=;4=jBTE<GHm7GV1
+Z140 DXx4 work 27 net_packet_logger_s_sv_unit 0 22 ;kFmAg>MEgoAU^0k7A`Yi3
+Z141 VPlgif>=;4=jBTE<GHm7GV1
 r1
 31
-Z144 !s100 Adl]hG<Unb]D:CVDa?22l1
-Z145 I4cXF_`eDQmNk1K0@fVim=0
-Z146 !s105 net_packet_logger_s_sv_unit
+Z142 !s100 Adl]hG<Unb]D:CVDa?22l1
+Z143 I4cXF_`eDQmNk1K0@fVim=0
+Z144 !s105 net_packet_logger_s_sv_unit
 S1
 R7
-R112
+R110
+R135
 R136
-R137
 L0 8
 R11
+R137
 R138
 R139
-R140
 R15
 R16
 !s85 0
@@ -508,46 +508,46 @@ R16
 !s101 -O0
 vreg_file
 R1
-Z147 !s100 0TBei`LIEl;YWfC03l6aV0
-Z148 I8U=1T_P^XN9?FGE:9Y4Ji2
-Z149 VjB3KJEo^2Tn<kD_]EnBMd3
-Z150 !s105 reg_file_sv_unit
+Z145 !s100 0TBei`LIEl;YWfC03l6aV0
+Z146 I8U=1T_P^XN9?FGE:9Y4Ji2
+Z147 VjB3KJEo^2Tn<kD_]EnBMd3
+Z148 !s105 reg_file_sv_unit
 S1
 R7
-R112
-Z151 8C:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv
-Z152 FC:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv
+Z149 w1416729479
+Z150 8C:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv
+Z151 FC:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv
 L0 2
 R11
 r1
 31
-Z153 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv|
+Z152 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv|
 R15
 R16
-Z154 !s108 1416720118.128000
-Z155 !s107 C:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv|
+Z153 !s108 1416731818.040000
+Z154 !s107 C:/cygwin64/home/jack/cse141L/core/lab2/reg_file.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vreg_file2
 R1
-Z156 !s100 QkIhiA_Nm34I`Z0QXeJEz2
-Z157 IlDeTl:PJ99;e6<g=JUodf2
-Z158 VNf]M<JJUh>KPG`8MYPCod1
-R150
+Z155 !s100 QkIhiA_Nm34I`Z0QXeJEz2
+Z156 IlDeTl:PJ99;e6<g=JUodf2
+Z157 VNf]M<JJUh>KPG`8MYPCod1
+R148
 S1
-Z159 dC:\cygwin64\home\Admin\cse141l_project\core\lab2
-Z160 w1414887402
-Z161 8C:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv
-Z162 FC:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv
+Z158 dC:\cygwin64\home\Admin\cse141l_project\core\lab2
+Z159 w1414887402
+Z160 8C:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv
+Z161 FC:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv
 L0 2
 R11
 r1
 31
 R15
-Z163 !s108 1414970432.799000
-Z164 !s107 C:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv|
-Z165 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv|
+Z162 !s108 1414970432.799000
+Z163 !s107 C:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv|
+Z164 !s90 -reportprogress|30|-work|work|C:/cygwin64/home/Admin/cse141l_project/core/lab2/reg_file.sv|
 !i10b 1
 !s85 0
 !s101 -O0
