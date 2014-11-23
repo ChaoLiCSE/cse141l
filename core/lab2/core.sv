@@ -86,7 +86,24 @@ assign data_mem_addr = alu_result;
 assign debug_o = {PC_r, instruction, state_r, barrier_mask_r, barrier_r};
 
 
-// Insruction memory
+
+
+
+ //-----------------------------------------------------------------------------
+// bubble delay
+//-----------------------------------------------------------------------------
+logic [3:0] bubble = 3;
+always_ff @ (posedge clk)
+begin
+	bubble <= (bubble+1) % 5;
+end
+
+
+//-----------------------------------------------------------------------------
+// Instruction Fetch Stage
+//-----------------------------------------------------------------------------
+
+// Instruction memory
 instr_mem #(.addr_width_p(imem_addr_width_p)) imem
            (.clk(clk)
            ,.addr_i(imem_addr)
@@ -100,20 +117,37 @@ instr_mem #(.addr_width_p(imem_addr_width_p)) imem
 // if the PC is not written, the instruction must not change
 assign instruction = (PC_wen_r) ? imem_out : instruction_r;
 
+// Determine next PC
+assign pc_plus1     = PC_r + 1'b1;
+assign imm_jump_add = $signed(instruction.rs_imm)  + $signed(PC_r);
 
+// Next pc is based on network or the instruction
+always_comb
+	begin
+		PC_n = pc_plus1;
+		if (net_PC_write_cmd_IDLE)
+			PC_n = net_packet_i.net_addr;
+		else
+			unique casez (instruction)
+				`kJALR:
+					PC_n = alu_result[0+:imem_addr_width_p];
+
+				`kBNEQZ,`kBEQZ,`kBLTZ,`kBGTZ:
+					if (jump_now)
+						PC_n = imm_jump_add;
+				default: begin end
+			endcase
+	end
+
+	
+	
 //-----------------------------------------------------------------------------
 // IF/ID pipeline
 //-----------------------------------------------------------------------------
 fd_pipeline_s fd_pipeline_r, fd_pipeline_n;
 
 assign fd_pipeline_n.instruction 	= instruction;
-assign fd_pipeline_n.net_packet  	= net_packet_i;
 assign fd_pipeline_n.pc_r		 	= PC_r;
-assign fd_pipeline_n.rd_addr	 	= rd_addr;
-assign fd_pipeline_n.state_r	 	= state_r;
-assign fd_pipeline_n.net_PC_write_cmd_IDLE = net_PC_write_cmd_IDLE;
-assign fd_pipeline_n.exception_o	= exception_o;
-assign fd_pipeline_n.stall			= stall;
 
 always_ff @(posedge clk) begin
 	if(!reset) 
@@ -121,6 +155,13 @@ always_ff @(posedge clk) begin
 	else if(PC_wen)
 		fd_pipeline_r <= fd_pipeline_n;
 end
+ 
+
+
+//-----------------------------------------------------------------------------
+// Instruction Decode Stage
+//-----------------------------------------------------------------------------
+
 
 // Decode module
 cl_decode decode (.instruction_i(fd_pipeline_r.instruction)
@@ -134,16 +175,16 @@ cl_decode decode (.instruction_i(fd_pipeline_r.instruction)
 
 // State machine
 cl_state_machine state_machine (.instruction_i(fd_pipeline_r.instruction)
-                               ,.state_i(fd_pipeline_r.state_r)
-                               ,.exception_i(fd_pipeline_r.exception_o)
-                               ,.net_PC_write_cmd_IDLE_i(fd_pipeline_r.net_PC_write_cmd_IDLE)
-                               ,.stall_i(fd_pipeline_r.stall)
+                               ,.state_i(state_r)
+                               ,.exception_i(exception_o)
+                               ,.net_PC_write_cmd_IDLE_i(net_PC_write_cmd_IDLE)
+                               ,.stall_i(stall)
                                ,.state_o(state_n)
                                );
 
 
 //-----------------------------------------------------------------------------
-// control signals
+// Control Signal Structure
 //-----------------------------------------------------------------------------							   
 control_pipeline_s control_pipeline;
 
@@ -154,22 +195,35 @@ assign control_pipeline.is_mem_op_c    = is_mem_op_c;
 assign control_pipeline.is_byte_op_c   = is_byte_op_c;
 
 
+// Register write could be from network or the controller
+assign rf_wen    = (net_reg_write_cmd || (op_writes_rf_c && (~stall)));
+
+// Selection between network and address included in the instruction which is exeuted
+// Address for Reg. File is shorter than address of Ins. memory in network data
+// Since network can write into immediate registers, the address is wider
+// but for the destination register in an instruction the extra bits must be zero
+assign rd_addr = (net_reg_write_cmd)
+                 ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
+                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
+                    ,{instruction.rd}});
 
 
 // Register file
 reg_file #(.addr_width_p($bits(instruction.rs_imm))) rf
           (.clk(clk)
-          ,.rs_addr_i(fd_pipeline_r.instruction.rs_imm)
-          ,.rd_addr_i(fd_pipeline_r.rd_addr)
+          ,.rs_addr_i(instruction.rs_imm)
+          ,.rd_addr_i(rd_addr)
           ,.wen_i(rf_wen)
-		  ,.write_addr_i(fd_pipeline_r.rd_addr)	//added for new reg file parameter
+		  ,.write_addr_i(rd_addr)	//added for new reg file parameter
           ,.write_data_i(rf_wd)
           ,.rs_val_o(rs_val)
           ,.rd_val_o(rd_val)
           );
 
-assign rs_val_or_zero = fd_pipeline_r.instruction.rs_imm	? rs_val : 32'b0;
-assign rd_val_or_zero = fd_pipeline_r.rd_addr		  		? rd_val : 32'b0;
+assign rs_val_or_zero = instruction.rs_imm	? rs_val : 32'b0;
+assign rd_val_or_zero = rd_addr		  		? rd_val : 32'b0;
+
+
 
 // ALU
 alu alu_1 (.rd_i(rd_val_or_zero)
@@ -186,7 +240,7 @@ always_comb
     if (net_reg_write_cmd)
       rf_wd = net_packet_i.net_data;
 
-    else if (instruction==?`kJALR)
+    else if (instruction ==? `kJALR)
       rf_wd = pc_plus1;
 
     else if (is_load_op_c)
@@ -196,42 +250,13 @@ always_comb
       rf_wd = alu_result;
   end
 
-// Determine next PC
-assign pc_plus1     = PC_r + 1'b1;
-assign imm_jump_add = $signed(instruction.rs_imm)  + $signed(PC_r);
-
-// Next pc is based on network or the instruction
-always_comb
-  begin
-    PC_n = pc_plus1;
-    if (net_PC_write_cmd_IDLE)
-      PC_n = net_packet_i.net_addr;
-    else
-      unique casez (instruction)
-        `kJALR:
-          PC_n = alu_result[0+:imem_addr_width_p];
-
-        `kBNEQZ,`kBEQZ,`kBLTZ,`kBGTZ:
-          if (jump_now)
-            PC_n = imm_jump_add;
-
-        default: begin end
-      endcase
-  end
 
   
 
- //-----------------------------------------------------------------------------
-// bubble delay
-//-----------------------------------------------------------------------------
-logic [3:0] bubble = 5;
-always_ff @ (posedge clk)
-begin
-	bubble <= (bubble+1) % 5;
-end
+
      
+assign PC_wen = net_PC_write_cmd_IDLE || ~stall ;
 	 
-assign PC_wen = (net_PC_write_cmd_IDLE || ~stall || ~bubble);
 
 // Sequential part, including PC, barrier, exception and state
 always_ff @ (posedge clk)
@@ -269,7 +294,7 @@ always_ff @ (posedge clk)
 assign stall_non_mem = (net_reg_write_cmd && op_writes_rf_c)
                     || (net_imem_write_cmd);
 // Stall if LD/ST still active; or in non-RUN state
-assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN);
+assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN) || bubble;
 
 // Launch LD/ST
 assign valid_to_mem_c = is_mem_op_c & (mem_stage_r < 2'b10);
@@ -312,21 +337,12 @@ assign barrier_o = barrier_mask_r & barrier_r;
 // The instruction write is just for network
 assign imem_wen  = net_imem_write_cmd;
 
-// Register write could be from network or the controller
-assign rf_wen    = (net_reg_write_cmd || (op_writes_rf_c && ~stall));
+
 
 // Selection between network and core for instruction address
 assign imem_addr = (net_imem_write_cmd) ? net_packet_i.net_addr
                                        : PC_n;
 
-// Selection between network and address included in the instruction which is exeuted
-// Address for Reg. File is shorter than address of Ins. memory in network data
-// Since network can write into immediate registers, the address is wider
-// but for the destination register in an instruction the extra bits must be zero
-assign rd_addr = (net_reg_write_cmd)
-                 ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
-                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
-                    ,{instruction.rd}});
 
 // Instructions are shorter than 32 bits of network data
 assign net_instruction = net_packet_i.net_data [0+:($bits(instruction))];
