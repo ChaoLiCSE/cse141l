@@ -17,21 +17,6 @@ module core #(parameter imem_addr_width_p=10
              ,output logic [31:0]               data_mem_addr
              );
 
-
-
-
-logic IFStall = 0;
-logic IDStall = 0;
-logic EXStall = 0;
-logic MEMStall = 0;
-logic WBStall = 0;
-
-control_pipeline_s control_pipeline;
-fd_pipeline_s fd_pipeline;
-dx_pipeline_s dx_pipeline;
-xm_pipeline_s xm_pipeline;
-mw_pipeline_s mwb_pipeline;
-
 //---- Adresses and Data ----//
 // Ins. memory address signals
 logic [imem_addr_width_p-1:0] PC_r, PC_n,
@@ -109,63 +94,81 @@ instr_mem #(.addr_width_p(imem_addr_width_p)) imem
            ,.instruction_o(imem_out)
            );
 
-//Instruction fetch part    
-logic [2:0] count = 0;
-always @ (posedge clk)
-begin
-	if (count == 4)
-		begin
-			IFStall = 0;
-			count = 0;
-		end
-	else
-		begin
-			IFStall = 1;
-			count = count +1;
-		end
-end
 // Since imem has one cycle delay and we send next cycle's address, PC_n,
 // if the PC is not written, the instruction must not change
 assign instruction = (PC_wen_r) ? imem_out : instruction_r;
-// instruction fd part
-always @ (*)
+
+
+logic IFStall = 0;
+logic IDStall = 0;
+logic EXStall = 0;
+logic MEMStall = 0;
+logic WBStall = 0;
+
+
+logic [2:0] count = 0;
+always_ff @ (posedge clk)
 begin
-	if(~reset)
+	if (count == 4)
 		begin
-			fd_pipeline.fd_instruction = 0;
-			fd_pipeline.fd_pc_r = 0;
+			IFStall <= 0;
+			count   <= 0;
 		end
 	else
 		begin
-			fd_pipeline.fd_instruction = instruction;
-			fd_pipeline.fd_pc_r = PC_r;
+			IFStall <= 1;
+			count <= count +1;
 		end
 end
 
-// instruction decode part
-always @ (*)
+
+
+fd_pipeline_s fd_pipeline;
+
+always_ff @ (posedge clk)
 begin
-	control_pipeline.is_load_op_c = is_load_op_c;
-	control_pipeline.op_writes_rf_c = op_writes_rf_c;
-	control_pipeline.is_store_op_c = is_store_op_c;
-	control_pipeline.is_mem_op_c = is_mem_op_c;
-	control_pipeline.is_byte_op_c = is_byte_op_c;
-	control_pipeline.jump_now_c = jump_now;
-	control_pipeline.rd_addr_c = rd_addr;
-	control_pipeline.rs_imm_c = instruction.rs_imm;
-	control_pipeline.PC_wen_r_c = PC_wen_r;
+	if(~reset)
+		begin
+			fd_pipeline <= 0;
+		end
+	else
+		begin
+			fd_pipeline.fd_instruction <= instruction;
+			fd_pipeline.fd_pc_r        <= PC_r;
+		end
+end
+always_ff @ (negedge clk)
+begin
+	$display ("\nfd_pipeline.fd_instruction:    %B", fd_pipeline.fd_instruction);
+	$display ("instruction:                   %B",   instruction);
+	$display ("fd_pipeline.fd_pc_r:           %B",   fd_pipeline.fd_pc_r);
+	$display ("PC_r:                          %B",   PC_r);
 end
 
+control_pipeline_s control_pipeline;
 
+// instruction decode part
+always_ff @ (posedge clk)
+begin
+	control_pipeline.is_load_op_c   <= is_load_op_c;
+	control_pipeline.op_writes_rf_c <= op_writes_rf_c;
+	control_pipeline.is_store_op_c  <= is_store_op_c;
+	control_pipeline.is_mem_op_c    <= is_mem_op_c;
+	control_pipeline.is_byte_op_c   <= is_byte_op_c;
+	control_pipeline.jump_now_c     <= jump_now;
+	control_pipeline.rd_addr_c      <= rd_addr;
+	control_pipeline.rs_imm_c       <= instruction.rs_imm;
+	control_pipeline.PC_wen_r_c     <= PC_wen_r;
+end
 
 
 // Register file
 reg_file #(.addr_width_p($bits(fd_pipeline.fd_instruction.rs_imm))) rf
           (.clk(clk)
           ,.rs_addr_i(fd_pipeline.fd_instruction.rs_imm)
-          ,.rd_addr_i(control_pipeline.rd_addr_c)
+          ,.rd_addr_i(rd_addr)
           ,.wen_i(rf_wen)
-			 ,.write_addr_i(control_pipeline.rd_addr_c)	//added for new reg file parameter
+		  ,.write_addr_i(rd_addr)	//added for new reg file parameter
           ,.write_data_i(rf_wd)
           ,.rs_val_o(rs_val)
           ,.rd_val_o(rd_val)
@@ -174,81 +177,14 @@ reg_file #(.addr_width_p($bits(fd_pipeline.fd_instruction.rs_imm))) rf
 assign rs_val_or_zero = instruction.rs_imm ? rs_val : 32'b0;
 assign rd_val_or_zero = rd_addr            ? rd_val : 32'b0;
 
-// pipeline register for decode/execute
-always @ (*)
-begin
-	if(~reset)
-		begin		
-			dx_pipeline.dx_control = 0;
-			dx_pipeline.dx_rs_val = 0;
-			dx_pipeline.dx_rd_val = 0;
-			dx_pipeline.dx_instruction = 0;
-			dx_pipeline.dx_rf_wb_addr = 0;
-		end
-	else
-		begin
-			dx_pipeline.dx_control = control_pipeline;
-			dx_pipeline.dx_rs_val = rs_val_or_zero;
-			dx_pipeline.dx_rd_val = rd_val_or_zero;
-			dx_pipeline.dx_instruction = instruction;
-			dx_pipeline.dx_rf_wb_addr = rd_addr;
-		end
-end
-
 // ALU
-alu alu_1 (.rd_i(dx_pipeline.dx_rd_val)
-          ,.rs_i(dx_pipeline.dx_rs_val)
-          ,.op_i(dx_pipeline.dx_instruction)
+alu alu_1 (.rd_i(rd_val_or_zero)
+          ,.rs_i(rs_val_or_zero)
+          ,.op_i(instruction)
           ,.result_o(alu_result)
           ,.jump_now_o(jump_now)
           );
 
-///*** insert XM pipeline register***/
-// must cut a cross alu_result, instruction to ALU, is_lop_op_c
-// may not want to cut across jump_now ... 
-
-/*logic [31:0]  xm_alu_result_p;
-logic         xm_is_load_c_p;
-logic [4:0]   xm_opcode_p;
-logic [4:0]   xm_rf_wb_addr_p;
-
-assign xm_alu_result_p = alu_result;
-assign xm_is_load_c_p  = dx_pipeline.is_load_op_c;
-assign xm_opcode_p     = dx_pipeline.opcode;
-assign xm_rf_wb_addr_p = dx_pipeline.rf_wb_addr;*/
-
-always @(*) begin
-	if(!reset)
-		xm_pipeline = 0;
-	else begin
-		xm_pipeline.xm_control = control_pipeline;
-		xm_pipeline.xm_alu_result = alu_result;
-		xm_pipeline.xm_opcode = dx_pipeline.dx_instruction.opcode;
-		xm_pipeline.xm_rf_wb_addr = dx_pipeline.dx_rf_wb_addr;
-	end
-end
-		  
-mw_pipeline_s mw_pipeline;
-
-	logic [31:0]          mw_alu_result;
-	logic [4:0]  		  mw_opcode;
-	logic [4:0]           mw_rf_wb_addr;
-	logic [31:0]          mw_pc_plus1;
-
-always @(*) begin
-	if(!reset)
-		mw_pipeline = 0;
-	else begin
-		mw_pipeline.mw_control    = xm_pipeline.xm_control;
-		mw_pipeline.mw_alu_result = xm_pipeline.xm_alu_result;
-		mw_pipeline.mw_opcode     = xm_pipeline.xm_opcode;
-		mw_pipeline.mw_rf_wb_addr = xm_pipeline.xm_rf_wb_addr;
-		mw_pipeline.mw_pc_plus1   = pc_plus1;
-	end
-end
-
-		  
-		  
 // select the input data for Register file, from network, the PC_plus1 for JALR,
 // Data Memory or ALU result
 always_comb
@@ -256,17 +192,15 @@ always_comb
     if (net_reg_write_cmd)
       rf_wd = net_packet_i.net_data;
 
-    else if (instruction ==?`kJALR)
-      rf_wd = mw_pipeline.mw_pc_plus1;
+    else if (instruction==?`kJALR)
+      rf_wd = pc_plus1;
 
-    else if (mw_pipeline.mw_control.is_load_op_c)
+    else if (is_load_op_c)
       rf_wd = from_mem_i.read_data;
 
     else
-      rf_wd = xm_pipeline.xm_alu_result;
+      rf_wd = alu_result;
   end
-
-
 
 // Determine next PC
 assign pc_plus1     = PC_r + 1'b1;
@@ -325,9 +259,9 @@ always_ff @ (posedge clk)
 // stall and memory stages signals
 // rf structural hazard and imem structural hazard (can't load next instruction)
 assign stall_non_mem = (net_reg_write_cmd && op_writes_rf_c)
-                    || (net_imem_write_cmd) ;
+                    || (net_imem_write_cmd) || IFStall || IDStall || EXStall || MEMStall || WBStall;
 // Stall if LD/ST still active; or in non-RUN state
-assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN) || IFStall || IDStall || EXStall || MEMStall || WBStall;
+assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN);
 
 // Launch LD/ST
 assign valid_to_mem_c = is_mem_op_c & (mem_stage_r < 2'b10);
@@ -435,13 +369,5 @@ always_comb
     exception_n = 1'b1;
   else
     exception_n = exception_o;
-    
-/*always @ (negedge clk)
-begin
-	$display ("\noriginal:   %B", instruction.opcode);
-	$display ("our shitty: %B",  mw_pipeline.mw_opcode);
-
-end*/
-
 
 endmodule

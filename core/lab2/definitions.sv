@@ -157,7 +157,7 @@ typedef struct packed {
 
 typedef struct packed {
 	instruction_s    fd_instruction;
-	logic [31:0]	 fd_pc_r;
+	logic [9:0]	 fd_pc_r;
 } fd_pipeline_s;
 
 typedef struct packed {
