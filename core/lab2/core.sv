@@ -148,6 +148,7 @@ fd_pipeline_s fd_pipeline_r, fd_pipeline_n;
 
 assign fd_pipeline_n.instruction 	= instruction;
 assign fd_pipeline_n.pc_r		 	= PC_r;
+assign fd_pipeline_n.rd_addr        = rd_addr;
 
 always_ff @(posedge clk) begin
 	if(!reset) 
@@ -164,7 +165,7 @@ end
 
 
 // Decode module
-cl_decode decode (.instruction_i(fd_pipeline_r.instruction)
+cl_decode decode (.instruction_i(fd_pipeline_n.instruction)
 
                   ,.is_load_op_o(is_load_op_c)
                   ,.op_writes_rf_o(op_writes_rf_c)
@@ -174,7 +175,7 @@ cl_decode decode (.instruction_i(fd_pipeline_r.instruction)
                   );
 
 // State machine
-cl_state_machine state_machine (.instruction_i(fd_pipeline_r.instruction)
+cl_state_machine state_machine (.instruction_i(fd_pipeline_n.instruction)
                                ,.state_i(state_r)
                                ,.exception_i(exception_o)
                                ,.net_PC_write_cmd_IDLE_i(net_PC_write_cmd_IDLE)
@@ -203,32 +204,32 @@ assign rf_wen    = (net_reg_write_cmd || (op_writes_rf_c && (~stall)));
 // Since network can write into immediate registers, the address is wider
 // but for the destination register in an instruction the extra bits must be zero
 assign rd_addr = (net_reg_write_cmd)
-                 ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
-                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
+                 ? (net_packet_i.net_addr [0+:($bits(fd_pipeline_n.instruction.rs_imm))])
+                 : ({{($bits(fd_pipeline_n.instruction.rs_imm)-$bits(fd_pipeline_n.instruction.rd)){1'b0}}
                     ,{instruction.rd}});
 
 
 // Register file
-reg_file #(.addr_width_p($bits(instruction.rs_imm))) rf
+reg_file #(.addr_width_p($bits(fd_pipeline_n.instruction.rs_imm))) rf
           (.clk(clk)
-          ,.rs_addr_i(instruction.rs_imm)
-          ,.rd_addr_i(rd_addr)
+          ,.rs_addr_i(fd_pipeline_n.instruction.rs_imm)
+          ,.rd_addr_i(fd_pipeline_n.rd_addr)
           ,.wen_i(rf_wen)
-		  ,.write_addr_i(rd_addr)	//added for new reg file parameter
+		  ,.write_addr_i(fd_pipeline_n.rd_addr)	//added for new reg file parameter
           ,.write_data_i(rf_wd)
           ,.rs_val_o(rs_val)
           ,.rd_val_o(rd_val)
           );
 
-assign rs_val_or_zero = instruction.rs_imm	? rs_val : 32'b0;
-assign rd_val_or_zero = rd_addr		  		? rd_val : 32'b0;
+assign rs_val_or_zero = fd_pipeline_n.instruction.rs_imm	? rs_val : 32'b0;
+assign rd_val_or_zero = fd_pipeline_n.rd_addr		  		? rd_val : 32'b0;
 
 
 
 // ALU
 alu alu_1 (.rd_i(rd_val_or_zero)
           ,.rs_i(rs_val_or_zero)
-          ,.op_i(instruction)
+          ,.op_i(fd_pipeline_n.instruction)
           ,.result_o(alu_result)
           ,.jump_now_o(jump_now)
           );
