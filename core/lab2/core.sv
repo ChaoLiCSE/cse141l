@@ -92,10 +92,10 @@ assign debug_o = {PC_r, instruction, state_r, barrier_mask_r, barrier_r};
  //-----------------------------------------------------------------------------
 // bubble delay
 //-----------------------------------------------------------------------------
-logic [3:0] bubble = 3;
+logic bubble = 0;
 always_ff @ (posedge clk)
 begin
-	bubble <= (bubble+1) % 5;
+	bubble <= ~bubble;
 end
 
 
@@ -119,6 +119,7 @@ assign instruction = (PC_wen_r) ? imem_out : instruction_r;
 
 // Determine next PC
 assign pc_plus1     = PC_r + 1'b1;
+//assign pc_plus1     = fd_pipeline_r.pc_r + 1'b1;
 assign imm_jump_add = $signed(instruction.rs_imm)  + $signed(PC_r);
 
 // Next pc is based on network or the instruction
@@ -139,8 +140,7 @@ always_comb
 			endcase
 	end
 
-	
-	
+
 //-----------------------------------------------------------------------------
 // IF/ID pipeline
 //-----------------------------------------------------------------------------
@@ -148,7 +148,7 @@ fd_pipeline_s fd_pipeline_r, fd_pipeline_n;
 
 assign fd_pipeline_n.instruction 	= instruction;
 assign fd_pipeline_n.pc_r		 	= PC_r;
-assign fd_pipeline_n.rd_addr        = rd_addr;
+assign fd_pipeline_n.rd_addr		= rd_addr;
 
 always_ff @(posedge clk) begin
 	if(!reset) 
@@ -156,8 +156,6 @@ always_ff @(posedge clk) begin
 	else if(PC_wen)
 		fd_pipeline_r <= fd_pipeline_n;
 end
- 
-
 
 //-----------------------------------------------------------------------------
 // Instruction Decode Stage
@@ -197,39 +195,38 @@ assign control_pipeline.is_byte_op_c   = is_byte_op_c;
 
 
 // Register write could be from network or the controller
-assign rf_wen    = (net_reg_write_cmd || (op_writes_rf_c && (~stall)));
+assign rf_wen = (net_reg_write_cmd || (op_writes_rf_c && (~stall || bubble)));
 
 // Selection between network and address included in the instruction which is exeuted
 // Address for Reg. File is shorter than address of Ins. memory in network data
 // Since network can write into immediate registers, the address is wider
 // but for the destination register in an instruction the extra bits must be zero
 assign rd_addr = (net_reg_write_cmd)
-                 ? (net_packet_i.net_addr [0+:($bits(fd_pipeline_n.instruction.rs_imm))])
-                 : ({{($bits(fd_pipeline_n.instruction.rs_imm)-$bits(fd_pipeline_n.instruction.rd)){1'b0}}
+                 ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
+                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
                     ,{instruction.rd}});
 
-
 // Register file
-reg_file #(.addr_width_p($bits(fd_pipeline_n.instruction.rs_imm))) rf
+reg_file #(.addr_width_p($bits(instruction.rs_imm))) rf
           (.clk(clk)
-          ,.rs_addr_i(fd_pipeline_n.instruction.rs_imm)
-          ,.rd_addr_i(fd_pipeline_n.rd_addr)
+          ,.rs_addr_i(instruction.rs_imm)
+          ,.rd_addr_i(rd_addr)
           ,.wen_i(rf_wen)
-		  ,.write_addr_i(fd_pipeline_n.rd_addr)	//added for new reg file parameter
+		  ,.write_addr_i(rd_addr)		//added for new reg file parameter
           ,.write_data_i(rf_wd)
           ,.rs_val_o(rs_val)
           ,.rd_val_o(rd_val)
           );
 
-assign rs_val_or_zero = fd_pipeline_n.instruction.rs_imm	? rs_val : 32'b0;
-assign rd_val_or_zero = fd_pipeline_n.rd_addr		  		? rd_val : 32'b0;
+assign rs_val_or_zero = instruction.rs_imm	? rs_val : 32'b0;
+assign rd_val_or_zero = rd_addr		  		? rd_val : 32'b0;
 
 
 
 // ALU
 alu alu_1 (.rd_i(rd_val_or_zero)
           ,.rs_i(rs_val_or_zero)
-          ,.op_i(fd_pipeline_n.instruction)
+          ,.op_i(instruction)
           ,.result_o(alu_result)
           ,.jump_now_o(jump_now)
           );
@@ -251,14 +248,8 @@ always_comb
       rf_wd = alu_result;
   end
 
-
-  
-
-
      
-assign PC_wen = net_PC_write_cmd_IDLE || ~stall ;
-	 
-
+assign PC_wen = (net_PC_write_cmd_IDLE || ~stall) && ~bubble ;
 // Sequential part, including PC, barrier, exception and state
 always_ff @ (posedge clk)
   begin
@@ -295,7 +286,7 @@ always_ff @ (posedge clk)
 assign stall_non_mem = (net_reg_write_cmd && op_writes_rf_c)
                     || (net_imem_write_cmd);
 // Stall if LD/ST still active; or in non-RUN state
-assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN) || bubble;
+assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN);
 
 // Launch LD/ST
 assign valid_to_mem_c = is_mem_op_c & (mem_stage_r < 2'b10);

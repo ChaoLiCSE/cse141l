@@ -157,17 +157,11 @@ typedef struct packed {
 } control_pipeline_s;
 
 typedef struct packed {
-	instruction_s   instruction;
-	net_packet_s    net_packet;
-	logic [9:0]	 	pc_r;
-	logic [5:0] 	rd_addr; 
-	state_e			state_r;
-	logic 			net_PC_write_cmd_IDLE;
-	logic 			exception_o;
-	logic 			stall;
 
-	
-} fd_pipeline_s;
+	instruction_s   instruction;
+	logic [9:0]	 	pc_r;
+	logic [5:0]     rd_addr;
+	} fd_pipeline_s;
 
 typedef struct packed {
 	control_pipeline_s	control;
