@@ -69,11 +69,9 @@ class kernel{
 
     /** An enumuration for opcodes */
     public static enum opcodes {
-		ADDU, SUBU,  SLLV, SRAV, SRLV, AND, OR, NOR, SLT, SLTU, MOV, LW, LBU, SW, SB, JALR,
-      BEQZ, BNEQZ, BGTZ, BLTZ,
-      DONE, BAR, NOTVALID,
-		XOR, ROR, ROL,
-		BS0, BS1, SS0, SS1;
+		ADDU, SUBU,  SLLV, SRAV, SRLV, AND, OR, NOR, SLT, SLTU, MOV, LW,
+		LBU, SW, SB, JALR, BEQZ, BNEQZ, BGTZ, BLTZ, DONE, BAR, NOTVALID,
+		XOR, ROR, ROL, BS0, BS1, SS0, SS1, NOP;
   
     /** gets an String as opcode and outputs the corresponding opcode in form of the used enumeration. */
 		public static opcodes toOpcode(String str)
@@ -109,6 +107,7 @@ class kernel{
 		opcodeTable.put("BNEQZ", "10001");
 		opcodeTable.put("BGTZ" , "10010");
 		opcodeTable.put("BLTZ" , "10011");
+		opcodeTable.put("NOP"  , "10100");	// NOP
 		opcodeTable.put("JALR" , "10111");
 		opcodeTable.put("LW"   , "11000");
 		opcodeTable.put("LBU"  , "11001");
@@ -122,8 +121,7 @@ class kernel{
 	}
 
 
-
-  /** Converts the intrucion to binary machine code. */
+	/** Converts the instruction to binary machine code. */
 	String generateCode(Instruction instruction) {
       String operator = instruction.operator.toUpperCase();
 		String temp;
@@ -136,21 +134,21 @@ class kernel{
 		//System.out.print(opcodes.toOpcode(operator));
 		switch(opcodes.toOpcode(operator)) {
 			case ADDU:
-	      case SUBU:
+			case SUBU:
 			case SLLV:
 			case SRAV:
 			case SRLV:
-         case AND:
-         case OR:
-         case NOR: 
-         case SLT:
-         case SLTU:
-         case JALR:
-         case LW:
-         case LBU:
-         case SW:
-         case SB:
-         case MOV:
+			case AND:
+			case OR:
+			case NOR: 
+			case SLT:
+			case SLTU:
+			case JALR:
+			case LW:
+			case LBU:
+			case SW:
+			case SB:
+			case MOV:
 			case XOR:
 			case ROR:
 			case ROL:
@@ -186,11 +184,13 @@ class kernel{
                 len = temp.length();
 				for (int i = 0; i < 6 - len; i++) 
 					mc.append("0");
-				mc.append((temp.length() > 6) ? 
-					    temp.substring(temp.length()-6,temp.length()) : temp);
+				mc.append((temp.length() > 6) ? temp.substring(temp.length()-6,temp.length()) : temp);
 				break;
-            
-         case BEQZ:
+
+			
+				
+		
+			case BEQZ:
 			case BNEQZ:
 			case BGTZ:
 			case BLTZ:
@@ -261,6 +261,12 @@ class kernel{
                             System.out.println("Invalid operator: " + instruction.operator);
                             System.exit(-1);
                             break;
+							
+			case NOP:
+				for(int i = 0; i < 11; i++){
+					mc.append("0");
+				}
+				break;
 			default:
 				return null;
 		}

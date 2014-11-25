@@ -16,7 +16,7 @@ public class vanillaAssembler
     * constructor with the input arguments from terminal.
     */
   public static void main(String[] args) throws IOException{
-  vanillaAssembler asm = new vanillaAssembler(args);
+		vanillaAssembler asm = new vanillaAssembler(args);
 		asm.AssembleCode(args);
 	}
 
