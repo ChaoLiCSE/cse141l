@@ -43,14 +43,14 @@ always_comb
                result_o   = rs_i;
       `kSW, `kSB:    
                result_o   = rd_i;
-		
-		
+
+				
 		// exclusive or
-		`kXOR:	result_o	  = (rd_i | rs_i) & ~ (rd_i & rs_i);
+		`kXOR:	result_o  = (rd_i | rs_i) & ~ (rd_i & rs_i);
 		// rotate right
-		`kROR:	result_o	  = (rd_i >> rs_i[4:0]) | (rd_i << (32'd32 - rs_i[4:0]));	
+		`kROR:	result_o  = (rd_i >> rs_i[4:0]) | (rd_i << (32'd32 - rs_i[4:0]));	
 		// rotate left
-		`kROL:	result_o   = (rd_i << rs_i[4:0]) | (rd_i >> (32'd32 - rs_i[4:0]));
+		`kROL:	result_o  = (rd_i << rs_i[4:0]) | (rd_i >> (32'd32 - rs_i[4:0]));
 
 		`kBS0:
 			begin
@@ -88,35 +88,10 @@ always_comb
 				result_o = (D | C) & ~(D & C); 
 			end
 		
-		/*
-		// big sigma 0
-		`kBS0:	result_o 	= ((((((rs_i >> 2) | (rs_i << 30)) | ((rs_i >> 13) | (rs_i << 19))) & 
-										(~(((rs_i >> 2) | (rs_i << 30)) & ((rs_i >> 13) | (rs_i << 19)))))) | ((rs_i >> 22) | (rs_i >> 10))) &
-									  (~((((((rs_i >> 2) |(rs_i << 30)) | ((rs_i >> 13) | (rs_i << 19))) &
-										  (~(((rs_i >> 2) |(rs_i << 30)) & ((rs_i >> 13) | (rs_i << 19)))))) & ((rs_i >> 22) | (rs_i >> 10)))); 
-		
-		
-		// big sigma 1
-		`kBS1:	result_o		= ((((((rs_i >> 6) | (rs_i << 30)) | ((rs_i >> 11) | (rs_i << 25))) &
-										(~(((rs_i >> 6) | (rs_i << 30)) & ((rs_i >> 11) | (rs_i << 25))))) | ((rs_i >> 25) | (rs_i << 6))) & 
-									  (~(((((rs_i >> 6) | (rs_i << 30)) | ((rs_i >> 11) | (rs_i << 25))) & 
-										 (~(((rs_i >> 6) | (rs_i << 30)) & ((rs_i >> 11) | (rs_i << 25))))) & ((rs_i >> 25) | (rs_i << 6)))));
-		
-		// small sigma 0
-		`kSS0:	result_o		= (((((rs_i >> 7) | (rs_i << 25)) | ((rs_i >> 18) | (rs_i << 14))) &
-									  (~(((rs_i >> 7) | (rs_i << 25)) & ((rs_i >> 18) | (rs_i << 14))))) | ((rs_i >> 3))) &
-									  (~(((((rs_i >> 7) | (rs_i << 25)) | ((rs_i >> 18) | (rs_i << 14))) &
-										  (~((rs_i >> 7) | (rs_i << 25)) & ((rs_i >> 18) | (rs_i << 14)))) & ((rs_i >> 3))));
-		
-		// small sigma 1
-		`kSS1:	result_o		= (((((rs_i >> 17) | (rs_i << 15)) | ((rs_i >> 19) | (rs_i << 13))) &
-									  (~(((rs_i >> 17) | (rs_i << 15)) & ((rs_i >> 19) | (rs_i << 13))))) | ((rs_i >> 10))) &
-									  (~(((((rs_i >> 17) | (rs_i << 15)) | ((rs_i >> 19) | (rs_i << 13))) & 
-									    (~(((rs_i >> 17) | (rs_i << 15)) & ((rs_i >> 19) | (rs_i << 13))))) & ((rs_i >> 10))));
-		
-		*/
-		//`kDONE:
-      
+		`kNOP:
+			result_o = 32'dX;
+			
+	  //`kDONE:
       default: 
         begin 
           result_o   = 32'dX; 
