@@ -30,7 +30,6 @@ LBU_TEST:
 
 // Test for BEQ
 BEQZ  $R0,START
-NOP
 
 // Check_answer subroutine
 

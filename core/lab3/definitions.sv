@@ -18,8 +18,8 @@
 
 `define kMOV   16'b01010_?????_??????
 
-// 11		-	EXCLUSIVE OR
-`define kXOR	16'b01011_?????_??????
+// 11      -   EXCLUSIVE OR
+`define kXOR   16'b01011_?????_??????
 
 // Synthesis hangs on ALU in Quartus, so we use
 // smaller wildcard
@@ -27,22 +27,22 @@
 `define kBAR   16'b01100_100??_??????
 `define kWAIT  16'b01100_00000_000000
 
-// 14		-	LEFT ROTATION
-`define kROL	16'b01110_?????_??????
-// 15		- 	RIGHT ROTATION
-`define kROR	16'b01111_?????_??????
+// 14      -   LEFT ROTATION
+`define kROL   16'b01110_?????_??????
+// 15      -    RIGHT ROTATION
+`define kROR   16'b01111_?????_??????
 
 `define kBEQZ  16'b10000_?????_??????
 `define kBNEQZ 16'b10001_?????_??????
 `define kBGTZ  16'b10010_?????_??????
 `define kBLTZ  16'b10011_?????_??????
-			  
+           
 // 20
-`define kNOP	16'b10100_?????_??????	// NOP
+`define kNOP   16'b10100_?????_??????   // NOP
 
 // 21
 // 22
-	
+   
 
 `define kJALR  16'b10111_?????_??????
 
@@ -51,14 +51,14 @@
 `define kSW    16'b11010_?????_??????
 `define kSB    16'b11011_?????_??????
 
-// 28		-	BIG SIGMA 0
+// 28      -   BIG SIGMA 0
 `define kBS0   16'b11100_?????_??????
-// 29		-	BIG SIGMA 1
+// 29      -   BIG SIGMA 1
 `define kBS1   16'b11101_?????_??????
-// 30		-	SMALL SIGMA 0
-`define kSS0	16'b11110_?????_??????
-// 31		-	SMALL SIGMA 1
-`define kSS1	16'b11111_?????_??????
+// 30      -   SMALL SIGMA 0
+`define kSS0   16'b11110_?????_??????
+// 31      -   SMALL SIGMA 1
+`define kSS1   16'b11111_?????_??????
 
 //---- Controller states ----//
 // WORK state means start of any operation or wait for the 
@@ -146,45 +146,48 @@ typedef struct packed {
 } debug_s;
 
 typedef struct packed {
-	logic is_load_op_c;
-	logic is_store_op_c;
-	logic op_writes_rf_c;
-	logic is_mem_op_c;
-	logic is_byte_op_c;
-	logic jump_now_c;
-	logic rs_imm_c;
-	logic PC_wen_r_c;
-	
-	logic net_reg_write_cmd_c;
+   logic is_load_op_c;
+   logic is_store_op_c;
+   logic op_writes_rf_c;
+   logic is_mem_op_c;
+   logic is_byte_op_c;
+   logic jump_now_c;
+   logic rs_imm_c;
+   logic PC_wen_r_c;
+   
+   logic net_reg_write_cmd_c;
 } control_pipeline_s;
 
 typedef struct packed {
-	instruction_s   instruction;
-	logic [9:0]	 	pc_r;
+   instruction_s   instruction;
+   logic [9:0]       pc_r;
 } fd_pipeline_s;
 
 typedef struct packed {
-	control_pipeline_s	control;
-	instruction_s       instruction;
-	logic [31:0]       	rs_val;
-	logic [31:0]	   	rd_val;
-	logic [4:0] 	   	rf_wb_addr;
+   control_pipeline_s  control_signals;
+   instruction_s       instruction;
+   logic [31:0]        rs_val;
+   logic [31:0]        rd_val;
+   logic [9:0]         pc_r;
 } dx_pipeline_s;
 
 // a struct for EX/MA pipeline
 typedef struct packed {
-	control_pipeline_s	control;
-	logic [31:0] 		alu_result;
-	logic [4:0]  		opcode;
-	logic [4:0]         rf_wb_addr;
+   control_pipeline_s   control_signals;
+   instruction_s        instruction;
+   logic [31:0]         alu_result;
+   logic                jump_now;
+   logic [31:0]         rs_val_or_zero;
+   logic [9:0]          pc_r;
+
 } xm_pipeline_s;
 
 typedef struct packed {
-	control_pipeline_s	control;
-	logic [31:0]        alu_result;
-	logic [4:0]  		opcode;
-	logic [4:0]         rf_wb_addr;
-	logic [31:0]        pc_plus1; 
+   control_pipeline_s   control_signals;
+   instruction_s        instruction;
+   mem_out_s            from_mem_i;
+   logic [9:0]          pc_r;
+   logic [31:0]         alu_result;
 } mw_pipeline_s;
 
 

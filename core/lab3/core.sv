@@ -74,14 +74,16 @@ logic [mask_length_gp-1:0] barrier_r,      barrier_n,
 assign net_packet_o = net_packet_i;
 
 
-assign data_mem_addr = alu_result;
 
 // DEBUG Struct
 assign debug_o = {PC_r, instruction, state_r, barrier_mask_r, barrier_r};
 
-
-
-
+//*****************************************************************************
+// Bubble Stalls
+//*****************************************************************************
+logic [2:0] bubble = 2;
+always_ff @(posedge clk)
+   bubble <= (bubble+1) % 3;
 
 //-----------------------------------------------------------------------------
 // Pipeline Registers
@@ -91,7 +93,10 @@ dx_pipeline_s dx_pipeline_r, dx_pipeline_n;
 xm_pipeline_s xm_pipeline_r, xm_pipeline_n;
 mw_pipeline_s mw_pipeline_r, mw_pipeline_n;
 
-
+//-----------------------------------------------------------------------------
+// Control Signals
+//-----------------------------------------------------------------------------
+control_pipeline_s control_signals;
 
 //-----------------------------------------------------------------------------
 // IF Stage
@@ -118,7 +123,6 @@ assign instruction = (PC_wen_r) ? imem_out : instruction_r;
 assign pc_plus1     = PC_r + 1'b1;
 assign imm_jump_add = $signed(instruction.rs_imm)  + $signed(PC_r);
 
-
 // Next pc is based on network or the instruction
 always_comb
   begin
@@ -137,32 +141,39 @@ always_comb
         default: begin end
       endcase
   end
-
  
-assign PC_wen = (net_PC_write_cmd_IDLE || ~stall);
+assign PC_wen = (net_PC_write_cmd_IDLE || ~stall) && ~bubble;
   
 always_ff @(posedge clk)
-	begin
-		if(!reset)
-			begin
-				PC_r			<= 0;
-				PC_wen_r 		<= 0;
-				instruction_r 	<= 0;
-			end
-		else
-			begin
-				if(PC_wen)
-					PC_r <= PC_n;
-					
-				instruction_r 	<= instruction;
-				PC_wen_r 		<= PC_wen;
-			end
-	end
+   begin
+      if(!reset)
+         begin
+            PC_r           <= 0;
+            PC_wen_r       <= 0;
+            instruction_r  <= 0;
+         end
+         begin
+            if(PC_wen)
+               PC_r        <= PC_n;
+                 
+            instruction_r  <= instruction;
+            PC_wen_r       <= PC_wen;
+         end
+   end
 
 
+//*****************************************************************************
+// IF/ID Pipeline
+//*****************************************************************************
+assign fd_pipeline_n.instruction = instruction;
+assign fd_pipeline_n.pc_r = PC_r;
+always_ff @(posedge clk)
+   if(!reset || bubble)
+      fd_pipeline_r <= 0;
+   else
+      fd_pipeline_r <= fd_pipeline_n;
 
-
-
+      
 //-----------------------------------------------------------------------------
 // ID Stage
 //-----------------------------------------------------------------------------
@@ -177,35 +188,19 @@ cl_decode decode (.instruction_i(instruction)
                   ,.is_byte_op_o(is_byte_op_c)
                   );
 
-// State machine
-cl_state_machine state_machine (.instruction_i(instruction)
-                               ,.state_i(state_r)
-                               ,.exception_i(exception_o)
-                               ,.net_PC_write_cmd_IDLE_i(net_PC_write_cmd_IDLE)
-                               ,.stall_i(stall)
-                               ,.state_o(state_n)
-                               );
+//*****************************************************************************
+//* Pipeline Control Signals
+//***************************************************************************** 
+assign control_signals.is_load_op_c   = is_load_op_c; 
+assign control_signals.op_writes_rf_c = op_writes_rf_c;
+assign control_signals.is_store_op_c  = is_store_op_c;
+assign control_signals.is_mem_op_c    = is_mem_op_c;
+assign control_signals.is_byte_op_c   = is_byte_op_c;
 
-// select the input data for Register file, from network, the PC_plus1 for JALR,
-// Data Memory or ALU result
-always_comb
-  begin
-    if (net_reg_write_cmd)
-      rf_wd = net_packet_i.net_data;
-
-    else if (instruction ==? `kJALR)
-      rf_wd = pc_plus1;
-
-    else if (is_load_op_c)
-      rf_wd = from_mem_i.read_data;
-
-    else
-      rf_wd = alu_result;
-  end
 
 // Register write could be from network or the controller
-assign rf_wen    = (net_reg_write_cmd || (op_writes_rf_c && ~stall));							   
-							   
+assign rf_wen = (net_reg_write_cmd || (op_writes_rf_c && (~stall)));                        
+                        
 // Selection between network and address included in the instruction which is exeuted
 // Address for Reg. File is shorter than address of Ins. memory in network data
 // Since network can write into immediate registers, the address is wider
@@ -215,41 +210,86 @@ assign rd_addr = (net_reg_write_cmd)
                  : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
                     ,{instruction.rd}});
 
-							   
+                        
 // Register file
 reg_file #(.addr_width_p($bits(instruction.rs_imm))) rf
           (.clk(clk)
           ,.rs_addr_i(instruction.rs_imm)
           ,.rd_addr_i(rd_addr)
           ,.wen_i(rf_wen)
-		  ,.write_addr_i(rd_addr)	//added for new reg file parameter
+          ,.write_addr_i(rd_addr)   //added for new reg file parameter
           ,.write_data_i(rf_wd)
           ,.rs_val_o(rs_val)
           ,.rd_val_o(rd_val)
           );
 
-assign rs_val_or_zero = instruction.rs_imm ? rs_val : 32'b0;
-assign rd_val_or_zero = rd_addr            ? rd_val : 32'b0;
 
-
+//*****************************************************************************
+//* ID/EX Pipeline
+//*****************************************************************************
+assign dx_pipeline_n.control_signals   = control_signals;
+assign dx_pipeline_n.instruction       = instruction;
+assign dx_pipeline_n.rs_val            = rs_val;
+assign dx_pipeline_n.rd_val            = rd_val;
+assign dx_pipeline_n.pc_r              = fd_pipeline_r.pc_r;
+always_ff @(posedge clk)
+   if(!reset || bubble)
+      dx_pipeline_r <=0;
+   else
+      dx_pipeline_r <= dx_pipeline_n;
+       
 
 
 //-----------------------------------------------------------------------------
 // EX Stage
 //-----------------------------------------------------------------------------
 
+assign rs_val_or_zero = dx_pipeline_r.instruction.rs_imm ? dx_pipeline_r.rs_val : 32'b0;
+assign rd_val_or_zero = dx_pipeline_r.rd_val             ? dx_pipeline_r.rd_val : 32'b0;
+
 // ALU
 alu alu_1 (.rd_i(rd_val_or_zero)
           ,.rs_i(rs_val_or_zero)
-          ,.op_i(instruction)
+          ,.op_i(dx_pipeline_r.instruction)
           ,.result_o(alu_result)
           ,.jump_now_o(jump_now)
           );
 
-		  
+
+//*****************************************************************************
+//* ID/EX Pipeline
+//***************************************************************************** 
+assign xm_pipeline_n.control_signals   = dx_pipeline_r.control_signals;
+assign xm_pipeline_n.instruction       = dx_pipeline_r.instruction;
+assign xm_pipeline_n.alu_result        = alu_result;
+assign xm_pipeline_n.jump_now          = jump_now;
+assign xm_pipeline_n.rs_val_or_zero    = rs_val_or_zero;
+assign xm_pipeline_n.pc_r              = dx_pipeline_r.pc_r;
+
+always_ff @(posedge clk)
+   if(!reset)
+      xm_pipeline_r  <= 0;
+   else 
+      xm_pipeline_r  <= xm_pipeline_r;
+
+
 //-----------------------------------------------------------------------------
 // MA Stage
 //-----------------------------------------------------------------------------  
+
+assign data_mem_addr = xm_pipeline_r.alu_result;
+
+  
+// Launch LD/ST
+assign valid_to_mem_c = is_mem_op_c & (mem_stage_r < 2'b10);
+  
+// Data_mem
+assign to_mem_o = '{write_data    : xm_pipeline_r.rs_val_or_zero
+                   ,valid         : valid_to_mem_c
+                   ,wen           : xm_pipeline_r.control_signals.is_store_op_c
+                   ,byte_not_word : xm_pipeline_r.control_signals.is_byte_op_c
+                   ,yumi          : yumi_to_mem_c
+                   };
 
 always_comb
   begin
@@ -270,34 +310,67 @@ always_comb
       end
   end
 
-// Launch LD/ST
-assign valid_to_mem_c = is_mem_op_c & (mem_stage_r < 2'b10);
-  
-// Data_mem
-assign to_mem_o = '{write_data    : rs_val_or_zero
-                   ,valid         : valid_to_mem_c
-                   ,wen           : is_store_op_c
-                   ,byte_not_word : is_byte_op_c
-                   ,yumi          : yumi_to_mem_c
-                   };
+always_ff @(posedge clk)
+   if(!reset)
+      mem_stage_r <= 2'b00;
+   else
+      mem_stage_r <= mem_stage_n;
+                   
+//*****************************************************************************
+//* MA/WB Pipeline
+//*****************************************************************************                    
+assign mw_pipeline_n.instruction       = xm_pipeline_r.instruction;
+assign mw_pipeline_n.control_signals   = xm_pipeline_r.control_signals;
+assign mw_pipeline_n.alu_result        = xm_pipeline_r.alu_result;
+assign mw_pipeline_n.from_mem_i        = from_mem_i;
+assign mw_pipeline_n.pc_r              = xm_pipeline_r.pc_r;
 
+always_ff @(posedge clk)
+   if(!reset)
+      mw_pipeline_r  <= mw_pipeline_n;
+   else
+      mw_pipeline_r  <= mw_pipeline_n;
+      
+      
 //-----------------------------------------------------------------------------
 // WB Stage
 //-----------------------------------------------------------------------------  
 
+// select the input data for Register file, from network, the PC_plus1 for JALR,
+// Data Memory or ALU result
+always_comb
+  begin
+    if (net_reg_write_cmd)
+      rf_wd = net_packet_i.net_data;
+    else if (mw_pipeline_r.instruction ==? `kJALR)
+      rf_wd = mw_pipeline_r.pc_r + 1;
+    else if (mw_pipeline_r.control_signals.is_load_op_c)
+      rf_wd = mw_pipeline_r.from_mem_i.read_data;
+    else
+      rf_wd = mw_pipeline_r.alu_result;
+  end
 
 
 
-
-
+  
+  
+  
+  
+  
+  
+//-----------------------------------------------------------------------------
+// IDK WTF Stage
+//-----------------------------------------------------------------------------  
+  
+  
+  
+  
 // stall and memory stages signals
 // rf structural hazard and imem structural hazard (can't load next instruction)
 assign stall_non_mem = (net_reg_write_cmd && op_writes_rf_c)
                     || (net_imem_write_cmd);
 // Stall if LD/ST still active; or in non-RUN state
 assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN);
-
-
 
 // Sequential part, including PC, barrier, exception and state
 always_ff @ (posedge clk)
@@ -308,7 +381,6 @@ always_ff @ (posedge clk)
         barrier_r       <= {(mask_length_gp){1'b0}};
         state_r         <= IDLE;
         exception_o     <= 0;
-        mem_stage_r     <= 2'b00;
       end
 
     else
@@ -317,10 +389,17 @@ always_ff @ (posedge clk)
         barrier_r      <= barrier_n;
         state_r        <= state_n;
         exception_o    <= exception_n;
-        mem_stage_r    <= mem_stage_n;
       end
   end
-
+  
+// State machine
+cl_state_machine state_machine (.instruction_i(xm_pipeline_r.instruction)
+                               ,.state_i(state_r)
+                               ,.exception_i(exception_o)
+                               ,.net_PC_write_cmd_IDLE_i(net_PC_write_cmd_IDLE)
+                               ,.stall_i(stall)
+                               ,.state_o(state_n)
+                               );
 
 //---- Datapath with network ----//
 // Detect a valid packet for this core
@@ -355,8 +434,8 @@ always_comb
 // or by an an BAR instruction that is committing
 assign barrier_n = net_PC_write_cmd_IDLE
                    ? net_packet_i.net_data[0+:mask_length_gp]
-                   : ((instruction==?`kBAR) & ~stall)
-                     ? alu_result [0+:mask_length_gp]
+                   : ((xm_pipeline_r.instruction==?`kBAR) & ~stall)
+                     ? xm_pipeline_r.alu_result [0+:mask_length_gp]
                      : barrier_r;
 
 // exception_n signal, which indicates an exception
