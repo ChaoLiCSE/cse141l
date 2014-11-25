@@ -31,9 +31,6 @@ LBU_TEST:
 // Test for BEQ
 BEQZ  $R0,START
 NOP
-NOP
-NOP
-NOP
 
 // Check_answer subroutine
 
@@ -145,7 +142,6 @@ NEXT:
 ADDU  $R1,%FOUR    
 JALR  $R0,$R1
 SW    $R12, $R5    // Indicate failed test
-
 PASSED_JALR:
 SW    $R10, $R5    // indicate passed test
 

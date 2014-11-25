@@ -1,0 +1,4530 @@
+# Compile of alu.sv was successful.
+# Compile of cl_decode.sv was successful.
+# Compile of cl_state_machine.sv was successful.
+# Compile of core.sv was successful.
+# Compile of core_flattened.sv was successful.
+# Compile of core_tb.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of definitions.sv was successful.
+# Compile of disassemble.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of miner_tb.sv was successful.
+# Compile of net_packet_logger_s.sv was successful.
+# Compile of reg_file.sv was successful.
+# 13 compiles, 0 failed with no errors. 
+vsim work.core_tb
+# vsim work.core_tb 
+# Loading sv_std.std
+# Loading work.core_tb_sv_unit
+# Loading work.core_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+# Loading work.net_packet_logger_s_sv_unit
+# Loading work.network_packet_s_logger
+run -all
+# --------VANILLA HAS BOOTED---------
+# PASS: 0x00000001          1 (CYCLE 0x0000000b         11)
+# PASS: 0x00000002          2 (CYCLE 0x00000012         18)
+# PASS: 0x00000003          3 (CYCLE 0x00000019         25)
+# PASS: 0x00000004          4 (CYCLE 0x00000020         32)
+# PASS: 0x00000005          5 (CYCLE 0x00000026         38)
+# PASS: 0x00000006          6 (CYCLE 0x00000034         52)
+# PASS: 0x00000007          7 (CYCLE 0x0000003f         63)
+# PASS: 0x00000008          8 (CYCLE 0x0000004f         79)
+# PASS: 0x00000009          9 (CYCLE 0x00000056         86)
+# PASS: 0x0000000a         10 (CYCLE 0x0000005c         92)
+# PASS: 0x0000000b         11 (CYCLE 0x00000062         98)
+# PASS: 0x0000000c         12 (CYCLE 0x0000006c        108)
+# PASS: 0x0000000d         13 (CYCLE 0x00000077        119)
+# PASS: 0x0000000e         14 (CYCLE 0x00000082        130)
+# PASS: 0x0000000f         15 (CYCLE 0x0000008d        141)
+# PASS: 0x00000010         16 (CYCLE 0x00000098        152)
+# PASS: 0x00000011         17 (CYCLE 0x000000a2        162)
+# PASS: 0x00000012         18 (CYCLE 0x000000ac        172)
+# PASS: 0x00000013         19 (CYCLE 0x000000b6        182)
+# {000000b9} barrier OR changed from        0 to        2
+# {000000ba} barrier OR changed from        0 to        2
+# DONE: 0x00000013         19 (CYCLE 0x000000ba        186)
+# Break in Module core_tb at C:/cygwin64/home/jack/cse141L/core/lab3/core_tb.sv line 258
+vsim work.miner_tb
+# vsim work.miner_tb 
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# [*] Trying a new Nonce = 0x000000001
+# [*] Trying a new Nonce = 0x000000002
+# [*] Trying a new Nonce = 0x000000003
+# [*] Trying a new Nonce = 0x000000004
+# [*] Trying a new Nonce = 0x000000005
+# [*] Trying a new Nonce = 0x000000006
+# [*] Trying a new Nonce = 0x000000007
+# [*] Trying a new Nonce = 0x000000008
+# [*] Trying a new Nonce = 0x000000009
+# [*] Trying a new Nonce = 0x00000000a
+# [*] Trying a new Nonce = 0x00000000b
+# [*] Trying a new Nonce = 0x00000000c
+# [*] Trying a new Nonce = 0x00000000d
+# [*] Trying a new Nonce = 0x00000000e
+# [*] Trying a new Nonce = 0x00000000f
+# [*] Trying a new Nonce = 0x000000010
+# [*] Trying a new Nonce = 0x000000011
+# [*] Trying a new Nonce = 0x000000012
+# [*] Trying a new Nonce = 0x000000013
+# [*] Trying a new Nonce = 0x000000014
+# [*] Trying a new Nonce = 0x000000015
+# [*] Trying a new Nonce = 0x000000016
+# [*] Trying a new Nonce = 0x000000017
+# [*] Trying a new Nonce = 0x000000018
+# [*] Trying a new Nonce = 0x000000019
+# [*] Trying a new Nonce = 0x00000001a
+# [*] Trying a new Nonce = 0x00000001b
+# [*] Trying a new Nonce = 0x00000001c
+# [*] Trying a new Nonce = 0x00000001d
+# [*] Trying a new Nonce = 0x00000001e
+# [*] Trying a new Nonce = 0x00000001f
+# [*] Trying a new Nonce = 0x000000020
+# [*] Trying a new Nonce = 0x000000021
+# [*] Trying a new Nonce = 0x000000022
+# [*] Trying a new Nonce = 0x000000023
+# [*] Trying a new Nonce = 0x000000024
+# [*] Trying a new Nonce = 0x000000025
+# [*] Trying a new Nonce = 0x000000026
+# [*] Trying a new Nonce = 0x000000027
+# [*] Trying a new Nonce = 0x000000028
+# [*] Trying a new Nonce = 0x000000029
+# [*] Trying a new Nonce = 0x00000002a
+# [*] Trying a new Nonce = 0x00000002b
+# [*] Trying a new Nonce = 0x00000002c
+# [*] Trying a new Nonce = 0x00000002d
+# [*] Trying a new Nonce = 0x00000002e
+# [*] Trying a new Nonce = 0x00000002f
+# [*] Trying a new Nonce = 0x000000030
+# [*] Trying a new Nonce = 0x000000031
+# [*] Trying a new Nonce = 0x000000032
+# [*] Trying a new Nonce = 0x000000033
+# [*] Trying a new Nonce = 0x000000034
+# [*] Trying a new Nonce = 0x000000035
+# [*] Trying a new Nonce = 0x000000036
+# [*] Trying a new Nonce = 0x000000037
+# [*] Trying a new Nonce = 0x000000038
+# [*] Trying a new Nonce = 0x000000039
+# [*] Trying a new Nonce = 0x00000003a
+# [*] Trying a new Nonce = 0x00000003b
+# [*] Trying a new Nonce = 0x00000003c
+# [*] Trying a new Nonce = 0x00000003d
+# [*] Trying a new Nonce = 0x00000003e
+# [*] Trying a new Nonce = 0x00000003f
+# [*] Trying a new Nonce = 0x000000040
+# [*] Trying a new Nonce = 0x000000041
+# [*] Trying a new Nonce = 0x000000042
+# [*] Trying a new Nonce = 0x000000043
+# [*] Trying a new Nonce = 0x000000044
+# [*] Trying a new Nonce = 0x000000045
+# [*] Trying a new Nonce = 0x000000046
+# [*] Trying a new Nonce = 0x000000047
+# [*] Trying a new Nonce = 0x000000048
+# [*] Trying a new Nonce = 0x000000049
+# [*] Trying a new Nonce = 0x00000004a
+# [*] Trying a new Nonce = 0x00000004b
+# [*] Trying a new Nonce = 0x00000004c
+# [*] Trying a new Nonce = 0x00000004d
+# [*] Trying a new Nonce = 0x00000004e
+# [*] Trying a new Nonce = 0x00000004f
+# [*] Trying a new Nonce = 0x000000050
+# [*] Trying a new Nonce = 0x000000051
+# [*] Trying a new Nonce = 0x000000052
+# [*] Trying a new Nonce = 0x000000053
+# [*] Trying a new Nonce = 0x000000054
+# [*] Trying a new Nonce = 0x000000055
+# [*] Trying a new Nonce = 0x000000056
+# [*] Trying a new Nonce = 0x000000057
+# [*] Trying a new Nonce = 0x000000058
+# [*] Trying a new Nonce = 0x000000059
+# [*] Trying a new Nonce = 0x00000005a
+# [*] Trying a new Nonce = 0x00000005b
+# [*] Trying a new Nonce = 0x00000005c
+# [*] Trying a new Nonce = 0x00000005d
+# [*] Trying a new Nonce = 0x00000005e
+# [*] Trying a new Nonce = 0x00000005f
+# [*] Trying a new Nonce = 0x000000060
+# [*] Trying a new Nonce = 0x000000061
+# [*] Trying a new Nonce = 0x000000062
+# [*] Trying a new Nonce = 0x000000063
+# [*] Trying a new Nonce = 0x000000064
+# [*] Trying a new Nonce = 0x000000065
+# [*] Trying a new Nonce = 0x000000066
+# [*] Trying a new Nonce = 0x000000067
+# [*] Trying a new Nonce = 0x000000068
+# [*] Trying a new Nonce = 0x000000069
+# [*] Trying a new Nonce = 0x00000006a
+# [*] Trying a new Nonce = 0x00000006b
+# [*] Trying a new Nonce = 0x00000006c
+# [*] Trying a new Nonce = 0x00000006d
+# [*] Trying a new Nonce = 0x00000006e
+# [*] Trying a new Nonce = 0x00000006f
+# [*] Trying a new Nonce = 0x000000070
+# [*] Trying a new Nonce = 0x000000071
+# [*] Trying a new Nonce = 0x000000072
+# [*] Trying a new Nonce = 0x000000073
+# [*] Trying a new Nonce = 0x000000074
+# [*] Trying a new Nonce = 0x000000075
+# [*] Trying a new Nonce = 0x000000076
+# [*] Trying a new Nonce = 0x000000077
+# [*] Trying a new Nonce = 0x000000078
+# [*] Trying a new Nonce = 0x000000079
+# [*] Trying a new Nonce = 0x00000007a
+# [*] Trying a new Nonce = 0x00000007b
+# [*] Trying a new Nonce = 0x00000007c
+# [*] Trying a new Nonce = 0x00000007d
+# [*] Trying a new Nonce = 0x00000007e
+# [*] Trying a new Nonce = 0x00000007f
+# [*] Trying a new Nonce = 0x000000080
+# [*] Trying a new Nonce = 0x000000081
+# [*] Trying a new Nonce = 0x000000082
+# [*] Trying a new Nonce = 0x000000083
+# [*] Trying a new Nonce = 0x000000084
+# [*] Trying a new Nonce = 0x000000085
+# [*] Trying a new Nonce = 0x000000086
+# [*] Trying a new Nonce = 0x000000087
+# [*] Trying a new Nonce = 0x000000088
+# [*] Trying a new Nonce = 0x000000089
+# [*] Trying a new Nonce = 0x00000008a
+# [*] Trying a new Nonce = 0x00000008b
+# [*] Trying a new Nonce = 0x00000008c
+# [*] Trying a new Nonce = 0x00000008d
+# [*] Trying a new Nonce = 0x00000008e
+# [*] Trying a new Nonce = 0x00000008f
+# [*] Trying a new Nonce = 0x000000090
+# [*] Trying a new Nonce = 0x000000091
+# [*] Trying a new Nonce = 0x000000092
+# [*] Trying a new Nonce = 0x000000093
+# [*] Trying a new Nonce = 0x000000094
+# [*] Trying a new Nonce = 0x000000095
+# [*] Trying a new Nonce = 0x000000096
+# [*] Trying a new Nonce = 0x000000097
+# [*] Trying a new Nonce = 0x000000098
+# [*] Trying a new Nonce = 0x000000099
+# [*] Trying a new Nonce = 0x00000009a
+# [*] Trying a new Nonce = 0x00000009b
+# [*] Trying a new Nonce = 0x00000009c
+# [*] Trying a new Nonce = 0x00000009d
+# [*] Trying a new Nonce = 0x00000009e
+# [*] Trying a new Nonce = 0x00000009f
+# [*] Trying a new Nonce = 0x0000000a0
+# [*] Trying a new Nonce = 0x0000000a1
+# [*] Trying a new Nonce = 0x0000000a2
+# [*] Trying a new Nonce = 0x0000000a3
+# [*] Trying a new Nonce = 0x0000000a4
+# [*] Trying a new Nonce = 0x0000000a5
+# [*] Trying a new Nonce = 0x0000000a6
+# [*] Trying a new Nonce = 0x0000000a7
+# [*] Trying a new Nonce = 0x0000000a8
+# [*] Trying a new Nonce = 0x0000000a9
+# [*] Trying a new Nonce = 0x0000000aa
+# [*] Trying a new Nonce = 0x0000000ab
+# [*] Trying a new Nonce = 0x0000000ac
+# [*] Trying a new Nonce = 0x0000000ad
+# [*] Trying a new Nonce = 0x0000000ae
+# [*] Trying a new Nonce = 0x0000000af
+# [*] Trying a new Nonce = 0x0000000b0
+# [*] Trying a new Nonce = 0x0000000b1
+# [*] Trying a new Nonce = 0x0000000b2
+# [*] Trying a new Nonce = 0x0000000b3
+# [*] Trying a new Nonce = 0x0000000b4
+# [*] Trying a new Nonce = 0x0000000b5
+# [*] Trying a new Nonce = 0x0000000b6
+# [*] Trying a new Nonce = 0x0000000b7
+# [*] Trying a new Nonce = 0x0000000b8
+# [*] Trying a new Nonce = 0x0000000b9
+# [*] Trying a new Nonce = 0x0000000ba
+# [*] Trying a new Nonce = 0x0000000bb
+# [*] Trying a new Nonce = 0x0000000bc
+# [*] Trying a new Nonce = 0x0000000bd
+# [*] Trying a new Nonce = 0x0000000be
+# [*] Trying a new Nonce = 0x0000000bf
+# [*] Trying a new Nonce = 0x0000000c0
+# [*] Trying a new Nonce = 0x0000000c1
+# [*] Trying a new Nonce = 0x0000000c2
+# [*] Trying a new Nonce = 0x0000000c3
+# [*] Trying a new Nonce = 0x0000000c4
+# [*] Trying a new Nonce = 0x0000000c5
+# [*] Trying a new Nonce = 0x0000000c6
+# [*] Trying a new Nonce = 0x0000000c7
+# [*] Trying a new Nonce = 0x0000000c8
+# [*] Trying a new Nonce = 0x0000000c9
+# [*] Trying a new Nonce = 0x0000000ca
+# [*] Trying a new Nonce = 0x0000000cb
+# [*] Trying a new Nonce = 0x0000000cc
+# [*] Trying a new Nonce = 0x0000000cd
+# [*] Trying a new Nonce = 0x0000000ce
+# [*] Trying a new Nonce = 0x0000000cf
+# [*] Trying a new Nonce = 0x0000000d0
+# [*] Trying a new Nonce = 0x0000000d1
+# [*] Trying a new Nonce = 0x0000000d2
+# [*] Trying a new Nonce = 0x0000000d3
+# [*] Trying a new Nonce = 0x0000000d4
+# [*] Trying a new Nonce = 0x0000000d5
+# [*] Trying a new Nonce = 0x0000000d6
+# [*] Trying a new Nonce = 0x0000000d7
+# [*] Trying a new Nonce = 0x0000000d8
+# [*] Trying a new Nonce = 0x0000000d9
+# [*] Trying a new Nonce = 0x0000000da
+# [*] Trying a new Nonce = 0x0000000db
+# [*] Trying a new Nonce = 0x0000000dc
+# [*] Trying a new Nonce = 0x0000000dd
+# [*] Trying a new Nonce = 0x0000000de
+# [*] Trying a new Nonce = 0x0000000df
+# [*] Trying a new Nonce = 0x0000000e0
+# [*] Trying a new Nonce = 0x0000000e1
+# [*] Trying a new Nonce = 0x0000000e2
+# [*] Trying a new Nonce = 0x0000000e3
+# [*] Trying a new Nonce = 0x0000000e4
+# [*] Trying a new Nonce = 0x0000000e5
+# [*] Trying a new Nonce = 0x0000000e6
+# [*] Trying a new Nonce = 0x0000000e7
+# [*] Trying a new Nonce = 0x0000000e8
+# [*] Trying a new Nonce = 0x0000000e9
+# [*] Trying a new Nonce = 0x0000000ea
+# [*] Trying a new Nonce = 0x0000000eb
+# [*] Trying a new Nonce = 0x0000000ec
+# [*] Trying a new Nonce = 0x0000000ed
+# [*] Trying a new Nonce = 0x0000000ee
+# [*] Trying a new Nonce = 0x0000000ef
+# [*] Trying a new Nonce = 0x0000000f0
+# [*] Trying a new Nonce = 0x0000000f1
+# [*] Trying a new Nonce = 0x0000000f2
+# [*] Trying a new Nonce = 0x0000000f3
+# [*] Trying a new Nonce = 0x0000000f4
+# [*] Trying a new Nonce = 0x0000000f5
+# [*] Trying a new Nonce = 0x0000000f6
+# [*] Trying a new Nonce = 0x0000000f7
+# [*] Trying a new Nonce = 0x0000000f8
+# [*] Trying a new Nonce = 0x0000000f9
+# [*] Trying a new Nonce = 0x0000000fa
+# [*] Trying a new Nonce = 0x0000000fb
+# [*] Trying a new Nonce = 0x0000000fc
+# [*] Trying a new Nonce = 0x0000000fd
+# [*] Trying a new Nonce = 0x0000000fe
+# [*] Trying a new Nonce = 0x0000000ff
+# [*] Trying a new Nonce = 0x000000100
+# [*] Trying a new Nonce = 0x000000101
+# [*] Trying a new Nonce = 0x000000102
+# [*] Trying a new Nonce = 0x000000103
+# [*] Trying a new Nonce = 0x000000104
+# [*] Trying a new Nonce = 0x000000105
+# [*] Trying a new Nonce = 0x000000106
+# [*] Trying a new Nonce = 0x000000107
+# [*] Trying a new Nonce = 0x000000108
+# [*] Trying a new Nonce = 0x000000109
+# [*] Trying a new Nonce = 0x00000010a
+# [*] Trying a new Nonce = 0x00000010b
+# [*] Trying a new Nonce = 0x00000010c
+# [*] Trying a new Nonce = 0x00000010d
+# [*] Trying a new Nonce = 0x00000010e
+# [*] Trying a new Nonce = 0x00000010f
+# [*] Trying a new Nonce = 0x000000110
+# [*] Trying a new Nonce = 0x000000111
+# [*] Trying a new Nonce = 0x000000112
+# [*] Trying a new Nonce = 0x000000113
+# [*] Trying a new Nonce = 0x000000114
+# [*] Trying a new Nonce = 0x000000115
+# [*] Trying a new Nonce = 0x000000116
+# [*] Trying a new Nonce = 0x000000117
+# [*] Trying a new Nonce = 0x000000118
+# [*] Trying a new Nonce = 0x000000119
+# [*] Trying a new Nonce = 0x00000011a
+# [*] Trying a new Nonce = 0x00000011b
+# [*] Trying a new Nonce = 0x00000011c
+# [*] Trying a new Nonce = 0x00000011d
+# [*] Trying a new Nonce = 0x00000011e
+# [*] Trying a new Nonce = 0x00000011f
+# [*] Trying a new Nonce = 0x000000120
+# [*] Trying a new Nonce = 0x000000121
+# [*] Trying a new Nonce = 0x000000122
+# [*] Trying a new Nonce = 0x000000123
+# [*] Trying a new Nonce = 0x000000124
+# [*] Trying a new Nonce = 0x000000125
+# [*] Trying a new Nonce = 0x000000126
+# [*] Trying a new Nonce = 0x000000127
+# [*] Trying a new Nonce = 0x000000128
+# [*] Trying a new Nonce = 0x000000129
+# [*] Trying a new Nonce = 0x00000012a
+# [*] Trying a new Nonce = 0x00000012b
+# [*] Trying a new Nonce = 0x00000012c
+# [*] Trying a new Nonce = 0x00000012d
+# [*] Trying a new Nonce = 0x00000012e
+# [*] Trying a new Nonce = 0x00000012f
+# [*] Trying a new Nonce = 0x000000130
+# [*] Trying a new Nonce = 0x000000131
+# [*] Trying a new Nonce = 0x000000132
+# [*] Trying a new Nonce = 0x000000133
+# [*] Trying a new Nonce = 0x000000134
+# [*] Trying a new Nonce = 0x000000135
+# [*] Trying a new Nonce = 0x000000136
+# [*] Trying a new Nonce = 0x000000137
+# [*] Trying a new Nonce = 0x000000138
+# [*] Trying a new Nonce = 0x000000139
+# [*] Trying a new Nonce = 0x00000013a
+# [*] Trying a new Nonce = 0x00000013b
+# [*] Trying a new Nonce = 0x00000013c
+# [*] Trying a new Nonce = 0x00000013d
+# [*] Trying a new Nonce = 0x00000013e
+# [*] Trying a new Nonce = 0x00000013f
+# [*] Trying a new Nonce = 0x000000140
+# [*] Trying a new Nonce = 0x000000141
+# [*] Trying a new Nonce = 0x000000142
+# [*] Trying a new Nonce = 0x000000143
+# [*] Trying a new Nonce = 0x000000144
+# [*] Trying a new Nonce = 0x000000145
+# [*] Trying a new Nonce = 0x000000146
+# [*] Trying a new Nonce = 0x000000147
+# [*] Trying a new Nonce = 0x000000148
+# [*] Trying a new Nonce = 0x000000149
+# [*] Trying a new Nonce = 0x00000014a
+# [*] Trying a new Nonce = 0x00000014b
+# [*] Trying a new Nonce = 0x00000014c
+# [*] Trying a new Nonce = 0x00000014d
+# [*] Trying a new Nonce = 0x00000014e
+# [*] Trying a new Nonce = 0x00000014f
+# [*] Trying a new Nonce = 0x000000150
+# [*] Trying a new Nonce = 0x000000151
+# [*] Trying a new Nonce = 0x000000152
+# [*] Trying a new Nonce = 0x000000153
+# [*] Trying a new Nonce = 0x000000154
+# [*] Trying a new Nonce = 0x000000155
+# [*] Trying a new Nonce = 0x000000156
+# [*] Trying a new Nonce = 0x000000157
+# [*] Trying a new Nonce = 0x000000158
+# [*] Trying a new Nonce = 0x000000159
+# [*] Trying a new Nonce = 0x00000015a
+# [*] Trying a new Nonce = 0x00000015b
+# [*] Trying a new Nonce = 0x00000015c
+# [*] Trying a new Nonce = 0x00000015d
+# [*] Trying a new Nonce = 0x00000015e
+# [*] Trying a new Nonce = 0x00000015f
+# [*] Trying a new Nonce = 0x000000160
+# [*] Trying a new Nonce = 0x000000161
+# [*] Trying a new Nonce = 0x000000162
+# [*] Trying a new Nonce = 0x000000163
+# [*] Trying a new Nonce = 0x000000164
+# [*] Trying a new Nonce = 0x000000165
+# [*] Trying a new Nonce = 0x000000166
+# [*] Trying a new Nonce = 0x000000167
+# [*] Trying a new Nonce = 0x000000168
+# [*] Trying a new Nonce = 0x000000169
+# [*] Trying a new Nonce = 0x00000016a
+# [*] Trying a new Nonce = 0x00000016b
+# [*] Trying a new Nonce = 0x00000016c
+# [*] Trying a new Nonce = 0x00000016d
+# [*] Trying a new Nonce = 0x00000016e
+# [*] Trying a new Nonce = 0x00000016f
+# [*] Trying a new Nonce = 0x000000170
+# [*] Trying a new Nonce = 0x000000171
+# [*] Trying a new Nonce = 0x000000172
+# [*] Trying a new Nonce = 0x000000173
+# [*] Trying a new Nonce = 0x000000174
+# [*] Trying a new Nonce = 0x000000175
+# [*] Trying a new Nonce = 0x000000176
+# [*] Trying a new Nonce = 0x000000177
+# [*] Trying a new Nonce = 0x000000178
+# [*] Trying a new Nonce = 0x000000179
+# [*] Trying a new Nonce = 0x00000017a
+# [*] Trying a new Nonce = 0x00000017b
+# [*] Trying a new Nonce = 0x00000017c
+# [*] Trying a new Nonce = 0x00000017d
+# [*] Trying a new Nonce = 0x00000017e
+# [*] Trying a new Nonce = 0x00000017f
+# [*] Trying a new Nonce = 0x000000180
+# [*] Trying a new Nonce = 0x000000181
+# [*] Trying a new Nonce = 0x000000182
+# [*] Trying a new Nonce = 0x000000183
+# [*] Trying a new Nonce = 0x000000184
+# [*] Trying a new Nonce = 0x000000185
+# [*] Trying a new Nonce = 0x000000186
+# [*] Trying a new Nonce = 0x000000187
+# [*] Trying a new Nonce = 0x000000188
+# [*] Trying a new Nonce = 0x000000189
+# [*] Trying a new Nonce = 0x00000018a
+# [*] Trying a new Nonce = 0x00000018b
+# [*] Trying a new Nonce = 0x00000018c
+# [*] Trying a new Nonce = 0x00000018d
+# [*] Trying a new Nonce = 0x00000018e
+# [*] Trying a new Nonce = 0x00000018f
+# [*] Trying a new Nonce = 0x000000190
+# [*] Trying a new Nonce = 0x000000191
+# [*] Trying a new Nonce = 0x000000192
+# [*] Trying a new Nonce = 0x000000193
+# [*] Trying a new Nonce = 0x000000194
+# [*] Trying a new Nonce = 0x000000195
+# [*] Trying a new Nonce = 0x000000196
+# [*] Trying a new Nonce = 0x000000197
+# [*] Trying a new Nonce = 0x000000198
+# [*] Trying a new Nonce = 0x000000199
+# [*] Trying a new Nonce = 0x00000019a
+# [*] Trying a new Nonce = 0x00000019b
+# [*] Trying a new Nonce = 0x00000019c
+# [*] Trying a new Nonce = 0x00000019d
+# [*] Trying a new Nonce = 0x00000019e
+# [*] Trying a new Nonce = 0x00000019f
+# [*] Trying a new Nonce = 0x0000001a0
+# [*] Trying a new Nonce = 0x0000001a1
+# [*] Trying a new Nonce = 0x0000001a2
+# [*] Trying a new Nonce = 0x0000001a3
+# [*] Trying a new Nonce = 0x0000001a4
+# [*] Trying a new Nonce = 0x0000001a5
+# [*] Trying a new Nonce = 0x0000001a6
+# [*] Trying a new Nonce = 0x0000001a7
+# [*] Trying a new Nonce = 0x0000001a8
+# [*] Trying a new Nonce = 0x0000001a9
+# [*] Trying a new Nonce = 0x0000001aa
+# [*] Trying a new Nonce = 0x0000001ab
+# [*] Trying a new Nonce = 0x0000001ac
+# [*] Trying a new Nonce = 0x0000001ad
+# [*] Trying a new Nonce = 0x0000001ae
+# [*] Trying a new Nonce = 0x0000001af
+# [*] Trying a new Nonce = 0x0000001b0
+# [*] Trying a new Nonce = 0x0000001b1
+# [*] Trying a new Nonce = 0x0000001b2
+# [*] Trying a new Nonce = 0x0000001b3
+# [*] Trying a new Nonce = 0x0000001b4
+# [*] Trying a new Nonce = 0x0000001b5
+# [*] Trying a new Nonce = 0x0000001b6
+# [*] Trying a new Nonce = 0x0000001b7
+# [*] Trying a new Nonce = 0x0000001b8
+# [*] Trying a new Nonce = 0x0000001b9
+# [*] Trying a new Nonce = 0x0000001ba
+# [*] Trying a new Nonce = 0x0000001bb
+# [*] Trying a new Nonce = 0x0000001bc
+# [*] Trying a new Nonce = 0x0000001bd
+# [*] Trying a new Nonce = 0x0000001be
+# [*] Trying a new Nonce = 0x0000001bf
+# [*] Trying a new Nonce = 0x0000001c0
+# [*] Trying a new Nonce = 0x0000001c1
+# [*] Trying a new Nonce = 0x0000001c2
+# [*] Trying a new Nonce = 0x0000001c3
+# [*] Trying a new Nonce = 0x0000001c4
+# [*] Trying a new Nonce = 0x0000001c5
+# [*] Trying a new Nonce = 0x0000001c6
+# [*] Trying a new Nonce = 0x0000001c7
+# [*] Trying a new Nonce = 0x0000001c8
+# [*] Trying a new Nonce = 0x0000001c9
+# [*] Trying a new Nonce = 0x0000001ca
+# [*] Trying a new Nonce = 0x0000001cb
+# [*] Trying a new Nonce = 0x0000001cc
+# [*] Trying a new Nonce = 0x0000001cd
+# [*] Trying a new Nonce = 0x0000001ce
+# [*] Trying a new Nonce = 0x0000001cf
+# [*] Trying a new Nonce = 0x0000001d0
+# [*] Trying a new Nonce = 0x0000001d1
+# [*] Trying a new Nonce = 0x0000001d2
+# [*] Trying a new Nonce = 0x0000001d3
+# [*] Trying a new Nonce = 0x0000001d4
+# [*] Trying a new Nonce = 0x0000001d5
+# [*] Trying a new Nonce = 0x0000001d6
+# [*] Trying a new Nonce = 0x0000001d7
+# [*] Trying a new Nonce = 0x0000001d8
+# [*] Trying a new Nonce = 0x0000001d9
+# [*] Trying a new Nonce = 0x0000001da
+# [*] Trying a new Nonce = 0x0000001db
+# [*] Trying a new Nonce = 0x0000001dc
+# [*] Trying a new Nonce = 0x0000001dd
+# [*] Trying a new Nonce = 0x0000001de
+# [*] Trying a new Nonce = 0x0000001df
+# [*] Trying a new Nonce = 0x0000001e0
+# [*] Trying a new Nonce = 0x0000001e1
+# [*] Trying a new Nonce = 0x0000001e2
+# [*] Trying a new Nonce = 0x0000001e3
+# [*] Trying a new Nonce = 0x0000001e4
+# [*] Trying a new Nonce = 0x0000001e5
+# [*] Trying a new Nonce = 0x0000001e6
+# [*] Trying a new Nonce = 0x0000001e7
+# [*] Trying a new Nonce = 0x0000001e8
+# [*] Trying a new Nonce = 0x0000001e9
+# [*] Trying a new Nonce = 0x0000001ea
+# [*] Trying a new Nonce = 0x0000001eb
+# [*] Trying a new Nonce = 0x0000001ec
+# [*] Trying a new Nonce = 0x0000001ed
+# [*] Trying a new Nonce = 0x0000001ee
+# [*] Trying a new Nonce = 0x0000001ef
+# [*] Trying a new Nonce = 0x0000001f0
+# [*] Trying a new Nonce = 0x0000001f1
+# [*] Trying a new Nonce = 0x0000001f2
+# [*] Trying a new Nonce = 0x0000001f3
+# [*] Trying a new Nonce = 0x0000001f4
+# [*] Trying a new Nonce = 0x0000001f5
+# [*] Trying a new Nonce = 0x0000001f6
+# [*] Trying a new Nonce = 0x0000001f7
+# [*] Trying a new Nonce = 0x0000001f8
+# [*] Trying a new Nonce = 0x0000001f9
+# [*] Trying a new Nonce = 0x0000001fa
+# [*] Trying a new Nonce = 0x0000001fb
+# [*] Trying a new Nonce = 0x0000001fc
+# [*] Trying a new Nonce = 0x0000001fd
+# [*] Trying a new Nonce = 0x0000001fe
+# [*] Trying a new Nonce = 0x0000001ff
+# [*] Trying a new Nonce = 0x000000200
+# [*] Trying a new Nonce = 0x000000201
+# [*] Trying a new Nonce = 0x000000202
+# [*] Trying a new Nonce = 0x000000203
+# [*] Trying a new Nonce = 0x000000204
+# [*] Trying a new Nonce = 0x000000205
+# [*] Trying a new Nonce = 0x000000206
+# [*] Trying a new Nonce = 0x000000207
+# [*] Trying a new Nonce = 0x000000208
+# [*] Trying a new Nonce = 0x000000209
+# [*] Trying a new Nonce = 0x00000020a
+# [*] Trying a new Nonce = 0x00000020b
+# [*] Trying a new Nonce = 0x00000020c
+# [*] Trying a new Nonce = 0x00000020d
+# [*] Trying a new Nonce = 0x00000020e
+# [*] Trying a new Nonce = 0x00000020f
+# [*] Trying a new Nonce = 0x000000210
+# [*] Trying a new Nonce = 0x000000211
+# [*] Trying a new Nonce = 0x000000212
+# [*] Trying a new Nonce = 0x000000213
+# [*] Trying a new Nonce = 0x000000214
+# [*] Trying a new Nonce = 0x000000215
+# [*] Trying a new Nonce = 0x000000216
+# [*] Trying a new Nonce = 0x000000217
+# [*] Trying a new Nonce = 0x000000218
+# [*] Trying a new Nonce = 0x000000219
+# [*] Trying a new Nonce = 0x00000021a
+# [*] Trying a new Nonce = 0x00000021b
+# [*] Trying a new Nonce = 0x00000021c
+# [*] Trying a new Nonce = 0x00000021d
+# [*] Trying a new Nonce = 0x00000021e
+# [*] Trying a new Nonce = 0x00000021f
+# [*] Trying a new Nonce = 0x000000220
+# [*] Trying a new Nonce = 0x000000221
+# [*] Trying a new Nonce = 0x000000222
+# [*] Trying a new Nonce = 0x000000223
+# [*] Trying a new Nonce = 0x000000224
+# [*] Trying a new Nonce = 0x000000225
+# [*] Trying a new Nonce = 0x000000226
+# [*] Trying a new Nonce = 0x000000227
+# [*] Trying a new Nonce = 0x000000228
+# [*] Trying a new Nonce = 0x000000229
+# [*] Trying a new Nonce = 0x00000022a
+# [*] Trying a new Nonce = 0x00000022b
+# [*] Trying a new Nonce = 0x00000022c
+# [*] Trying a new Nonce = 0x00000022d
+# [*] Trying a new Nonce = 0x00000022e
+# [*] Trying a new Nonce = 0x00000022f
+# [*] Trying a new Nonce = 0x000000230
+# [*] Trying a new Nonce = 0x000000231
+# [*] Trying a new Nonce = 0x000000232
+# [*] Trying a new Nonce = 0x000000233
+# [*] Trying a new Nonce = 0x000000234
+# [*] Trying a new Nonce = 0x000000235
+# [*] Trying a new Nonce = 0x000000236
+# [*] Trying a new Nonce = 0x000000237
+# [*] Trying a new Nonce = 0x000000238
+# [*] Trying a new Nonce = 0x000000239
+# [*] Trying a new Nonce = 0x00000023a
+# [*] Trying a new Nonce = 0x00000023b
+# [*] Trying a new Nonce = 0x00000023c
+# [*] Trying a new Nonce = 0x00000023d
+# [*] Trying a new Nonce = 0x00000023e
+# [*] Trying a new Nonce = 0x00000023f
+# [*] Trying a new Nonce = 0x000000240
+# [*] Trying a new Nonce = 0x000000241
+# [*] Trying a new Nonce = 0x000000242
+# [*] Trying a new Nonce = 0x000000243
+# [*] Trying a new Nonce = 0x000000244
+# [*] Trying a new Nonce = 0x000000245
+# [*] Trying a new Nonce = 0x000000246
+# [*] Trying a new Nonce = 0x000000247
+# [*] Trying a new Nonce = 0x000000248
+# [*] Trying a new Nonce = 0x000000249
+# [*] Trying a new Nonce = 0x00000024a
+# [*] Trying a new Nonce = 0x00000024b
+# [*] Trying a new Nonce = 0x00000024c
+# [*] Trying a new Nonce = 0x00000024d
+# [*] Trying a new Nonce = 0x00000024e
+# [*] Trying a new Nonce = 0x00000024f
+# [*] Trying a new Nonce = 0x000000250
+# [*] Trying a new Nonce = 0x000000251
+# [*] Trying a new Nonce = 0x000000252
+# [*] Trying a new Nonce = 0x000000253
+# [*] Trying a new Nonce = 0x000000254
+# [*] Trying a new Nonce = 0x000000255
+# [*] Trying a new Nonce = 0x000000256
+# [*] Trying a new Nonce = 0x000000257
+# [*] Trying a new Nonce = 0x000000258
+# [*] Trying a new Nonce = 0x000000259
+# [*] Trying a new Nonce = 0x00000025a
+# [*] Trying a new Nonce = 0x00000025b
+# [*] Trying a new Nonce = 0x00000025c
+# [*] Trying a new Nonce = 0x00000025d
+# [*] Trying a new Nonce = 0x00000025e
+# [*] Trying a new Nonce = 0x00000025f
+# [*] Trying a new Nonce = 0x000000260
+# [*] Trying a new Nonce = 0x000000261
+# [*] Trying a new Nonce = 0x000000262
+# [*] Trying a new Nonce = 0x000000263
+# [*] Trying a new Nonce = 0x000000264
+# [*] Trying a new Nonce = 0x000000265
+# [*] Trying a new Nonce = 0x000000266
+# [*] Trying a new Nonce = 0x000000267
+# [*] Trying a new Nonce = 0x000000268
+# [*] Trying a new Nonce = 0x000000269
+# [*] Trying a new Nonce = 0x00000026a
+# [*] Trying a new Nonce = 0x00000026b
+# [*] Trying a new Nonce = 0x00000026c
+# [*] Trying a new Nonce = 0x00000026d
+# [*] Trying a new Nonce = 0x00000026e
+# [*] Trying a new Nonce = 0x00000026f
+# [*] Trying a new Nonce = 0x000000270
+# [*] Trying a new Nonce = 0x000000271
+# [*] Trying a new Nonce = 0x000000272
+# [*] Trying a new Nonce = 0x000000273
+# [*] Trying a new Nonce = 0x000000274
+# [*] Trying a new Nonce = 0x000000275
+# [*] Trying a new Nonce = 0x000000276
+# [*] Trying a new Nonce = 0x000000277
+# [*] Trying a new Nonce = 0x000000278
+# [*] Trying a new Nonce = 0x000000279
+# [*] Trying a new Nonce = 0x00000027a
+# [*] Trying a new Nonce = 0x00000027b
+# [*] Trying a new Nonce = 0x00000027c
+# [*] Trying a new Nonce = 0x00000027d
+# [*] Trying a new Nonce = 0x00000027e
+# [*] Trying a new Nonce = 0x00000027f
+# [*] Trying a new Nonce = 0x000000280
+# [*] Trying a new Nonce = 0x000000281
+# [*] Trying a new Nonce = 0x000000282
+# [*] Trying a new Nonce = 0x000000283
+# [*] Trying a new Nonce = 0x000000284
+# [*] Trying a new Nonce = 0x000000285
+# [*] Trying a new Nonce = 0x000000286
+# [*] Trying a new Nonce = 0x000000287
+# [*] Trying a new Nonce = 0x000000288
+# [*] Trying a new Nonce = 0x000000289
+# [*] Trying a new Nonce = 0x00000028a
+# [*] Trying a new Nonce = 0x00000028b
+# [*] Trying a new Nonce = 0x00000028c
+# [*] Trying a new Nonce = 0x00000028d
+# [*] Trying a new Nonce = 0x00000028e
+# [*] Trying a new Nonce = 0x00000028f
+# [*] Trying a new Nonce = 0x000000290
+# [*] Trying a new Nonce = 0x000000291
+# [*] Trying a new Nonce = 0x000000292
+# [*] Trying a new Nonce = 0x000000293
+# [*] Trying a new Nonce = 0x000000294
+# [*] Trying a new Nonce = 0x000000295
+# [*] Trying a new Nonce = 0x000000296
+# [*] Trying a new Nonce = 0x000000297
+# [*] Trying a new Nonce = 0x000000298
+# [*] Trying a new Nonce = 0x000000299
+# [*] Trying a new Nonce = 0x00000029a
+# [*] Trying a new Nonce = 0x00000029b
+# [*] Trying a new Nonce = 0x00000029c
+# [*] Trying a new Nonce = 0x00000029d
+# [*] Trying a new Nonce = 0x00000029e
+# [*] Trying a new Nonce = 0x00000029f
+# [*] Trying a new Nonce = 0x0000002a0
+# [*] Trying a new Nonce = 0x0000002a1
+# [*] Trying a new Nonce = 0x0000002a2
+# [*] Trying a new Nonce = 0x0000002a3
+# [*] Trying a new Nonce = 0x0000002a4
+# [*] Trying a new Nonce = 0x0000002a5
+# [*] Trying a new Nonce = 0x0000002a6
+# [*] Trying a new Nonce = 0x0000002a7
+# [*] Trying a new Nonce = 0x0000002a8
+# [*] Trying a new Nonce = 0x0000002a9
+# [*] Trying a new Nonce = 0x0000002aa
+# [*] Trying a new Nonce = 0x0000002ab
+# [*] Trying a new Nonce = 0x0000002ac
+# [*] Trying a new Nonce = 0x0000002ad
+# [*] Trying a new Nonce = 0x0000002ae
+# [*] Trying a new Nonce = 0x0000002af
+# [*] Trying a new Nonce = 0x0000002b0
+# [*] Trying a new Nonce = 0x0000002b1
+# [*] Trying a new Nonce = 0x0000002b2
+# [*] Trying a new Nonce = 0x0000002b3
+# [*] Trying a new Nonce = 0x0000002b4
+# [*] Trying a new Nonce = 0x0000002b5
+# [*] Trying a new Nonce = 0x0000002b6
+# [*] Trying a new Nonce = 0x0000002b7
+# [*] Trying a new Nonce = 0x0000002b8
+# [*] Trying a new Nonce = 0x0000002b9
+# [*] Trying a new Nonce = 0x0000002ba
+# [*] Trying a new Nonce = 0x0000002bb
+# [*] Trying a new Nonce = 0x0000002bc
+# [*] Trying a new Nonce = 0x0000002bd
+# [*] Trying a new Nonce = 0x0000002be
+# [*] Trying a new Nonce = 0x0000002bf
+# [*] Trying a new Nonce = 0x0000002c0
+# [*] Trying a new Nonce = 0x0000002c1
+# [*] Trying a new Nonce = 0x0000002c2
+# [*] Trying a new Nonce = 0x0000002c3
+# [*] Trying a new Nonce = 0x0000002c4
+# [*] Trying a new Nonce = 0x0000002c5
+# [*] Trying a new Nonce = 0x0000002c6
+# [*] Trying a new Nonce = 0x0000002c7
+# [*] Trying a new Nonce = 0x0000002c8
+# [*] Trying a new Nonce = 0x0000002c9
+# [*] Trying a new Nonce = 0x0000002ca
+# [*] Trying a new Nonce = 0x0000002cb
+# [*] Trying a new Nonce = 0x0000002cc
+# [*] Trying a new Nonce = 0x0000002cd
+# [*] Trying a new Nonce = 0x0000002ce
+# [*] Trying a new Nonce = 0x0000002cf
+# [*] Trying a new Nonce = 0x0000002d0
+# [*] Trying a new Nonce = 0x0000002d1
+# [*] Trying a new Nonce = 0x0000002d2
+# [*] Trying a new Nonce = 0x0000002d3
+# [*] Trying a new Nonce = 0x0000002d4
+# [*] Trying a new Nonce = 0x0000002d5
+# [*] Trying a new Nonce = 0x0000002d6
+# [*] Trying a new Nonce = 0x0000002d7
+# [*] Trying a new Nonce = 0x0000002d8
+# [*] Trying a new Nonce = 0x0000002d9
+# [*] Trying a new Nonce = 0x0000002da
+# [*] Trying a new Nonce = 0x0000002db
+# [*] Trying a new Nonce = 0x0000002dc
+# [*] Trying a new Nonce = 0x0000002dd
+# [*] Trying a new Nonce = 0x0000002de
+# [*] Trying a new Nonce = 0x0000002df
+# [*] Trying a new Nonce = 0x0000002e0
+# [*] Trying a new Nonce = 0x0000002e1
+# [*] Trying a new Nonce = 0x0000002e2
+# [*] Trying a new Nonce = 0x0000002e3
+# [*] Trying a new Nonce = 0x0000002e4
+# [*] Trying a new Nonce = 0x0000002e5
+# [*] Trying a new Nonce = 0x0000002e6
+# [*] Trying a new Nonce = 0x0000002e7
+# [*] Trying a new Nonce = 0x0000002e8
+# [*] Trying a new Nonce = 0x0000002e9
+# [*] Trying a new Nonce = 0x0000002ea
+# [*] Trying a new Nonce = 0x0000002eb
+# [*] Trying a new Nonce = 0x0000002ec
+# [*] Trying a new Nonce = 0x0000002ed
+# [*] Trying a new Nonce = 0x0000002ee
+# [*] Trying a new Nonce = 0x0000002ef
+# [*] Trying a new Nonce = 0x0000002f0
+# [*] Trying a new Nonce = 0x0000002f1
+# [*] Trying a new Nonce = 0x0000002f2
+# [*] Trying a new Nonce = 0x0000002f3
+# [*] Trying a new Nonce = 0x0000002f4
+# [*] Trying a new Nonce = 0x0000002f5
+# [*] Trying a new Nonce = 0x0000002f6
+# [*] Trying a new Nonce = 0x0000002f7
+# [*] Trying a new Nonce = 0x0000002f8
+# [*] Trying a new Nonce = 0x0000002f9
+# [*] Trying a new Nonce = 0x0000002fa
+# [*] Trying a new Nonce = 0x0000002fb
+# [*] Trying a new Nonce = 0x0000002fc
+# [*] Trying a new Nonce = 0x0000002fd
+# [*] Trying a new Nonce = 0x0000002fe
+# [*] Trying a new Nonce = 0x0000002ff
+# [*] Trying a new Nonce = 0x000000300
+# [*] Trying a new Nonce = 0x000000301
+# [*] Trying a new Nonce = 0x000000302
+# [*] Trying a new Nonce = 0x000000303
+# [*] Trying a new Nonce = 0x000000304
+# [*] Trying a new Nonce = 0x000000305
+# [*] Trying a new Nonce = 0x000000306
+# [*] Trying a new Nonce = 0x000000307
+# [*] Trying a new Nonce = 0x000000308
+# [*] Trying a new Nonce = 0x000000309
+# [*] Trying a new Nonce = 0x00000030a
+# [*] Trying a new Nonce = 0x00000030b
+# [*] Trying a new Nonce = 0x00000030c
+# [*] Trying a new Nonce = 0x00000030d
+# [*] Trying a new Nonce = 0x00000030e
+# [*] Trying a new Nonce = 0x00000030f
+# [*] Trying a new Nonce = 0x000000310
+# [*] Trying a new Nonce = 0x000000311
+# [*] Trying a new Nonce = 0x000000312
+# [*] Trying a new Nonce = 0x000000313
+# [*] Trying a new Nonce = 0x000000314
+# [*] Trying a new Nonce = 0x000000315
+# [*] Trying a new Nonce = 0x000000316
+# [*] Trying a new Nonce = 0x000000317
+# [*] Trying a new Nonce = 0x000000318
+# [*] Trying a new Nonce = 0x000000319
+# [*] Trying a new Nonce = 0x00000031a
+# [*] Trying a new Nonce = 0x00000031b
+# [*] Trying a new Nonce = 0x00000031c
+# [*] Trying a new Nonce = 0x00000031d
+# [*] Trying a new Nonce = 0x00000031e
+# [*] Trying a new Nonce = 0x00000031f
+# [*] Trying a new Nonce = 0x000000320
+# [*] Trying a new Nonce = 0x000000321
+# [*] Trying a new Nonce = 0x000000322
+# [*] Trying a new Nonce = 0x000000323
+# [*] Trying a new Nonce = 0x000000324
+# [*] Trying a new Nonce = 0x000000325
+# [*] Trying a new Nonce = 0x000000326
+# [*] Trying a new Nonce = 0x000000327
+# [*] Trying a new Nonce = 0x000000328
+# [*] Trying a new Nonce = 0x000000329
+# [*] Trying a new Nonce = 0x00000032a
+# [*] Trying a new Nonce = 0x00000032b
+# [*] Trying a new Nonce = 0x00000032c
+# [*] Trying a new Nonce = 0x00000032d
+# [*] Trying a new Nonce = 0x00000032e
+# [*] Trying a new Nonce = 0x00000032f
+# [*] Trying a new Nonce = 0x000000330
+# [*] Trying a new Nonce = 0x000000331
+# [*] Trying a new Nonce = 0x000000332
+# [*] Trying a new Nonce = 0x000000333
+# [*] Trying a new Nonce = 0x000000334
+# [*] Trying a new Nonce = 0x000000335
+# [*] Trying a new Nonce = 0x000000336
+# [*] Trying a new Nonce = 0x000000337
+# [*] Trying a new Nonce = 0x000000338
+# [*] Trying a new Nonce = 0x000000339
+# [*] Trying a new Nonce = 0x00000033a
+# [*] Trying a new Nonce = 0x00000033b
+# [*] Trying a new Nonce = 0x00000033c
+# [*] Trying a new Nonce = 0x00000033d
+# [*] Trying a new Nonce = 0x00000033e
+# [*] Trying a new Nonce = 0x00000033f
+# [*] Trying a new Nonce = 0x000000340
+# [*] Trying a new Nonce = 0x000000341
+# [*] Trying a new Nonce = 0x000000342
+# [*] Trying a new Nonce = 0x000000343
+# [*] Trying a new Nonce = 0x000000344
+# [*] Trying a new Nonce = 0x000000345
+# [*] Trying a new Nonce = 0x000000346
+# [*] Trying a new Nonce = 0x000000347
+# [*] Trying a new Nonce = 0x000000348
+# [*] Trying a new Nonce = 0x000000349
+# [*] Trying a new Nonce = 0x00000034a
+# [*] Trying a new Nonce = 0x00000034b
+# [*] Trying a new Nonce = 0x00000034c
+# [*] Trying a new Nonce = 0x00000034d
+# [*] Trying a new Nonce = 0x00000034e
+# [*] Trying a new Nonce = 0x00000034f
+# [*] Trying a new Nonce = 0x000000350
+# [*] Trying a new Nonce = 0x000000351
+# [*] Trying a new Nonce = 0x000000352
+# [*] Trying a new Nonce = 0x000000353
+# [*] Trying a new Nonce = 0x000000354
+# [*] Trying a new Nonce = 0x000000355
+# [*] Trying a new Nonce = 0x000000356
+# [*] Trying a new Nonce = 0x000000357
+# [*] Trying a new Nonce = 0x000000358
+# [*] Trying a new Nonce = 0x000000359
+# [*] Trying a new Nonce = 0x00000035a
+# [*] Trying a new Nonce = 0x00000035b
+# [*] Trying a new Nonce = 0x00000035c
+# [*] Trying a new Nonce = 0x00000035d
+# [*] Trying a new Nonce = 0x00000035e
+# [*] Trying a new Nonce = 0x00000035f
+# [*] Trying a new Nonce = 0x000000360
+# [*] Trying a new Nonce = 0x000000361
+# [*] Trying a new Nonce = 0x000000362
+# [*] Trying a new Nonce = 0x000000363
+# [*] Trying a new Nonce = 0x000000364
+# [*] Trying a new Nonce = 0x000000365
+# [*] Trying a new Nonce = 0x000000366
+# [*] Trying a new Nonce = 0x000000367
+# [*] Trying a new Nonce = 0x000000368
+# [*] Trying a new Nonce = 0x000000369
+# [*] Trying a new Nonce = 0x00000036a
+# [*] Trying a new Nonce = 0x00000036b
+# [*] Trying a new Nonce = 0x00000036c
+# [*] Trying a new Nonce = 0x00000036d
+# [*] Trying a new Nonce = 0x00000036e
+# [*] Trying a new Nonce = 0x00000036f
+# [*] Trying a new Nonce = 0x000000370
+# [*] Trying a new Nonce = 0x000000371
+# [*] Trying a new Nonce = 0x000000372
+# [*] Trying a new Nonce = 0x000000373
+# [*] Trying a new Nonce = 0x000000374
+# [*] Trying a new Nonce = 0x000000375
+# [*] Trying a new Nonce = 0x000000376
+# [*] Trying a new Nonce = 0x000000377
+# [*] Trying a new Nonce = 0x000000378
+# [*] Trying a new Nonce = 0x000000379
+# [*] Trying a new Nonce = 0x00000037a
+# [*] Trying a new Nonce = 0x00000037b
+# [*] Trying a new Nonce = 0x00000037c
+# [*] Trying a new Nonce = 0x00000037d
+# [*] Trying a new Nonce = 0x00000037e
+# [*] Trying a new Nonce = 0x00000037f
+# [*] Trying a new Nonce = 0x000000380
+# [*] Trying a new Nonce = 0x000000381
+# [*] Trying a new Nonce = 0x000000382
+# [*] Trying a new Nonce = 0x000000383
+# [*] Trying a new Nonce = 0x000000384
+# [*] Trying a new Nonce = 0x000000385
+# [*] Trying a new Nonce = 0x000000386
+# [*] Trying a new Nonce = 0x000000387
+# [*] Trying a new Nonce = 0x000000388
+# [*] Trying a new Nonce = 0x000000389
+# [*] Trying a new Nonce = 0x00000038a
+# [*] Trying a new Nonce = 0x00000038b
+# [*] Trying a new Nonce = 0x00000038c
+# [*] Trying a new Nonce = 0x00000038d
+# [*] Trying a new Nonce = 0x00000038e
+# [*] Trying a new Nonce = 0x00000038f
+# [*] Trying a new Nonce = 0x000000390
+# [*] Trying a new Nonce = 0x000000391
+# [*] Trying a new Nonce = 0x000000392
+# [*] Trying a new Nonce = 0x000000393
+# [*] Trying a new Nonce = 0x000000394
+# [*] Trying a new Nonce = 0x000000395
+# [*] Trying a new Nonce = 0x000000396
+# [*] Trying a new Nonce = 0x000000397
+# [*] Trying a new Nonce = 0x000000398
+# [*] Trying a new Nonce = 0x000000399
+# [*] Trying a new Nonce = 0x00000039a
+# [*] Trying a new Nonce = 0x00000039b
+# [*] Trying a new Nonce = 0x00000039c
+# [*] Trying a new Nonce = 0x00000039d
+# [*] Trying a new Nonce = 0x00000039e
+# [*] Trying a new Nonce = 0x00000039f
+# [*] Trying a new Nonce = 0x0000003a0
+# [*] Trying a new Nonce = 0x0000003a1
+# [*] Trying a new Nonce = 0x0000003a2
+# [*] Trying a new Nonce = 0x0000003a3
+# [*] Trying a new Nonce = 0x0000003a4
+# [*] Trying a new Nonce = 0x0000003a5
+# [*] Trying a new Nonce = 0x0000003a6
+# [*] Trying a new Nonce = 0x0000003a7
+# [*] Trying a new Nonce = 0x0000003a8
+# [*] Trying a new Nonce = 0x0000003a9
+# [*] Trying a new Nonce = 0x0000003aa
+# [*] Trying a new Nonce = 0x0000003ab
+# [*] Trying a new Nonce = 0x0000003ac
+# [*] Trying a new Nonce = 0x0000003ad
+# [*] Trying a new Nonce = 0x0000003ae
+# [*] Trying a new Nonce = 0x0000003af
+# [*] Trying a new Nonce = 0x0000003b0
+# [*] Trying a new Nonce = 0x0000003b1
+# [*] Trying a new Nonce = 0x0000003b2
+# [*] Trying a new Nonce = 0x0000003b3
+# [*] Trying a new Nonce = 0x0000003b4
+# [*] Trying a new Nonce = 0x0000003b5
+# [*] Trying a new Nonce = 0x0000003b6
+# [*] Trying a new Nonce = 0x0000003b7
+# [*] Trying a new Nonce = 0x0000003b8
+# [*] Trying a new Nonce = 0x0000003b9
+# [*] Trying a new Nonce = 0x0000003ba
+# [*] Trying a new Nonce = 0x0000003bb
+# [*] Trying a new Nonce = 0x0000003bc
+# [*] Trying a new Nonce = 0x0000003bd
+# [*] Trying a new Nonce = 0x0000003be
+# [*] Trying a new Nonce = 0x0000003bf
+# [*] Trying a new Nonce = 0x0000003c0
+# [*] Trying a new Nonce = 0x0000003c1
+# [*] Trying a new Nonce = 0x0000003c2
+# [*] Trying a new Nonce = 0x0000003c3
+# [*] Trying a new Nonce = 0x0000003c4
+# [*] Trying a new Nonce = 0x0000003c5
+# [*] Trying a new Nonce = 0x0000003c6
+# [*] Trying a new Nonce = 0x0000003c7
+# [*] Trying a new Nonce = 0x0000003c8
+# [*] Trying a new Nonce = 0x0000003c9
+# [*] Trying a new Nonce = 0x0000003ca
+# [*] Trying a new Nonce = 0x0000003cb
+# [*] Trying a new Nonce = 0x0000003cc
+# [*] Trying a new Nonce = 0x0000003cd
+# [*] Trying a new Nonce = 0x0000003ce
+# [*] Trying a new Nonce = 0x0000003cf
+# [*] Trying a new Nonce = 0x0000003d0
+# [*] Trying a new Nonce = 0x0000003d1
+# [*] Trying a new Nonce = 0x0000003d2
+# [*] Trying a new Nonce = 0x0000003d3
+# [*] Trying a new Nonce = 0x0000003d4
+# [*] Trying a new Nonce = 0x0000003d5
+# [*] Trying a new Nonce = 0x0000003d6
+# [*] Trying a new Nonce = 0x0000003d7
+# [*] Trying a new Nonce = 0x0000003d8
+# [*] Trying a new Nonce = 0x0000003d9
+# [*] Trying a new Nonce = 0x0000003da
+# [*] Trying a new Nonce = 0x0000003db
+# [*] Trying a new Nonce = 0x0000003dc
+# [*] Trying a new Nonce = 0x0000003dd
+# [*] Trying a new Nonce = 0x0000003de
+# [*] Trying a new Nonce = 0x0000003df
+# [*] Trying a new Nonce = 0x0000003e0
+# [*] Trying a new Nonce = 0x0000003e1
+# [*] Trying a new Nonce = 0x0000003e2
+# [*] Trying a new Nonce = 0x0000003e3
+# [*] Trying a new Nonce = 0x0000003e4
+# [*] Trying a new Nonce = 0x0000003e5
+# [*] Trying a new Nonce = 0x0000003e6
+# [*] Trying a new Nonce = 0x0000003e7
+# [*] Trying a new Nonce = 0x0000003e8
+# [*] Trying a new Nonce = 0x0000003e9
+# [*] Trying a new Nonce = 0x0000003ea
+# [*] Trying a new Nonce = 0x0000003eb
+# [*] Trying a new Nonce = 0x0000003ec
+# [*] Trying a new Nonce = 0x0000003ed
+# [*] Trying a new Nonce = 0x0000003ee
+# [*] Trying a new Nonce = 0x0000003ef
+# [*] Trying a new Nonce = 0x0000003f0
+# [*] Trying a new Nonce = 0x0000003f1
+# [*] Trying a new Nonce = 0x0000003f2
+# [*] Trying a new Nonce = 0x0000003f3
+# [*] Trying a new Nonce = 0x0000003f4
+# [*] Trying a new Nonce = 0x0000003f5
+# [*] Trying a new Nonce = 0x0000003f6
+# [*] Trying a new Nonce = 0x0000003f7
+# [*] Trying a new Nonce = 0x0000003f8
+# [*] Trying a new Nonce = 0x0000003f9
+# [*] Trying a new Nonce = 0x0000003fa
+# [*] Trying a new Nonce = 0x0000003fb
+# [*] Trying a new Nonce = 0x0000003fc
+# [*] Trying a new Nonce = 0x0000003fd
+# [*] Trying a new Nonce = 0x0000003fe
+# [*] Trying a new Nonce = 0x0000003ff
+# [*] Trying a new Nonce = 0x000000400
+# [*] Trying a new Nonce = 0x000000401
+# [*] Trying a new Nonce = 0x000000402
+# [*] Trying a new Nonce = 0x000000403
+# [*] Trying a new Nonce = 0x000000404
+# [*] Trying a new Nonce = 0x000000405
+# [*] Trying a new Nonce = 0x000000406
+# [*] Trying a new Nonce = 0x000000407
+# [*] Trying a new Nonce = 0x000000408
+# [*] Trying a new Nonce = 0x000000409
+# [*] Trying a new Nonce = 0x00000040a
+# [*] Trying a new Nonce = 0x00000040b
+# [*] Trying a new Nonce = 0x00000040c
+# [*] Trying a new Nonce = 0x00000040d
+# [*] Trying a new Nonce = 0x00000040e
+# [*] Trying a new Nonce = 0x00000040f
+# [*] Trying a new Nonce = 0x000000410
+# [*] Trying a new Nonce = 0x000000411
+# [*] Trying a new Nonce = 0x000000412
+# [*] Trying a new Nonce = 0x000000413
+# [*] Trying a new Nonce = 0x000000414
+# [*] Trying a new Nonce = 0x000000415
+# [*] Trying a new Nonce = 0x000000416
+# [*] Trying a new Nonce = 0x000000417
+# [*] Trying a new Nonce = 0x000000418
+# [*] Trying a new Nonce = 0x000000419
+# [*] Trying a new Nonce = 0x00000041a
+# [*] Trying a new Nonce = 0x00000041b
+# [*] Trying a new Nonce = 0x00000041c
+# [*] Trying a new Nonce = 0x00000041d
+# [*] Trying a new Nonce = 0x00000041e
+# [*] Trying a new Nonce = 0x00000041f
+# [*] Trying a new Nonce = 0x000000420
+# [*] Trying a new Nonce = 0x000000421
+# [*] Trying a new Nonce = 0x000000422
+# [*] Trying a new Nonce = 0x000000423
+# [*] Trying a new Nonce = 0x000000424
+# [*] Trying a new Nonce = 0x000000425
+# [*] Trying a new Nonce = 0x000000426
+# [*] Trying a new Nonce = 0x000000427
+# [*] Trying a new Nonce = 0x000000428
+# [*] Trying a new Nonce = 0x000000429
+# [*] Trying a new Nonce = 0x00000042a
+# [*] Trying a new Nonce = 0x00000042b
+# [*] Trying a new Nonce = 0x00000042c
+# [*] Trying a new Nonce = 0x00000042d
+# [*] Trying a new Nonce = 0x00000042e
+# [*] Trying a new Nonce = 0x00000042f
+# [*] Trying a new Nonce = 0x000000430
+# [*] Trying a new Nonce = 0x000000431
+# [*] Trying a new Nonce = 0x000000432
+# [*] Trying a new Nonce = 0x000000433
+# [*] Trying a new Nonce = 0x000000434
+# [*] Trying a new Nonce = 0x000000435
+# [*] Trying a new Nonce = 0x000000436
+# [*] Trying a new Nonce = 0x000000437
+# [*] Trying a new Nonce = 0x000000438
+# [*] Trying a new Nonce = 0x000000439
+# [*] Trying a new Nonce = 0x00000043a
+# [*] Trying a new Nonce = 0x00000043b
+# [*] Trying a new Nonce = 0x00000043c
+# [*] Trying a new Nonce = 0x00000043d
+# [*] Trying a new Nonce = 0x00000043e
+# [*] Trying a new Nonce = 0x00000043f
+# [*] Trying a new Nonce = 0x000000440
+# [*] Trying a new Nonce = 0x000000441
+# [*] Trying a new Nonce = 0x000000442
+# [*] Trying a new Nonce = 0x000000443
+# [*] Trying a new Nonce = 0x000000444
+# [*] Trying a new Nonce = 0x000000445
+# [*] Trying a new Nonce = 0x000000446
+# [*] Trying a new Nonce = 0x000000447
+# [*] Trying a new Nonce = 0x000000448
+# [*] Trying a new Nonce = 0x000000449
+# [*] Trying a new Nonce = 0x00000044a
+# [*] Trying a new Nonce = 0x00000044b
+# [*] Trying a new Nonce = 0x00000044c
+# [*] Trying a new Nonce = 0x00000044d
+# [*] Trying a new Nonce = 0x00000044e
+# [*] Trying a new Nonce = 0x00000044f
+# [*] Trying a new Nonce = 0x000000450
+# [*] Trying a new Nonce = 0x000000451
+# [*] Trying a new Nonce = 0x000000452
+# [*] Trying a new Nonce = 0x000000453
+# [*] Trying a new Nonce = 0x000000454
+# [*] Trying a new Nonce = 0x000000455
+# [*] Trying a new Nonce = 0x000000456
+# [*] Trying a new Nonce = 0x000000457
+# [*] Trying a new Nonce = 0x000000458
+# [*] Trying a new Nonce = 0x000000459
+# [*] Trying a new Nonce = 0x00000045a
+# [*] Trying a new Nonce = 0x00000045b
+# [*] Trying a new Nonce = 0x00000045c
+# [*] Trying a new Nonce = 0x00000045d
+# [*] Trying a new Nonce = 0x00000045e
+# [*] Trying a new Nonce = 0x00000045f
+# [*] Trying a new Nonce = 0x000000460
+# [*] Trying a new Nonce = 0x000000461
+# [*] Trying a new Nonce = 0x000000462
+# [*] Trying a new Nonce = 0x000000463
+# [*] Trying a new Nonce = 0x000000464
+# [*] Trying a new Nonce = 0x000000465
+# [*] Trying a new Nonce = 0x000000466
+# [*] Trying a new Nonce = 0x000000467
+# [*] Trying a new Nonce = 0x000000468
+# [*] Trying a new Nonce = 0x000000469
+# [*] Trying a new Nonce = 0x00000046a
+# [*] Trying a new Nonce = 0x00000046b
+# [*] Trying a new Nonce = 0x00000046c
+# [*] Trying a new Nonce = 0x00000046d
+# [*] Trying a new Nonce = 0x00000046e
+# [*] Trying a new Nonce = 0x00000046f
+# [*] Trying a new Nonce = 0x000000470
+# [*] Trying a new Nonce = 0x000000471
+# [*] Trying a new Nonce = 0x000000472
+# [*] Trying a new Nonce = 0x000000473
+# [*] Trying a new Nonce = 0x000000474
+# [*] Trying a new Nonce = 0x000000475
+# [*] Trying a new Nonce = 0x000000476
+# [*] Trying a new Nonce = 0x000000477
+# [*] Trying a new Nonce = 0x000000478
+# [*] Trying a new Nonce = 0x000000479
+# [*] Trying a new Nonce = 0x00000047a
+# [*] Trying a new Nonce = 0x00000047b
+# [*] Trying a new Nonce = 0x00000047c
+# [*] Trying a new Nonce = 0x00000047d
+# [*] Trying a new Nonce = 0x00000047e
+# [*] Trying a new Nonce = 0x00000047f
+# [*] Trying a new Nonce = 0x000000480
+# [*] Trying a new Nonce = 0x000000481
+# [*] Trying a new Nonce = 0x000000482
+# [*] Trying a new Nonce = 0x000000483
+# [*] Trying a new Nonce = 0x000000484
+# [*] Trying a new Nonce = 0x000000485
+# [*] Trying a new Nonce = 0x000000486
+# [*] Trying a new Nonce = 0x000000487
+# [*] Trying a new Nonce = 0x000000488
+# [*] Trying a new Nonce = 0x000000489
+# [*] Trying a new Nonce = 0x00000048a
+# [*] Trying a new Nonce = 0x00000048b
+# [*] Trying a new Nonce = 0x00000048c
+# [*] Trying a new Nonce = 0x00000048d
+# [*] Trying a new Nonce = 0x00000048e
+# [*] Trying a new Nonce = 0x00000048f
+# [*] Trying a new Nonce = 0x000000490
+# [*] Trying a new Nonce = 0x000000491
+# [*] Trying a new Nonce = 0x000000492
+# [*] Trying a new Nonce = 0x000000493
+# [*] Trying a new Nonce = 0x000000494
+# [*] Trying a new Nonce = 0x000000495
+# [*] Trying a new Nonce = 0x000000496
+# [*] Trying a new Nonce = 0x000000497
+# [*] Trying a new Nonce = 0x000000498
+# [*] Trying a new Nonce = 0x000000499
+# [*] Trying a new Nonce = 0x00000049a
+# [*] Trying a new Nonce = 0x00000049b
+# [*] Trying a new Nonce = 0x00000049c
+# [*] Trying a new Nonce = 0x00000049d
+# [*] Trying a new Nonce = 0x00000049e
+# [*] Trying a new Nonce = 0x00000049f
+# [*] Trying a new Nonce = 0x0000004a0
+# [*] Trying a new Nonce = 0x0000004a1
+# [*] Trying a new Nonce = 0x0000004a2
+# [*] Trying a new Nonce = 0x0000004a3
+# [*] Trying a new Nonce = 0x0000004a4
+# [*] Trying a new Nonce = 0x0000004a5
+# [*] Trying a new Nonce = 0x0000004a6
+# [*] Trying a new Nonce = 0x0000004a7
+# [*] Trying a new Nonce = 0x0000004a8
+# [*] Trying a new Nonce = 0x0000004a9
+# [*] Trying a new Nonce = 0x0000004aa
+# [*] Trying a new Nonce = 0x0000004ab
+# [*] Trying a new Nonce = 0x0000004ac
+# [*] Trying a new Nonce = 0x0000004ad
+# [*] Trying a new Nonce = 0x0000004ae
+# [*] Trying a new Nonce = 0x0000004af
+# [*] Trying a new Nonce = 0x0000004b0
+# [*] Trying a new Nonce = 0x0000004b1
+# [*] Trying a new Nonce = 0x0000004b2
+# [*] Trying a new Nonce = 0x0000004b3
+# [*] Trying a new Nonce = 0x0000004b4
+# [*] Trying a new Nonce = 0x0000004b5
+# [*] Trying a new Nonce = 0x0000004b6
+# [*] Trying a new Nonce = 0x0000004b7
+# [*] Trying a new Nonce = 0x0000004b8
+# [*] Trying a new Nonce = 0x0000004b9
+# [*] Trying a new Nonce = 0x0000004ba
+# [*] Trying a new Nonce = 0x0000004bb
+# [*] Trying a new Nonce = 0x0000004bc
+# [*] Trying a new Nonce = 0x0000004bd
+# [*] Trying a new Nonce = 0x0000004be
+# [*] Trying a new Nonce = 0x0000004bf
+# [*] Trying a new Nonce = 0x0000004c0
+# [*] Trying a new Nonce = 0x0000004c1
+# [*] Trying a new Nonce = 0x0000004c2
+# [*] Trying a new Nonce = 0x0000004c3
+# [*] Trying a new Nonce = 0x0000004c4
+# [*] Trying a new Nonce = 0x0000004c5
+# [*] Trying a new Nonce = 0x0000004c6
+# [*] Trying a new Nonce = 0x0000004c7
+# [*] Trying a new Nonce = 0x0000004c8
+# [*] Trying a new Nonce = 0x0000004c9
+# [*] Trying a new Nonce = 0x0000004ca
+# [*] Trying a new Nonce = 0x0000004cb
+# [*] Trying a new Nonce = 0x0000004cc
+# [*] Trying a new Nonce = 0x0000004cd
+# [*] Trying a new Nonce = 0x0000004ce
+# [*] Trying a new Nonce = 0x0000004cf
+# [*] Trying a new Nonce = 0x0000004d0
+# [*] Trying a new Nonce = 0x0000004d1
+# [*] Trying a new Nonce = 0x0000004d2
+# [*] Trying a new Nonce = 0x0000004d3
+# [*] Trying a new Nonce = 0x0000004d4
+# [*] Trying a new Nonce = 0x0000004d5
+# [*] Trying a new Nonce = 0x0000004d6
+# [*] Trying a new Nonce = 0x0000004d7
+# [*] Trying a new Nonce = 0x0000004d8
+# [*] Trying a new Nonce = 0x0000004d9
+# [*] Trying a new Nonce = 0x0000004da
+# [*] Trying a new Nonce = 0x0000004db
+# [*] Trying a new Nonce = 0x0000004dc
+# [*] Trying a new Nonce = 0x0000004dd
+# [*] Trying a new Nonce = 0x0000004de
+# [*] Trying a new Nonce = 0x0000004df
+# [*] Trying a new Nonce = 0x0000004e0
+# [*] Trying a new Nonce = 0x0000004e1
+# [*] Trying a new Nonce = 0x0000004e2
+# [*] Trying a new Nonce = 0x0000004e3
+# [*] Trying a new Nonce = 0x0000004e4
+# [*] Trying a new Nonce = 0x0000004e5
+# [*] Trying a new Nonce = 0x0000004e6
+# [*] Trying a new Nonce = 0x0000004e7
+# [*] Trying a new Nonce = 0x0000004e8
+# [*] Trying a new Nonce = 0x0000004e9
+# [*] Trying a new Nonce = 0x0000004ea
+# [*] Trying a new Nonce = 0x0000004eb
+# [*] Trying a new Nonce = 0x0000004ec
+# [*] Trying a new Nonce = 0x0000004ed
+# [*] Trying a new Nonce = 0x0000004ee
+# [*] Trying a new Nonce = 0x0000004ef
+# [*] Trying a new Nonce = 0x0000004f0
+# [*] Trying a new Nonce = 0x0000004f1
+# [*] Trying a new Nonce = 0x0000004f2
+# [*] Trying a new Nonce = 0x0000004f3
+# [*] Trying a new Nonce = 0x0000004f4
+# [*] Trying a new Nonce = 0x0000004f5
+# [*] Trying a new Nonce = 0x0000004f6
+# [*] Trying a new Nonce = 0x0000004f7
+# [*] Trying a new Nonce = 0x0000004f8
+# [*] Trying a new Nonce = 0x0000004f9
+# [*] Trying a new Nonce = 0x0000004fa
+# [*] Trying a new Nonce = 0x0000004fb
+# [*] Trying a new Nonce = 0x0000004fc
+# [*] Trying a new Nonce = 0x0000004fd
+# [*] Trying a new Nonce = 0x0000004fe
+# [*] Trying a new Nonce = 0x0000004ff
+# [*] Trying a new Nonce = 0x000000500
+# [*] Trying a new Nonce = 0x000000501
+# [*] Trying a new Nonce = 0x000000502
+# [*] Trying a new Nonce = 0x000000503
+# [*] Trying a new Nonce = 0x000000504
+# [*] Trying a new Nonce = 0x000000505
+# [*] Trying a new Nonce = 0x000000506
+# [*] Trying a new Nonce = 0x000000507
+# [*] Trying a new Nonce = 0x000000508
+# [*] Trying a new Nonce = 0x000000509
+# [*] Trying a new Nonce = 0x00000050a
+# [*] Trying a new Nonce = 0x00000050b
+# [*] Trying a new Nonce = 0x00000050c
+# [*] Trying a new Nonce = 0x00000050d
+# [*] Trying a new Nonce = 0x00000050e
+# [*] Trying a new Nonce = 0x00000050f
+# [*] Trying a new Nonce = 0x000000510
+# [*] Trying a new Nonce = 0x000000511
+# [*] Trying a new Nonce = 0x000000512
+# [*] Trying a new Nonce = 0x000000513
+# [*] Trying a new Nonce = 0x000000514
+# [*] Trying a new Nonce = 0x000000515
+# [*] Trying a new Nonce = 0x000000516
+# [*] Trying a new Nonce = 0x000000517
+# [*] Trying a new Nonce = 0x000000518
+# [*] Trying a new Nonce = 0x000000519
+# [*] Trying a new Nonce = 0x00000051a
+# [*] Trying a new Nonce = 0x00000051b
+# [*] Trying a new Nonce = 0x00000051c
+# [*] Trying a new Nonce = 0x00000051d
+# [*] Trying a new Nonce = 0x00000051e
+# [*] Trying a new Nonce = 0x00000051f
+# [*] Trying a new Nonce = 0x000000520
+# [*] Trying a new Nonce = 0x000000521
+# [*] Trying a new Nonce = 0x000000522
+# [*] Trying a new Nonce = 0x000000523
+# [*] Trying a new Nonce = 0x000000524
+# [*] Trying a new Nonce = 0x000000525
+# [*] Trying a new Nonce = 0x000000526
+# [*] Trying a new Nonce = 0x000000527
+# [*] Trying a new Nonce = 0x000000528
+# [*] Trying a new Nonce = 0x000000529
+# [*] Trying a new Nonce = 0x00000052a
+# [*] Trying a new Nonce = 0x00000052b
+# [*] Trying a new Nonce = 0x00000052c
+# [*] Trying a new Nonce = 0x00000052d
+# [*] Trying a new Nonce = 0x00000052e
+# [*] Trying a new Nonce = 0x00000052f
+# [*] Trying a new Nonce = 0x000000530
+# [*] Trying a new Nonce = 0x000000531
+# [*] Trying a new Nonce = 0x000000532
+# [*] Trying a new Nonce = 0x000000533
+# [*] Trying a new Nonce = 0x000000534
+# [*] Trying a new Nonce = 0x000000535
+# [*] Trying a new Nonce = 0x000000536
+# [*] Trying a new Nonce = 0x000000537
+# [*] Trying a new Nonce = 0x000000538
+# [*] Trying a new Nonce = 0x000000539
+# [*] Trying a new Nonce = 0x00000053a
+# [*] Trying a new Nonce = 0x00000053b
+# [*] Trying a new Nonce = 0x00000053c
+# [*] Trying a new Nonce = 0x00000053d
+# [*] Trying a new Nonce = 0x00000053e
+# [*] Trying a new Nonce = 0x00000053f
+# [*] Trying a new Nonce = 0x000000540
+# [*] Trying a new Nonce = 0x000000541
+# [*] Trying a new Nonce = 0x000000542
+# [*] Trying a new Nonce = 0x000000543
+# [*] Trying a new Nonce = 0x000000544
+# [*] Trying a new Nonce = 0x000000545
+# [*] Trying a new Nonce = 0x000000546
+# [*] Trying a new Nonce = 0x000000547
+# [*] Trying a new Nonce = 0x000000548
+# [*] Trying a new Nonce = 0x000000549
+# [*] Trying a new Nonce = 0x00000054a
+# [*] Trying a new Nonce = 0x00000054b
+# [*] Trying a new Nonce = 0x00000054c
+# [*] Trying a new Nonce = 0x00000054d
+# [*] Trying a new Nonce = 0x00000054e
+# [*] Trying a new Nonce = 0x00000054f
+# [*] Trying a new Nonce = 0x000000550
+# [*] Trying a new Nonce = 0x000000551
+# [*] Trying a new Nonce = 0x000000552
+# [*] Trying a new Nonce = 0x000000553
+# [*] Trying a new Nonce = 0x000000554
+# [*] Trying a new Nonce = 0x000000555
+# [*] Trying a new Nonce = 0x000000556
+# [*] Trying a new Nonce = 0x000000557
+# [*] Trying a new Nonce = 0x000000558
+# [*] Trying a new Nonce = 0x000000559
+# [*] Trying a new Nonce = 0x00000055a
+# [*] Trying a new Nonce = 0x00000055b
+# [*] Trying a new Nonce = 0x00000055c
+# [*] Trying a new Nonce = 0x00000055d
+# [*] Trying a new Nonce = 0x00000055e
+# [*] Trying a new Nonce = 0x00000055f
+# [*] Trying a new Nonce = 0x000000560
+# [*] Trying a new Nonce = 0x000000561
+# [*] Trying a new Nonce = 0x000000562
+# [*] Trying a new Nonce = 0x000000563
+# [*] Trying a new Nonce = 0x000000564
+# [*] Trying a new Nonce = 0x000000565
+# [*] Trying a new Nonce = 0x000000566
+# [*] Trying a new Nonce = 0x000000567
+# [*] Trying a new Nonce = 0x000000568
+# [*] Trying a new Nonce = 0x000000569
+# [*] Trying a new Nonce = 0x00000056a
+# [*] Trying a new Nonce = 0x00000056b
+# [*] Trying a new Nonce = 0x00000056c
+# [*] Trying a new Nonce = 0x00000056d
+# [*] Trying a new Nonce = 0x00000056e
+# [*] Trying a new Nonce = 0x00000056f
+# [*] Trying a new Nonce = 0x000000570
+# [*] Trying a new Nonce = 0x000000571
+# [*] Trying a new Nonce = 0x000000572
+# [*] Trying a new Nonce = 0x000000573
+# [*] Trying a new Nonce = 0x000000574
+# [*] Trying a new Nonce = 0x000000575
+# [*] Trying a new Nonce = 0x000000576
+# [*] Trying a new Nonce = 0x000000577
+# [*] Trying a new Nonce = 0x000000578
+# [*] Trying a new Nonce = 0x000000579
+# [*] Trying a new Nonce = 0x00000057a
+# [*] Trying a new Nonce = 0x00000057b
+# [*] Trying a new Nonce = 0x00000057c
+# [*] Trying a new Nonce = 0x00000057d
+# [*] Trying a new Nonce = 0x00000057e
+# [*] Trying a new Nonce = 0x00000057f
+# [*] Trying a new Nonce = 0x000000580
+# [*] Trying a new Nonce = 0x000000581
+# [*] Trying a new Nonce = 0x000000582
+# [*] Trying a new Nonce = 0x000000583
+# [*] Trying a new Nonce = 0x000000584
+# [*] Trying a new Nonce = 0x000000585
+# [*] Trying a new Nonce = 0x000000586
+# [*] Trying a new Nonce = 0x000000587
+# [*] Trying a new Nonce = 0x000000588
+# [*] Trying a new Nonce = 0x000000589
+# [*] Trying a new Nonce = 0x00000058a
+# [*] Trying a new Nonce = 0x00000058b
+# [*] Trying a new Nonce = 0x00000058c
+# [*] Trying a new Nonce = 0x00000058d
+# [*] Trying a new Nonce = 0x00000058e
+# [*] Trying a new Nonce = 0x00000058f
+# [*] Trying a new Nonce = 0x000000590
+# [*] Trying a new Nonce = 0x000000591
+# [*] Trying a new Nonce = 0x000000592
+# [*] Trying a new Nonce = 0x000000593
+# [*] Trying a new Nonce = 0x000000594
+# [*] Trying a new Nonce = 0x000000595
+# [*] Trying a new Nonce = 0x000000596
+# [*] Trying a new Nonce = 0x000000597
+# [*] Trying a new Nonce = 0x000000598
+# [*] Trying a new Nonce = 0x000000599
+# [*] Trying a new Nonce = 0x00000059a
+# [*] Trying a new Nonce = 0x00000059b
+# [*] Trying a new Nonce = 0x00000059c
+# [*] Trying a new Nonce = 0x00000059d
+# [*] Trying a new Nonce = 0x00000059e
+# [*] Trying a new Nonce = 0x00000059f
+# [*] Trying a new Nonce = 0x0000005a0
+# [*] Trying a new Nonce = 0x0000005a1
+# [*] Trying a new Nonce = 0x0000005a2
+# [*] Trying a new Nonce = 0x0000005a3
+# [*] Trying a new Nonce = 0x0000005a4
+# [*] Trying a new Nonce = 0x0000005a5
+# [*] Trying a new Nonce = 0x0000005a6
+# [*] Trying a new Nonce = 0x0000005a7
+# [*] Trying a new Nonce = 0x0000005a8
+# [*] Trying a new Nonce = 0x0000005a9
+# [*] Trying a new Nonce = 0x0000005aa
+# [*] Trying a new Nonce = 0x0000005ab
+# [*] Trying a new Nonce = 0x0000005ac
+# [*] Trying a new Nonce = 0x0000005ad
+# [*] Trying a new Nonce = 0x0000005ae
+# [*] Trying a new Nonce = 0x0000005af
+# [*] Trying a new Nonce = 0x0000005b0
+# [*] Trying a new Nonce = 0x0000005b1
+# [*] Trying a new Nonce = 0x0000005b2
+# [*] Trying a new Nonce = 0x0000005b3
+# [*] Trying a new Nonce = 0x0000005b4
+# [*] Trying a new Nonce = 0x0000005b5
+# [*] Trying a new Nonce = 0x0000005b6
+# [*] Trying a new Nonce = 0x0000005b7
+# [*] Trying a new Nonce = 0x0000005b8
+# [*] Trying a new Nonce = 0x0000005b9
+# [*] Trying a new Nonce = 0x0000005ba
+# [*] Trying a new Nonce = 0x0000005bb
+# [*] Trying a new Nonce = 0x0000005bc
+# [*] Trying a new Nonce = 0x0000005bd
+# [*] Trying a new Nonce = 0x0000005be
+# [*] Trying a new Nonce = 0x0000005bf
+# [*] Trying a new Nonce = 0x0000005c0
+# [*] Trying a new Nonce = 0x0000005c1
+# [*] Trying a new Nonce = 0x0000005c2
+# [*] Trying a new Nonce = 0x0000005c3
+# [*] Trying a new Nonce = 0x0000005c4
+# [*] Trying a new Nonce = 0x0000005c5
+# [*] Trying a new Nonce = 0x0000005c6
+# [*] Trying a new Nonce = 0x0000005c7
+# [*] Trying a new Nonce = 0x0000005c8
+# [*] Trying a new Nonce = 0x0000005c9
+# [*] Trying a new Nonce = 0x0000005ca
+# [*] Trying a new Nonce = 0x0000005cb
+# [*] Trying a new Nonce = 0x0000005cc
+# [*] Trying a new Nonce = 0x0000005cd
+# [*] Trying a new Nonce = 0x0000005ce
+# [*] Trying a new Nonce = 0x0000005cf
+# [*] Trying a new Nonce = 0x0000005d0
+# [*] Trying a new Nonce = 0x0000005d1
+# [*] Trying a new Nonce = 0x0000005d2
+# [*] Trying a new Nonce = 0x0000005d3
+# [*] Trying a new Nonce = 0x0000005d4
+# [*] Trying a new Nonce = 0x0000005d5
+# [*] Trying a new Nonce = 0x0000005d6
+# [*] Trying a new Nonce = 0x0000005d7
+# [*] Trying a new Nonce = 0x0000005d8
+# [*] Trying a new Nonce = 0x0000005d9
+# [*] Trying a new Nonce = 0x0000005da
+# [*] Trying a new Nonce = 0x0000005db
+# [*] Trying a new Nonce = 0x0000005dc
+# [*] Trying a new Nonce = 0x0000005dd
+# [*] Trying a new Nonce = 0x0000005de
+# [*] Trying a new Nonce = 0x0000005df
+# [*] Trying a new Nonce = 0x0000005e0
+# [*] Trying a new Nonce = 0x0000005e1
+# [*] Trying a new Nonce = 0x0000005e2
+# [*] Trying a new Nonce = 0x0000005e3
+# [*] Trying a new Nonce = 0x0000005e4
+# [*] Trying a new Nonce = 0x0000005e5
+# [*] Trying a new Nonce = 0x0000005e6
+# [*] Trying a new Nonce = 0x0000005e7
+# [*] Trying a new Nonce = 0x0000005e8
+# [*] Trying a new Nonce = 0x0000005e9
+# [*] Trying a new Nonce = 0x0000005ea
+# [*] Trying a new Nonce = 0x0000005eb
+# [*] Trying a new Nonce = 0x0000005ec
+# [*] Trying a new Nonce = 0x0000005ed
+# [*] Trying a new Nonce = 0x0000005ee
+# [*] Trying a new Nonce = 0x0000005ef
+# [*] Trying a new Nonce = 0x0000005f0
+# [*] Trying a new Nonce = 0x0000005f1
+# [*] Trying a new Nonce = 0x0000005f2
+# [*] Trying a new Nonce = 0x0000005f3
+# [*] Trying a new Nonce = 0x0000005f4
+# [*] Trying a new Nonce = 0x0000005f5
+# [*] Trying a new Nonce = 0x0000005f6
+# [*] Trying a new Nonce = 0x0000005f7
+# [*] Trying a new Nonce = 0x0000005f8
+# [*] Trying a new Nonce = 0x0000005f9
+# [*] Trying a new Nonce = 0x0000005fa
+# [*] Trying a new Nonce = 0x0000005fb
+# [*] Trying a new Nonce = 0x0000005fc
+# [*] Trying a new Nonce = 0x0000005fd
+# [*] Trying a new Nonce = 0x0000005fe
+# [*] Trying a new Nonce = 0x0000005ff
+# [*] Trying a new Nonce = 0x000000600
+# [*] Trying a new Nonce = 0x000000601
+# [*] Trying a new Nonce = 0x000000602
+# [*] Trying a new Nonce = 0x000000603
+# [*] Trying a new Nonce = 0x000000604
+# [*] Trying a new Nonce = 0x000000605
+# [*] Trying a new Nonce = 0x000000606
+# [*] Trying a new Nonce = 0x000000607
+# [*] Trying a new Nonce = 0x000000608
+# [*] Trying a new Nonce = 0x000000609
+# [*] Trying a new Nonce = 0x00000060a
+# [*] Trying a new Nonce = 0x00000060b
+# [*] Trying a new Nonce = 0x00000060c
+# [*] Trying a new Nonce = 0x00000060d
+# [*] Trying a new Nonce = 0x00000060e
+# [*] Trying a new Nonce = 0x00000060f
+# [*] Trying a new Nonce = 0x000000610
+# [*] Trying a new Nonce = 0x000000611
+# [*] Trying a new Nonce = 0x000000612
+# [*] Trying a new Nonce = 0x000000613
+# [*] Trying a new Nonce = 0x000000614
+# [*] Trying a new Nonce = 0x000000615
+# [*] Trying a new Nonce = 0x000000616
+# [*] Trying a new Nonce = 0x000000617
+# [*] Trying a new Nonce = 0x000000618
+# [*] Trying a new Nonce = 0x000000619
+# [*] Trying a new Nonce = 0x00000061a
+# [*] Trying a new Nonce = 0x00000061b
+# [*] Trying a new Nonce = 0x00000061c
+# [*] Trying a new Nonce = 0x00000061d
+# [*] Trying a new Nonce = 0x00000061e
+# [*] Trying a new Nonce = 0x00000061f
+# [*] Trying a new Nonce = 0x000000620
+# [*] Trying a new Nonce = 0x000000621
+# [*] Trying a new Nonce = 0x000000622
+# [*] Trying a new Nonce = 0x000000623
+# [*] Trying a new Nonce = 0x000000624
+# [*] Trying a new Nonce = 0x000000625
+# [*] Trying a new Nonce = 0x000000626
+# [*] Trying a new Nonce = 0x000000627
+# [*] Trying a new Nonce = 0x000000628
+# [*] Trying a new Nonce = 0x000000629
+# [*] Trying a new Nonce = 0x00000062a
+# [*] Trying a new Nonce = 0x00000062b
+# [*] Trying a new Nonce = 0x00000062c
+# [*] Trying a new Nonce = 0x00000062d
+# [*] Trying a new Nonce = 0x00000062e
+# [*] Trying a new Nonce = 0x00000062f
+# [*] Trying a new Nonce = 0x000000630
+# [*] Trying a new Nonce = 0x000000631
+# [*] Trying a new Nonce = 0x000000632
+# [*] Trying a new Nonce = 0x000000633
+# [*] Trying a new Nonce = 0x000000634
+# [*] Trying a new Nonce = 0x000000635
+# [*] Trying a new Nonce = 0x000000636
+# [*] Trying a new Nonce = 0x000000637
+# [*] Trying a new Nonce = 0x000000638
+# [*] Trying a new Nonce = 0x000000639
+# [*] Trying a new Nonce = 0x00000063a
+# [*] Trying a new Nonce = 0x00000063b
+# [*] Trying a new Nonce = 0x00000063c
+# [*] Trying a new Nonce = 0x00000063d
+# [*] Trying a new Nonce = 0x00000063e
+# [*] Trying a new Nonce = 0x00000063f
+# [*] Trying a new Nonce = 0x000000640
+# [*] Trying a new Nonce = 0x000000641
+# [*] Trying a new Nonce = 0x000000642
+# [*] Trying a new Nonce = 0x000000643
+# [*] Trying a new Nonce = 0x000000644
+# [*] Trying a new Nonce = 0x000000645
+# [*] Trying a new Nonce = 0x000000646
+# [*] Trying a new Nonce = 0x000000647
+# [*] Trying a new Nonce = 0x000000648
+# [*] Trying a new Nonce = 0x000000649
+# [*] Trying a new Nonce = 0x00000064a
+# [*] Trying a new Nonce = 0x00000064b
+# [*] Trying a new Nonce = 0x00000064c
+# [*] Trying a new Nonce = 0x00000064d
+# [*] Trying a new Nonce = 0x00000064e
+# [*] Trying a new Nonce = 0x00000064f
+# [*] Trying a new Nonce = 0x000000650
+# [*] Trying a new Nonce = 0x000000651
+# [*] Trying a new Nonce = 0x000000652
+# [*] Trying a new Nonce = 0x000000653
+# [*] Trying a new Nonce = 0x000000654
+# [*] Trying a new Nonce = 0x000000655
+# [*] Trying a new Nonce = 0x000000656
+# [*] Trying a new Nonce = 0x000000657
+# [*] Trying a new Nonce = 0x000000658
+# [*] Trying a new Nonce = 0x000000659
+# [*] Trying a new Nonce = 0x00000065a
+# [*] Trying a new Nonce = 0x00000065b
+# [*] Trying a new Nonce = 0x00000065c
+# [*] Trying a new Nonce = 0x00000065d
+# [*] Trying a new Nonce = 0x00000065e
+# [*] Trying a new Nonce = 0x00000065f
+# [*] Trying a new Nonce = 0x000000660
+# [*] Trying a new Nonce = 0x000000661
+# [*] Trying a new Nonce = 0x000000662
+# [*] Trying a new Nonce = 0x000000663
+# [*] Trying a new Nonce = 0x000000664
+# [*] Trying a new Nonce = 0x000000665
+# [*] Trying a new Nonce = 0x000000666
+# [*] Trying a new Nonce = 0x000000667
+# [*] Trying a new Nonce = 0x000000668
+# [*] Trying a new Nonce = 0x000000669
+# [*] Trying a new Nonce = 0x00000066a
+# [*] Trying a new Nonce = 0x00000066b
+# [*] Trying a new Nonce = 0x00000066c
+# [*] Trying a new Nonce = 0x00000066d
+# [*] Trying a new Nonce = 0x00000066e
+# [*] Trying a new Nonce = 0x00000066f
+# [*] Trying a new Nonce = 0x000000670
+# [*] Trying a new Nonce = 0x000000671
+# [*] Trying a new Nonce = 0x000000672
+# [*] Trying a new Nonce = 0x000000673
+# [*] Trying a new Nonce = 0x000000674
+# [*] Trying a new Nonce = 0x000000675
+# [*] Trying a new Nonce = 0x000000676
+# [*] Trying a new Nonce = 0x000000677
+# [*] Trying a new Nonce = 0x000000678
+# [*] Trying a new Nonce = 0x000000679
+# [*] Trying a new Nonce = 0x00000067a
+# [*] Trying a new Nonce = 0x00000067b
+# [*] Trying a new Nonce = 0x00000067c
+# [*] Trying a new Nonce = 0x00000067d
+# [*] Trying a new Nonce = 0x00000067e
+# [*] Trying a new Nonce = 0x00000067f
+# [*] Trying a new Nonce = 0x000000680
+# [*] Trying a new Nonce = 0x000000681
+# [*] Trying a new Nonce = 0x000000682
+# [*] Trying a new Nonce = 0x000000683
+# [*] Trying a new Nonce = 0x000000684
+# [*] Trying a new Nonce = 0x000000685
+# [*] Trying a new Nonce = 0x000000686
+# [*] Trying a new Nonce = 0x000000687
+# [*] Trying a new Nonce = 0x000000688
+# [*] Trying a new Nonce = 0x000000689
+# [*] Trying a new Nonce = 0x00000068a
+# [*] Trying a new Nonce = 0x00000068b
+# [*] Trying a new Nonce = 0x00000068c
+# [*] Trying a new Nonce = 0x00000068d
+# [*] Trying a new Nonce = 0x00000068e
+# [*] Trying a new Nonce = 0x00000068f
+# [*] Trying a new Nonce = 0x000000690
+# [*] Trying a new Nonce = 0x000000691
+# [*] Trying a new Nonce = 0x000000692
+# [*] Trying a new Nonce = 0x000000693
+# [*] Trying a new Nonce = 0x000000694
+# [*] Trying a new Nonce = 0x000000695
+# [*] Trying a new Nonce = 0x000000696
+# [*] Trying a new Nonce = 0x000000697
+# [*] Trying a new Nonce = 0x000000698
+# [*] Trying a new Nonce = 0x000000699
+# [*] Trying a new Nonce = 0x00000069a
+# [*] Trying a new Nonce = 0x00000069b
+# [*] Trying a new Nonce = 0x00000069c
+# [*] Trying a new Nonce = 0x00000069d
+# [*] Trying a new Nonce = 0x00000069e
+# [*] Trying a new Nonce = 0x00000069f
+# [*] Trying a new Nonce = 0x0000006a0
+# [*] Trying a new Nonce = 0x0000006a1
+# [*] Trying a new Nonce = 0x0000006a2
+# [*] Trying a new Nonce = 0x0000006a3
+# [*] Trying a new Nonce = 0x0000006a4
+# [*] Trying a new Nonce = 0x0000006a5
+# [*] Trying a new Nonce = 0x0000006a6
+# [*] Trying a new Nonce = 0x0000006a7
+# [*] Trying a new Nonce = 0x0000006a8
+# [*] Trying a new Nonce = 0x0000006a9
+# [*] Trying a new Nonce = 0x0000006aa
+# [*] Trying a new Nonce = 0x0000006ab
+# [*] Trying a new Nonce = 0x0000006ac
+# [*] Trying a new Nonce = 0x0000006ad
+# [*] Trying a new Nonce = 0x0000006ae
+# [*] Trying a new Nonce = 0x0000006af
+# [*] Trying a new Nonce = 0x0000006b0
+# [*] Trying a new Nonce = 0x0000006b1
+# [*] Trying a new Nonce = 0x0000006b2
+# [*] Trying a new Nonce = 0x0000006b3
+# [*] Trying a new Nonce = 0x0000006b4
+# [*] Trying a new Nonce = 0x0000006b5
+# [*] Trying a new Nonce = 0x0000006b6
+# [*] Trying a new Nonce = 0x0000006b7
+# [*] Trying a new Nonce = 0x0000006b8
+# [*] Trying a new Nonce = 0x0000006b9
+# [*] Trying a new Nonce = 0x0000006ba
+# [*] Trying a new Nonce = 0x0000006bb
+# [*] Trying a new Nonce = 0x0000006bc
+# [*] Trying a new Nonce = 0x0000006bd
+# [*] Trying a new Nonce = 0x0000006be
+# [*] Trying a new Nonce = 0x0000006bf
+# [*] Trying a new Nonce = 0x0000006c0
+# [*] Trying a new Nonce = 0x0000006c1
+# [*] Trying a new Nonce = 0x0000006c2
+# [*] Trying a new Nonce = 0x0000006c3
+# [*] Trying a new Nonce = 0x0000006c4
+# [*] Trying a new Nonce = 0x0000006c5
+# [*] Trying a new Nonce = 0x0000006c6
+# [*] Trying a new Nonce = 0x0000006c7
+# [*] Trying a new Nonce = 0x0000006c8
+# [*] Trying a new Nonce = 0x0000006c9
+# [*] Trying a new Nonce = 0x0000006ca
+# [*] Trying a new Nonce = 0x0000006cb
+# [*] Trying a new Nonce = 0x0000006cc
+# [*] Trying a new Nonce = 0x0000006cd
+# [*] Trying a new Nonce = 0x0000006ce
+# [*] Trying a new Nonce = 0x0000006cf
+# [*] Trying a new Nonce = 0x0000006d0
+# [*] Trying a new Nonce = 0x0000006d1
+# [*] Trying a new Nonce = 0x0000006d2
+# [*] Trying a new Nonce = 0x0000006d3
+# [*] Trying a new Nonce = 0x0000006d4
+# [*] Trying a new Nonce = 0x0000006d5
+# [*] Trying a new Nonce = 0x0000006d6
+# [*] Trying a new Nonce = 0x0000006d7
+# [*] Trying a new Nonce = 0x0000006d8
+# [*] Trying a new Nonce = 0x0000006d9
+# [*] Trying a new Nonce = 0x0000006da
+# [*] Trying a new Nonce = 0x0000006db
+# [*] Trying a new Nonce = 0x0000006dc
+# [*] Trying a new Nonce = 0x0000006dd
+# [*] Trying a new Nonce = 0x0000006de
+# [*] Trying a new Nonce = 0x0000006df
+# [*] Trying a new Nonce = 0x0000006e0
+# [*] Trying a new Nonce = 0x0000006e1
+# [*] Trying a new Nonce = 0x0000006e2
+# [*] Trying a new Nonce = 0x0000006e3
+# [*] Trying a new Nonce = 0x0000006e4
+# [*] Trying a new Nonce = 0x0000006e5
+# [*] Trying a new Nonce = 0x0000006e6
+# [*] Trying a new Nonce = 0x0000006e7
+# [*] Trying a new Nonce = 0x0000006e8
+# [*] Trying a new Nonce = 0x0000006e9
+# [*] Trying a new Nonce = 0x0000006ea
+# [*] Trying a new Nonce = 0x0000006eb
+# [*] Trying a new Nonce = 0x0000006ec
+# [*] Trying a new Nonce = 0x0000006ed
+# [*] Trying a new Nonce = 0x0000006ee
+# [*] Trying a new Nonce = 0x0000006ef
+# [*] Trying a new Nonce = 0x0000006f0
+# [*] Trying a new Nonce = 0x0000006f1
+# [*] Trying a new Nonce = 0x0000006f2
+# [*] Trying a new Nonce = 0x0000006f3
+# [*] Trying a new Nonce = 0x0000006f4
+# [*] Trying a new Nonce = 0x0000006f5
+# [*] Trying a new Nonce = 0x0000006f6
+# [*] Trying a new Nonce = 0x0000006f7
+# [*] Trying a new Nonce = 0x0000006f8
+# [*] Trying a new Nonce = 0x0000006f9
+# [*] Trying a new Nonce = 0x0000006fa
+# [*] Trying a new Nonce = 0x0000006fb
+# [*] Trying a new Nonce = 0x0000006fc
+# [*] Trying a new Nonce = 0x0000006fd
+# [*] Trying a new Nonce = 0x0000006fe
+# [*] Trying a new Nonce = 0x0000006ff
+# [*] Trying a new Nonce = 0x000000700
+# [*] Trying a new Nonce = 0x000000701
+# [*] Trying a new Nonce = 0x000000702
+# [*] Trying a new Nonce = 0x000000703
+# [*] Trying a new Nonce = 0x000000704
+# [*] Trying a new Nonce = 0x000000705
+# [*] Trying a new Nonce = 0x000000706
+# [*] Trying a new Nonce = 0x000000707
+# [*] Trying a new Nonce = 0x000000708
+# [*] Trying a new Nonce = 0x000000709
+# [*] Trying a new Nonce = 0x00000070a
+# [*] Trying a new Nonce = 0x00000070b
+# [*] Trying a new Nonce = 0x00000070c
+# [*] Trying a new Nonce = 0x00000070d
+# [*] Trying a new Nonce = 0x00000070e
+# [*] Trying a new Nonce = 0x00000070f
+# [*] Trying a new Nonce = 0x000000710
+# [*] Trying a new Nonce = 0x000000711
+# [*] Trying a new Nonce = 0x000000712
+# [*] Trying a new Nonce = 0x000000713
+# [*] Trying a new Nonce = 0x000000714
+# [*] Trying a new Nonce = 0x000000715
+# [*] Trying a new Nonce = 0x000000716
+# [*] Trying a new Nonce = 0x000000717
+# [*] Trying a new Nonce = 0x000000718
+# [*] Trying a new Nonce = 0x000000719
+# [*] Trying a new Nonce = 0x00000071a
+# [*] Trying a new Nonce = 0x00000071b
+# [*] Trying a new Nonce = 0x00000071c
+# [*] Trying a new Nonce = 0x00000071d
+# [*] Trying a new Nonce = 0x00000071e
+# [*] Trying a new Nonce = 0x00000071f
+# [*] Trying a new Nonce = 0x000000720
+# [*] Trying a new Nonce = 0x000000721
+# [*] Trying a new Nonce = 0x000000722
+# [*] Trying a new Nonce = 0x000000723
+# [*] Trying a new Nonce = 0x000000724
+# [*] Trying a new Nonce = 0x000000725
+# [*] Trying a new Nonce = 0x000000726
+# [*] Trying a new Nonce = 0x000000727
+# [*] Trying a new Nonce = 0x000000728
+# [*] Trying a new Nonce = 0x000000729
+# [*] Trying a new Nonce = 0x00000072a
+# [*] Trying a new Nonce = 0x00000072b
+# [*] Trying a new Nonce = 0x00000072c
+# [*] Trying a new Nonce = 0x00000072d
+# [*] Trying a new Nonce = 0x00000072e
+# [*] Trying a new Nonce = 0x00000072f
+# [*] Trying a new Nonce = 0x000000730
+# [*] Trying a new Nonce = 0x000000731
+# [*] Trying a new Nonce = 0x000000732
+# [*] Trying a new Nonce = 0x000000733
+# [*] Trying a new Nonce = 0x000000734
+# [*] Trying a new Nonce = 0x000000735
+# [*] Trying a new Nonce = 0x000000736
+# [*] Trying a new Nonce = 0x000000737
+# [*] Trying a new Nonce = 0x000000738
+# [*] Trying a new Nonce = 0x000000739
+# [*] Trying a new Nonce = 0x00000073a
+# [*] Trying a new Nonce = 0x00000073b
+# [*] Trying a new Nonce = 0x00000073c
+# [*] Trying a new Nonce = 0x00000073d
+# [*] Trying a new Nonce = 0x00000073e
+# [*] Trying a new Nonce = 0x00000073f
+# [*] Trying a new Nonce = 0x000000740
+# [*] Trying a new Nonce = 0x000000741
+# [*] Trying a new Nonce = 0x000000742
+# [*] Trying a new Nonce = 0x000000743
+# [*] Trying a new Nonce = 0x000000744
+# [*] Trying a new Nonce = 0x000000745
+# [*] Trying a new Nonce = 0x000000746
+# [*] Trying a new Nonce = 0x000000747
+# [*] Trying a new Nonce = 0x000000748
+# [*] Trying a new Nonce = 0x000000749
+# [*] Trying a new Nonce = 0x00000074a
+# [*] Trying a new Nonce = 0x00000074b
+# [*] Trying a new Nonce = 0x00000074c
+# [*] Trying a new Nonce = 0x00000074d
+# [*] Trying a new Nonce = 0x00000074e
+# [*] Trying a new Nonce = 0x00000074f
+# [*] Trying a new Nonce = 0x000000750
+# [*] Trying a new Nonce = 0x000000751
+# [*] Trying a new Nonce = 0x000000752
+# [*] Trying a new Nonce = 0x000000753
+# [*] Trying a new Nonce = 0x000000754
+# [*] Trying a new Nonce = 0x000000755
+# [*] Trying a new Nonce = 0x000000756
+# [*] Trying a new Nonce = 0x000000757
+# [*] Trying a new Nonce = 0x000000758
+# [*] Trying a new Nonce = 0x000000759
+# [*] Trying a new Nonce = 0x00000075a
+# [*] Trying a new Nonce = 0x00000075b
+# [*] Trying a new Nonce = 0x00000075c
+# [*] Trying a new Nonce = 0x00000075d
+# [*] Trying a new Nonce = 0x00000075e
+# [*] Trying a new Nonce = 0x00000075f
+# [*] Trying a new Nonce = 0x000000760
+# [*] Trying a new Nonce = 0x000000761
+# [*] Trying a new Nonce = 0x000000762
+# [*] Trying a new Nonce = 0x000000763
+# [*] Trying a new Nonce = 0x000000764
+# [*] Trying a new Nonce = 0x000000765
+# [*] Trying a new Nonce = 0x000000766
+# [*] Trying a new Nonce = 0x000000767
+# [*] Trying a new Nonce = 0x000000768
+# [*] Trying a new Nonce = 0x000000769
+# [*] Trying a new Nonce = 0x00000076a
+# [*] Trying a new Nonce = 0x00000076b
+# [*] Trying a new Nonce = 0x00000076c
+# [*] Trying a new Nonce = 0x00000076d
+# [*] Trying a new Nonce = 0x00000076e
+# [*] Trying a new Nonce = 0x00000076f
+# [*] Trying a new Nonce = 0x000000770
+# [*] Trying a new Nonce = 0x000000771
+# [*] Trying a new Nonce = 0x000000772
+# [*] Trying a new Nonce = 0x000000773
+# [*] Trying a new Nonce = 0x000000774
+# [*] Trying a new Nonce = 0x000000775
+# [*] Trying a new Nonce = 0x000000776
+# [*] Trying a new Nonce = 0x000000777
+# [*] Trying a new Nonce = 0x000000778
+# [*] Trying a new Nonce = 0x000000779
+# [*] Trying a new Nonce = 0x00000077a
+# [*] Trying a new Nonce = 0x00000077b
+# [*] Trying a new Nonce = 0x00000077c
+# [*] Trying a new Nonce = 0x00000077d
+# [*] Trying a new Nonce = 0x00000077e
+# [*] Trying a new Nonce = 0x00000077f
+# [*] Trying a new Nonce = 0x000000780
+# [*] Trying a new Nonce = 0x000000781
+# [*] Trying a new Nonce = 0x000000782
+# [*] Trying a new Nonce = 0x000000783
+# [*] Trying a new Nonce = 0x000000784
+# [*] Trying a new Nonce = 0x000000785
+# [*] Trying a new Nonce = 0x000000786
+# [*] Trying a new Nonce = 0x000000787
+# [*] Trying a new Nonce = 0x000000788
+# [*] Trying a new Nonce = 0x000000789
+# [*] Trying a new Nonce = 0x00000078a
+# [*] Trying a new Nonce = 0x00000078b
+# [*] Trying a new Nonce = 0x00000078c
+# [*] Trying a new Nonce = 0x00000078d
+# [*] Trying a new Nonce = 0x00000078e
+# [*] Trying a new Nonce = 0x00000078f
+# [*] Trying a new Nonce = 0x000000790
+# [*] Trying a new Nonce = 0x000000791
+# [*] Trying a new Nonce = 0x000000792
+# [*] Trying a new Nonce = 0x000000793
+# [*] Trying a new Nonce = 0x000000794
+# [*] Trying a new Nonce = 0x000000795
+# [*] Trying a new Nonce = 0x000000796
+# [*] Trying a new Nonce = 0x000000797
+# [*] Trying a new Nonce = 0x000000798
+# [*] Trying a new Nonce = 0x000000799
+# Compile of cl_decode.sv failed with 2 errors.
+# Compile of cl_decode.sv failed with 2 errors.
+# Compile of cl_decode.sv failed with 2 errors.
+# Compile of alu.sv was successful.
+# Compile of cl_decode.sv failed with 2 errors.
+# Compile of cl_state_machine.sv was successful.
+# Compile of core.sv was successful.
+# Compile of core_flattened.sv was successful.
+# Compile of core_tb.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of definitions.sv was successful.
+# Compile of disassemble.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of miner_tb.sv was successful.
+# Compile of net_packet_logger_s.sv was successful.
+# Compile of reg_file.sv was successful.
+# 13 compiles, 1 failed with 2 errors. 
+# Compile of cl_decode.sv was successful.
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# [*] Trying a new Nonce = 0x000000001
+# [*] Trying a new Nonce = 0x000000002
+# [*] Trying a new Nonce = 0x000000003
+# [*] Trying a new Nonce = 0x000000004
+# [*] Trying a new Nonce = 0x000000005
+# [*] Trying a new Nonce = 0x000000006
+# [*] Trying a new Nonce = 0x000000007
+# [*] Trying a new Nonce = 0x000000008
+# [*] Trying a new Nonce = 0x000000009
+# [*] Trying a new Nonce = 0x00000000a
+# [*] Trying a new Nonce = 0x00000000b
+# [*] Trying a new Nonce = 0x00000000c
+# [*] Trying a new Nonce = 0x00000000d
+# [*] Trying a new Nonce = 0x00000000e
+# [*] Trying a new Nonce = 0x00000000f
+# [*] Trying a new Nonce = 0x000000010
+# [*] Trying a new Nonce = 0x000000011
+# [*] Trying a new Nonce = 0x000000012
+# [*] Trying a new Nonce = 0x000000013
+# [*] Trying a new Nonce = 0x000000014
+# [*] Trying a new Nonce = 0x000000015
+# [*] Trying a new Nonce = 0x000000016
+# [*] Trying a new Nonce = 0x000000017
+# [*] Trying a new Nonce = 0x000000018
+# [*] Trying a new Nonce = 0x000000019
+# [*] Trying a new Nonce = 0x00000001a
+# [*] Trying a new Nonce = 0x00000001b
+# [*] Trying a new Nonce = 0x00000001c
+# [*] Trying a new Nonce = 0x00000001d
+# [*] Trying a new Nonce = 0x00000001e
+# [*] Trying a new Nonce = 0x00000001f
+# [*] Trying a new Nonce = 0x000000020
+# [*] Trying a new Nonce = 0x000000021
+# [*] Trying a new Nonce = 0x000000022
+# [*] Trying a new Nonce = 0x000000023
+# [*] Trying a new Nonce = 0x000000024
+# [*] Trying a new Nonce = 0x000000025
+# [*] Trying a new Nonce = 0x000000026
+# [*] Trying a new Nonce = 0x000000027
+# [*] Trying a new Nonce = 0x000000028
+# [*] Trying a new Nonce = 0x000000029
+# [*] Trying a new Nonce = 0x00000002a
+# [*] Trying a new Nonce = 0x00000002b
+# [*] Trying a new Nonce = 0x00000002c
+# [*] Trying a new Nonce = 0x00000002d
+# [*] Trying a new Nonce = 0x00000002e
+# [*] Trying a new Nonce = 0x00000002f
+# [*] Trying a new Nonce = 0x000000030
+# [*] Trying a new Nonce = 0x000000031
+# [*] Trying a new Nonce = 0x000000032
+# [*] Trying a new Nonce = 0x000000033
+# [*] Trying a new Nonce = 0x000000034
+# [*] Trying a new Nonce = 0x000000035
+# [*] Trying a new Nonce = 0x000000036
+# [*] Trying a new Nonce = 0x000000037
+# [*] Trying a new Nonce = 0x000000038
+# [*] Trying a new Nonce = 0x000000039
+# [*] Trying a new Nonce = 0x00000003a
+# [*] Trying a new Nonce = 0x00000003b
+# [*] Trying a new Nonce = 0x00000003c
+# [*] Trying a new Nonce = 0x00000003d
+# [*] Trying a new Nonce = 0x00000003e
+# [*] Trying a new Nonce = 0x00000003f
+# [*] Trying a new Nonce = 0x000000040
+# [*] Trying a new Nonce = 0x000000041
+# [*] Trying a new Nonce = 0x000000042
+# [*] Trying a new Nonce = 0x000000043
+# [*] Trying a new Nonce = 0x000000044
+# [*] Trying a new Nonce = 0x000000045
+# [*] Trying a new Nonce = 0x000000046
+# [*] Trying a new Nonce = 0x000000047
+# [*] Trying a new Nonce = 0x000000048
+# [*] Trying a new Nonce = 0x000000049
+# [*] Trying a new Nonce = 0x00000004a
+# [*] Trying a new Nonce = 0x00000004b
+# [*] Trying a new Nonce = 0x00000004c
+# [*] Trying a new Nonce = 0x00000004d
+# [*] Trying a new Nonce = 0x00000004e
+# [*] Trying a new Nonce = 0x00000004f
+# [*] Trying a new Nonce = 0x000000050
+# [*] Trying a new Nonce = 0x000000051
+# [*] Trying a new Nonce = 0x000000052
+# [*] Trying a new Nonce = 0x000000053
+# [*] Trying a new Nonce = 0x000000054
+# [*] Trying a new Nonce = 0x000000055
+# [*] Trying a new Nonce = 0x000000056
+# [*] Trying a new Nonce = 0x000000057
+# [*] Trying a new Nonce = 0x000000058
+# [*] Trying a new Nonce = 0x000000059
+# [*] Trying a new Nonce = 0x00000005a
+# [*] Trying a new Nonce = 0x00000005b
+# [*] Trying a new Nonce = 0x00000005c
+# [*] Trying a new Nonce = 0x00000005d
+# [*] Trying a new Nonce = 0x00000005e
+# [*] Trying a new Nonce = 0x00000005f
+# [*] Trying a new Nonce = 0x000000060
+# [*] Trying a new Nonce = 0x000000061
+# [*] Trying a new Nonce = 0x000000062
+# [*] Trying a new Nonce = 0x000000063
+# [*] Trying a new Nonce = 0x000000064
+# [*] Trying a new Nonce = 0x000000065
+# [*] Trying a new Nonce = 0x000000066
+# [*] Trying a new Nonce = 0x000000067
+# [*] Trying a new Nonce = 0x000000068
+# [*] Trying a new Nonce = 0x000000069
+# [*] Trying a new Nonce = 0x00000006a
+# [*] Trying a new Nonce = 0x00000006b
+# [*] Trying a new Nonce = 0x00000006c
+# [*] Trying a new Nonce = 0x00000006d
+# [*] Trying a new Nonce = 0x00000006e
+# [*] Trying a new Nonce = 0x00000006f
+# [*] Trying a new Nonce = 0x000000070
+# [*] Trying a new Nonce = 0x000000071
+# [*] Trying a new Nonce = 0x000000072
+# [*] Trying a new Nonce = 0x000000073
+# [*] Trying a new Nonce = 0x000000074
+# [*] Trying a new Nonce = 0x000000075
+# [*] Trying a new Nonce = 0x000000076
+# [*] Trying a new Nonce = 0x000000077
+# [*] Trying a new Nonce = 0x000000078
+# [*] Trying a new Nonce = 0x000000079
+# [*] Trying a new Nonce = 0x00000007a
+# [*] Trying a new Nonce = 0x00000007b
+# [*] Trying a new Nonce = 0x00000007c
+# [*] Trying a new Nonce = 0x00000007d
+# [*] Trying a new Nonce = 0x00000007e
+# [*] Trying a new Nonce = 0x00000007f
+# [*] Trying a new Nonce = 0x000000080
+# [*] Trying a new Nonce = 0x000000081
+# [*] Trying a new Nonce = 0x000000082
+# [*] Trying a new Nonce = 0x000000083
+# [*] Trying a new Nonce = 0x000000084
+# [*] Trying a new Nonce = 0x000000085
+# [*] Trying a new Nonce = 0x000000086
+# [*] Trying a new Nonce = 0x000000087
+# [*] Trying a new Nonce = 0x000000088
+# [*] Trying a new Nonce = 0x000000089
+# [*] Trying a new Nonce = 0x00000008a
+# [*] Trying a new Nonce = 0x00000008b
+# [*] Trying a new Nonce = 0x00000008c
+# [*] Trying a new Nonce = 0x00000008d
+# [*] Trying a new Nonce = 0x00000008e
+# [*] Trying a new Nonce = 0x00000008f
+# [*] Trying a new Nonce = 0x000000090
+# [*] Trying a new Nonce = 0x000000091
+# [*] Trying a new Nonce = 0x000000092
+# [*] Trying a new Nonce = 0x000000093
+# [*] Trying a new Nonce = 0x000000094
+# [*] Trying a new Nonce = 0x000000095
+# [*] Trying a new Nonce = 0x000000096
+# [*] Trying a new Nonce = 0x000000097
+# [*] Trying a new Nonce = 0x000000098
+# [*] Trying a new Nonce = 0x000000099
+# [*] Trying a new Nonce = 0x00000009a
+# [*] Trying a new Nonce = 0x00000009b
+# [*] Trying a new Nonce = 0x00000009c
+# [*] Trying a new Nonce = 0x00000009d
+# [*] Trying a new Nonce = 0x00000009e
+# [*] Trying a new Nonce = 0x00000009f
+# [*] Trying a new Nonce = 0x0000000a0
+# [*] Trying a new Nonce = 0x0000000a1
+# [*] Trying a new Nonce = 0x0000000a2
+# [*] Trying a new Nonce = 0x0000000a3
+# [*] Trying a new Nonce = 0x0000000a4
+# [*] Trying a new Nonce = 0x0000000a5
+# [*] Trying a new Nonce = 0x0000000a6
+# [*] Trying a new Nonce = 0x0000000a7
+# [*] Trying a new Nonce = 0x0000000a8
+# [*] Trying a new Nonce = 0x0000000a9
+# [*] Trying a new Nonce = 0x0000000aa
+# [*] Trying a new Nonce = 0x0000000ab
+# [*] Trying a new Nonce = 0x0000000ac
+# [*] Trying a new Nonce = 0x0000000ad
+# [*] Trying a new Nonce = 0x0000000ae
+# [*] Trying a new Nonce = 0x0000000af
+# [*] Trying a new Nonce = 0x0000000b0
+# [*] Trying a new Nonce = 0x0000000b1
+# [*] Trying a new Nonce = 0x0000000b2
+# [*] Trying a new Nonce = 0x0000000b3
+# [*] Trying a new Nonce = 0x0000000b4
+# [*] Trying a new Nonce = 0x0000000b5
+# [*] Trying a new Nonce = 0x0000000b6
+# [*] Trying a new Nonce = 0x0000000b7
+# [*] Trying a new Nonce = 0x0000000b8
+# [*] Trying a new Nonce = 0x0000000b9
+# [*] Trying a new Nonce = 0x0000000ba
+# [*] Trying a new Nonce = 0x0000000bb
+# [*] Trying a new Nonce = 0x0000000bc
+# [*] Trying a new Nonce = 0x0000000bd
+# [*] Trying a new Nonce = 0x0000000be
+# [*] Trying a new Nonce = 0x0000000bf
+# [*] Trying a new Nonce = 0x0000000c0
+# [*] Trying a new Nonce = 0x0000000c1
+# [*] Trying a new Nonce = 0x0000000c2
+# [*] Trying a new Nonce = 0x0000000c3
+# [*] Trying a new Nonce = 0x0000000c4
+# [*] Trying a new Nonce = 0x0000000c5
+# [*] Trying a new Nonce = 0x0000000c6
+# [*] Trying a new Nonce = 0x0000000c7
+# [*] Trying a new Nonce = 0x0000000c8
+# [*] Trying a new Nonce = 0x0000000c9
+# [*] Trying a new Nonce = 0x0000000ca
+# [*] Trying a new Nonce = 0x0000000cb
+# [*] Trying a new Nonce = 0x0000000cc
+# [*] Trying a new Nonce = 0x0000000cd
+# [*] Trying a new Nonce = 0x0000000ce
+# [*] Trying a new Nonce = 0x0000000cf
+# [*] Trying a new Nonce = 0x0000000d0
+# [*] Trying a new Nonce = 0x0000000d1
+# [*] Trying a new Nonce = 0x0000000d2
+# [*] Trying a new Nonce = 0x0000000d3
+# [*] Trying a new Nonce = 0x0000000d4
+# [*] Trying a new Nonce = 0x0000000d5
+# [*] Trying a new Nonce = 0x0000000d6
+# [*] Trying a new Nonce = 0x0000000d7
+# [*] Trying a new Nonce = 0x0000000d8
+# [*] Trying a new Nonce = 0x0000000d9
+# [*] Trying a new Nonce = 0x0000000da
+# [*] Trying a new Nonce = 0x0000000db
+# [*] Trying a new Nonce = 0x0000000dc
+# [*] Trying a new Nonce = 0x0000000dd
+# [*] Trying a new Nonce = 0x0000000de
+# [*] Trying a new Nonce = 0x0000000df
+# [*] Trying a new Nonce = 0x0000000e0
+# [*] Trying a new Nonce = 0x0000000e1
+# [*] Trying a new Nonce = 0x0000000e2
+# [*] Trying a new Nonce = 0x0000000e3
+# [*] Trying a new Nonce = 0x0000000e4
+# [*] Trying a new Nonce = 0x0000000e5
+# [*] Trying a new Nonce = 0x0000000e6
+# [*] Trying a new Nonce = 0x0000000e7
+# [*] Trying a new Nonce = 0x0000000e8
+# [*] Trying a new Nonce = 0x0000000e9
+# [*] Trying a new Nonce = 0x0000000ea
+# [*] Trying a new Nonce = 0x0000000eb
+# [*] Trying a new Nonce = 0x0000000ec
+# [*] Trying a new Nonce = 0x0000000ed
+# [*] Trying a new Nonce = 0x0000000ee
+# [*] Trying a new Nonce = 0x0000000ef
+# [*] Trying a new Nonce = 0x0000000f0
+# [*] Trying a new Nonce = 0x0000000f1
+# [*] Trying a new Nonce = 0x0000000f2
+# [*] Trying a new Nonce = 0x0000000f3
+# [*] Trying a new Nonce = 0x0000000f4
+# [*] Trying a new Nonce = 0x0000000f5
+# [*] Trying a new Nonce = 0x0000000f6
+# [*] Trying a new Nonce = 0x0000000f7
+# [*] Trying a new Nonce = 0x0000000f8
+# [*] Trying a new Nonce = 0x0000000f9
+# [*] Trying a new Nonce = 0x0000000fa
+# [*] Trying a new Nonce = 0x0000000fb
+# [*] Trying a new Nonce = 0x0000000fc
+# [*] Trying a new Nonce = 0x0000000fd
+# [*] Trying a new Nonce = 0x0000000fe
+# [*] Trying a new Nonce = 0x0000000ff
+# [*] Trying a new Nonce = 0x000000100
+# [*] Trying a new Nonce = 0x000000101
+# [*] Trying a new Nonce = 0x000000102
+# [*] Trying a new Nonce = 0x000000103
+# [*] Trying a new Nonce = 0x000000104
+# [*] Trying a new Nonce = 0x000000105
+# [*] Trying a new Nonce = 0x000000106
+# [*] Trying a new Nonce = 0x000000107
+# [*] Trying a new Nonce = 0x000000108
+# [*] Trying a new Nonce = 0x000000109
+# [*] Trying a new Nonce = 0x00000010a
+# [*] Trying a new Nonce = 0x00000010b
+# [*] Trying a new Nonce = 0x00000010c
+# [*] Trying a new Nonce = 0x00000010d
+# [*] Trying a new Nonce = 0x00000010e
+# [*] Trying a new Nonce = 0x00000010f
+# [*] Trying a new Nonce = 0x000000110
+# [*] Trying a new Nonce = 0x000000111
+# [*] Trying a new Nonce = 0x000000112
+# [*] Trying a new Nonce = 0x000000113
+# [*] Trying a new Nonce = 0x000000114
+# [*] Trying a new Nonce = 0x000000115
+# [*] Trying a new Nonce = 0x000000116
+# [*] Trying a new Nonce = 0x000000117
+# [*] Trying a new Nonce = 0x000000118
+# [*] Trying a new Nonce = 0x000000119
+# [*] Trying a new Nonce = 0x00000011a
+# [*] Trying a new Nonce = 0x00000011b
+# [*] Trying a new Nonce = 0x00000011c
+# [*] Trying a new Nonce = 0x00000011d
+# [*] Trying a new Nonce = 0x00000011e
+# [*] Trying a new Nonce = 0x00000011f
+# [*] Trying a new Nonce = 0x000000120
+# [*] Trying a new Nonce = 0x000000121
+# [*] Trying a new Nonce = 0x000000122
+# [*] Trying a new Nonce = 0x000000123
+# [*] Trying a new Nonce = 0x000000124
+# [*] Trying a new Nonce = 0x000000125
+# [*] Trying a new Nonce = 0x000000126
+# [*] Trying a new Nonce = 0x000000127
+# [*] Trying a new Nonce = 0x000000128
+# [*] Trying a new Nonce = 0x000000129
+# [*] Trying a new Nonce = 0x00000012a
+# [*] Trying a new Nonce = 0x00000012b
+# [*] Trying a new Nonce = 0x00000012c
+# [*] Trying a new Nonce = 0x00000012d
+# [*] Trying a new Nonce = 0x00000012e
+# [*] Trying a new Nonce = 0x00000012f
+# [*] Trying a new Nonce = 0x000000130
+# [*] Trying a new Nonce = 0x000000131
+# [*] Trying a new Nonce = 0x000000132
+# [*] Trying a new Nonce = 0x000000133
+# [*] Trying a new Nonce = 0x000000134
+# [*] Trying a new Nonce = 0x000000135
+# [*] Trying a new Nonce = 0x000000136
+# [*] Trying a new Nonce = 0x000000137
+# [*] Trying a new Nonce = 0x000000138
+# [*] Trying a new Nonce = 0x000000139
+# [*] Trying a new Nonce = 0x00000013a
+# [*] Trying a new Nonce = 0x00000013b
+# [*] Trying a new Nonce = 0x00000013c
+# [*] Trying a new Nonce = 0x00000013d
+# [*] Trying a new Nonce = 0x00000013e
+# [*] Trying a new Nonce = 0x00000013f
+# [*] Trying a new Nonce = 0x000000140
+# [*] Trying a new Nonce = 0x000000141
+# [*] Trying a new Nonce = 0x000000142
+# [*] Trying a new Nonce = 0x000000143
+# [*] Trying a new Nonce = 0x000000144
+# [*] Trying a new Nonce = 0x000000145
+# [*] Trying a new Nonce = 0x000000146
+# [*] Trying a new Nonce = 0x000000147
+# [*] Trying a new Nonce = 0x000000148
+# [*] Trying a new Nonce = 0x000000149
+# [*] Trying a new Nonce = 0x00000014a
+# [*] Trying a new Nonce = 0x00000014b
+# [*] Trying a new Nonce = 0x00000014c
+# [*] Trying a new Nonce = 0x00000014d
+# [*] Trying a new Nonce = 0x00000014e
+# [*] Trying a new Nonce = 0x00000014f
+# [*] Trying a new Nonce = 0x000000150
+# [*] Trying a new Nonce = 0x000000151
+# [*] Trying a new Nonce = 0x000000152
+# [*] Trying a new Nonce = 0x000000153
+# [*] Trying a new Nonce = 0x000000154
+# [*] Trying a new Nonce = 0x000000155
+# [*] Trying a new Nonce = 0x000000156
+# [*] Trying a new Nonce = 0x000000157
+# [*] Trying a new Nonce = 0x000000158
+# [*] Trying a new Nonce = 0x000000159
+# [*] Trying a new Nonce = 0x00000015a
+# [*] Trying a new Nonce = 0x00000015b
+# [*] Trying a new Nonce = 0x00000015c
+# [*] Trying a new Nonce = 0x00000015d
+# [*] Trying a new Nonce = 0x00000015e
+# [*] Trying a new Nonce = 0x00000015f
+# [*] Trying a new Nonce = 0x000000160
+# [*] Trying a new Nonce = 0x000000161
+# [*] Trying a new Nonce = 0x000000162
+# [*] Trying a new Nonce = 0x000000163
+# [*] Trying a new Nonce = 0x000000164
+# [*] Trying a new Nonce = 0x000000165
+# [*] Trying a new Nonce = 0x000000166
+# [*] Trying a new Nonce = 0x000000167
+# [*] Trying a new Nonce = 0x000000168
+# [*] Trying a new Nonce = 0x000000169
+# [*] Trying a new Nonce = 0x00000016a
+# [*] Trying a new Nonce = 0x00000016b
+# [*] Trying a new Nonce = 0x00000016c
+# [*] Trying a new Nonce = 0x00000016d
+# [*] Trying a new Nonce = 0x00000016e
+# [*] Trying a new Nonce = 0x00000016f
+# [*] Trying a new Nonce = 0x000000170
+# [*] Trying a new Nonce = 0x000000171
+# [*] Trying a new Nonce = 0x000000172
+# [*] Trying a new Nonce = 0x000000173
+# [*] Trying a new Nonce = 0x000000174
+# [*] Trying a new Nonce = 0x000000175
+# [*] Trying a new Nonce = 0x000000176
+# [*] Trying a new Nonce = 0x000000177
+# [*] Trying a new Nonce = 0x000000178
+# [*] Trying a new Nonce = 0x000000179
+# [*] Trying a new Nonce = 0x00000017a
+# [*] Trying a new Nonce = 0x00000017b
+# [*] Trying a new Nonce = 0x00000017c
+# [*] Trying a new Nonce = 0x00000017d
+# [*] Trying a new Nonce = 0x00000017e
+# [*] Trying a new Nonce = 0x00000017f
+# [*] Trying a new Nonce = 0x000000180
+# [*] Trying a new Nonce = 0x000000181
+# [*] Trying a new Nonce = 0x000000182
+# [*] Trying a new Nonce = 0x000000183
+# [*] Trying a new Nonce = 0x000000184
+# [*] Trying a new Nonce = 0x000000185
+# [*] Trying a new Nonce = 0x000000186
+# [*] Trying a new Nonce = 0x000000187
+# [*] Trying a new Nonce = 0x000000188
+# [*] Trying a new Nonce = 0x000000189
+# [*] Trying a new Nonce = 0x00000018a
+# [*] Trying a new Nonce = 0x00000018b
+# [*] Trying a new Nonce = 0x00000018c
+# [*] Trying a new Nonce = 0x00000018d
+# [*] Trying a new Nonce = 0x00000018e
+# [*] Trying a new Nonce = 0x00000018f
+# [*] Trying a new Nonce = 0x000000190
+# [*] Trying a new Nonce = 0x000000191
+# [*] Trying a new Nonce = 0x000000192
+# [*] Trying a new Nonce = 0x000000193
+# [*] Trying a new Nonce = 0x000000194
+# [*] Trying a new Nonce = 0x000000195
+# [*] Trying a new Nonce = 0x000000196
+# [*] Trying a new Nonce = 0x000000197
+# [*] Trying a new Nonce = 0x000000198
+# [*] Trying a new Nonce = 0x000000199
+# [*] Trying a new Nonce = 0x00000019a
+# [*] Trying a new Nonce = 0x00000019b
+# [*] Trying a new Nonce = 0x00000019c
+# [*] Trying a new Nonce = 0x00000019d
+# [*] Trying a new Nonce = 0x00000019e
+# [*] Trying a new Nonce = 0x00000019f
+# [*] Trying a new Nonce = 0x0000001a0
+# [*] Trying a new Nonce = 0x0000001a1
+# [*] Trying a new Nonce = 0x0000001a2
+# [*] Trying a new Nonce = 0x0000001a3
+# [*] Trying a new Nonce = 0x0000001a4
+# [*] Trying a new Nonce = 0x0000001a5
+# [*] Trying a new Nonce = 0x0000001a6
+# [*] Trying a new Nonce = 0x0000001a7
+# [*] Trying a new Nonce = 0x0000001a8
+# [*] Trying a new Nonce = 0x0000001a9
+# [*] Trying a new Nonce = 0x0000001aa
+# [*] Trying a new Nonce = 0x0000001ab
+# [*] Trying a new Nonce = 0x0000001ac
+# [*] Trying a new Nonce = 0x0000001ad
+# [*] Trying a new Nonce = 0x0000001ae
+# [*] Trying a new Nonce = 0x0000001af
+# [*] Trying a new Nonce = 0x0000001b0
+# [*] Trying a new Nonce = 0x0000001b1
+# [*] Trying a new Nonce = 0x0000001b2
+# [*] Trying a new Nonce = 0x0000001b3
+# [*] Trying a new Nonce = 0x0000001b4
+# [*] Trying a new Nonce = 0x0000001b5
+# [*] Trying a new Nonce = 0x0000001b6
+# [*] Trying a new Nonce = 0x0000001b7
+# [*] Trying a new Nonce = 0x0000001b8
+# [*] Trying a new Nonce = 0x0000001b9
+# [*] Trying a new Nonce = 0x0000001ba
+# [*] Trying a new Nonce = 0x0000001bb
+# [*] Trying a new Nonce = 0x0000001bc
+# [*] Trying a new Nonce = 0x0000001bd
+# [*] Trying a new Nonce = 0x0000001be
+# [*] Trying a new Nonce = 0x0000001bf
+# [*] Trying a new Nonce = 0x0000001c0
+# [*] Trying a new Nonce = 0x0000001c1
+# [*] Trying a new Nonce = 0x0000001c2
+# [*] Trying a new Nonce = 0x0000001c3
+# [*] Trying a new Nonce = 0x0000001c4
+# [*] Trying a new Nonce = 0x0000001c5
+# [*] Trying a new Nonce = 0x0000001c6
+# [*] Trying a new Nonce = 0x0000001c7
+# [*] Trying a new Nonce = 0x0000001c8
+# [*] Trying a new Nonce = 0x0000001c9
+# [*] Trying a new Nonce = 0x0000001ca
+# [*] Trying a new Nonce = 0x0000001cb
+# [*] Trying a new Nonce = 0x0000001cc
+# [*] Trying a new Nonce = 0x0000001cd
+# [*] Trying a new Nonce = 0x0000001ce
+# [*] Trying a new Nonce = 0x0000001cf
+# [*] Trying a new Nonce = 0x0000001d0
+# [*] Trying a new Nonce = 0x0000001d1
+# [*] Trying a new Nonce = 0x0000001d2
+# [*] Trying a new Nonce = 0x0000001d3
+# [*] Trying a new Nonce = 0x0000001d4
+# [*] Trying a new Nonce = 0x0000001d5
+# [*] Trying a new Nonce = 0x0000001d6
+# [*] Trying a new Nonce = 0x0000001d7
+# [*] Trying a new Nonce = 0x0000001d8
+# [*] Trying a new Nonce = 0x0000001d9
+# [*] Trying a new Nonce = 0x0000001da
+# [*] Trying a new Nonce = 0x0000001db
+# [*] Trying a new Nonce = 0x0000001dc
+# [*] Trying a new Nonce = 0x0000001dd
+# [*] Trying a new Nonce = 0x0000001de
+# [*] Trying a new Nonce = 0x0000001df
+# [*] Trying a new Nonce = 0x0000001e0
+# [*] Trying a new Nonce = 0x0000001e1
+# [*] Trying a new Nonce = 0x0000001e2
+# [*] Trying a new Nonce = 0x0000001e3
+# [*] Trying a new Nonce = 0x0000001e4
+# [*] Trying a new Nonce = 0x0000001e5
+# [*] Trying a new Nonce = 0x0000001e6
+# [*] Trying a new Nonce = 0x0000001e7
+# [*] Trying a new Nonce = 0x0000001e8
+# [*] Trying a new Nonce = 0x0000001e9
+# [*] Trying a new Nonce = 0x0000001ea
+# [*] Trying a new Nonce = 0x0000001eb
+# [*] Trying a new Nonce = 0x0000001ec
+# [*] Trying a new Nonce = 0x0000001ed
+# [*] Trying a new Nonce = 0x0000001ee
+# [*] Trying a new Nonce = 0x0000001ef
+# [*] Trying a new Nonce = 0x0000001f0
+# [*] Trying a new Nonce = 0x0000001f1
+# [*] Trying a new Nonce = 0x0000001f2
+# [*] Trying a new Nonce = 0x0000001f3
+# [*] Trying a new Nonce = 0x0000001f4
+# [*] Trying a new Nonce = 0x0000001f5
+# [*] Trying a new Nonce = 0x0000001f6
+# [*] Trying a new Nonce = 0x0000001f7
+# [*] Trying a new Nonce = 0x0000001f8
+# [*] Trying a new Nonce = 0x0000001f9
+# [*] Trying a new Nonce = 0x0000001fa
+# [*] Trying a new Nonce = 0x0000001fb
+# [*] Trying a new Nonce = 0x0000001fc
+# [*] Trying a new Nonce = 0x0000001fd
+# [*] Trying a new Nonce = 0x0000001fe
+# [*] Trying a new Nonce = 0x0000001ff
+# [*] Trying a new Nonce = 0x000000200
+# [*] Trying a new Nonce = 0x000000201
+# [*] Trying a new Nonce = 0x000000202
+# [*] Trying a new Nonce = 0x000000203
+# [*] Trying a new Nonce = 0x000000204
+# [*] Trying a new Nonce = 0x000000205
+# [*] Trying a new Nonce = 0x000000206
+# [*] Trying a new Nonce = 0x000000207
+# [*] Trying a new Nonce = 0x000000208
+# [*] Trying a new Nonce = 0x000000209
+# [*] Trying a new Nonce = 0x00000020a
+# [*] Trying a new Nonce = 0x00000020b
+# [*] Trying a new Nonce = 0x00000020c
+# [*] Trying a new Nonce = 0x00000020d
+# [*] Trying a new Nonce = 0x00000020e
+# [*] Trying a new Nonce = 0x00000020f
+# [*] Trying a new Nonce = 0x000000210
+# [*] Trying a new Nonce = 0x000000211
+# [*] Trying a new Nonce = 0x000000212
+# [*] Trying a new Nonce = 0x000000213
+# [*] Trying a new Nonce = 0x000000214
+# [*] Trying a new Nonce = 0x000000215
+# [*] Trying a new Nonce = 0x000000216
+# [*] Trying a new Nonce = 0x000000217
+# [*] Trying a new Nonce = 0x000000218
+# [*] Trying a new Nonce = 0x000000219
+# [*] Trying a new Nonce = 0x00000021a
+# [*] Trying a new Nonce = 0x00000021b
+# [*] Trying a new Nonce = 0x00000021c
+# [*] Trying a new Nonce = 0x00000021d
+# [*] Trying a new Nonce = 0x00000021e
+# [*] Trying a new Nonce = 0x00000021f
+# [*] Trying a new Nonce = 0x000000220
+# [*] Trying a new Nonce = 0x000000221
+# [*] Trying a new Nonce = 0x000000222
+# [*] Trying a new Nonce = 0x000000223
+# [*] Trying a new Nonce = 0x000000224
+# [*] Trying a new Nonce = 0x000000225
+# [*] Trying a new Nonce = 0x000000226
+# [*] Trying a new Nonce = 0x000000227
+# [*] Trying a new Nonce = 0x000000228
+# [*] Trying a new Nonce = 0x000000229
+# [*] Trying a new Nonce = 0x00000022a
+# [*] Trying a new Nonce = 0x00000022b
+# [*] Trying a new Nonce = 0x00000022c
+# [*] Trying a new Nonce = 0x00000022d
+# [*] Trying a new Nonce = 0x00000022e
+# [*] Trying a new Nonce = 0x00000022f
+# [*] Trying a new Nonce = 0x000000230
+# [*] Trying a new Nonce = 0x000000231
+# [*] Trying a new Nonce = 0x000000232
+# [*] Trying a new Nonce = 0x000000233
+# [*] Trying a new Nonce = 0x000000234
+# [*] Trying a new Nonce = 0x000000235
+# [*] Trying a new Nonce = 0x000000236
+# [*] Trying a new Nonce = 0x000000237
+# [*] Trying a new Nonce = 0x000000238
+# [*] Trying a new Nonce = 0x000000239
+# [*] Trying a new Nonce = 0x00000023a
+# [*] Trying a new Nonce = 0x00000023b
+# [*] Trying a new Nonce = 0x00000023c
+# [*] Trying a new Nonce = 0x00000023d
+# [*] Trying a new Nonce = 0x00000023e
+# [*] Trying a new Nonce = 0x00000023f
+# [*] Trying a new Nonce = 0x000000240
+# [*] Trying a new Nonce = 0x000000241
+# [*] Trying a new Nonce = 0x000000242
+# [*] Trying a new Nonce = 0x000000243
+# [*] Trying a new Nonce = 0x000000244
+# [*] Trying a new Nonce = 0x000000245
+# [*] Trying a new Nonce = 0x000000246
+# [*] Trying a new Nonce = 0x000000247
+# [*] Trying a new Nonce = 0x000000248
+# [*] Trying a new Nonce = 0x000000249
+# [*] Trying a new Nonce = 0x00000024a
+# [*] Trying a new Nonce = 0x00000024b
+# [*] Trying a new Nonce = 0x00000024c
+# [*] Trying a new Nonce = 0x00000024d
+# [*] Trying a new Nonce = 0x00000024e
+# [*] Trying a new Nonce = 0x00000024f
+# [*] Trying a new Nonce = 0x000000250
+# [*] Trying a new Nonce = 0x000000251
+# [*] Trying a new Nonce = 0x000000252
+# [*] Trying a new Nonce = 0x000000253
+# [*] Trying a new Nonce = 0x000000254
+# [*] Trying a new Nonce = 0x000000255
+# [*] Trying a new Nonce = 0x000000256
+# [*] Trying a new Nonce = 0x000000257
+# [*] Trying a new Nonce = 0x000000258
+# [*] Trying a new Nonce = 0x000000259
+# [*] Trying a new Nonce = 0x00000025a
+# [*] Trying a new Nonce = 0x00000025b
+# [*] Trying a new Nonce = 0x00000025c
+# [*] Trying a new Nonce = 0x00000025d
+# [*] Trying a new Nonce = 0x00000025e
+# [*] Trying a new Nonce = 0x00000025f
+# [*] Trying a new Nonce = 0x000000260
+# [*] Trying a new Nonce = 0x000000261
+# [*] Trying a new Nonce = 0x000000262
+# [*] Trying a new Nonce = 0x000000263
+# [*] Trying a new Nonce = 0x000000264
+# [*] Trying a new Nonce = 0x000000265
+# [*] Trying a new Nonce = 0x000000266
+# [*] Trying a new Nonce = 0x000000267
+# [*] Trying a new Nonce = 0x000000268
+# [*] Trying a new Nonce = 0x000000269
+# [*] Trying a new Nonce = 0x00000026a
+# [*] Trying a new Nonce = 0x00000026b
+# [*] Trying a new Nonce = 0x00000026c
+# [*] Trying a new Nonce = 0x00000026d
+# [*] Trying a new Nonce = 0x00000026e
+# [*] Trying a new Nonce = 0x00000026f
+# [*] Trying a new Nonce = 0x000000270
+# [*] Trying a new Nonce = 0x000000271
+# [*] Trying a new Nonce = 0x000000272
+# [*] Trying a new Nonce = 0x000000273
+# [*] Trying a new Nonce = 0x000000274
+# [*] Trying a new Nonce = 0x000000275
+# [*] Trying a new Nonce = 0x000000276
+# [*] Trying a new Nonce = 0x000000277
+# [*] Trying a new Nonce = 0x000000278
+# [*] Trying a new Nonce = 0x000000279
+# [*] Trying a new Nonce = 0x00000027a
+# [*] Trying a new Nonce = 0x00000027b
+# [*] Trying a new Nonce = 0x00000027c
+# [*] Trying a new Nonce = 0x00000027d
+# [*] Trying a new Nonce = 0x00000027e
+# [*] Trying a new Nonce = 0x00000027f
+# [*] Trying a new Nonce = 0x000000280
+# [*] Trying a new Nonce = 0x000000281
+# [*] Trying a new Nonce = 0x000000282
+# [*] Trying a new Nonce = 0x000000283
+# [*] Trying a new Nonce = 0x000000284
+# [*] Trying a new Nonce = 0x000000285
+# [*] Trying a new Nonce = 0x000000286
+# [*] Trying a new Nonce = 0x000000287
+# [*] Trying a new Nonce = 0x000000288
+# [*] Trying a new Nonce = 0x000000289
+# [*] Trying a new Nonce = 0x00000028a
+# [*] Trying a new Nonce = 0x00000028b
+# [*] Trying a new Nonce = 0x00000028c
+# [*] Trying a new Nonce = 0x00000028d
+# [*] Trying a new Nonce = 0x00000028e
+# [*] Trying a new Nonce = 0x00000028f
+# [*] Trying a new Nonce = 0x000000290
+# [*] Trying a new Nonce = 0x000000291
+# [*] Trying a new Nonce = 0x000000292
+# [*] Trying a new Nonce = 0x000000293
+# [*] Trying a new Nonce = 0x000000294
+# [*] Trying a new Nonce = 0x000000295
+# [*] Trying a new Nonce = 0x000000296
+# [*] Trying a new Nonce = 0x000000297
+# [*] Trying a new Nonce = 0x000000298
+# [*] Trying a new Nonce = 0x000000299
+# [*] Trying a new Nonce = 0x00000029a
+# [*] Trying a new Nonce = 0x00000029b
+# [*] Trying a new Nonce = 0x00000029c
+# [*] Trying a new Nonce = 0x00000029d
+# [*] Trying a new Nonce = 0x00000029e
+# [*] Trying a new Nonce = 0x00000029f
+# [*] Trying a new Nonce = 0x0000002a0
+# [*] Trying a new Nonce = 0x0000002a1
+# [*] Trying a new Nonce = 0x0000002a2
+# [*] Trying a new Nonce = 0x0000002a3
+# [*] Trying a new Nonce = 0x0000002a4
+# [*] Trying a new Nonce = 0x0000002a5
+# [*] Trying a new Nonce = 0x0000002a6
+# [*] Trying a new Nonce = 0x0000002a7
+# [*] Trying a new Nonce = 0x0000002a8
+# [*] Trying a new Nonce = 0x0000002a9
+# [*] Trying a new Nonce = 0x0000002aa
+# [*] Trying a new Nonce = 0x0000002ab
+# [*] Trying a new Nonce = 0x0000002ac
+# [*] Trying a new Nonce = 0x0000002ad
+# [*] Trying a new Nonce = 0x0000002ae
+# [*] Trying a new Nonce = 0x0000002af
+# [*] Trying a new Nonce = 0x0000002b0
+# [*] Trying a new Nonce = 0x0000002b1
+# [*] Trying a new Nonce = 0x0000002b2
+# [*] Trying a new Nonce = 0x0000002b3
+# [*] Trying a new Nonce = 0x0000002b4
+# [*] Trying a new Nonce = 0x0000002b5
+# [*] Trying a new Nonce = 0x0000002b6
+# [*] Trying a new Nonce = 0x0000002b7
+# [*] Trying a new Nonce = 0x0000002b8
+# [*] Trying a new Nonce = 0x0000002b9
+# [*] Trying a new Nonce = 0x0000002ba
+# [*] Trying a new Nonce = 0x0000002bb
+# [*] Trying a new Nonce = 0x0000002bc
+# [*] Trying a new Nonce = 0x0000002bd
+# [*] Trying a new Nonce = 0x0000002be
+# [*] Trying a new Nonce = 0x0000002bf
+# [*] Trying a new Nonce = 0x0000002c0
+# [*] Trying a new Nonce = 0x0000002c1
+# [*] Trying a new Nonce = 0x0000002c2
+# [*] Trying a new Nonce = 0x0000002c3
+# [*] Trying a new Nonce = 0x0000002c4
+# [*] Trying a new Nonce = 0x0000002c5
+# [*] Trying a new Nonce = 0x0000002c6
+# [*] Trying a new Nonce = 0x0000002c7
+# [*] Trying a new Nonce = 0x0000002c8
+# [*] Trying a new Nonce = 0x0000002c9
+# [*] Trying a new Nonce = 0x0000002ca
+# [*] Trying a new Nonce = 0x0000002cb
+# [*] Trying a new Nonce = 0x0000002cc
+# [*] Trying a new Nonce = 0x0000002cd
+# [*] Trying a new Nonce = 0x0000002ce
+# [*] Trying a new Nonce = 0x0000002cf
+# [*] Trying a new Nonce = 0x0000002d0
+# [*] Trying a new Nonce = 0x0000002d1
+# [*] Trying a new Nonce = 0x0000002d2
+# [*] Trying a new Nonce = 0x0000002d3
+# [*] Trying a new Nonce = 0x0000002d4
+# [*] Trying a new Nonce = 0x0000002d5
+# [*] Trying a new Nonce = 0x0000002d6
+# [*] Trying a new Nonce = 0x0000002d7
+# [*] Trying a new Nonce = 0x0000002d8
+# [*] Trying a new Nonce = 0x0000002d9
+# [*] Trying a new Nonce = 0x0000002da
+# [*] Trying a new Nonce = 0x0000002db
+# [*] Trying a new Nonce = 0x0000002dc
+# [*] Trying a new Nonce = 0x0000002dd
+# [*] Trying a new Nonce = 0x0000002de
+# [*] Trying a new Nonce = 0x0000002df
+# [*] Trying a new Nonce = 0x0000002e0
+# [*] Trying a new Nonce = 0x0000002e1
+# [*] Trying a new Nonce = 0x0000002e2
+# [*] Trying a new Nonce = 0x0000002e3
+# [*] Trying a new Nonce = 0x0000002e4
+# [*] Trying a new Nonce = 0x0000002e5
+# [*] Trying a new Nonce = 0x0000002e6
+# [*] Trying a new Nonce = 0x0000002e7
+# [*] Trying a new Nonce = 0x0000002e8
+# [*] Trying a new Nonce = 0x0000002e9
+# [*] Trying a new Nonce = 0x0000002ea
+# [*] Trying a new Nonce = 0x0000002eb
+# [*] Trying a new Nonce = 0x0000002ec
+# [*] Trying a new Nonce = 0x0000002ed
+# [*] Trying a new Nonce = 0x0000002ee
+# [*] Trying a new Nonce = 0x0000002ef
+# [*] Trying a new Nonce = 0x0000002f0
+# [*] Trying a new Nonce = 0x0000002f1
+# [*] Trying a new Nonce = 0x0000002f2
+# [*] Trying a new Nonce = 0x0000002f3
+# [*] Trying a new Nonce = 0x0000002f4
+# [*] Trying a new Nonce = 0x0000002f5
+# [*] Trying a new Nonce = 0x0000002f6
+# [*] Trying a new Nonce = 0x0000002f7
+# [*] Trying a new Nonce = 0x0000002f8
+# [*] Trying a new Nonce = 0x0000002f9
+# [*] Trying a new Nonce = 0x0000002fa
+# [*] Trying a new Nonce = 0x0000002fb
+# [*] Trying a new Nonce = 0x0000002fc
+# [*] Trying a new Nonce = 0x0000002fd
+# [*] Trying a new Nonce = 0x0000002fe
+# [*] Trying a new Nonce = 0x0000002ff
+# [*] Trying a new Nonce = 0x000000300
+# [*] Trying a new Nonce = 0x000000301
+# [*] Trying a new Nonce = 0x000000302
+# [*] Trying a new Nonce = 0x000000303
+# [*] Trying a new Nonce = 0x000000304
+# [*] Trying a new Nonce = 0x000000305
+# [*] Trying a new Nonce = 0x000000306
+# [*] Trying a new Nonce = 0x000000307
+# [*] Trying a new Nonce = 0x000000308
+# [*] Trying a new Nonce = 0x000000309
+# [*] Trying a new Nonce = 0x00000030a
+# [*] Trying a new Nonce = 0x00000030b
+# [*] Trying a new Nonce = 0x00000030c
+# [*] Trying a new Nonce = 0x00000030d
+# [*] Trying a new Nonce = 0x00000030e
+# [*] Trying a new Nonce = 0x00000030f
+# [*] Trying a new Nonce = 0x000000310
+# [*] Trying a new Nonce = 0x000000311
+# [*] Trying a new Nonce = 0x000000312
+# [*] Trying a new Nonce = 0x000000313
+# [*] Trying a new Nonce = 0x000000314
+# [*] Trying a new Nonce = 0x000000315
+# [*] Trying a new Nonce = 0x000000316
+# [*] Trying a new Nonce = 0x000000317
+# [*] Trying a new Nonce = 0x000000318
+# [*] Trying a new Nonce = 0x000000319
+# [*] Trying a new Nonce = 0x00000031a
+# [*] Trying a new Nonce = 0x00000031b
+# [*] Trying a new Nonce = 0x00000031c
+# [*] Trying a new Nonce = 0x00000031d
+# [*] Trying a new Nonce = 0x00000031e
+# [*] Trying a new Nonce = 0x00000031f
+# [*] Trying a new Nonce = 0x000000320
+# [*] Trying a new Nonce = 0x000000321
+# [*] Trying a new Nonce = 0x000000322
+# [*] Trying a new Nonce = 0x000000323
+# [*] Trying a new Nonce = 0x000000324
+# [*] Trying a new Nonce = 0x000000325
+# [*] Trying a new Nonce = 0x000000326
+# [*] Trying a new Nonce = 0x000000327
+# [*] Trying a new Nonce = 0x000000328
+# [*] Trying a new Nonce = 0x000000329
+# [*] Trying a new Nonce = 0x00000032a
+# [*] Trying a new Nonce = 0x00000032b
+# [*] Trying a new Nonce = 0x00000032c
+# [*] Trying a new Nonce = 0x00000032d
+# [*] Trying a new Nonce = 0x00000032e
+# [*] Trying a new Nonce = 0x00000032f
+# [*] Trying a new Nonce = 0x000000330
+# [*] Trying a new Nonce = 0x000000331
+# [*] Trying a new Nonce = 0x000000332
+# [*] Trying a new Nonce = 0x000000333
+# [*] Trying a new Nonce = 0x000000334
+# [*] Trying a new Nonce = 0x000000335
+# [*] Trying a new Nonce = 0x000000336
+# [*] Trying a new Nonce = 0x000000337
+# [*] Trying a new Nonce = 0x000000338
+# [*] Trying a new Nonce = 0x000000339
+# [*] Trying a new Nonce = 0x00000033a
+# [*] Trying a new Nonce = 0x00000033b
+# [*] Trying a new Nonce = 0x00000033c
+# [*] Trying a new Nonce = 0x00000033d
+# [*] Trying a new Nonce = 0x00000033e
+# [*] Trying a new Nonce = 0x00000033f
+# [*] Trying a new Nonce = 0x000000340
+# [*] Trying a new Nonce = 0x000000341
+# [*] Trying a new Nonce = 0x000000342
+# [*] Trying a new Nonce = 0x000000343
+# [*] Trying a new Nonce = 0x000000344
+# [*] Trying a new Nonce = 0x000000345
+# [*] Trying a new Nonce = 0x000000346
+# [*] Trying a new Nonce = 0x000000347
+# [*] Trying a new Nonce = 0x000000348
+# [*] Trying a new Nonce = 0x000000349
+# [*] Trying a new Nonce = 0x00000034a
+# [*] Trying a new Nonce = 0x00000034b
+# [*] Trying a new Nonce = 0x00000034c
+# [*] Trying a new Nonce = 0x00000034d
+# [*] Trying a new Nonce = 0x00000034e
+# [*] Trying a new Nonce = 0x00000034f
+# [*] Trying a new Nonce = 0x000000350
+# [*] Trying a new Nonce = 0x000000351
+# [*] Trying a new Nonce = 0x000000352
+# [*] Trying a new Nonce = 0x000000353
+# [*] Trying a new Nonce = 0x000000354
+# [*] Trying a new Nonce = 0x000000355
+# [*] Trying a new Nonce = 0x000000356
+# [*] Trying a new Nonce = 0x000000357
+# [*] Trying a new Nonce = 0x000000358
+# [*] Trying a new Nonce = 0x000000359
+# [*] Trying a new Nonce = 0x00000035a
+# [*] Trying a new Nonce = 0x00000035b
+# [*] Trying a new Nonce = 0x00000035c
+# [*] Trying a new Nonce = 0x00000035d
+# [*] Trying a new Nonce = 0x00000035e
+# [*] Trying a new Nonce = 0x00000035f
+# [*] Trying a new Nonce = 0x000000360
+# [*] Trying a new Nonce = 0x000000361
+# [*] Trying a new Nonce = 0x000000362
+# [*] Trying a new Nonce = 0x000000363
+# [*] Trying a new Nonce = 0x000000364
+# [*] Trying a new Nonce = 0x000000365
+# [*] Trying a new Nonce = 0x000000366
+# [*] Trying a new Nonce = 0x000000367
+# [*] Trying a new Nonce = 0x000000368
+# [*] Trying a new Nonce = 0x000000369
+# [*] Trying a new Nonce = 0x00000036a
+# [*] Trying a new Nonce = 0x00000036b
+# [*] Trying a new Nonce = 0x00000036c
+# [*] Trying a new Nonce = 0x00000036d
+# [*] Trying a new Nonce = 0x00000036e
+# [*] Trying a new Nonce = 0x00000036f
+# [*] Trying a new Nonce = 0x000000370
+# [*] Trying a new Nonce = 0x000000371
+# [*] Trying a new Nonce = 0x000000372
+# [*] Trying a new Nonce = 0x000000373
+# [*] Trying a new Nonce = 0x000000374
+# [*] Trying a new Nonce = 0x000000375
+# [*] Trying a new Nonce = 0x000000376
+# [*] Trying a new Nonce = 0x000000377
+# [*] Trying a new Nonce = 0x000000378
+# [*] Trying a new Nonce = 0x000000379
+# [*] Trying a new Nonce = 0x00000037a
+# [*] Trying a new Nonce = 0x00000037b
+# [*] Trying a new Nonce = 0x00000037c
+# [*] Trying a new Nonce = 0x00000037d
+# [*] Trying a new Nonce = 0x00000037e
+# [*] Trying a new Nonce = 0x00000037f
+# [*] Trying a new Nonce = 0x000000380
+# [*] Trying a new Nonce = 0x000000381
+# [*] Trying a new Nonce = 0x000000382
+# [*] Trying a new Nonce = 0x000000383
+# [*] Trying a new Nonce = 0x000000384
+# [*] Trying a new Nonce = 0x000000385
+# [*] Trying a new Nonce = 0x000000386
+# [*] Trying a new Nonce = 0x000000387
+# [*] Trying a new Nonce = 0x000000388
+# [*] Trying a new Nonce = 0x000000389
+# [*] Trying a new Nonce = 0x00000038a
+# [*] Trying a new Nonce = 0x00000038b
+# [*] Trying a new Nonce = 0x00000038c
+# [*] Trying a new Nonce = 0x00000038d
+# [*] Trying a new Nonce = 0x00000038e
+# [*] Trying a new Nonce = 0x00000038f
+# [*] Trying a new Nonce = 0x000000390
+# [*] Trying a new Nonce = 0x000000391
+# [*] Trying a new Nonce = 0x000000392
+# [*] Trying a new Nonce = 0x000000393
+# [*] Trying a new Nonce = 0x000000394
+# [*] Trying a new Nonce = 0x000000395
+# [*] Trying a new Nonce = 0x000000396
+# [*] Trying a new Nonce = 0x000000397
+# [*] Trying a new Nonce = 0x000000398
+# [*] Trying a new Nonce = 0x000000399
+# [*] Trying a new Nonce = 0x00000039a
+# [*] Trying a new Nonce = 0x00000039b
+# [*] Trying a new Nonce = 0x00000039c
+# [*] Trying a new Nonce = 0x00000039d
+# [*] Trying a new Nonce = 0x00000039e
+# [*] Trying a new Nonce = 0x00000039f
+# [*] Trying a new Nonce = 0x0000003a0
+# [*] Trying a new Nonce = 0x0000003a1
+# [*] Trying a new Nonce = 0x0000003a2
+# [*] Trying a new Nonce = 0x0000003a3
+# [*] Trying a new Nonce = 0x0000003a4
+# [*] Trying a new Nonce = 0x0000003a5
+# [*] Trying a new Nonce = 0x0000003a6
+# [*] Trying a new Nonce = 0x0000003a7
+# [*] Trying a new Nonce = 0x0000003a8
+# [*] Trying a new Nonce = 0x0000003a9
+# [*] Trying a new Nonce = 0x0000003aa
+# [*] Trying a new Nonce = 0x0000003ab
+# [*] Trying a new Nonce = 0x0000003ac
+# [*] Trying a new Nonce = 0x0000003ad
+# [*] Trying a new Nonce = 0x0000003ae
+# [*] Trying a new Nonce = 0x0000003af
+# [*] Trying a new Nonce = 0x0000003b0
+# [*] Trying a new Nonce = 0x0000003b1
+# [*] Trying a new Nonce = 0x0000003b2
+# [*] Trying a new Nonce = 0x0000003b3
+# [*] Trying a new Nonce = 0x0000003b4
+# [*] Trying a new Nonce = 0x0000003b5
+# [*] Trying a new Nonce = 0x0000003b6
+# [*] Trying a new Nonce = 0x0000003b7
+# [*] Trying a new Nonce = 0x0000003b8
+# [*] Trying a new Nonce = 0x0000003b9
+# [*] Trying a new Nonce = 0x0000003ba
+# [*] Trying a new Nonce = 0x0000003bb
+# [*] Trying a new Nonce = 0x0000003bc
+# [*] Trying a new Nonce = 0x0000003bd
+# [*] Trying a new Nonce = 0x0000003be
+# [*] Trying a new Nonce = 0x0000003bf
+# [*] Trying a new Nonce = 0x0000003c0
+# [*] Trying a new Nonce = 0x0000003c1
+# [*] Trying a new Nonce = 0x0000003c2
+# [*] Trying a new Nonce = 0x0000003c3
+# [*] Trying a new Nonce = 0x0000003c4
+# [*] Trying a new Nonce = 0x0000003c5
+# [*] Trying a new Nonce = 0x0000003c6
+# [*] Trying a new Nonce = 0x0000003c7
+# [*] Trying a new Nonce = 0x0000003c8
+# [*] Trying a new Nonce = 0x0000003c9
+# [*] Trying a new Nonce = 0x0000003ca
+# [*] Trying a new Nonce = 0x0000003cb
+# [*] Trying a new Nonce = 0x0000003cc
+# [*] Trying a new Nonce = 0x0000003cd
+# [*] Trying a new Nonce = 0x0000003ce
+# [*] Trying a new Nonce = 0x0000003cf
+# [*] Trying a new Nonce = 0x0000003d0
+# [*] Trying a new Nonce = 0x0000003d1
+# [*] Trying a new Nonce = 0x0000003d2
+# [*] Trying a new Nonce = 0x0000003d3
+# [*] Trying a new Nonce = 0x0000003d4
+# [*] Trying a new Nonce = 0x0000003d5
+# [*] Trying a new Nonce = 0x0000003d6
+# [*] Trying a new Nonce = 0x0000003d7
+# [*] Trying a new Nonce = 0x0000003d8
+# [*] Trying a new Nonce = 0x0000003d9
+# [*] Trying a new Nonce = 0x0000003da
+# [*] Trying a new Nonce = 0x0000003db
+# [*] Trying a new Nonce = 0x0000003dc
+# [*] Trying a new Nonce = 0x0000003dd
+# [*] Trying a new Nonce = 0x0000003de
+# [*] Trying a new Nonce = 0x0000003df
+# [*] Trying a new Nonce = 0x0000003e0
+# [*] Trying a new Nonce = 0x0000003e1
+# [*] Trying a new Nonce = 0x0000003e2
+# [*] Trying a new Nonce = 0x0000003e3
+# [*] Trying a new Nonce = 0x0000003e4
+# [*] Trying a new Nonce = 0x0000003e5
+# [*] Trying a new Nonce = 0x0000003e6
+# [*] Trying a new Nonce = 0x0000003e7
+# [*] Trying a new Nonce = 0x0000003e8
+# [*] Trying a new Nonce = 0x0000003e9
+# [*] Trying a new Nonce = 0x0000003ea
+# [*] Trying a new Nonce = 0x0000003eb
+# [*] Trying a new Nonce = 0x0000003ec
+# [*] Trying a new Nonce = 0x0000003ed
+# [*] Trying a new Nonce = 0x0000003ee
+# [*] Trying a new Nonce = 0x0000003ef
+# [*] Trying a new Nonce = 0x0000003f0
+# [*] Trying a new Nonce = 0x0000003f1
+# [*] Trying a new Nonce = 0x0000003f2
+# [*] Trying a new Nonce = 0x0000003f3
+# [*] Trying a new Nonce = 0x0000003f4
+# [*] Trying a new Nonce = 0x0000003f5
+# [*] Trying a new Nonce = 0x0000003f6
+# [*] Trying a new Nonce = 0x0000003f7
+# [*] Trying a new Nonce = 0x0000003f8
+# [*] Trying a new Nonce = 0x0000003f9
+# [*] Trying a new Nonce = 0x0000003fa
+# [*] Trying a new Nonce = 0x0000003fb
+# [*] Trying a new Nonce = 0x0000003fc
+# [*] Trying a new Nonce = 0x0000003fd
+# [*] Trying a new Nonce = 0x0000003fe
+# [*] Trying a new Nonce = 0x0000003ff
+# [*] Trying a new Nonce = 0x000000400
+# [*] Trying a new Nonce = 0x000000401
+# [*] Trying a new Nonce = 0x000000402
+# [*] Trying a new Nonce = 0x000000403
+# [*] Trying a new Nonce = 0x000000404
+# [*] Trying a new Nonce = 0x000000405
+# [*] Trying a new Nonce = 0x000000406
+# [*] Trying a new Nonce = 0x000000407
+# [*] Trying a new Nonce = 0x000000408
+# [*] Trying a new Nonce = 0x000000409
+# [*] Trying a new Nonce = 0x00000040a
+# [*] Trying a new Nonce = 0x00000040b
+# [*] Trying a new Nonce = 0x00000040c
+# [*] Trying a new Nonce = 0x00000040d
+# [*] Trying a new Nonce = 0x00000040e
+# [*] Trying a new Nonce = 0x00000040f
+# [*] Trying a new Nonce = 0x000000410
+# [*] Trying a new Nonce = 0x000000411
+# [*] Trying a new Nonce = 0x000000412
+# [*] Trying a new Nonce = 0x000000413
+# [*] Trying a new Nonce = 0x000000414
+# [*] Trying a new Nonce = 0x000000415
+# [*] Trying a new Nonce = 0x000000416
+# [*] Trying a new Nonce = 0x000000417
+# [*] Trying a new Nonce = 0x000000418
+# [*] Trying a new Nonce = 0x000000419
+# [*] Trying a new Nonce = 0x00000041a
+# [*] Trying a new Nonce = 0x00000041b
+# [*] Trying a new Nonce = 0x00000041c
+# [*] Trying a new Nonce = 0x00000041d
+# [*] Trying a new Nonce = 0x00000041e
+# [*] Trying a new Nonce = 0x00000041f
+# [*] Trying a new Nonce = 0x000000420
+# [*] Trying a new Nonce = 0x000000421
+# [*] Trying a new Nonce = 0x000000422
+# [*] Trying a new Nonce = 0x000000423
+# [*] Trying a new Nonce = 0x000000424
+# [*] Trying a new Nonce = 0x000000425
+# [*] Trying a new Nonce = 0x000000426
+# [*] Trying a new Nonce = 0x000000427
+# [*] Trying a new Nonce = 0x000000428
+# [*] Trying a new Nonce = 0x000000429
+# [*] Trying a new Nonce = 0x00000042a
+# [*] Trying a new Nonce = 0x00000042b
+# [*] Trying a new Nonce = 0x00000042c
+# [*] Trying a new Nonce = 0x00000042d
+# [*] Trying a new Nonce = 0x00000042e
+# [*] Trying a new Nonce = 0x00000042f
+# [*] Trying a new Nonce = 0x000000430
+# [*] Trying a new Nonce = 0x000000431
+# [*] Trying a new Nonce = 0x000000432
+# [*] Trying a new Nonce = 0x000000433
+# [*] Trying a new Nonce = 0x000000434
+# [*] Trying a new Nonce = 0x000000435
+# [*] Trying a new Nonce = 0x000000436
+# [*] Trying a new Nonce = 0x000000437
+# [*] Trying a new Nonce = 0x000000438
+# [*] Trying a new Nonce = 0x000000439
+# [*] Trying a new Nonce = 0x00000043a
+# [*] Trying a new Nonce = 0x00000043b
+# [*] Trying a new Nonce = 0x00000043c
+# [*] Trying a new Nonce = 0x00000043d
+# [*] Trying a new Nonce = 0x00000043e
+# [*] Trying a new Nonce = 0x00000043f
+# [*] Trying a new Nonce = 0x000000440
+# [*] Trying a new Nonce = 0x000000441
+# [*] Trying a new Nonce = 0x000000442
+# [*] Trying a new Nonce = 0x000000443
+# [*] Trying a new Nonce = 0x000000444
+# [*] Trying a new Nonce = 0x000000445
+# [*] Trying a new Nonce = 0x000000446
+# [*] Trying a new Nonce = 0x000000447
+# [*] Trying a new Nonce = 0x000000448
+# [*] Trying a new Nonce = 0x000000449
+# [*] Trying a new Nonce = 0x00000044a
+# [*] Trying a new Nonce = 0x00000044b
+# [*] Trying a new Nonce = 0x00000044c
+# [*] Trying a new Nonce = 0x00000044d
+# [*] Trying a new Nonce = 0x00000044e
+# [*] Trying a new Nonce = 0x00000044f
+# [*] Trying a new Nonce = 0x000000450
+# [*] Trying a new Nonce = 0x000000451
+# [*] Trying a new Nonce = 0x000000452
+# [*] Trying a new Nonce = 0x000000453
+# [*] Trying a new Nonce = 0x000000454
+# [*] Trying a new Nonce = 0x000000455
+# [*] Trying a new Nonce = 0x000000456
+# [*] Trying a new Nonce = 0x000000457
+# [*] Trying a new Nonce = 0x000000458
+# [*] Trying a new Nonce = 0x000000459
+# [*] Trying a new Nonce = 0x00000045a
+# [*] Trying a new Nonce = 0x00000045b
+# [*] Trying a new Nonce = 0x00000045c
+# [*] Trying a new Nonce = 0x00000045d
+# [*] Trying a new Nonce = 0x00000045e
+# [*] Trying a new Nonce = 0x00000045f
+# [*] Trying a new Nonce = 0x000000460
+# [*] Trying a new Nonce = 0x000000461
+# [*] Trying a new Nonce = 0x000000462
+# [*] Trying a new Nonce = 0x000000463
+# [*] Trying a new Nonce = 0x000000464
+# [*] Trying a new Nonce = 0x000000465
+# [*] Trying a new Nonce = 0x000000466
+# [*] Trying a new Nonce = 0x000000467
+# [*] Trying a new Nonce = 0x000000468
+# [*] Trying a new Nonce = 0x000000469
+# [*] Trying a new Nonce = 0x00000046a
+# [*] Trying a new Nonce = 0x00000046b
+# [*] Trying a new Nonce = 0x00000046c
+# [*] Trying a new Nonce = 0x00000046d
+# [*] Trying a new Nonce = 0x00000046e
+# [*] Trying a new Nonce = 0x00000046f
+# [*] Trying a new Nonce = 0x000000470
+# [*] Trying a new Nonce = 0x000000471
+# [*] Trying a new Nonce = 0x000000472
+# [*] Trying a new Nonce = 0x000000473
+# [*] Trying a new Nonce = 0x000000474
+# [*] Trying a new Nonce = 0x000000475
+# [*] Trying a new Nonce = 0x000000476
+# [*] Trying a new Nonce = 0x000000477
+# [*] Trying a new Nonce = 0x000000478
+# [*] Trying a new Nonce = 0x000000479
+# [*] Trying a new Nonce = 0x00000047a
+# [*] Trying a new Nonce = 0x00000047b
+# [*] Trying a new Nonce = 0x00000047c
+# [*] Trying a new Nonce = 0x00000047d
+# [*] Trying a new Nonce = 0x00000047e
+# [*] Trying a new Nonce = 0x00000047f
+# [*] Trying a new Nonce = 0x000000480
+# [*] Trying a new Nonce = 0x000000481
+# [*] Trying a new Nonce = 0x000000482
+# [*] Trying a new Nonce = 0x000000483
+# [*] Trying a new Nonce = 0x000000484
+# [*] Trying a new Nonce = 0x000000485
+# [*] Trying a new Nonce = 0x000000486
+# [*] Trying a new Nonce = 0x000000487
+# [*] Trying a new Nonce = 0x000000488
+# [*] Trying a new Nonce = 0x000000489
+# [*] Trying a new Nonce = 0x00000048a
+# [*] Trying a new Nonce = 0x00000048b
+# [*] Trying a new Nonce = 0x00000048c
+# [*] Trying a new Nonce = 0x00000048d
+# [*] Trying a new Nonce = 0x00000048e
+# [*] Trying a new Nonce = 0x00000048f
+# [*] Trying a new Nonce = 0x000000490
+# [*] Trying a new Nonce = 0x000000491
+# [*] Trying a new Nonce = 0x000000492
+# [*] Trying a new Nonce = 0x000000493
+# [*] Trying a new Nonce = 0x000000494
+# [*] Trying a new Nonce = 0x000000495
+# [*] Trying a new Nonce = 0x000000496
+# [*] Trying a new Nonce = 0x000000497
+# [*] Trying a new Nonce = 0x000000498
+# [*] Trying a new Nonce = 0x000000499
+# [*] Trying a new Nonce = 0x00000049a
+# [*] Trying a new Nonce = 0x00000049b
+# [*] Trying a new Nonce = 0x00000049c
+# [*] Trying a new Nonce = 0x00000049d
+# [*] Trying a new Nonce = 0x00000049e
+# [*] Trying a new Nonce = 0x00000049f
+# [*] Trying a new Nonce = 0x0000004a0
+# [*] Trying a new Nonce = 0x0000004a1
+# [*] Trying a new Nonce = 0x0000004a2
+# [*] Trying a new Nonce = 0x0000004a3
+# [*] Trying a new Nonce = 0x0000004a4
+# [*] Trying a new Nonce = 0x0000004a5
+# [*] Trying a new Nonce = 0x0000004a6
+# [*] Trying a new Nonce = 0x0000004a7
+# [*] Trying a new Nonce = 0x0000004a8
+# [*] Trying a new Nonce = 0x0000004a9
+# [*] Trying a new Nonce = 0x0000004aa
+# [*] Trying a new Nonce = 0x0000004ab
+# [*] Trying a new Nonce = 0x0000004ac
+# [*] Trying a new Nonce = 0x0000004ad
+# [*] Trying a new Nonce = 0x0000004ae
+# [*] Trying a new Nonce = 0x0000004af
+# [*] Trying a new Nonce = 0x0000004b0
+# [*] Trying a new Nonce = 0x0000004b1
+# [*] Trying a new Nonce = 0x0000004b2
+# [*] Trying a new Nonce = 0x0000004b3
+# [*] Trying a new Nonce = 0x0000004b4
+# [*] Trying a new Nonce = 0x0000004b5
+# [*] Trying a new Nonce = 0x0000004b6
+# [*] Trying a new Nonce = 0x0000004b7
+# [*] Trying a new Nonce = 0x0000004b8
+# [*] Trying a new Nonce = 0x0000004b9
+# [*] Trying a new Nonce = 0x0000004ba
+# [*] Trying a new Nonce = 0x0000004bb
+# [*] Trying a new Nonce = 0x0000004bc
+# [*] Trying a new Nonce = 0x0000004bd
+# [*] Trying a new Nonce = 0x0000004be
+# [*] Trying a new Nonce = 0x0000004bf
+# [*] Trying a new Nonce = 0x0000004c0
+# [*] Trying a new Nonce = 0x0000004c1
+# [*] Trying a new Nonce = 0x0000004c2
+# [*] Trying a new Nonce = 0x0000004c3
+# [*] Trying a new Nonce = 0x0000004c4
+# [*] Trying a new Nonce = 0x0000004c5
+# [*] Trying a new Nonce = 0x0000004c6
+# [*] Trying a new Nonce = 0x0000004c7
+# [*] Trying a new Nonce = 0x0000004c8
+# [*] Trying a new Nonce = 0x0000004c9
+# [*] Trying a new Nonce = 0x0000004ca
+# [*] Trying a new Nonce = 0x0000004cb
+# [*] Trying a new Nonce = 0x0000004cc
+# [*] Trying a new Nonce = 0x0000004cd
+# [*] Trying a new Nonce = 0x0000004ce
+# [*] Trying a new Nonce = 0x0000004cf
+# [*] Trying a new Nonce = 0x0000004d0
+vlog -work work -sv -O0 C:/cygwin64/home/jack/cse141L/core/lab3/core.sv
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/cygwin64/home/jack/cse141L/core/lab3/core.sv(89): near "fd_pipeline_n": syntax error, unexpected IDENTIFIER, expecting ';' or ','
+# ** Error: C:/cygwin64/home/jack/cse141L/core/lab3/core.sv(90): near "dx_pipeline_n": syntax error, unexpected IDENTIFIER, expecting ';' or ','
+# ** Error: C:/cygwin64/home/jack/cse141L/core/lab3/core.sv(91): near "xm_pipeline_n": syntax error, unexpected IDENTIFIER, expecting ';' or ','
+# ** Error: C:/cygwin64/home/jack/cse141L/core/lab3/core.sv(92): near "xm_pipeline_n": syntax error, unexpected IDENTIFIER, expecting ';' or ','
+# C:/Program Files (x86)/altera/14.0/modelsim_ase/win32aloem/vlog failed.
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+vlog -work work -sv -O0 C:/cygwin64/home/jack/cse141L/core/lab3/core.sv
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/cygwin64/home/jack/cse141L/core/lab3/core.sv(92): 'xm_pipeline_n' already declared in this scope (core).
+# C:/Program Files (x86)/altera/14.0/modelsim_ase/win32aloem/vlog failed.
+vlog -work work -sv -O0 C:/cygwin64/home/jack/cse141L/core/lab3/core.sv
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling package core_sv_unit
+# -- Compiling module core
+# 
+# Top level modules:
+# 	core
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# [*] Trying a new Nonce = 0x000000001
+# [*] Trying a new Nonce = 0x000000002
+# [*] Trying a new Nonce = 0x000000003
+# [*] Trying a new Nonce = 0x000000004
+# [*] Trying a new Nonce = 0x000000005
+# [*] Trying a new Nonce = 0x000000006
+# [*] Trying a new Nonce = 0x000000007
+# [*] Trying a new Nonce = 0x000000008
+# [*] Trying a new Nonce = 0x000000009
+# [*] Trying a new Nonce = 0x00000000a
+# [*] Trying a new Nonce = 0x00000000b
+# [*] Trying a new Nonce = 0x00000000c
+# [*] Trying a new Nonce = 0x00000000d
+# [*] Trying a new Nonce = 0x00000000e
+# [*] Trying a new Nonce = 0x00000000f
+# [*] Trying a new Nonce = 0x000000010
+# [*] Trying a new Nonce = 0x000000011
+# [*] Trying a new Nonce = 0x000000012
+# [*] Trying a new Nonce = 0x000000013
+# [*] Trying a new Nonce = 0x000000014
+# [*] Trying a new Nonce = 0x000000015
+# [*] Trying a new Nonce = 0x000000016
+# [*] Trying a new Nonce = 0x000000017
+# [*] Trying a new Nonce = 0x000000018
+# [*] Trying a new Nonce = 0x000000019
+# [*] Trying a new Nonce = 0x00000001a
+# [*] Trying a new Nonce = 0x00000001b
+# [*] Trying a new Nonce = 0x00000001c
+# [*] Trying a new Nonce = 0x00000001d
+# [*] Trying a new Nonce = 0x00000001e
+# [*] Trying a new Nonce = 0x00000001f
+# [*] Trying a new Nonce = 0x000000020
+# [*] Trying a new Nonce = 0x000000021
+# [*] Trying a new Nonce = 0x000000022
+# [*] Trying a new Nonce = 0x000000023
+# [*] Trying a new Nonce = 0x000000024
+# [*] Trying a new Nonce = 0x000000025
+# [*] Trying a new Nonce = 0x000000026
+# [*] Trying a new Nonce = 0x000000027
+# [*] Trying a new Nonce = 0x000000028
+# [*] Trying a new Nonce = 0x000000029
+# [*] Trying a new Nonce = 0x00000002a
+# [*] Trying a new Nonce = 0x00000002b
+# [*] Trying a new Nonce = 0x00000002c
+# [*] Trying a new Nonce = 0x00000002d
+# [*] Trying a new Nonce = 0x00000002e
+# [*] Trying a new Nonce = 0x00000002f
+# [*] Trying a new Nonce = 0x000000030
+# [*] Trying a new Nonce = 0x000000031
+# [*] Trying a new Nonce = 0x000000032
+# [*] Trying a new Nonce = 0x000000033
+# [*] Trying a new Nonce = 0x000000034
+# [*] Trying a new Nonce = 0x000000035
+# [*] Trying a new Nonce = 0x000000036
+# [*] Trying a new Nonce = 0x000000037
+# [*] Trying a new Nonce = 0x000000038
+# [*] Trying a new Nonce = 0x000000039
+# [*] Trying a new Nonce = 0x00000003a
+# [*] Trying a new Nonce = 0x00000003b
+# [*] Trying a new Nonce = 0x00000003c
+# [*] Trying a new Nonce = 0x00000003d
+# [*] Trying a new Nonce = 0x00000003e
+# [*] Trying a new Nonce = 0x00000003f
+# [*] Trying a new Nonce = 0x000000040
+# [*] Trying a new Nonce = 0x000000041
+# [*] Trying a new Nonce = 0x000000042
+# [*] Trying a new Nonce = 0x000000043
+# [*] Trying a new Nonce = 0x000000044
+# [*] Trying a new Nonce = 0x000000045
+# [*] Trying a new Nonce = 0x000000046
+# [*] Trying a new Nonce = 0x000000047
+# [*] Trying a new Nonce = 0x000000048
+# [*] Trying a new Nonce = 0x000000049
+# [*] Trying a new Nonce = 0x00000004a
+# [*] Trying a new Nonce = 0x00000004b
+# [*] Trying a new Nonce = 0x00000004c
+# [*] Trying a new Nonce = 0x00000004d
+# [*] Trying a new Nonce = 0x00000004e
+# [*] Trying a new Nonce = 0x00000004f
+# [*] Trying a new Nonce = 0x000000050
+# [*] Trying a new Nonce = 0x000000051
+# [*] Trying a new Nonce = 0x000000052
+# [*] Trying a new Nonce = 0x000000053
+# [*] Trying a new Nonce = 0x000000054
+# [*] Trying a new Nonce = 0x000000055
+# [*] Trying a new Nonce = 0x000000056
+# [*] Trying a new Nonce = 0x000000057
+# [*] Trying a new Nonce = 0x000000058
+# [*] Trying a new Nonce = 0x000000059
+# [*] Trying a new Nonce = 0x00000005a
+# [*] Trying a new Nonce = 0x00000005b
+# [*] Trying a new Nonce = 0x00000005c
+# [*] Trying a new Nonce = 0x00000005d
+# [*] Trying a new Nonce = 0x00000005e
+# [*] Trying a new Nonce = 0x00000005f
+# [*] Trying a new Nonce = 0x000000060
+# [*] Trying a new Nonce = 0x000000061
+# [*] Trying a new Nonce = 0x000000062
+# [*] Trying a new Nonce = 0x000000063
+# [*] Trying a new Nonce = 0x000000064
+# [*] Trying a new Nonce = 0x000000065
+# [*] Trying a new Nonce = 0x000000066
+# [*] Trying a new Nonce = 0x000000067
+# [*] Trying a new Nonce = 0x000000068
+# [*] Trying a new Nonce = 0x000000069
+# [*] Trying a new Nonce = 0x00000006a
+# [*] Trying a new Nonce = 0x00000006b
+# [*] Trying a new Nonce = 0x00000006c
+# [*] Trying a new Nonce = 0x00000006d
+# [*] Trying a new Nonce = 0x00000006e
+# [*] Trying a new Nonce = 0x00000006f
+# [*] Trying a new Nonce = 0x000000070
+# [*] Trying a new Nonce = 0x000000071
+# [*] Trying a new Nonce = 0x000000072
+# [*] Trying a new Nonce = 0x000000073
+# [*] Trying a new Nonce = 0x000000074
+# [*] Trying a new Nonce = 0x000000075
+# [*] Trying a new Nonce = 0x000000076
+# [*] Trying a new Nonce = 0x000000077
+# [*] Trying a new Nonce = 0x000000078
+# [*] Trying a new Nonce = 0x000000079
+# [*] Trying a new Nonce = 0x00000007a
+# [*] Trying a new Nonce = 0x00000007b
+# [*] Trying a new Nonce = 0x00000007c
+# [*] Trying a new Nonce = 0x00000007d
+# [*] Trying a new Nonce = 0x00000007e
+# [*] Trying a new Nonce = 0x00000007f
+# [*] Trying a new Nonce = 0x000000080
+# [*] Trying a new Nonce = 0x000000081
+# [*] Trying a new Nonce = 0x000000082
+# [*] Trying a new Nonce = 0x000000083
+# [*] Trying a new Nonce = 0x000000084
+# [*] Trying a new Nonce = 0x000000085
+# [*] Trying a new Nonce = 0x000000086
+# [*] Trying a new Nonce = 0x000000087
+# [*] Trying a new Nonce = 0x000000088
+# [*] Trying a new Nonce = 0x000000089
+# [*] Trying a new Nonce = 0x00000008a
+# [*] Trying a new Nonce = 0x00000008b
+# [*] Trying a new Nonce = 0x00000008c
+# [*] Trying a new Nonce = 0x00000008d
+# [*] Trying a new Nonce = 0x00000008e
+# [*] Trying a new Nonce = 0x00000008f
+# [*] Trying a new Nonce = 0x000000090
+# [*] Trying a new Nonce = 0x000000091
+# [*] Trying a new Nonce = 0x000000092
+# [*] Trying a new Nonce = 0x000000093
+# [*] Trying a new Nonce = 0x000000094
+# [*] Trying a new Nonce = 0x000000095
+# [*] Trying a new Nonce = 0x000000096
+# [*] Trying a new Nonce = 0x000000097
+# [*] Trying a new Nonce = 0x000000098
+# [*] Trying a new Nonce = 0x000000099
+# [*] Trying a new Nonce = 0x00000009a
+# [*] Trying a new Nonce = 0x00000009b
+# [*] Trying a new Nonce = 0x00000009c
+# [*] Trying a new Nonce = 0x00000009d
+# [*] Trying a new Nonce = 0x00000009e
+# [*] Trying a new Nonce = 0x00000009f
+# [*] Trying a new Nonce = 0x0000000a0
+# [*] Trying a new Nonce = 0x0000000a1
+# [*] Trying a new Nonce = 0x0000000a2
+# [*] Trying a new Nonce = 0x0000000a3
+# [*] Trying a new Nonce = 0x0000000a4
+# [*] Trying a new Nonce = 0x0000000a5
+# [*] Trying a new Nonce = 0x0000000a6
+# [*] Trying a new Nonce = 0x0000000a7
+# [*] Trying a new Nonce = 0x0000000a8
+# [*] Trying a new Nonce = 0x0000000a9
+# [*] Trying a new Nonce = 0x0000000aa
+# [*] Trying a new Nonce = 0x0000000ab
+# [*] Trying a new Nonce = 0x0000000ac
+# [*] Trying a new Nonce = 0x0000000ad
+# [*] Trying a new Nonce = 0x0000000ae
+# [*] Trying a new Nonce = 0x0000000af
+# [*] Trying a new Nonce = 0x0000000b0
+# [*] Trying a new Nonce = 0x0000000b1
+# [*] Trying a new Nonce = 0x0000000b2
+# [*] Trying a new Nonce = 0x0000000b3
+# [*] Trying a new Nonce = 0x0000000b4
+# [*] Trying a new Nonce = 0x0000000b5
+# [*] Trying a new Nonce = 0x0000000b6
+# [*] Trying a new Nonce = 0x0000000b7
+# [*] Trying a new Nonce = 0x0000000b8
+# [*] Trying a new Nonce = 0x0000000b9
+# [*] Trying a new Nonce = 0x0000000ba
+# [*] Trying a new Nonce = 0x0000000bb
+# [*] Trying a new Nonce = 0x0000000bc
+# [*] Trying a new Nonce = 0x0000000bd
+# [*] Trying a new Nonce = 0x0000000be
+# [*] Trying a new Nonce = 0x0000000bf
+# [*] Trying a new Nonce = 0x0000000c0
+# [*] Trying a new Nonce = 0x0000000c1
+# [*] Trying a new Nonce = 0x0000000c2
+# [*] Trying a new Nonce = 0x0000000c3
+# [*] Trying a new Nonce = 0x0000000c4
+# [*] Trying a new Nonce = 0x0000000c5
+# [*] Trying a new Nonce = 0x0000000c6
+# [*] Trying a new Nonce = 0x0000000c7
+# [*] Trying a new Nonce = 0x0000000c8
+# [*] Trying a new Nonce = 0x0000000c9
+# [*] Trying a new Nonce = 0x0000000ca
+# [*] Trying a new Nonce = 0x0000000cb
+# [*] Trying a new Nonce = 0x0000000cc
+# [*] Trying a new Nonce = 0x0000000cd
+# [*] Trying a new Nonce = 0x0000000ce
+# [*] Trying a new Nonce = 0x0000000cf
+# [*] Trying a new Nonce = 0x0000000d0
+# [*] Trying a new Nonce = 0x0000000d1
+# [*] Trying a new Nonce = 0x0000000d2
+# [*] Trying a new Nonce = 0x0000000d3
+# [*] Trying a new Nonce = 0x0000000d4
+# [*] Trying a new Nonce = 0x0000000d5
+# [*] Trying a new Nonce = 0x0000000d6
+# [*] Trying a new Nonce = 0x0000000d7
+# [*] Trying a new Nonce = 0x0000000d8
+# [*] Trying a new Nonce = 0x0000000d9
+# [*] Trying a new Nonce = 0x0000000da
+# [*] Trying a new Nonce = 0x0000000db
+# [*] Trying a new Nonce = 0x0000000dc
+# [*] Trying a new Nonce = 0x0000000dd
+# [*] Trying a new Nonce = 0x0000000de
+# [*] Trying a new Nonce = 0x0000000df
+# [*] Trying a new Nonce = 0x0000000e0
+# [*] Trying a new Nonce = 0x0000000e1
+# [*] Trying a new Nonce = 0x0000000e2
+# [*] Trying a new Nonce = 0x0000000e3
+# [*] Trying a new Nonce = 0x0000000e4
+# [*] Trying a new Nonce = 0x0000000e5
+# [*] Trying a new Nonce = 0x0000000e6
+# [*] Trying a new Nonce = 0x0000000e7
+# [*] Trying a new Nonce = 0x0000000e8
+# [*] Trying a new Nonce = 0x0000000e9
+# [*] Trying a new Nonce = 0x0000000ea
+# [*] Trying a new Nonce = 0x0000000eb
+# [*] Trying a new Nonce = 0x0000000ec
+# [*] Trying a new Nonce = 0x0000000ed
+# [*] Trying a new Nonce = 0x0000000ee
+# [*] Trying a new Nonce = 0x0000000ef
+# [*] Trying a new Nonce = 0x0000000f0
+# [*] Trying a new Nonce = 0x0000000f1
+# [*] Trying a new Nonce = 0x0000000f2
+# [*] Trying a new Nonce = 0x0000000f3
+# [*] Trying a new Nonce = 0x0000000f4
+# [*] Trying a new Nonce = 0x0000000f5
+# [*] Trying a new Nonce = 0x0000000f6
+# [*] Trying a new Nonce = 0x0000000f7
+# [*] Trying a new Nonce = 0x0000000f8
+# [*] Trying a new Nonce = 0x0000000f9
+# [*] Trying a new Nonce = 0x0000000fa
+# [*] Trying a new Nonce = 0x0000000fb
+# [*] Trying a new Nonce = 0x0000000fc
+# [*] Trying a new Nonce = 0x0000000fd
+# [*] Trying a new Nonce = 0x0000000fe
+# [*] Trying a new Nonce = 0x0000000ff
+# [*] Trying a new Nonce = 0x000000100
+# [*] Trying a new Nonce = 0x000000101
+# [*] Trying a new Nonce = 0x000000102
+# [*] Trying a new Nonce = 0x000000103
+# [*] Trying a new Nonce = 0x000000104
+# [*] Trying a new Nonce = 0x000000105
+# [*] Trying a new Nonce = 0x000000106
+# [*] Trying a new Nonce = 0x000000107
+# [*] Trying a new Nonce = 0x000000108
+# [*] Trying a new Nonce = 0x000000109
+# [*] Trying a new Nonce = 0x00000010a
+# [*] Trying a new Nonce = 0x00000010b
+# [*] Trying a new Nonce = 0x00000010c
+# [*] Trying a new Nonce = 0x00000010d
+# [*] Trying a new Nonce = 0x00000010e
+# [*] Trying a new Nonce = 0x00000010f
+# [*] Trying a new Nonce = 0x000000110
+# [*] Trying a new Nonce = 0x000000111
+# [*] Trying a new Nonce = 0x000000112
+# [*] Trying a new Nonce = 0x000000113
+# [*] Trying a new Nonce = 0x000000114
+# [*] Trying a new Nonce = 0x000000115
+# [*] Trying a new Nonce = 0x000000116
+# [*] Trying a new Nonce = 0x000000117
+# [*] Trying a new Nonce = 0x000000118
+# [*] Trying a new Nonce = 0x000000119
+# [*] Trying a new Nonce = 0x00000011a
+# [*] Trying a new Nonce = 0x00000011b
+# [*] Trying a new Nonce = 0x00000011c
+# [*] Trying a new Nonce = 0x00000011d
+# [*] Trying a new Nonce = 0x00000011e
+# [*] Trying a new Nonce = 0x00000011f
+# [*] Trying a new Nonce = 0x000000120
+# [*] Trying a new Nonce = 0x000000121
+# [*] Trying a new Nonce = 0x000000122
+# [*] Trying a new Nonce = 0x000000123
+# [*] Trying a new Nonce = 0x000000124
+# [*] Trying a new Nonce = 0x000000125
+# [*] Trying a new Nonce = 0x000000126
+# [*] Trying a new Nonce = 0x000000127
+# [*] Trying a new Nonce = 0x000000128
+# [*] Trying a new Nonce = 0x000000129
+# [*] Trying a new Nonce = 0x00000012a
+# [*] Trying a new Nonce = 0x00000012b
+# [*] Trying a new Nonce = 0x00000012c
+# [*] Trying a new Nonce = 0x00000012d
+# [*] Trying a new Nonce = 0x00000012e
+# [*] Trying a new Nonce = 0x00000012f
+# [*] Trying a new Nonce = 0x000000130
+# [*] Trying a new Nonce = 0x000000131
+# [*] Trying a new Nonce = 0x000000132
+# [*] Trying a new Nonce = 0x000000133
+# [*] Trying a new Nonce = 0x000000134
+# [*] Trying a new Nonce = 0x000000135
+# [*] Trying a new Nonce = 0x000000136
+# [*] Trying a new Nonce = 0x000000137
+# [*] Trying a new Nonce = 0x000000138
+# [*] Trying a new Nonce = 0x000000139
+# [*] Trying a new Nonce = 0x00000013a
+# [*] Trying a new Nonce = 0x00000013b
+# [*] Trying a new Nonce = 0x00000013c
+# [*] Trying a new Nonce = 0x00000013d
+# [*] Trying a new Nonce = 0x00000013e
+# [*] Trying a new Nonce = 0x00000013f
+# [*] Trying a new Nonce = 0x000000140
+# [*] Trying a new Nonce = 0x000000141
+# [*] Trying a new Nonce = 0x000000142
+# [*] Trying a new Nonce = 0x000000143
+# [*] Trying a new Nonce = 0x000000144
+# [*] Trying a new Nonce = 0x000000145
+# [*] Trying a new Nonce = 0x000000146
+# [*] Trying a new Nonce = 0x000000147
+# [*] Trying a new Nonce = 0x000000148
+# [*] Trying a new Nonce = 0x000000149
+# [*] Trying a new Nonce = 0x00000014a
+# [*] Trying a new Nonce = 0x00000014b
+# [*] Trying a new Nonce = 0x00000014c
+# [*] Trying a new Nonce = 0x00000014d
+# [*] Trying a new Nonce = 0x00000014e
+# [*] Trying a new Nonce = 0x00000014f
+# [*] Trying a new Nonce = 0x000000150
+# [*] Trying a new Nonce = 0x000000151
+# [*] Trying a new Nonce = 0x000000152
+# [*] Trying a new Nonce = 0x000000153
+# [*] Trying a new Nonce = 0x000000154
+# [*] Trying a new Nonce = 0x000000155
+# [*] Trying a new Nonce = 0x000000156
+# [*] Trying a new Nonce = 0x000000157
+# [*] Trying a new Nonce = 0x000000158
+# [*] Trying a new Nonce = 0x000000159
+# [*] Trying a new Nonce = 0x00000015a
+# [*] Trying a new Nonce = 0x00000015b
+# [*] Trying a new Nonce = 0x00000015c
+# [*] Trying a new Nonce = 0x00000015d
+# [*] Trying a new Nonce = 0x00000015e
+# [*] Trying a new Nonce = 0x00000015f
+# [*] Trying a new Nonce = 0x000000160
+# [*] Trying a new Nonce = 0x000000161
+# [*] Trying a new Nonce = 0x000000162
+# [*] Trying a new Nonce = 0x000000163
+# [*] Trying a new Nonce = 0x000000164
+# [*] Trying a new Nonce = 0x000000165
+# [*] Trying a new Nonce = 0x000000166
+# [*] Trying a new Nonce = 0x000000167
+# [*] Trying a new Nonce = 0x000000168
+# [*] Trying a new Nonce = 0x000000169
+# [*] Trying a new Nonce = 0x00000016a
+# [*] Trying a new Nonce = 0x00000016b
+# [*] Trying a new Nonce = 0x00000016c
+# [*] Trying a new Nonce = 0x00000016d
+# [*] Trying a new Nonce = 0x00000016e
+# [*] Trying a new Nonce = 0x00000016f
+# [*] Trying a new Nonce = 0x000000170
+# [*] Trying a new Nonce = 0x000000171
+# [*] Trying a new Nonce = 0x000000172
+# [*] Trying a new Nonce = 0x000000173
+# [*] Trying a new Nonce = 0x000000174
+# [*] Trying a new Nonce = 0x000000175
+# [*] Trying a new Nonce = 0x000000176
+# [*] Trying a new Nonce = 0x000000177
+# [*] Trying a new Nonce = 0x000000178
+# [*] Trying a new Nonce = 0x000000179
+# [*] Trying a new Nonce = 0x00000017a
+# [*] Trying a new Nonce = 0x00000017b
+# [*] Trying a new Nonce = 0x00000017c
+# [*] Trying a new Nonce = 0x00000017d
+# [*] Trying a new Nonce = 0x00000017e
+# [*] Trying a new Nonce = 0x00000017f
+# [*] Trying a new Nonce = 0x000000180
+# [*] Trying a new Nonce = 0x000000181
+# [*] Trying a new Nonce = 0x000000182
+# [*] Trying a new Nonce = 0x000000183
+# [*] Trying a new Nonce = 0x000000184
+# [*] Trying a new Nonce = 0x000000185
+# [*] Trying a new Nonce = 0x000000186
+# [*] Trying a new Nonce = 0x000000187
+# [*] Trying a new Nonce = 0x000000188
+# [*] Trying a new Nonce = 0x000000189
+# [*] Trying a new Nonce = 0x00000018a
+# [*] Trying a new Nonce = 0x00000018b
+# [*] Trying a new Nonce = 0x00000018c
+# [*] Trying a new Nonce = 0x00000018d
+# [*] Trying a new Nonce = 0x00000018e
+# [*] Trying a new Nonce = 0x00000018f
+# [*] Trying a new Nonce = 0x000000190
+# [*] Trying a new Nonce = 0x000000191
+# [*] Trying a new Nonce = 0x000000192
+# [*] Trying a new Nonce = 0x000000193
+# [*] Trying a new Nonce = 0x000000194
+# [*] Trying a new Nonce = 0x000000195
+# [*] Trying a new Nonce = 0x000000196
+# [*] Trying a new Nonce = 0x000000197
+# [*] Trying a new Nonce = 0x000000198
+# [*] Trying a new Nonce = 0x000000199
+# [*] Trying a new Nonce = 0x00000019a
+# [*] Trying a new Nonce = 0x00000019b
+# [*] Trying a new Nonce = 0x00000019c
+# [*] Trying a new Nonce = 0x00000019d
+# [*] Trying a new Nonce = 0x00000019e
+# [*] Trying a new Nonce = 0x00000019f
+# [*] Trying a new Nonce = 0x0000001a0
+# [*] Trying a new Nonce = 0x0000001a1
+# [*] Trying a new Nonce = 0x0000001a2
+# [*] Trying a new Nonce = 0x0000001a3
+# [*] Trying a new Nonce = 0x0000001a4
+# [*] Trying a new Nonce = 0x0000001a5
+# [*] Trying a new Nonce = 0x0000001a6
+# [*] Trying a new Nonce = 0x0000001a7
+# [*] Trying a new Nonce = 0x0000001a8
+# [*] Trying a new Nonce = 0x0000001a9
+# [*] Trying a new Nonce = 0x0000001aa
+# [*] Trying a new Nonce = 0x0000001ab
+# [*] Trying a new Nonce = 0x0000001ac
+# [*] Trying a new Nonce = 0x0000001ad
+# [*] Trying a new Nonce = 0x0000001ae
+# [*] Trying a new Nonce = 0x0000001af
+# [*] Trying a new Nonce = 0x0000001b0
+# [*] Trying a new Nonce = 0x0000001b1
+# [*] Trying a new Nonce = 0x0000001b2
+# [*] Trying a new Nonce = 0x0000001b3
+# [*] Trying a new Nonce = 0x0000001b4
+# [*] Trying a new Nonce = 0x0000001b5
+# [*] Trying a new Nonce = 0x0000001b6
+# [*] Trying a new Nonce = 0x0000001b7
+# [*] Trying a new Nonce = 0x0000001b8
+# [*] Trying a new Nonce = 0x0000001b9
+# [*] Trying a new Nonce = 0x0000001ba
+# [*] Trying a new Nonce = 0x0000001bb
+# [*] Trying a new Nonce = 0x0000001bc
+# [*] Trying a new Nonce = 0x0000001bd
+# [*] Trying a new Nonce = 0x0000001be
+# [*] Trying a new Nonce = 0x0000001bf
+# [*] Trying a new Nonce = 0x0000001c0
+# [*] Trying a new Nonce = 0x0000001c1
+# [*] Trying a new Nonce = 0x0000001c2
+# [*] Trying a new Nonce = 0x0000001c3
+# [*] Trying a new Nonce = 0x0000001c4
+# [*] Trying a new Nonce = 0x0000001c5
+# [*] Trying a new Nonce = 0x0000001c6
+# [*] Trying a new Nonce = 0x0000001c7
+# [*] Trying a new Nonce = 0x0000001c8
+# [*] Trying a new Nonce = 0x0000001c9
+# [*] Trying a new Nonce = 0x0000001ca
+# [*] Trying a new Nonce = 0x0000001cb
+# [*] Trying a new Nonce = 0x0000001cc
+# [*] Trying a new Nonce = 0x0000001cd
+# [*] Trying a new Nonce = 0x0000001ce
+# [*] Trying a new Nonce = 0x0000001cf
+# [*] Trying a new Nonce = 0x0000001d0
+# [*] Trying a new Nonce = 0x0000001d1
+# [*] Trying a new Nonce = 0x0000001d2
+# [*] Trying a new Nonce = 0x0000001d3
+# [*] Trying a new Nonce = 0x0000001d4
+# [*] Trying a new Nonce = 0x0000001d5
+# [*] Trying a new Nonce = 0x0000001d6
+# [*] Trying a new Nonce = 0x0000001d7
+# [*] Trying a new Nonce = 0x0000001d8
+# [*] Trying a new Nonce = 0x0000001d9
+# [*] Trying a new Nonce = 0x0000001da
+# [*] Trying a new Nonce = 0x0000001db
+# [*] Trying a new Nonce = 0x0000001dc
+# [*] Trying a new Nonce = 0x0000001dd
+# [*] Trying a new Nonce = 0x0000001de
+# [*] Trying a new Nonce = 0x0000001df
+# [*] Trying a new Nonce = 0x0000001e0
+# [*] Trying a new Nonce = 0x0000001e1
+# [*] Trying a new Nonce = 0x0000001e2
+# [*] Trying a new Nonce = 0x0000001e3
+# [*] Trying a new Nonce = 0x0000001e4
+# [*] Trying a new Nonce = 0x0000001e5
+# [*] Trying a new Nonce = 0x0000001e6
+# [*] Trying a new Nonce = 0x0000001e7
+# [*] Trying a new Nonce = 0x0000001e8
+# [*] Trying a new Nonce = 0x0000001e9
+# [*] Trying a new Nonce = 0x0000001ea
+# [*] Trying a new Nonce = 0x0000001eb
+# [*] Trying a new Nonce = 0x0000001ec
+# [*] Trying a new Nonce = 0x0000001ed
+# [*] Trying a new Nonce = 0x0000001ee
+# [*] Trying a new Nonce = 0x0000001ef
+# [*] Trying a new Nonce = 0x0000001f0
+# [*] Trying a new Nonce = 0x0000001f1
+# [*] Trying a new Nonce = 0x0000001f2
+# [*] Trying a new Nonce = 0x0000001f3
+# [*] Trying a new Nonce = 0x0000001f4
+# [*] Trying a new Nonce = 0x0000001f5
+# [*] Trying a new Nonce = 0x0000001f6
+# [*] Trying a new Nonce = 0x0000001f7
+# [*] Trying a new Nonce = 0x0000001f8
+# [*] Trying a new Nonce = 0x0000001f9
+# [*] Trying a new Nonce = 0x0000001fa
+# [*] Trying a new Nonce = 0x0000001fb
+# [*] Trying a new Nonce = 0x0000001fc
+# [*] Trying a new Nonce = 0x0000001fd
+# [*] Trying a new Nonce = 0x0000001fe
+# [*] Trying a new Nonce = 0x0000001ff
+# [*] Trying a new Nonce = 0x000000200
+# [*] Trying a new Nonce = 0x000000201
+# [*] Trying a new Nonce = 0x000000202
+# [*] Trying a new Nonce = 0x000000203
+# [*] Trying a new Nonce = 0x000000204
+# [*] Trying a new Nonce = 0x000000205
+# [*] Trying a new Nonce = 0x000000206
+# [*] Trying a new Nonce = 0x000000207
+# [*] Trying a new Nonce = 0x000000208
+# [*] Trying a new Nonce = 0x000000209
+# [*] Trying a new Nonce = 0x00000020a
+# [*] Trying a new Nonce = 0x00000020b
+# [*] Trying a new Nonce = 0x00000020c
+# [*] Trying a new Nonce = 0x00000020d
+# [*] Trying a new Nonce = 0x00000020e
+# [*] Trying a new Nonce = 0x00000020f
+# [*] Trying a new Nonce = 0x000000210
+# [*] Trying a new Nonce = 0x000000211
+# [*] Trying a new Nonce = 0x000000212
+# [*] Trying a new Nonce = 0x000000213
+# [*] Trying a new Nonce = 0x000000214
+# [*] Trying a new Nonce = 0x000000215
+# [*] Trying a new Nonce = 0x000000216
+# [*] Trying a new Nonce = 0x000000217
+# [*] Trying a new Nonce = 0x000000218
+# [*] Trying a new Nonce = 0x000000219
+# [*] Trying a new Nonce = 0x00000021a
+# [*] Trying a new Nonce = 0x00000021b
+# [*] Trying a new Nonce = 0x00000021c
+# [*] Trying a new Nonce = 0x00000021d
+# [*] Trying a new Nonce = 0x00000021e
+# [*] Trying a new Nonce = 0x00000021f
+# [*] Trying a new Nonce = 0x000000220
+# [*] Trying a new Nonce = 0x000000221
+# [*] Trying a new Nonce = 0x000000222
+# [*] Trying a new Nonce = 0x000000223
+# [*] Trying a new Nonce = 0x000000224
+# [*] Trying a new Nonce = 0x000000225
+# [*] Trying a new Nonce = 0x000000226
+# [*] Trying a new Nonce = 0x000000227
+# [*] Trying a new Nonce = 0x000000228
+# [*] Trying a new Nonce = 0x000000229
+# [*] Trying a new Nonce = 0x00000022a
+# [*] Trying a new Nonce = 0x00000022b
+# [*] Trying a new Nonce = 0x00000022c
+# [*] Trying a new Nonce = 0x00000022d
+# [*] Trying a new Nonce = 0x00000022e
+# [*] Trying a new Nonce = 0x00000022f
+# [*] Trying a new Nonce = 0x000000230
+# [*] Trying a new Nonce = 0x000000231
+# [*] Trying a new Nonce = 0x000000232
+# [*] Trying a new Nonce = 0x000000233
+# [*] Trying a new Nonce = 0x000000234
+# [*] Trying a new Nonce = 0x000000235
+# [*] Trying a new Nonce = 0x000000236
+# [*] Trying a new Nonce = 0x000000237
+# [*] Trying a new Nonce = 0x000000238
+# [*] Trying a new Nonce = 0x000000239
+# [*] Trying a new Nonce = 0x00000023a
+# [*] Trying a new Nonce = 0x00000023b
+# [*] Trying a new Nonce = 0x00000023c
+# [*] Trying a new Nonce = 0x00000023d
+# [*] Trying a new Nonce = 0x00000023e
+# [*] Trying a new Nonce = 0x00000023f
+# [*] Trying a new Nonce = 0x000000240
+# [*] Trying a new Nonce = 0x000000241
+# [*] Trying a new Nonce = 0x000000242
+# [*] Trying a new Nonce = 0x000000243
+# [*] Trying a new Nonce = 0x000000244
+# [*] Trying a new Nonce = 0x000000245
+# [*] Trying a new Nonce = 0x000000246
+# [*] Trying a new Nonce = 0x000000247
+# [*] Trying a new Nonce = 0x000000248
+# [*] Trying a new Nonce = 0x000000249
+# [*] Trying a new Nonce = 0x00000024a
+# [*] Trying a new Nonce = 0x00000024b
+# [*] Trying a new Nonce = 0x00000024c
+# [*] Trying a new Nonce = 0x00000024d
+# [*] Trying a new Nonce = 0x00000024e
+# [*] Trying a new Nonce = 0x00000024f
+# [*] Trying a new Nonce = 0x000000250
+# [*] Trying a new Nonce = 0x000000251
+# [*] Trying a new Nonce = 0x000000252
+# [*] Trying a new Nonce = 0x000000253
+# [*] Trying a new Nonce = 0x000000254
+# [*] Trying a new Nonce = 0x000000255
+# [*] Trying a new Nonce = 0x000000256
+# [*] Trying a new Nonce = 0x000000257
+# [*] Trying a new Nonce = 0x000000258
+# [*] Trying a new Nonce = 0x000000259
+# [*] Trying a new Nonce = 0x00000025a
+# [*] Trying a new Nonce = 0x00000025b
+# [*] Trying a new Nonce = 0x00000025c
+# [*] Trying a new Nonce = 0x00000025d
+# [*] Trying a new Nonce = 0x00000025e
+# [*] Trying a new Nonce = 0x00000025f
+# [*] Trying a new Nonce = 0x000000260
+# [*] Trying a new Nonce = 0x000000261
+# [*] Trying a new Nonce = 0x000000262
+# [*] Trying a new Nonce = 0x000000263
+# [*] Trying a new Nonce = 0x000000264
+# [*] Trying a new Nonce = 0x000000265
+# [*] Trying a new Nonce = 0x000000266
+# [*] Trying a new Nonce = 0x000000267
+# [*] Trying a new Nonce = 0x000000268
+# [*] Trying a new Nonce = 0x000000269
+# [*] Trying a new Nonce = 0x00000026a
+# [*] Trying a new Nonce = 0x00000026b
+# [*] Trying a new Nonce = 0x00000026c
+# [*] Trying a new Nonce = 0x00000026d
+# [*] Trying a new Nonce = 0x00000026e
+# [*] Trying a new Nonce = 0x00000026f
+# [*] Trying a new Nonce = 0x000000270
+# [*] Trying a new Nonce = 0x000000271
+# [*] Trying a new Nonce = 0x000000272
+# [*] Trying a new Nonce = 0x000000273
+# [*] Trying a new Nonce = 0x000000274
+# [*] Trying a new Nonce = 0x000000275
+# [*] Trying a new Nonce = 0x000000276
+# [*] Trying a new Nonce = 0x000000277
+# [*] Trying a new Nonce = 0x000000278
+# [*] Trying a new Nonce = 0x000000279
+# [*] Trying a new Nonce = 0x00000027a
+# [*] Trying a new Nonce = 0x00000027b
+# [*] Trying a new Nonce = 0x00000027c
+# [*] Trying a new Nonce = 0x00000027d
+# [*] Trying a new Nonce = 0x00000027e
+# [*] Trying a new Nonce = 0x00000027f
+# [*] Trying a new Nonce = 0x000000280
+# [*] Trying a new Nonce = 0x000000281
+# [*] Trying a new Nonce = 0x000000282
+# [*] Trying a new Nonce = 0x000000283
+# [*] Trying a new Nonce = 0x000000284
+# [*] Trying a new Nonce = 0x000000285
+# [*] Trying a new Nonce = 0x000000286
+# [*] Trying a new Nonce = 0x000000287
+# [*] Trying a new Nonce = 0x000000288
+# [*] Trying a new Nonce = 0x000000289
+# [*] Trying a new Nonce = 0x00000028a
+# [*] Trying a new Nonce = 0x00000028b
+# [*] Trying a new Nonce = 0x00000028c
+# [*] Trying a new Nonce = 0x00000028d
+# [*] Trying a new Nonce = 0x00000028e
+# [*] Trying a new Nonce = 0x00000028f
+# [*] Trying a new Nonce = 0x000000290
+# [*] Trying a new Nonce = 0x000000291
+# [*] Trying a new Nonce = 0x000000292
+# [*] Trying a new Nonce = 0x000000293
+# [*] Trying a new Nonce = 0x000000294
+# [*] Trying a new Nonce = 0x000000295
+# [*] Trying a new Nonce = 0x000000296
+# [*] Trying a new Nonce = 0x000000297
+# [*] Trying a new Nonce = 0x000000298
+# [*] Trying a new Nonce = 0x000000299
+# [*] Trying a new Nonce = 0x00000029a
+# [*] Trying a new Nonce = 0x00000029b
+# [*] Trying a new Nonce = 0x00000029c
+# [*] Trying a new Nonce = 0x00000029d
+# [*] Trying a new Nonce = 0x00000029e
+# [*] Trying a new Nonce = 0x00000029f
+# [*] Trying a new Nonce = 0x0000002a0
+# [*] Trying a new Nonce = 0x0000002a1
+# [*] Trying a new Nonce = 0x0000002a2
+# [*] Trying a new Nonce = 0x0000002a3
+# [*] Trying a new Nonce = 0x0000002a4
+# [*] Trying a new Nonce = 0x0000002a5
+# [*] Trying a new Nonce = 0x0000002a6
+# [*] Trying a new Nonce = 0x0000002a7
+# [*] Trying a new Nonce = 0x0000002a8
+# [*] Trying a new Nonce = 0x0000002a9
+# [*] Trying a new Nonce = 0x0000002aa
+# [*] Trying a new Nonce = 0x0000002ab
+# [*] Trying a new Nonce = 0x0000002ac
+# [*] Trying a new Nonce = 0x0000002ad
+# [*] Trying a new Nonce = 0x0000002ae
+# [*] Trying a new Nonce = 0x0000002af
+# [*] Trying a new Nonce = 0x0000002b0
+# [*] Trying a new Nonce = 0x0000002b1
+# [*] Trying a new Nonce = 0x0000002b2
+# [*] Trying a new Nonce = 0x0000002b3
+# [*] Trying a new Nonce = 0x0000002b4
+# [*] Trying a new Nonce = 0x0000002b5
+# [*] Trying a new Nonce = 0x0000002b6
+# [*] Trying a new Nonce = 0x0000002b7
+# [*] Trying a new Nonce = 0x0000002b8
+# [*] Trying a new Nonce = 0x0000002b9
+# [*] Trying a new Nonce = 0x0000002ba
+# [*] Trying a new Nonce = 0x0000002bb
+# [*] Trying a new Nonce = 0x0000002bc
+# [*] Trying a new Nonce = 0x0000002bd
+# [*] Trying a new Nonce = 0x0000002be
+# [*] Trying a new Nonce = 0x0000002bf
+# [*] Trying a new Nonce = 0x0000002c0
+# [*] Trying a new Nonce = 0x0000002c1
+# [*] Trying a new Nonce = 0x0000002c2
+# [*] Trying a new Nonce = 0x0000002c3
+# [*] Trying a new Nonce = 0x0000002c4
+# [*] Trying a new Nonce = 0x0000002c5
+# [*] Trying a new Nonce = 0x0000002c6
+# [*] Trying a new Nonce = 0x0000002c7
+# [*] Trying a new Nonce = 0x0000002c8
+# [*] Trying a new Nonce = 0x0000002c9
+# [*] Trying a new Nonce = 0x0000002ca
+# [*] Trying a new Nonce = 0x0000002cb
+# [*] Trying a new Nonce = 0x0000002cc
+# [*] Trying a new Nonce = 0x0000002cd
+# [*] Trying a new Nonce = 0x0000002ce
+# [*] Trying a new Nonce = 0x0000002cf
+# [*] Trying a new Nonce = 0x0000002d0
+# [*] Trying a new Nonce = 0x0000002d1
+# [*] Trying a new Nonce = 0x0000002d2
+# [*] Trying a new Nonce = 0x0000002d3
+# [*] Trying a new Nonce = 0x0000002d4
+# [*] Trying a new Nonce = 0x0000002d5
+# [*] Trying a new Nonce = 0x0000002d6
+# [*] Trying a new Nonce = 0x0000002d7
+# [*] Trying a new Nonce = 0x0000002d8
+# [*] Trying a new Nonce = 0x0000002d9
+# [*] Trying a new Nonce = 0x0000002da
+# [*] Trying a new Nonce = 0x0000002db
+# [*] Trying a new Nonce = 0x0000002dc
+# [*] Trying a new Nonce = 0x0000002dd
+# [*] Trying a new Nonce = 0x0000002de
+# [*] Trying a new Nonce = 0x0000002df
+# [*] Trying a new Nonce = 0x0000002e0
+# [*] Trying a new Nonce = 0x0000002e1
+# [*] Trying a new Nonce = 0x0000002e2
+# [*] Trying a new Nonce = 0x0000002e3
+# [*] Trying a new Nonce = 0x0000002e4
+# [*] Trying a new Nonce = 0x0000002e5
+# [*] Trying a new Nonce = 0x0000002e6
+# [*] Trying a new Nonce = 0x0000002e7
+# [*] Trying a new Nonce = 0x0000002e8
+# [*] Trying a new Nonce = 0x0000002e9
+# [*] Trying a new Nonce = 0x0000002ea
+# [*] Trying a new Nonce = 0x0000002eb
+# [*] Trying a new Nonce = 0x0000002ec
+# [*] Trying a new Nonce = 0x0000002ed
+# [*] Trying a new Nonce = 0x0000002ee
+# [*] Trying a new Nonce = 0x0000002ef
+# [*] Trying a new Nonce = 0x0000002f0
+# [*] Trying a new Nonce = 0x0000002f1
+# [*] Trying a new Nonce = 0x0000002f2
+# [*] Trying a new Nonce = 0x0000002f3
+# [*] Trying a new Nonce = 0x0000002f4
+# [*] Trying a new Nonce = 0x0000002f5
+# [*] Trying a new Nonce = 0x0000002f6
+# [*] Trying a new Nonce = 0x0000002f7
+# [*] Trying a new Nonce = 0x0000002f8
+# [*] Trying a new Nonce = 0x0000002f9
+# [*] Trying a new Nonce = 0x0000002fa
+# [*] Trying a new Nonce = 0x0000002fb
+# [*] Trying a new Nonce = 0x0000002fc
+# [*] Trying a new Nonce = 0x0000002fd
+# [*] Trying a new Nonce = 0x0000002fe
+# [*] Trying a new Nonce = 0x0000002ff
+# [*] Trying a new Nonce = 0x000000300
+# [*] Trying a new Nonce = 0x000000301
+# [*] Trying a new Nonce = 0x000000302
+# [*] Trying a new Nonce = 0x000000303
+# [*] Trying a new Nonce = 0x000000304
+# [*] Trying a new Nonce = 0x000000305
+# [*] Trying a new Nonce = 0x000000306
+# [*] Trying a new Nonce = 0x000000307
+# [*] Trying a new Nonce = 0x000000308
+# [*] Trying a new Nonce = 0x000000309
+# [*] Trying a new Nonce = 0x00000030a
+# [*] Trying a new Nonce = 0x00000030b
+# [*] Trying a new Nonce = 0x00000030c
+# [*] Trying a new Nonce = 0x00000030d
+# [*] Trying a new Nonce = 0x00000030e
+# [*] Trying a new Nonce = 0x00000030f
+# [*] Trying a new Nonce = 0x000000310
+# [*] Trying a new Nonce = 0x000000311
+# [*] Trying a new Nonce = 0x000000312
+# [*] Trying a new Nonce = 0x000000313
+# [*] Trying a new Nonce = 0x000000314
+# [*] Trying a new Nonce = 0x000000315
+# [*] Trying a new Nonce = 0x000000316
+# [*] Trying a new Nonce = 0x000000317
+# [*] Trying a new Nonce = 0x000000318
+# [*] Trying a new Nonce = 0x000000319
+# [*] Trying a new Nonce = 0x00000031a
+# [*] Trying a new Nonce = 0x00000031b
+# [*] Trying a new Nonce = 0x00000031c
+# [*] Trying a new Nonce = 0x00000031d
+# [*] Trying a new Nonce = 0x00000031e
+# [*] Trying a new Nonce = 0x00000031f
+# [*] Trying a new Nonce = 0x000000320
+# [*] Trying a new Nonce = 0x000000321
+# [*] Trying a new Nonce = 0x000000322
+# [*] Trying a new Nonce = 0x000000323
+# [*] Trying a new Nonce = 0x000000324
+# [*] Trying a new Nonce = 0x000000325
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xddc37ea5 3720576677 (CYCLE 0x00002e92      11922)
+# CODE: 0x4444190c 1145313548 (CYCLE 0x00002e94      11924)
+# CODE: 0x21158168  555057512 (CYCLE 0x00002e96      11926)
+# CODE: 0x48fcdb9a 1224530842 (CYCLE 0x00002e98      11928)
+# CODE: 0xd1c40be4 3519286244 (CYCLE 0x00002e9a      11930)
+# CODE: 0x039db8e4   60668132 (CYCLE 0x00002e9c      11932)
+# CODE: 0xb32b4364 3005956964 (CYCLE 0x00002e9e      11934)
+# CODE: 0xe0ded03d 3772698685 (CYCLE 0x00002ea0      11936)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xa889120a 2827555338 (CYCLE 0x00005cff      23807)
+# CODE: 0xa8fd3c0c 2835168268 (CYCLE 0x00005d01      23809)
+# CODE: 0xd181f9f0 3514956272 (CYCLE 0x00005d03      23811)
+# CODE: 0x55050ba7 1426394023 (CYCLE 0x00005d05      23813)
+# CODE: 0x81a2ae48 2174922312 (CYCLE 0x00005d07      23815)
+# CODE: 0x951ffab0 2501900976 (CYCLE 0x00005d09      23817)
+# CODE: 0x7217ad6c 1914154348 (CYCLE 0x00005d0b      23819)
+# CODE: 0x4efa9336 1325044534 (CYCLE 0x00005d0d      23821)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0xc3f08a94 3287321236 (CYCLE 0x00008b6c      35692)
+# CODE: 0xcc64831e 3429139230 (CYCLE 0x00008b6e      35694)
+# CODE: 0x8c4bc02b 2353774635 (CYCLE 0x00008b70      35696)
+# CODE: 0xf56f1607 4117698055 (CYCLE 0x00008b72      35698)
+# CODE: 0x53191e80 1394155136 (CYCLE 0x00008b74      35700)
+# CODE: 0x29356710  691365648 (CYCLE 0x00008b76      35702)
+# CODE: 0xc579d169 3313095017 (CYCLE 0x00008b78      35704)
+# CODE: 0x5c2044de 1545618654 (CYCLE 0x00008b7a      35706)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x4f85cb58 1334168408 (CYCLE 0x0000b9d9      47577)
+# CODE: 0x84af6503 2226087171 (CYCLE 0x0000b9db      47579)
+# CODE: 0xfa64be68 4200906344 (CYCLE 0x0000b9dd      47581)
+# CODE: 0x407113d2 1081152466 (CYCLE 0x0000b9df      47583)
+# CODE: 0x14f1b621  351385121 (CYCLE 0x0000b9e1      47585)
+# CODE: 0x23a5b58a  598062474 (CYCLE 0x0000b9e3      47587)
+# CODE: 0x389e47ef  949897199 (CYCLE 0x0000b9e5      47589)
+# CODE: 0x38486728  944269096 (CYCLE 0x0000b9e7      47591)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0x8b3d6277 2336055927 (CYCLE 0x0000e846      59462)
+# CODE: 0xd4ee161b 3572373019 (CYCLE 0x0000e848      59464)
+# CODE: 0x0f00b0f2  251703538 (CYCLE 0x0000e84a      59466)
+# CODE: 0x5616d623 1444337187 (CYCLE 0x0000e84c      59468)
+# CODE: 0x4de38055 1306755157 (CYCLE 0x0000e84e      59470)
+# CODE: 0x8757747d 2270655613 (CYCLE 0x0000e850      59472)
+# CODE: 0x4b3cfbb7 1262287799 (CYCLE 0x0000e852      59474)
+# CODE: 0x736aa806 1936369670 (CYCLE 0x0000e854      59476)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x71a7baf9 1906817785 (CYCLE 0x000116b3      71347)
+# CODE: 0x7b62be6e 2070068846 (CYCLE 0x000116b5      71349)
+# CODE: 0xcc85d8d1 3431323857 (CYCLE 0x000116b7      71351)
+# CODE: 0x12b078f5  313555189 (CYCLE 0x000116b9      71353)
+# CODE: 0x1b9230f0  462565616 (CYCLE 0x000116bb      71355)
+# CODE: 0xd469b776 3563698038 (CYCLE 0x000116bd      71357)
+# CODE: 0xefeba5c3 4025198019 (CYCLE 0x000116bf      71359)
+# CODE: 0xceea072b 3471443755 (CYCLE 0x000116c1      71361)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xf154e135 4048871733 (CYCLE 0x00014520      83232)
+# CODE: 0xd661fa19 3596745241 (CYCLE 0x00014522      83234)
+# CODE: 0xd6e8c985 3605580165 (CYCLE 0x00014524      83236)
+# CODE: 0x8e92c7ca 2391984074 (CYCLE 0x00014526      83238)
+# CODE: 0xf51a5692 4112144018 (CYCLE 0x00014528      83240)
+# CODE: 0x27556143  659906883 (CYCLE 0x0001452a      83242)
+# CODE: 0xc8d6f212 3369529874 (CYCLE 0x0001452c      83244)
+# CODE: 0xfe64ce6d 4268019309 (CYCLE 0x0001452e      83246)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0x6c1e45de 1813923294 (CYCLE 0x0001738d      95117)
+# CODE: 0xcdb383e4 3451093988 (CYCLE 0x0001738f      95119)
+# CODE: 0x72f7fec4 1928855236 (CYCLE 0x00017391      95121)
+# CODE: 0x49148eeb 1226084075 (CYCLE 0x00017393      95123)
+# CODE: 0x77c0a936 2009114934 (CYCLE 0x00017395      95125)
+# CODE: 0x892cf7f3 2301425651 (CYCLE 0x00017397      95127)
+# CODE: 0x67dcdfd1 1742528465 (CYCLE 0x00017399      95129)
+# CODE: 0x5f842def 1602498031 (CYCLE 0x0001739b      95131)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x1404b3fa  335852538 (CYCLE 0x0001a1fa     107002)
+# CODE: 0xf3588faa 4082667434 (CYCLE 0x0001a1fc     107004)
+# CODE: 0xbc10367d 3155179133 (CYCLE 0x0001a1fe     107006)
+# CODE: 0xf5f485ed 4126442989 (CYCLE 0x0001a200     107008)
+# CODE: 0x22261d69  572923241 (CYCLE 0x0001a202     107010)
+# CODE: 0x0687047c  109511804 (CYCLE 0x0001a204     107012)
+# CODE: 0xb48dd548 3029194056 (CYCLE 0x0001a206     107014)
+# CODE: 0xd6054d80 3590671744 (CYCLE 0x0001a208     107016)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001a220     107040)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/lab3/miner_tb.sv line 399
+vlog -work work -sv -O0 C:/cygwin64/home/jack/cse141L/core/lab3/core.sv
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling package core_sv_unit
+# -- Compiling module core
+# 
+# Top level modules:
+# 	core
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xddc37ea5 3720576677 (CYCLE 0x00002e92      11922)
+# CODE: 0x4444190c 1145313548 (CYCLE 0x00002e94      11924)
+# CODE: 0x21158168  555057512 (CYCLE 0x00002e96      11926)
+# CODE: 0x48fcdb9a 1224530842 (CYCLE 0x00002e98      11928)
+# CODE: 0xd1c40be4 3519286244 (CYCLE 0x00002e9a      11930)
+# CODE: 0x039db8e4   60668132 (CYCLE 0x00002e9c      11932)
+# CODE: 0xb32b4364 3005956964 (CYCLE 0x00002e9e      11934)
+# CODE: 0xe0ded03d 3772698685 (CYCLE 0x00002ea0      11936)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xa889120a 2827555338 (CYCLE 0x00005cff      23807)
+# CODE: 0xa8fd3c0c 2835168268 (CYCLE 0x00005d01      23809)
+# CODE: 0xd181f9f0 3514956272 (CYCLE 0x00005d03      23811)
+# CODE: 0x55050ba7 1426394023 (CYCLE 0x00005d05      23813)
+# CODE: 0x81a2ae48 2174922312 (CYCLE 0x00005d07      23815)
+# CODE: 0x951ffab0 2501900976 (CYCLE 0x00005d09      23817)
+# CODE: 0x7217ad6c 1914154348 (CYCLE 0x00005d0b      23819)
+# CODE: 0x4efa9336 1325044534 (CYCLE 0x00005d0d      23821)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0xc3f08a94 3287321236 (CYCLE 0x00008b6c      35692)
+# CODE: 0xcc64831e 3429139230 (CYCLE 0x00008b6e      35694)
+# CODE: 0x8c4bc02b 2353774635 (CYCLE 0x00008b70      35696)
+# CODE: 0xf56f1607 4117698055 (CYCLE 0x00008b72      35698)
+# CODE: 0x53191e80 1394155136 (CYCLE 0x00008b74      35700)
+# CODE: 0x29356710  691365648 (CYCLE 0x00008b76      35702)
+# CODE: 0xc579d169 3313095017 (CYCLE 0x00008b78      35704)
+# CODE: 0x5c2044de 1545618654 (CYCLE 0x00008b7a      35706)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x4f85cb58 1334168408 (CYCLE 0x0000b9d9      47577)
+# CODE: 0x84af6503 2226087171 (CYCLE 0x0000b9db      47579)
+# CODE: 0xfa64be68 4200906344 (CYCLE 0x0000b9dd      47581)
+# CODE: 0x407113d2 1081152466 (CYCLE 0x0000b9df      47583)
+# CODE: 0x14f1b621  351385121 (CYCLE 0x0000b9e1      47585)
+# CODE: 0x23a5b58a  598062474 (CYCLE 0x0000b9e3      47587)
+# CODE: 0x389e47ef  949897199 (CYCLE 0x0000b9e5      47589)
+# CODE: 0x38486728  944269096 (CYCLE 0x0000b9e7      47591)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0x8b3d6277 2336055927 (CYCLE 0x0000e846      59462)
+# CODE: 0xd4ee161b 3572373019 (CYCLE 0x0000e848      59464)
+# CODE: 0x0f00b0f2  251703538 (CYCLE 0x0000e84a      59466)
+# CODE: 0x5616d623 1444337187 (CYCLE 0x0000e84c      59468)
+# CODE: 0x4de38055 1306755157 (CYCLE 0x0000e84e      59470)
+# CODE: 0x8757747d 2270655613 (CYCLE 0x0000e850      59472)
+# CODE: 0x4b3cfbb7 1262287799 (CYCLE 0x0000e852      59474)
+# CODE: 0x736aa806 1936369670 (CYCLE 0x0000e854      59476)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x71a7baf9 1906817785 (CYCLE 0x000116b3      71347)
+# CODE: 0x7b62be6e 2070068846 (CYCLE 0x000116b5      71349)
+# CODE: 0xcc85d8d1 3431323857 (CYCLE 0x000116b7      71351)
+# CODE: 0x12b078f5  313555189 (CYCLE 0x000116b9      71353)
+# CODE: 0x1b9230f0  462565616 (CYCLE 0x000116bb      71355)
+# CODE: 0xd469b776 3563698038 (CYCLE 0x000116bd      71357)
+# CODE: 0xefeba5c3 4025198019 (CYCLE 0x000116bf      71359)
+# CODE: 0xceea072b 3471443755 (CYCLE 0x000116c1      71361)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xf154e135 4048871733 (CYCLE 0x00014520      83232)
+# CODE: 0xd661fa19 3596745241 (CYCLE 0x00014522      83234)
+# CODE: 0xd6e8c985 3605580165 (CYCLE 0x00014524      83236)
+# CODE: 0x8e92c7ca 2391984074 (CYCLE 0x00014526      83238)
+# CODE: 0xf51a5692 4112144018 (CYCLE 0x00014528      83240)
+# CODE: 0x27556143  659906883 (CYCLE 0x0001452a      83242)
+# CODE: 0xc8d6f212 3369529874 (CYCLE 0x0001452c      83244)
+# CODE: 0xfe64ce6d 4268019309 (CYCLE 0x0001452e      83246)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0x6c1e45de 1813923294 (CYCLE 0x0001738d      95117)
+# CODE: 0xcdb383e4 3451093988 (CYCLE 0x0001738f      95119)
+# CODE: 0x72f7fec4 1928855236 (CYCLE 0x00017391      95121)
+# CODE: 0x49148eeb 1226084075 (CYCLE 0x00017393      95123)
+# CODE: 0x77c0a936 2009114934 (CYCLE 0x00017395      95125)
+# CODE: 0x892cf7f3 2301425651 (CYCLE 0x00017397      95127)
+# CODE: 0x67dcdfd1 1742528465 (CYCLE 0x00017399      95129)
+# CODE: 0x5f842def 1602498031 (CYCLE 0x0001739b      95131)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x1404b3fa  335852538 (CYCLE 0x0001a1fa     107002)
+# CODE: 0xf3588faa 4082667434 (CYCLE 0x0001a1fc     107004)
+# CODE: 0xbc10367d 3155179133 (CYCLE 0x0001a1fe     107006)
+# CODE: 0xf5f485ed 4126442989 (CYCLE 0x0001a200     107008)
+# CODE: 0x22261d69  572923241 (CYCLE 0x0001a202     107010)
+# CODE: 0x0687047c  109511804 (CYCLE 0x0001a204     107012)
+# CODE: 0xb48dd548 3029194056 (CYCLE 0x0001a206     107014)
+# CODE: 0xd6054d80 3590671744 (CYCLE 0x0001a208     107016)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001a220     107040)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/lab3/miner_tb.sv line 399
+vlog -work work -sv -O0 C:/cygwin64/home/jack/cse141L/core/lab3/core.sv
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling package core_sv_unit
+# -- Compiling module core
+# ** Error: (vlog-3838) C:/cygwin64/home/jack/cse141L/core/lab3/core.sv(147): Variable 'instruction' written by continuous and procedural assignments. See C:/cygwin64/home/jack/cse141L/core/lab3/core.sv(115). 
+# 
+# C:/Program Files (x86)/altera/14.0/modelsim_ase/win32aloem/vlog failed.
+# Compile of core.sv was successful.
+# Compile of definitions.sv was successful.
+# 2 compiles, 0 failed with no errors. 
+vlog -work work -sv -O0 C:/cygwin64/home/jack/cse141L/core/lab3/core.sv
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling package core_sv_unit
+# -- Compiling module core
+# 
+# Top level modules:
+# 	core
+vlog -work work -sv -O0 C:/cygwin64/home/jack/cse141L/core/lab3/core.sv
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling package core_sv_unit
+# -- Compiling module core
+# 
+# Top level modules:
+# 	core
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xddc37ea5 3720576677 (CYCLE 0x00002e92      11922)
+# CODE: 0x4444190c 1145313548 (CYCLE 0x00002e94      11924)
+# CODE: 0x21158168  555057512 (CYCLE 0x00002e96      11926)
+# CODE: 0x48fcdb9a 1224530842 (CYCLE 0x00002e98      11928)
+# CODE: 0xd1c40be4 3519286244 (CYCLE 0x00002e9a      11930)
+# CODE: 0x039db8e4   60668132 (CYCLE 0x00002e9c      11932)
+# CODE: 0xb32b4364 3005956964 (CYCLE 0x00002e9e      11934)
+# CODE: 0xe0ded03d 3772698685 (CYCLE 0x00002ea0      11936)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xa889120a 2827555338 (CYCLE 0x00005cff      23807)
+# CODE: 0xa8fd3c0c 2835168268 (CYCLE 0x00005d01      23809)
+# CODE: 0xd181f9f0 3514956272 (CYCLE 0x00005d03      23811)
+# CODE: 0x55050ba7 1426394023 (CYCLE 0x00005d05      23813)
+# CODE: 0x81a2ae48 2174922312 (CYCLE 0x00005d07      23815)
+# CODE: 0x951ffab0 2501900976 (CYCLE 0x00005d09      23817)
+# CODE: 0x7217ad6c 1914154348 (CYCLE 0x00005d0b      23819)
+# CODE: 0x4efa9336 1325044534 (CYCLE 0x00005d0d      23821)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0xc3f08a94 3287321236 (CYCLE 0x00008b6c      35692)
+# CODE: 0xcc64831e 3429139230 (CYCLE 0x00008b6e      35694)
+# CODE: 0x8c4bc02b 2353774635 (CYCLE 0x00008b70      35696)
+# CODE: 0xf56f1607 4117698055 (CYCLE 0x00008b72      35698)
+# CODE: 0x53191e80 1394155136 (CYCLE 0x00008b74      35700)
+# CODE: 0x29356710  691365648 (CYCLE 0x00008b76      35702)
+# CODE: 0xc579d169 3313095017 (CYCLE 0x00008b78      35704)
+# CODE: 0x5c2044de 1545618654 (CYCLE 0x00008b7a      35706)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x4f85cb58 1334168408 (CYCLE 0x0000b9d9      47577)
+# CODE: 0x84af6503 2226087171 (CYCLE 0x0000b9db      47579)
+# CODE: 0xfa64be68 4200906344 (CYCLE 0x0000b9dd      47581)
+# CODE: 0x407113d2 1081152466 (CYCLE 0x0000b9df      47583)
+# CODE: 0x14f1b621  351385121 (CYCLE 0x0000b9e1      47585)
+# CODE: 0x23a5b58a  598062474 (CYCLE 0x0000b9e3      47587)
+# CODE: 0x389e47ef  949897199 (CYCLE 0x0000b9e5      47589)
+# CODE: 0x38486728  944269096 (CYCLE 0x0000b9e7      47591)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0x8b3d6277 2336055927 (CYCLE 0x0000e846      59462)
+# CODE: 0xd4ee161b 3572373019 (CYCLE 0x0000e848      59464)
+# CODE: 0x0f00b0f2  251703538 (CYCLE 0x0000e84a      59466)
+# CODE: 0x5616d623 1444337187 (CYCLE 0x0000e84c      59468)
+# CODE: 0x4de38055 1306755157 (CYCLE 0x0000e84e      59470)
+# CODE: 0x8757747d 2270655613 (CYCLE 0x0000e850      59472)
+# CODE: 0x4b3cfbb7 1262287799 (CYCLE 0x0000e852      59474)
+# CODE: 0x736aa806 1936369670 (CYCLE 0x0000e854      59476)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x71a7baf9 1906817785 (CYCLE 0x000116b3      71347)
+# CODE: 0x7b62be6e 2070068846 (CYCLE 0x000116b5      71349)
+# CODE: 0xcc85d8d1 3431323857 (CYCLE 0x000116b7      71351)
+# CODE: 0x12b078f5  313555189 (CYCLE 0x000116b9      71353)
+# CODE: 0x1b9230f0  462565616 (CYCLE 0x000116bb      71355)
+# CODE: 0xd469b776 3563698038 (CYCLE 0x000116bd      71357)
+# CODE: 0xefeba5c3 4025198019 (CYCLE 0x000116bf      71359)
+# CODE: 0xceea072b 3471443755 (CYCLE 0x000116c1      71361)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xf154e135 4048871733 (CYCLE 0x00014520      83232)
+# CODE: 0xd661fa19 3596745241 (CYCLE 0x00014522      83234)
+# CODE: 0xd6e8c985 3605580165 (CYCLE 0x00014524      83236)
+# CODE: 0x8e92c7ca 2391984074 (CYCLE 0x00014526      83238)
+# CODE: 0xf51a5692 4112144018 (CYCLE 0x00014528      83240)
+# CODE: 0x27556143  659906883 (CYCLE 0x0001452a      83242)
+# CODE: 0xc8d6f212 3369529874 (CYCLE 0x0001452c      83244)
+# CODE: 0xfe64ce6d 4268019309 (CYCLE 0x0001452e      83246)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0x6c1e45de 1813923294 (CYCLE 0x0001738d      95117)
+# CODE: 0xcdb383e4 3451093988 (CYCLE 0x0001738f      95119)
+# CODE: 0x72f7fec4 1928855236 (CYCLE 0x00017391      95121)
+# CODE: 0x49148eeb 1226084075 (CYCLE 0x00017393      95123)
+# CODE: 0x77c0a936 2009114934 (CYCLE 0x00017395      95125)
+# CODE: 0x892cf7f3 2301425651 (CYCLE 0x00017397      95127)
+# CODE: 0x67dcdfd1 1742528465 (CYCLE 0x00017399      95129)
+# CODE: 0x5f842def 1602498031 (CYCLE 0x0001739b      95131)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x1404b3fa  335852538 (CYCLE 0x0001a1fa     107002)
+# CODE: 0xf3588faa 4082667434 (CYCLE 0x0001a1fc     107004)
+# CODE: 0xbc10367d 3155179133 (CYCLE 0x0001a1fe     107006)
+# CODE: 0xf5f485ed 4126442989 (CYCLE 0x0001a200     107008)
+# CODE: 0x22261d69  572923241 (CYCLE 0x0001a202     107010)
+# CODE: 0x0687047c  109511804 (CYCLE 0x0001a204     107012)
+# CODE: 0xb48dd548 3029194056 (CYCLE 0x0001a206     107014)
+# CODE: 0xd6054d80 3590671744 (CYCLE 0x0001a208     107016)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001a220     107040)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/lab3/miner_tb.sv line 399
+vlog -work work -sv -O0 C:/cygwin64/home/jack/cse141L/core/lab3/core.sv
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling package core_sv_unit
+# -- Compiling module core
+# 
+# Top level modules:
+# 	core

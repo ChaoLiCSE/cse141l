@@ -36,9 +36,10 @@
 `define kBNEQZ 16'b10001_?????_??????
 `define kBGTZ  16'b10010_?????_??????
 `define kBLTZ  16'b10011_?????_??????
-
+			  
 // 20
-`define kNOP	16'b10100_?????_?????
+`define kNOP	16'b10100_?????_??????	// NOP
+
 // 21
 // 22
 	
@@ -143,5 +144,48 @@ typedef struct packed {
         logic [mask_length_gp-1:0] barrier_mask_r_f;
         logic [mask_length_gp-1:0] barrier_r_f;
 } debug_s;
+
+typedef struct packed {
+	logic is_load_op_c;
+	logic is_store_op_c;
+	logic op_writes_rf_c;
+	logic is_mem_op_c;
+	logic is_byte_op_c;
+	logic jump_now_c;
+	logic rs_imm_c;
+	logic PC_wen_r_c;
+	
+	logic net_reg_write_cmd_c;
+} control_pipeline_s;
+
+typedef struct packed {
+	instruction_s   instruction;
+	logic [9:0]	 	pc_r;
+} fd_pipeline_s;
+
+typedef struct packed {
+	control_pipeline_s	control;
+	instruction_s       instruction;
+	logic [31:0]       	rs_val;
+	logic [31:0]	   	rd_val;
+	logic [4:0] 	   	rf_wb_addr;
+} dx_pipeline_s;
+
+// a struct for EX/MA pipeline
+typedef struct packed {
+	control_pipeline_s	control;
+	logic [31:0] 		alu_result;
+	logic [4:0]  		opcode;
+	logic [4:0]         rf_wb_addr;
+} xm_pipeline_s;
+
+typedef struct packed {
+	control_pipeline_s	control;
+	logic [31:0]        alu_result;
+	logic [4:0]  		opcode;
+	logic [4:0]         rf_wb_addr;
+	logic [31:0]        pc_plus1; 
+} mw_pipeline_s;
+
 
 `endif

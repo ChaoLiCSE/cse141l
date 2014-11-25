@@ -73,19 +73,35 @@ logic [mask_length_gp-1:0] barrier_r,      barrier_n,
 // Suppress warnings
 assign net_packet_o = net_packet_i;
 
-// Data_mem
-assign to_mem_o = '{write_data    : rs_val_or_zero
-                   ,valid         : valid_to_mem_c
-                   ,wen           : is_store_op_c
-                   ,byte_not_word : is_byte_op_c
-                   ,yumi          : yumi_to_mem_c
-                   };
+
 assign data_mem_addr = alu_result;
 
 // DEBUG Struct
 assign debug_o = {PC_r, instruction, state_r, barrier_mask_r, barrier_r};
 
-// Insruction memory
+
+
+
+
+//-----------------------------------------------------------------------------
+// Pipeline Registers
+//-----------------------------------------------------------------------------
+fd_pipeline_s fd_pipeline_r, fd_pipeline_n;
+dx_pipeline_s dx_pipeline_r, dx_pipeline_n;
+xm_pipeline_s xm_pipeline_r, xm_pipeline_n;
+mw_pipeline_s mw_pipeline_r, mw_pipeline_n;
+
+
+
+//-----------------------------------------------------------------------------
+// IF Stage
+//-----------------------------------------------------------------------------
+
+// Selection between network and core for instruction address
+assign imem_addr = (net_imem_write_cmd) ? net_packet_i.net_addr
+                                       : PC_n;
+
+// Instruction memory
 instr_mem #(.addr_width_p(imem_addr_width_p)) imem
            (.clk(clk)
            ,.addr_i(imem_addr)
@@ -98,49 +114,10 @@ instr_mem #(.addr_width_p(imem_addr_width_p)) imem
 // if the PC is not written, the instruction must not change
 assign instruction = (PC_wen_r) ? imem_out : instruction_r;
 
-// Register file
-reg_file #(.addr_width_p($bits(instruction.rs_imm))) rf
-          (.clk(clk)
-          ,.rs_addr_i(instruction.rs_imm)
-          ,.rd_addr_i(rd_addr)
-          ,.wen_i(rf_wen)
-			 ,.write_addr_i(rd_addr)	//added for new reg file parameter
-          ,.write_data_i(rf_wd)
-          ,.rs_val_o(rs_val)
-          ,.rd_val_o(rd_val)
-          );
-
-assign rs_val_or_zero = instruction.rs_imm ? rs_val : 32'b0;
-assign rd_val_or_zero = rd_addr            ? rd_val : 32'b0;
-
-// ALU
-alu alu_1 (.rd_i(rd_val_or_zero)
-          ,.rs_i(rs_val_or_zero)
-          ,.op_i(instruction)
-          ,.result_o(alu_result)
-          ,.jump_now_o(jump_now)
-          );
-
-// select the input data for Register file, from network, the PC_plus1 for JALR,
-// Data Memory or ALU result
-always_comb
-  begin
-    if (net_reg_write_cmd)
-      rf_wd = net_packet_i.net_data;
-
-    else if (instruction==?`kJALR)
-      rf_wd = pc_plus1;
-
-    else if (is_load_op_c)
-      rf_wd = from_mem_i.read_data;
-
-    else
-      rf_wd = alu_result;
-  end
-
 // Determine next PC
 assign pc_plus1     = PC_r + 1'b1;
 assign imm_jump_add = $signed(instruction.rs_imm)  + $signed(PC_r);
+
 
 // Next pc is based on network or the instruction
 always_comb
@@ -149,7 +126,7 @@ always_comb
     if (net_PC_write_cmd_IDLE)
       PC_n = net_packet_i.net_addr;
     else
-      unique casez (instruction)
+      unique casez (instruction) //Branches/Jumps resolved here (EX)
         `kJALR:
           PC_n = alu_result[0+:imem_addr_width_p];
 
@@ -161,65 +138,34 @@ always_comb
       endcase
   end
 
+ 
 assign PC_wen = (net_PC_write_cmd_IDLE || ~stall);
+  
+always_ff @(posedge clk)
+	begin
+		if(!reset)
+			begin
+				PC_r			<= 0;
+				PC_wen_r 		<= 0;
+				instruction_r 	<= 0;
+			end
+		else
+			begin
+				if(PC_wen)
+					PC_r <= PC_n;
+					
+				instruction_r 	<= instruction;
+				PC_wen_r 		<= PC_wen;
+			end
+	end
 
-// Sequential part, including PC, barrier, exception and state
-always_ff @ (posedge clk)
-  begin
-    if (!reset)
-      begin
-        PC_r            <= 0;
-        barrier_mask_r  <= {(mask_length_gp){1'b0}};
-        barrier_r       <= {(mask_length_gp){1'b0}};
-        state_r         <= IDLE;
-        instruction_r   <= 0;
-        PC_wen_r        <= 0;
-        exception_o     <= 0;
-        mem_stage_r     <= 2'b00;
-      end
 
-    else
-      begin
-        if (PC_wen)
-          PC_r         <= PC_n;
-        barrier_mask_r <= barrier_mask_n;
-        barrier_r      <= barrier_n;
-        state_r        <= state_n;
-        instruction_r  <= instruction;
-        PC_wen_r       <= PC_wen;
-        exception_o    <= exception_n;
-        mem_stage_r    <= mem_stage_n;
-      end
-  end
 
-// stall and memory stages signals
-// rf structural hazard and imem structural hazard (can't load next instruction)
-assign stall_non_mem = (net_reg_write_cmd && op_writes_rf_c)
-                    || (net_imem_write_cmd);
-// Stall if LD/ST still active; or in non-RUN state
-assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN);
 
-// Launch LD/ST
-assign valid_to_mem_c = is_mem_op_c & (mem_stage_r < 2'b10);
 
-always_comb
-  begin
-    yumi_to_mem_c = 1'b0;
-    mem_stage_n   = mem_stage_r;
-
-    if (valid_to_mem_c)
-        mem_stage_n   = 2'b01;
-
-    if (from_mem_i.yumi)
-        mem_stage_n   = 2'b10;
-
-    // If we can commit the LD/ST this cycle, the acknowledge dmem's response
-    if (from_mem_i.valid & ~stall_non_mem)
-      begin
-        mem_stage_n   = 2'b00;
-        yumi_to_mem_c = 1'b1;
-      end
-  end
+//-----------------------------------------------------------------------------
+// ID Stage
+//-----------------------------------------------------------------------------
 
 // Decode module
 cl_decode decode (.instruction_i(instruction)
@@ -240,6 +186,142 @@ cl_state_machine state_machine (.instruction_i(instruction)
                                ,.state_o(state_n)
                                );
 
+// select the input data for Register file, from network, the PC_plus1 for JALR,
+// Data Memory or ALU result
+always_comb
+  begin
+    if (net_reg_write_cmd)
+      rf_wd = net_packet_i.net_data;
+
+    else if (instruction ==? `kJALR)
+      rf_wd = pc_plus1;
+
+    else if (is_load_op_c)
+      rf_wd = from_mem_i.read_data;
+
+    else
+      rf_wd = alu_result;
+  end
+
+// Register write could be from network or the controller
+assign rf_wen    = (net_reg_write_cmd || (op_writes_rf_c && ~stall));							   
+							   
+// Selection between network and address included in the instruction which is exeuted
+// Address for Reg. File is shorter than address of Ins. memory in network data
+// Since network can write into immediate registers, the address is wider
+// but for the destination register in an instruction the extra bits must be zero
+assign rd_addr = (net_reg_write_cmd)
+                 ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
+                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
+                    ,{instruction.rd}});
+
+							   
+// Register file
+reg_file #(.addr_width_p($bits(instruction.rs_imm))) rf
+          (.clk(clk)
+          ,.rs_addr_i(instruction.rs_imm)
+          ,.rd_addr_i(rd_addr)
+          ,.wen_i(rf_wen)
+		  ,.write_addr_i(rd_addr)	//added for new reg file parameter
+          ,.write_data_i(rf_wd)
+          ,.rs_val_o(rs_val)
+          ,.rd_val_o(rd_val)
+          );
+
+assign rs_val_or_zero = instruction.rs_imm ? rs_val : 32'b0;
+assign rd_val_or_zero = rd_addr            ? rd_val : 32'b0;
+
+
+
+
+//-----------------------------------------------------------------------------
+// EX Stage
+//-----------------------------------------------------------------------------
+
+// ALU
+alu alu_1 (.rd_i(rd_val_or_zero)
+          ,.rs_i(rs_val_or_zero)
+          ,.op_i(instruction)
+          ,.result_o(alu_result)
+          ,.jump_now_o(jump_now)
+          );
+
+		  
+//-----------------------------------------------------------------------------
+// MA Stage
+//-----------------------------------------------------------------------------  
+
+always_comb
+  begin
+    yumi_to_mem_c = 1'b0;
+    mem_stage_n   = mem_stage_r;
+
+    if (valid_to_mem_c)
+        mem_stage_n   = 2'b01;
+
+    if (from_mem_i.yumi)
+        mem_stage_n   = 2'b10;
+
+    // If we can commit the LD/ST this cycle, the acknowledge dmem's response
+    if (from_mem_i.valid & ~stall_non_mem)
+      begin
+        mem_stage_n   = 2'b00;
+        yumi_to_mem_c = 1'b1;
+      end
+  end
+
+// Launch LD/ST
+assign valid_to_mem_c = is_mem_op_c & (mem_stage_r < 2'b10);
+  
+// Data_mem
+assign to_mem_o = '{write_data    : rs_val_or_zero
+                   ,valid         : valid_to_mem_c
+                   ,wen           : is_store_op_c
+                   ,byte_not_word : is_byte_op_c
+                   ,yumi          : yumi_to_mem_c
+                   };
+
+//-----------------------------------------------------------------------------
+// WB Stage
+//-----------------------------------------------------------------------------  
+
+
+
+
+
+
+// stall and memory stages signals
+// rf structural hazard and imem structural hazard (can't load next instruction)
+assign stall_non_mem = (net_reg_write_cmd && op_writes_rf_c)
+                    || (net_imem_write_cmd);
+// Stall if LD/ST still active; or in non-RUN state
+assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN);
+
+
+
+// Sequential part, including PC, barrier, exception and state
+always_ff @ (posedge clk)
+  begin
+    if (!reset)
+      begin
+        barrier_mask_r  <= {(mask_length_gp){1'b0}};
+        barrier_r       <= {(mask_length_gp){1'b0}};
+        state_r         <= IDLE;
+        exception_o     <= 0;
+        mem_stage_r     <= 2'b00;
+      end
+
+    else
+      begin
+        barrier_mask_r <= barrier_mask_n;
+        barrier_r      <= barrier_n;
+        state_r        <= state_n;
+        exception_o    <= exception_n;
+        mem_stage_r    <= mem_stage_n;
+      end
+  end
+
+
 //---- Datapath with network ----//
 // Detect a valid packet for this core
 assign net_ID_match = (net_packet_i.ID==net_ID_p);
@@ -256,22 +338,6 @@ assign barrier_o = barrier_mask_r & barrier_r;
 
 // The instruction write is just for network
 assign imem_wen  = net_imem_write_cmd;
-
-// Register write could be from network or the controller
-assign rf_wen    = (net_reg_write_cmd || (op_writes_rf_c && ~stall));
-
-// Selection between network and core for instruction address
-assign imem_addr = (net_imem_write_cmd) ? net_packet_i.net_addr
-                                       : PC_n;
-
-// Selection between network and address included in the instruction which is exeuted
-// Address for Reg. File is shorter than address of Ins. memory in network data
-// Since network can write into immediate registers, the address is wider
-// but for the destination register in an instruction the extra bits must be zero
-assign rd_addr = (net_reg_write_cmd)
-                 ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
-                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
-                    ,{instruction.rd}});
 
 // Instructions are shorter than 32 bits of network data
 assign net_instruction = net_packet_i.net_data [0+:($bits(instruction))];

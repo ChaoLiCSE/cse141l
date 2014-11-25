@@ -18,10 +18,10 @@ always_comb
   begin
     jump_now_o = 1'bx;
     result_o   = 32'dx;
-	 A		 		= 32'dx;
-	 B				= 32'dx;
-	 C				= 32'dx;
-	 D				= 32'dx;
+	A   	   = 32'dx;
+	B		   = 32'dx;
+	C		   = 32'dx;
+	D		   = 32'dx;
 	 
     unique casez (op_i)
       `kADDU:  result_o   = rd_i +  rs_i;
@@ -34,23 +34,24 @@ always_comb
       `kNOR:   result_o   = ~ (rd_i|rs_i);
       `kSLT:   result_o   = ($signed(rd_i)<$signed(rs_i))     ? 32'd1 : 32'd0;
       `kSLTU:  result_o   = ($unsigned(rd_i)<$unsigned(rs_i)) ? 32'd1 : 32'd0;
+	  `kNOP:   result_o	  = rd_i;
       `kBEQZ:  jump_now_o = (rd_i==32'd0)                     ? 1'b1  : 1'b0;
       `kBNEQZ: jump_now_o = (rd_i!=32'd0)                     ? 1'b1  : 1'b0;
       `kBGTZ:  jump_now_o = ($signed(rd_i)>$signed(32'd0))    ? 1'b1  : 1'b0;
       `kBLTZ:  jump_now_o = ($signed(rd_i)<$signed(32'd0))    ? 1'b1  : 1'b0;
-      
+	   
+	  
       `kMOV, `kLW, `kLBU, `kJALR, `kBAR:   
                result_o   = rs_i;
       `kSW, `kSB:    
                result_o   = rd_i;
-
-				
+		
 		// exclusive or
-		`kXOR:	result_o  = (rd_i | rs_i) & ~ (rd_i & rs_i);
+		`kXOR:	result_o	  = (rd_i | rs_i) & ~ (rd_i & rs_i);
 		// rotate right
-		`kROR:	result_o  = (rd_i >> rs_i[4:0]) | (rd_i << (32'd32 - rs_i[4:0]));	
+		`kROR:	result_o	  = (rd_i >> rs_i[4:0]) | (rd_i << (32'd32 - rs_i[4:0]));	
 		// rotate left
-		`kROL:	result_o  = (rd_i << rs_i[4:0]) | (rd_i >> (32'd32 - rs_i[4:0]));
+		`kROL:	result_o   = (rd_i << rs_i[4:0]) | (rd_i >> (32'd32 - rs_i[4:0]));
 
 		`kBS0:
 			begin
@@ -87,11 +88,10 @@ always_comb
 				D 	= (A | B) & ~(A & B);
 				result_o = (D | C) & ~(D & C); 
 			end
-		
-		`kNOP:
-			result_o = 32'dX;
+
 			
-	  //`kDONE:
+		//`kDONE, 'kNOP:
+      
       default: 
         begin 
           result_o   = 32'dX; 

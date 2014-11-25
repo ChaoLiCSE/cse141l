@@ -10,9 +10,9 @@
 
 // TODO: Edit the file names below to match your Assembler output files.
 // read from assembled files and store in buffers
-   `define hex_i_file "../../assembler/lab2/src/tester_i.hex"
-   `define hex_r_file "../../assembler/lab2/src/tester_r.hex"
-   `define hex_d_file "../../assembler/lab2/src/tester_d.hex"
+   `define hex_i_file "../../assembler/lab3/src/tester_i.hex"
+   `define hex_r_file "../../assembler/lab3/src/tester_r.hex"
+   `define hex_d_file "../../assembler/lab3/src/tester_d.hex"
 
 module core_tb();
 
@@ -275,4 +275,14 @@ network_packet_s_logger #(.verbosity_p(0))
            , .cycle_counter_i(cycle_counter_r)
            , .barrier_OR_i(barrier_OR)
            );
+
+/* always_ff @(negedge clk)
+	begin
+		$display("\npr_r:			%b", debug.PC_r_f);
+		$display("instruction_i:	%b", debug.instruction_i_f);
+		$display("state_r:			%b", debug.state_r_f);
+		$display("barrier_mask_r:	%b", debug.barrier_mask_r_f);
+		$display("barrier_r:		%b", debug.barrier_r_f);
+	end */
+		   
 endmodule
