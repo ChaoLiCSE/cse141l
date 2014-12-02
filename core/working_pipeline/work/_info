@@ -1,0 +1,555 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\jack\Desktop\New folder
+valu
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 DXx4 work 11 alu_sv_unit 0 22 j4FKnU1J36lC2N5lTa`nf2
+Z3 VI7lk`SQ8Za@A6?2c<@gWI2
+r1
+31
+Z4 Ii]i3>nOPmYZWK2zREO1nb1
+S1
+Z5 dC:\Users\jack\Desktop\New folder
+Z6 w1417488021
+Z7 8C:/Users/jack/Desktop/New folder/alu.sv
+Z8 FC:/Users/jack/Desktop/New folder/alu.sv
+L0 4
+Z9 OV;L;10.1e;51
+Z10 !s108 1417488188.073000
+Z11 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/alu.sv|
+Z12 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/alu.sv|
+Z13 o-work work -sv -O0
+Z14 !s100 @eR7kfBJ[7CeL1DS@;8YQ2
+Z15 !s105 alu_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+Xalu_sv_unit
+R1
+Z16 Vj4FKnU1J36lC2N5lTa`nf2
+r1
+31
+Z17 Ij4FKnU1J36lC2N5lTa`nf2
+S1
+R5
+R6
+R7
+R8
+Z18 Fdefinitions.sv
+L1 67
+R9
+R10
+R11
+R12
+R13
+Z19 !s100 odzmKNHkdd6h2RHOIgVVn0
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vcl_decode
+R1
+Z20 DXx4 work 17 cl_decode_sv_unit 0 22 mdR5SM`=QlniacQ<09]R;2
+Z21 Vj2XdPkIgM0O^Hn@`n`AWZ1
+r1
+31
+Z22 IIbAX`OVz4Bnfh5OL^lD<[2
+S1
+R5
+R6
+Z23 8C:/Users/jack/Desktop/New folder/cl_decode.sv
+Z24 FC:/Users/jack/Desktop/New folder/cl_decode.sv
+L0 4
+R9
+Z25 !s108 1417488189.073000
+Z26 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/cl_decode.sv|
+Z27 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/cl_decode.sv|
+R13
+Z28 !s100 Q^[Rk9W<nLTG1f3KI7@f01
+Z29 !s105 cl_decode_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+Xcl_decode_sv_unit
+R1
+Z30 VmdR5SM`=QlniacQ<09]R;2
+r1
+31
+Z31 ImdR5SM`=QlniacQ<09]R;2
+S1
+R5
+R6
+R23
+R24
+R18
+L1 67
+R9
+R25
+R26
+R27
+R13
+Z32 !s100 8U_1DjTEk?GYcdE=W^Fg?1
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vcl_state_machine
+R1
+Z33 DXx4 work 24 cl_state_machine_sv_unit 0 22 5]?8U2c@;d^MC4K]akhfT1
+Z34 V_HO6g@<O=0IE^>?5Z5=h`1
+r1
+31
+Z35 IXNj]0^lGcWZNG_YRih;S?2
+S1
+R5
+R6
+Z36 8C:/Users/jack/Desktop/New folder/cl_state_machine.sv
+Z37 FC:/Users/jack/Desktop/New folder/cl_state_machine.sv
+L0 3
+R9
+Z38 !s108 1417488189.495000
+Z39 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/cl_state_machine.sv|
+Z40 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/cl_state_machine.sv|
+R13
+Z41 !s100 h4OV0O`V]Xz]l<EM<5^N?2
+Z42 !s105 cl_state_machine_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+Xcl_state_machine_sv_unit
+R1
+Z43 V5]?8U2c@;d^MC4K]akhfT1
+r1
+31
+Z44 I5]?8U2c@;d^MC4K]akhfT1
+S1
+R5
+R6
+R36
+R37
+R18
+L1 67
+R9
+R38
+R39
+R40
+R13
+Z45 !s100 bQU?NXzIJg6L2PF5XjL:B0
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vcore
+R1
+Z46 DXx4 work 12 core_sv_unit 0 22 7RgVd`6;I^1HG0G04dE_N3
+Z47 VY^HHaKkkI=e8TEdfJEzib2
+r1
+31
+Z48 I8>e=`Y4PS5JafokcK?_j_0
+S1
+R5
+R6
+Z49 8C:/Users/jack/Desktop/New folder/core.sv
+Z50 FC:/Users/jack/Desktop/New folder/core.sv
+L0 3
+R9
+Z51 !s108 1417488189.886000
+Z52 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/core.sv|
+Z53 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/core.sv|
+R13
+Z54 !s100 68H_?gF8?BX_@io?;m1IV0
+Z55 !s105 core_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+vcore_flattened
+R1
+Z56 DXx4 work 22 core_flattened_sv_unit 0 22 11nI[oYcBQiAbAFdPoZ@k0
+Z57 V2R0=69R;zAfBGzKl1Q]2X0
+r1
+31
+Z58 I^fIgH<[SPBPh=dl16RE_?3
+S1
+R5
+R6
+Z59 8C:/Users/jack/Desktop/New folder/core_flattened.sv
+Z60 FC:/Users/jack/Desktop/New folder/core_flattened.sv
+L0 4
+R9
+Z61 !s108 1417488190.386000
+Z62 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/core_flattened.sv|
+Z63 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/core_flattened.sv|
+R13
+Z64 !s100 4l[B@a1V`]a__eA<ToJ4G3
+Z65 !s105 core_flattened_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+Xcore_flattened_sv_unit
+R1
+Z66 V11nI[oYcBQiAbAFdPoZ@k0
+r1
+31
+Z67 I11nI[oYcBQiAbAFdPoZ@k0
+S1
+R5
+R6
+R59
+R60
+R18
+L1 67
+R9
+R61
+R62
+R63
+R13
+Z68 !s100 bO=:dV41MNaeOe_m[mG;k3
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+Xcore_sv_unit
+R1
+Z69 V7RgVd`6;I^1HG0G04dE_N3
+r1
+31
+Z70 I7RgVd`6;I^1HG0G04dE_N3
+S1
+R5
+R6
+R49
+R50
+R18
+L1 67
+R9
+R51
+R52
+R53
+R13
+Z71 !s100 Vc]j3A31UgoG5mGOA?4LW2
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vcore_tb
+R1
+Z72 DXx4 work 15 core_tb_sv_unit 0 22 _ZgSf7>M`d@Z]fLAR;UN?1
+Z73 VlN3iUPNV?OYGNgj@DJaoE2
+r1
+31
+Z74 IeXlb1o^beH[JP9miQl]A52
+S1
+R5
+R6
+Z75 8C:/Users/jack/Desktop/New folder/core_tb.sv
+Z76 FC:/Users/jack/Desktop/New folder/core_tb.sv
+L0 17
+R9
+Z77 !s108 1417488190.854000
+Z78 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/core_tb.sv|
+Z79 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/core_tb.sv|
+R13
+Z80 !s100 z6VzLh=`AWalQzTJa^zgQ0
+Z81 !s105 core_tb_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+Xcore_tb_sv_unit
+R1
+Z82 V_ZgSf7>M`d@Z]fLAR;UN?1
+r1
+31
+Z83 I_ZgSf7>M`d@Z]fLAR;UN?1
+S1
+R5
+R6
+R75
+R76
+R18
+L1 67
+R9
+R77
+R78
+R79
+R13
+Z84 !s100 330I^E=zEC1UVJ7ZQS;Pn3
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vdata_mem
+R1
+Z85 DXx4 work 16 data_mem_sv_unit 0 22 Hg^PkY[RL`6b7Bo__CPm]2
+Z86 VJTgBNdnj9c=zg80[gUozo3
+r1
+31
+Z87 IA`b2Bc_oLo>_^4=^OPljP0
+S1
+R5
+R6
+Z88 8C:/Users/jack/Desktop/New folder/data_mem.sv
+Z89 FC:/Users/jack/Desktop/New folder/data_mem.sv
+L0 11
+R9
+Z90 !s108 1417488191.511000
+Z91 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/data_mem.sv|
+Z92 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/data_mem.sv|
+R13
+Z93 !s100 TLfmPB6_bzHCkd7?^NhLA3
+Z94 !s105 data_mem_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+Xdata_mem_sv_unit
+R1
+Z95 VHg^PkY[RL`6b7Bo__CPm]2
+r1
+31
+Z96 IHg^PkY[RL`6b7Bo__CPm]2
+S1
+R5
+R6
+R88
+R89
+R18
+L1 67
+R9
+R90
+R91
+R92
+R13
+Z97 !s100 44TLcPC^FPC7ejb_fLESU2
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+Xdefinitions_sv_unit
+R1
+Z98 INfFlLMGU>zj9Na8XNL`Bj3
+Z99 VNfFlLMGU>zj9Na8XNL`Bj3
+S1
+R5
+R6
+Z100 8C:/Users/jack/Desktop/New folder/definitions.sv
+Z101 FC:/Users/jack/Desktop/New folder/definitions.sv
+L0 67
+R9
+r1
+31
+R13
+Z102 !s100 jSc7?aga4?U:OH9m;BFW73
+Z103 !s108 1417488191.933000
+Z104 !s107 C:/Users/jack/Desktop/New folder/definitions.sv|
+Z105 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/definitions.sv|
+!i10b 1
+!i103 1
+!s85 0
+!s101 -O0
+vhazard_unit
+R1
+Z106 DXx4 work 19 hazard_unit_sv_unit 0 22 Bb2[k0m<QZ0alk5_8z8i63
+Z107 VgPbC97[Ge^`gJ0cliBgWT0
+r1
+31
+Z108 ICimSkciS0Nc8_;AL^<=>n2
+S1
+R5
+R6
+Z109 8C:/Users/jack/Desktop/New folder/hazard_unit.sv
+Z110 FC:/Users/jack/Desktop/New folder/hazard_unit.sv
+L0 3
+R9
+Z111 !s108 1417488192.545000
+Z112 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/hazard_unit.sv|
+Z113 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/hazard_unit.sv|
+R13
+Z114 !s100 akId=X3T4[_WA:AeB:MIG1
+Z115 !s105 hazard_unit_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+Xhazard_unit_sv_unit
+R1
+Z116 VBb2[k0m<QZ0alk5_8z8i63
+r1
+31
+Z117 IBb2[k0m<QZ0alk5_8z8i63
+S1
+R5
+R6
+R109
+R110
+R18
+L1 67
+R9
+R111
+R112
+R113
+R13
+Z118 !s100 Rz7N62EKNYI0[Ff08BC[X0
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vinstr_mem
+R1
+Z119 DXx4 work 17 instr_mem_sv_unit 0 22 lHULhked=6Uh0?KADSFL<2
+Z120 VFbL0l?mC^hD9I>mmSWaGQ0
+r1
+31
+Z121 IkYoDGhk:gz_g2mfU7BM7b0
+S1
+R5
+R6
+Z122 8C:/Users/jack/Desktop/New folder/instr_mem.sv
+Z123 FC:/Users/jack/Desktop/New folder/instr_mem.sv
+L0 5
+R9
+Z124 !s108 1417488192.951000
+Z125 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/instr_mem.sv|
+Z126 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/instr_mem.sv|
+R13
+Z127 !s100 Fd^XWfQGgYMnf;R5]RhWk2
+Z128 !s105 instr_mem_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+Xinstr_mem_sv_unit
+R1
+Z129 VlHULhked=6Uh0?KADSFL<2
+r1
+31
+Z130 IlHULhked=6Uh0?KADSFL<2
+S1
+R5
+R6
+R122
+R123
+R18
+L1 67
+R9
+R124
+R125
+R126
+R13
+Z131 !s100 NGMg>Xl@D0IaaYUB9jP?72
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vminer_tb
+R1
+Z132 DXx4 work 16 miner_tb_sv_unit 0 22 7Q<7VSz]DV9>kIB?mfGLC1
+Z133 VmUcjK`[BR2I4D=oC[X9C`0
+r1
+31
+Z134 I7DEB9izN6]ZWVzJ`f0MAj3
+S1
+R5
+Z135 w1417488072
+Z136 8C:/Users/jack/Desktop/New folder/miner_tb.sv
+Z137 FC:/Users/jack/Desktop/New folder/miner_tb.sv
+L0 21
+R9
+Z138 !s108 1417488193.467000
+Z139 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/miner_tb.sv|
+Z140 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/miner_tb.sv|
+R13
+Z141 !s100 YEHCbM`LI[hbn`R6_EV0<0
+Z142 !s105 miner_tb_sv_unit
+!s85 0
+!i10b 1
+!s101 -O0
+Xminer_tb_sv_unit
+R1
+Z143 V7Q<7VSz]DV9>kIB?mfGLC1
+r1
+31
+Z144 I7Q<7VSz]DV9>kIB?mfGLC1
+S1
+R5
+R135
+R136
+R137
+R18
+L1 67
+R9
+R138
+R139
+R140
+R13
+Z145 !s100 Czz]l_mfPh4Y3V@TcJimM1
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+Xnet_packet_logger_s_sv_unit
+R1
+Z146 VFi]gnBGlR`U^l:?2CP;[J2
+r1
+31
+Z147 IFi]gnBGlR`U^l:?2CP;[J2
+S1
+R5
+R6
+Z148 8C:/Users/jack/Desktop/New folder/net_packet_logger_s.sv
+Z149 FC:/Users/jack/Desktop/New folder/net_packet_logger_s.sv
+R18
+L1 67
+R9
+Z150 !s108 1417488193.858000
+Z151 !s107 definitions.sv|C:/Users/jack/Desktop/New folder/net_packet_logger_s.sv|
+Z152 !s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/net_packet_logger_s.sv|
+R13
+!s85 0
+!i10b 1
+Z153 !s100 OVT=ULUoPMCU[4l=b^R6g0
+!i103 1
+!s101 -O0
+vnetwork_packet_s_logger
+R1
+Z154 DXx4 work 27 net_packet_logger_s_sv_unit 0 22 Fi]gnBGlR`U^l:?2CP;[J2
+Z155 VPlgif>=;4=jBTE<GHm7GV1
+r1
+31
+Z156 I?YnfPE@]BhgZ?O6VSY=Wd0
+S1
+R5
+R6
+R148
+R149
+L0 8
+R9
+R150
+R151
+R152
+R13
+!s85 0
+!i10b 1
+Z157 !s100 PXP3SZDJi66J`H7na1Jmn3
+Z158 !s105 net_packet_logger_s_sv_unit
+!s101 -O0
+vreg_file
+R1
+!i10b 1
+!s100 m8RY2Z2O6E1f]YJVe_SNT2
+IR5Q[iTI4Gdj[C=UmYcA@a2
+VM38=]9bCS3m>l]KY_nOhF1
+!s105 reg_file_sv_unit
+S1
+R5
+R6
+8C:/Users/jack/Desktop/New folder/reg_file.sv
+FC:/Users/jack/Desktop/New folder/reg_file.sv
+L0 2
+R9
+r1
+!s85 0
+31
+!s108 1417488194.233000
+!s107 C:/Users/jack/Desktop/New folder/reg_file.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/jack/Desktop/New folder/reg_file.sv|
+!s101 -O0
+R13

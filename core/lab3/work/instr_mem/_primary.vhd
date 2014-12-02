@@ -10,6 +10,7 @@ entity instr_mem is
         addr_i          : in     vl_logic_vector;
         instruction_i   : in     work.instr_mem_sv_unit.instruction_s;
         wen_i           : in     vl_logic;
+        bubble_i        : in     vl_logic_vector(2 downto 0);
         instruction_o   : out    work.instr_mem_sv_unit.instruction_s
     );
     attribute mti_svvh_generic_type : integer;

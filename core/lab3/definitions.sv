@@ -169,6 +169,7 @@ typedef struct packed {
    logic [31:0]        rs_val;
    logic [31:0]        rd_val;
    logic [9:0]         pc_r;
+   logic [9:0]         imm_jump_add;
 } dx_pipeline_s;
 
 // a struct for EX/MA pipeline
