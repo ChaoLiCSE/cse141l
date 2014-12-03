@@ -1,5 +1,3 @@
-//This file defines the structs and parameters used in the core
-
 `ifndef _definitions_v_
 `define _definitions_v_
 
@@ -146,60 +144,47 @@ typedef struct packed {
 
 // Control Signal Struct
 typedef struct packed {
-        logic is_load_op_o;
-        logic op_writes_rf_o;
-        logic is_store_op_o;
-        logic is_mem_op_o;
-        logic is_byte_op_o;
-
+   logic is_load_op_o;
+   logic op_writes_rf_o;
+   logic is_store_op_o;
+   logic is_mem_op_o;
+   logic is_byte_op_o;
 } control_pipeline_s;
 
 //IF_ID register
 typedef struct packed {
-
-instruction_s instruction;
-logic [imem_addr_width_gp-1:0] pc;
-
+   instruction_s        instruction;
+   logic [imem_addr_width_gp-1:0]   pc;
 } fd_pipeline_s;
-
 
 //ID_EX register
 typedef struct packed {
-
-instruction_s instruction; 
-control_pipeline_s ctrl_signals;
-
-logic [31:0] rs_val;    
-logic [31:0] rd_val;
-logic [imem_addr_width_gp-1:0] pc;
-
+   instruction_s        instruction; 
+   control_pipeline_s   control;
+   logic [31:0]         rs_val;    
+   logic [31:0]         rd_val;
+   logic [imem_addr_width_gp-1:0] pc;
 } dx_pipeline_s;
 
 //EX_MEM register
 typedef struct packed {
-
-instruction_s instruction; 
-control_pipeline_s ctrl_signals;
-
-logic [31:0] rs_val;    
-logic [31:0] rd_val;
-logic [31:0] alu_result;
-logic [imem_addr_width_gp-1:0] pc;
-
+   instruction_s        instruction; 
+   control_pipeline_s   control;
+   logic [31:0]         rs_val;    
+   logic [31:0]         rd_val;
+   logic [31:0]         alu_result;
+   logic [imem_addr_width_gp-1:0] pc;
 } xm_pipeline_s;
 
 //MEM_WB register
 typedef struct packed {
-
-instruction_s instruction; 
-control_pipeline_s ctrl_signals;
-mem_out_s from_mem_i;
-
-logic [31:0] rs_val;
-logic [31:0] rd_val;
-logic [31:0] alu_result;
-logic [imem_addr_width_gp-1:0] pc;
-
+   instruction_s        instruction; 
+   control_pipeline_s   control;
+   mem_out_s            from_mem_i;
+   logic [31:0]         rs_val;
+   logic [31:0]         rd_val;
+   logic [31:0]         alu_result;
+   logic [imem_addr_width_gp-1:0] pc;
 } mw_pipeline_s;
 
 `endif
