@@ -110,7 +110,14 @@ always_ff @(posedge clk)
                end
             else if (PC_wen)
                begin
-                  if (jump_now) // conditional jumps
+               if ( net_PC_write_cmd_IDLE )
+                     begin // reset pipeline for new nonce
+                        fd_pipeline_r <= 0;
+                        dx_pipeline_r <= 0;
+                        xm_pipeline_r <= 0;
+                        mw_pipeline_r <= 0;
+                     end
+                  else if (jump_now) // conditional jumps
                      begin
                         // flush the two fetched instructions
                         fd_pipeline_r <= 0;
@@ -118,13 +125,6 @@ always_ff @(posedge clk)
                         // finish the previous two instructions
                         xm_pipeline_r <= xm_pipeline_n;
                         mw_pipeline_r <= mw_pipeline_n;
-                     end
-                  else if ( net_PC_write_cmd_IDLE )
-                     begin // reset pipeline for new nonce
-                        fd_pipeline_r <= 0;
-                        dx_pipeline_r <= 0;
-                        xm_pipeline_r <= 0;
-                        mw_pipeline_r <= 0;
                      end
                   else
                      begin // normal pipeline forwarding

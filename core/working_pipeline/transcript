@@ -1,0 +1,1110 @@
+# Compile of alu.sv was successful.
+# Compile of cl_decode.sv was successful.
+# Compile of cl_state_machine.sv was successful.
+# Compile of core.sv was successful.
+# Compile of core_flattened.sv was successful.
+# Compile of core_tb.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of definitions.sv was successful.
+# Compile of disassemble.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of miner_tb.sv was successful.
+# Compile of net_packet_logger_s.sv was successful.
+# Compile of reg_file.sv was successful.
+# 13 compiles, 0 failed with no errors. 
+vsim work.miner_tb
+# vsim work.miner_tb 
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xd5ad501e 3584905246 (CYCLE 0x000035dc      13788)
+# CODE: 0x9e02afa7 2650976167 (CYCLE 0x000035df      13791)
+# CODE: 0xc1bf8b20 3250555680 (CYCLE 0x000035e2      13794)
+# CODE: 0x19574c17  425151511 (CYCLE 0x000035e5      13797)
+# CODE: 0x935e9638 2472449592 (CYCLE 0x000035e8      13800)
+# CODE: 0x98f99ee6 2566495974 (CYCLE 0x000035eb      13803)
+# CODE: 0x6680e10f 1719722255 (CYCLE 0x000035ee      13806)
+# CODE: 0xba6ade5e 3127565918 (CYCLE 0x000035f1      13809)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xf4d5740a 4107629578 (CYCLE 0x00006b8e      27534)
+# CODE: 0x91e840ac 2447917228 (CYCLE 0x00006b91      27537)
+# CODE: 0xaaa6f72d 2863068973 (CYCLE 0x00006b94      27540)
+# CODE: 0x2037c059  540524633 (CYCLE 0x00006b97      27543)
+# CODE: 0xd5e545d2 3588572626 (CYCLE 0x00006b9a      27546)
+# CODE: 0xbe44f2e1 3192189665 (CYCLE 0x00006b9d      27549)
+# CODE: 0xd65f8ea3 3596586659 (CYCLE 0x00006ba0      27552)
+# CODE: 0x23b3bc17  598981655 (CYCLE 0x00006ba3      27555)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0x90ced284 2429473412 (CYCLE 0x0000a140      41280)
+# CODE: 0x64518cdf 1683066079 (CYCLE 0x0000a143      41283)
+# CODE: 0x2f5b07f2  794494962 (CYCLE 0x0000a146      41286)
+# CODE: 0x7fa1d611 2141312529 (CYCLE 0x0000a149      41289)
+# CODE: 0x6d855271 1837453937 (CYCLE 0x0000a14c      41292)
+# CODE: 0x86f7a41d 2264376349 (CYCLE 0x0000a14f      41295)
+# CODE: 0x972004ef 2535458031 (CYCLE 0x0000a152      41298)
+# CODE: 0x4d29ab7e 1294576510 (CYCLE 0x0000a155      41301)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x49de3aab 1239300779 (CYCLE 0x0000d6f2      55026)
+# CODE: 0x5c06062c 1543898668 (CYCLE 0x0000d6f5      55029)
+# CODE: 0x2b470201  726073857 (CYCLE 0x0000d6f8      55032)
+# CODE: 0xa4b9fc74 2763652212 (CYCLE 0x0000d6fb      55035)
+# CODE: 0xd7ef0a00 3622767104 (CYCLE 0x0000d6fe      55038)
+# CODE: 0xf1652a46 4049939014 (CYCLE 0x0000d701      55041)
+# CODE: 0x6654046d 1716782189 (CYCLE 0x0000d704      55044)
+# CODE: 0x45f51dd5 1173691861 (CYCLE 0x0000d707      55047)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0xac2ae175 2888491381 (CYCLE 0x00010ca4      68772)
+# CODE: 0xab2ea743 2871961411 (CYCLE 0x00010ca7      68775)
+# CODE: 0xb186ec7e 2978409598 (CYCLE 0x00010caa      68778)
+# CODE: 0xcf1b37b4 3474667444 (CYCLE 0x00010cad      68781)
+# CODE: 0xc468328a 3295163018 (CYCLE 0x00010cb0      68784)
+# CODE: 0x221156ab  571561643 (CYCLE 0x00010cb3      68787)
+# CODE: 0x4002670c 1073899276 (CYCLE 0x00010cb6      68790)
+# CODE: 0x62ba5e25 1656380965 (CYCLE 0x00010cb9      68793)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x9d3f88b1 2638186673 (CYCLE 0x00014256      82518)
+# CODE: 0x7821586e 2015451246 (CYCLE 0x00014259      82521)
+# CODE: 0xb1524fe9 2974961641 (CYCLE 0x0001425c      82524)
+# CODE: 0xe7ebacc4 3890982084 (CYCLE 0x0001425f      82527)
+# CODE: 0x482eb722 1211021090 (CYCLE 0x00014262      82530)
+# CODE: 0xf6d56bfc 4141181948 (CYCLE 0x00014265      82533)
+# CODE: 0x0c152a00  202713600 (CYCLE 0x00014268      82536)
+# CODE: 0x02e751cb   48714187 (CYCLE 0x0001426b      82539)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xe837f5c5 3895981509 (CYCLE 0x00017808      96264)
+# CODE: 0x1890bf4d  412139341 (CYCLE 0x0001780b      96267)
+# CODE: 0x3fa311f9 1067651577 (CYCLE 0x0001780e      96270)
+# CODE: 0x81e7e088 2179457160 (CYCLE 0x00017811      96273)
+# CODE: 0x678025c9 1736451529 (CYCLE 0x00017814      96276)
+# CODE: 0x92d3f42e 2463364142 (CYCLE 0x00017817      96279)
+# CODE: 0xf46f0c4c 4100918348 (CYCLE 0x0001781a      96282)
+# CODE: 0xed8ed1f7 3985560055 (CYCLE 0x0001781d      96285)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0xdd8a4202 3716825602 (CYCLE 0x0001adba     110010)
+# CODE: 0x6938108e 1765281934 (CYCLE 0x0001adbd     110013)
+# CODE: 0xbb3a7949 3141171529 (CYCLE 0x0001adc0     110016)
+# CODE: 0xd7cd6e3b 3620564539 (CYCLE 0x0001adc3     110019)
+# CODE: 0x823a28dc 2184849628 (CYCLE 0x0001adc6     110022)
+# CODE: 0x35ae6d30  900623664 (CYCLE 0x0001adc9     110025)
+# CODE: 0x047256d5   74602197 (CYCLE 0x0001adcc     110028)
+# CODE: 0x3e972ca2 1050094754 (CYCLE 0x0001adcf     110031)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x69e3a54b 1776526667 (CYCLE 0x0001e36c     123756)
+# CODE: 0x093377c6  154367942 (CYCLE 0x0001e36f     123759)
+# CODE: 0xa62cd4f0 2787955952 (CYCLE 0x0001e372     123762)
+# CODE: 0x07509377  122721143 (CYCLE 0x0001e375     123765)
+# CODE: 0xf32602e6 4079354598 (CYCLE 0x0001e378     123768)
+# CODE: 0x9d01a596 2634130838 (CYCLE 0x0001e37b     123771)
+# CODE: 0xf3b050f6 4088418550 (CYCLE 0x0001e37e     123774)
+# CODE: 0x4bf329b0 1274227120 (CYCLE 0x0001e381     123777)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001e3a0     123808)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/working_pipeline/miner_tb.sv line 399
+quit -sim
+vlog -work work -sv -O0 C:/cygwin64/home/jack/cse141L/core/working_pipeline/miner_tb.sv
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling package miner_tb_sv_unit
+# -- Compiling module miner_tb
+# 
+# Top level modules:
+# 	miner_tb
+vsim work.miner_tb
+# vsim work.miner_tb 
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xd5ad501e 3584905246 (CYCLE 0x000035dc      13788)
+# CODE: 0x9e02afa7 2650976167 (CYCLE 0x000035df      13791)
+# CODE: 0xc1bf8b20 3250555680 (CYCLE 0x000035e2      13794)
+# CODE: 0x19574c17  425151511 (CYCLE 0x000035e5      13797)
+# CODE: 0x935e9638 2472449592 (CYCLE 0x000035e8      13800)
+# CODE: 0x98f99ee6 2566495974 (CYCLE 0x000035eb      13803)
+# CODE: 0x6680e10f 1719722255 (CYCLE 0x000035ee      13806)
+# CODE: 0xba6ade5e 3127565918 (CYCLE 0x000035f1      13809)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xf4d5740a 4107629578 (CYCLE 0x00006b8e      27534)
+# CODE: 0x91e840ac 2447917228 (CYCLE 0x00006b91      27537)
+# CODE: 0xaaa6f72d 2863068973 (CYCLE 0x00006b94      27540)
+# CODE: 0x2037c059  540524633 (CYCLE 0x00006b97      27543)
+# CODE: 0xd5e545d2 3588572626 (CYCLE 0x00006b9a      27546)
+# CODE: 0xbe44f2e1 3192189665 (CYCLE 0x00006b9d      27549)
+# CODE: 0xd65f8ea3 3596586659 (CYCLE 0x00006ba0      27552)
+# CODE: 0x23b3bc17  598981655 (CYCLE 0x00006ba3      27555)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0x90ced284 2429473412 (CYCLE 0x0000a140      41280)
+# CODE: 0x64518cdf 1683066079 (CYCLE 0x0000a143      41283)
+# CODE: 0x2f5b07f2  794494962 (CYCLE 0x0000a146      41286)
+# CODE: 0x7fa1d611 2141312529 (CYCLE 0x0000a149      41289)
+# CODE: 0x6d855271 1837453937 (CYCLE 0x0000a14c      41292)
+# CODE: 0x86f7a41d 2264376349 (CYCLE 0x0000a14f      41295)
+# CODE: 0x972004ef 2535458031 (CYCLE 0x0000a152      41298)
+# CODE: 0x4d29ab7e 1294576510 (CYCLE 0x0000a155      41301)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x49de3aab 1239300779 (CYCLE 0x0000d6f2      55026)
+# CODE: 0x5c06062c 1543898668 (CYCLE 0x0000d6f5      55029)
+# CODE: 0x2b470201  726073857 (CYCLE 0x0000d6f8      55032)
+# CODE: 0xa4b9fc74 2763652212 (CYCLE 0x0000d6fb      55035)
+# CODE: 0xd7ef0a00 3622767104 (CYCLE 0x0000d6fe      55038)
+# CODE: 0xf1652a46 4049939014 (CYCLE 0x0000d701      55041)
+# CODE: 0x6654046d 1716782189 (CYCLE 0x0000d704      55044)
+# CODE: 0x45f51dd5 1173691861 (CYCLE 0x0000d707      55047)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0xac2ae175 2888491381 (CYCLE 0x00010ca4      68772)
+# CODE: 0xab2ea743 2871961411 (CYCLE 0x00010ca7      68775)
+# CODE: 0xb186ec7e 2978409598 (CYCLE 0x00010caa      68778)
+# CODE: 0xcf1b37b4 3474667444 (CYCLE 0x00010cad      68781)
+# CODE: 0xc468328a 3295163018 (CYCLE 0x00010cb0      68784)
+# CODE: 0x221156ab  571561643 (CYCLE 0x00010cb3      68787)
+# CODE: 0x4002670c 1073899276 (CYCLE 0x00010cb6      68790)
+# CODE: 0x62ba5e25 1656380965 (CYCLE 0x00010cb9      68793)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x9d3f88b1 2638186673 (CYCLE 0x00014256      82518)
+# CODE: 0x7821586e 2015451246 (CYCLE 0x00014259      82521)
+# CODE: 0xb1524fe9 2974961641 (CYCLE 0x0001425c      82524)
+# CODE: 0xe7ebacc4 3890982084 (CYCLE 0x0001425f      82527)
+# CODE: 0x482eb722 1211021090 (CYCLE 0x00014262      82530)
+# CODE: 0xf6d56bfc 4141181948 (CYCLE 0x00014265      82533)
+# CODE: 0x0c152a00  202713600 (CYCLE 0x00014268      82536)
+# CODE: 0x02e751cb   48714187 (CYCLE 0x0001426b      82539)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xe837f5c5 3895981509 (CYCLE 0x00017808      96264)
+# CODE: 0x1890bf4d  412139341 (CYCLE 0x0001780b      96267)
+# CODE: 0x3fa311f9 1067651577 (CYCLE 0x0001780e      96270)
+# CODE: 0x81e7e088 2179457160 (CYCLE 0x00017811      96273)
+# CODE: 0x678025c9 1736451529 (CYCLE 0x00017814      96276)
+# CODE: 0x92d3f42e 2463364142 (CYCLE 0x00017817      96279)
+# CODE: 0xf46f0c4c 4100918348 (CYCLE 0x0001781a      96282)
+# CODE: 0xed8ed1f7 3985560055 (CYCLE 0x0001781d      96285)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0xdd8a4202 3716825602 (CYCLE 0x0001adba     110010)
+# CODE: 0x6938108e 1765281934 (CYCLE 0x0001adbd     110013)
+# CODE: 0xbb3a7949 3141171529 (CYCLE 0x0001adc0     110016)
+# CODE: 0xd7cd6e3b 3620564539 (CYCLE 0x0001adc3     110019)
+# CODE: 0x823a28dc 2184849628 (CYCLE 0x0001adc6     110022)
+# CODE: 0x35ae6d30  900623664 (CYCLE 0x0001adc9     110025)
+# CODE: 0x047256d5   74602197 (CYCLE 0x0001adcc     110028)
+# CODE: 0x3e972ca2 1050094754 (CYCLE 0x0001adcf     110031)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x69e3a54b 1776526667 (CYCLE 0x0001e36c     123756)
+# CODE: 0x093377c6  154367942 (CYCLE 0x0001e36f     123759)
+# CODE: 0xa62cd4f0 2787955952 (CYCLE 0x0001e372     123762)
+# CODE: 0x07509377  122721143 (CYCLE 0x0001e375     123765)
+# CODE: 0xf32602e6 4079354598 (CYCLE 0x0001e378     123768)
+# CODE: 0x9d01a596 2634130838 (CYCLE 0x0001e37b     123771)
+# CODE: 0xf3b050f6 4088418550 (CYCLE 0x0001e37e     123774)
+# CODE: 0x4bf329b0 1274227120 (CYCLE 0x0001e381     123777)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001e3a0     123808)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/working_pipeline/miner_tb.sv line 402
+# Compile of core.sv was successful.
+# Compile of miner_tb.sv was successful.
+# 2 compiles, 0 failed with no errors. 
+quit -sim
+vsim work.miner_tb
+# vsim work.miner_tb 
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xddc37ea5 3720576677 (CYCLE 0x00002e92      11922)
+# CODE: 0x4444190c 1145313548 (CYCLE 0x00002e94      11924)
+# CODE: 0x21158168  555057512 (CYCLE 0x00002e96      11926)
+# CODE: 0x48fcdb9a 1224530842 (CYCLE 0x00002e98      11928)
+# CODE: 0xd1c40be4 3519286244 (CYCLE 0x00002e9a      11930)
+# CODE: 0x039db8e4   60668132 (CYCLE 0x00002e9c      11932)
+# CODE: 0xb32b4364 3005956964 (CYCLE 0x00002e9e      11934)
+# CODE: 0xe0ded03d 3772698685 (CYCLE 0x00002ea0      11936)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xa889120a 2827555338 (CYCLE 0x00005cff      23807)
+# CODE: 0xa8fd3c0c 2835168268 (CYCLE 0x00005d01      23809)
+# CODE: 0xd181f9f0 3514956272 (CYCLE 0x00005d03      23811)
+# CODE: 0x55050ba7 1426394023 (CYCLE 0x00005d05      23813)
+# CODE: 0x81a2ae48 2174922312 (CYCLE 0x00005d07      23815)
+# CODE: 0x951ffab0 2501900976 (CYCLE 0x00005d09      23817)
+# CODE: 0x7217ad6c 1914154348 (CYCLE 0x00005d0b      23819)
+# CODE: 0x4efa9336 1325044534 (CYCLE 0x00005d0d      23821)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0xc3f08a94 3287321236 (CYCLE 0x00008b6c      35692)
+# CODE: 0xcc64831e 3429139230 (CYCLE 0x00008b6e      35694)
+# CODE: 0x8c4bc02b 2353774635 (CYCLE 0x00008b70      35696)
+# CODE: 0xf56f1607 4117698055 (CYCLE 0x00008b72      35698)
+# CODE: 0x53191e80 1394155136 (CYCLE 0x00008b74      35700)
+# CODE: 0x29356710  691365648 (CYCLE 0x00008b76      35702)
+# CODE: 0xc579d169 3313095017 (CYCLE 0x00008b78      35704)
+# CODE: 0x5c2044de 1545618654 (CYCLE 0x00008b7a      35706)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x4f85cb58 1334168408 (CYCLE 0x0000b9d9      47577)
+# CODE: 0x84af6503 2226087171 (CYCLE 0x0000b9db      47579)
+# CODE: 0xfa64be68 4200906344 (CYCLE 0x0000b9dd      47581)
+# CODE: 0x407113d2 1081152466 (CYCLE 0x0000b9df      47583)
+# CODE: 0x14f1b621  351385121 (CYCLE 0x0000b9e1      47585)
+# CODE: 0x23a5b58a  598062474 (CYCLE 0x0000b9e3      47587)
+# CODE: 0x389e47ef  949897199 (CYCLE 0x0000b9e5      47589)
+# CODE: 0x38486728  944269096 (CYCLE 0x0000b9e7      47591)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0x8b3d6277 2336055927 (CYCLE 0x0000e846      59462)
+# CODE: 0xd4ee161b 3572373019 (CYCLE 0x0000e848      59464)
+# CODE: 0x0f00b0f2  251703538 (CYCLE 0x0000e84a      59466)
+# CODE: 0x5616d623 1444337187 (CYCLE 0x0000e84c      59468)
+# CODE: 0x4de38055 1306755157 (CYCLE 0x0000e84e      59470)
+# CODE: 0x8757747d 2270655613 (CYCLE 0x0000e850      59472)
+# CODE: 0x4b3cfbb7 1262287799 (CYCLE 0x0000e852      59474)
+# CODE: 0x736aa806 1936369670 (CYCLE 0x0000e854      59476)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x71a7baf9 1906817785 (CYCLE 0x000116b3      71347)
+# CODE: 0x7b62be6e 2070068846 (CYCLE 0x000116b5      71349)
+# CODE: 0xcc85d8d1 3431323857 (CYCLE 0x000116b7      71351)
+# CODE: 0x12b078f5  313555189 (CYCLE 0x000116b9      71353)
+# CODE: 0x1b9230f0  462565616 (CYCLE 0x000116bb      71355)
+# CODE: 0xd469b776 3563698038 (CYCLE 0x000116bd      71357)
+# CODE: 0xefeba5c3 4025198019 (CYCLE 0x000116bf      71359)
+# CODE: 0xceea072b 3471443755 (CYCLE 0x000116c1      71361)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xf154e135 4048871733 (CYCLE 0x00014520      83232)
+# CODE: 0xd661fa19 3596745241 (CYCLE 0x00014522      83234)
+# CODE: 0xd6e8c985 3605580165 (CYCLE 0x00014524      83236)
+# CODE: 0x8e92c7ca 2391984074 (CYCLE 0x00014526      83238)
+# CODE: 0xf51a5692 4112144018 (CYCLE 0x00014528      83240)
+# CODE: 0x27556143  659906883 (CYCLE 0x0001452a      83242)
+# CODE: 0xc8d6f212 3369529874 (CYCLE 0x0001452c      83244)
+# CODE: 0xfe64ce6d 4268019309 (CYCLE 0x0001452e      83246)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0x6c1e45de 1813923294 (CYCLE 0x0001738d      95117)
+# CODE: 0xcdb383e4 3451093988 (CYCLE 0x0001738f      95119)
+# CODE: 0x72f7fec4 1928855236 (CYCLE 0x00017391      95121)
+# CODE: 0x49148eeb 1226084075 (CYCLE 0x00017393      95123)
+# CODE: 0x77c0a936 2009114934 (CYCLE 0x00017395      95125)
+# CODE: 0x892cf7f3 2301425651 (CYCLE 0x00017397      95127)
+# CODE: 0x67dcdfd1 1742528465 (CYCLE 0x00017399      95129)
+# CODE: 0x5f842def 1602498031 (CYCLE 0x0001739b      95131)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x1404b3fa  335852538 (CYCLE 0x0001a1fa     107002)
+# CODE: 0xf3588faa 4082667434 (CYCLE 0x0001a1fc     107004)
+# CODE: 0xbc10367d 3155179133 (CYCLE 0x0001a1fe     107006)
+# CODE: 0xf5f485ed 4126442989 (CYCLE 0x0001a200     107008)
+# CODE: 0x22261d69  572923241 (CYCLE 0x0001a202     107010)
+# CODE: 0x0687047c  109511804 (CYCLE 0x0001a204     107012)
+# CODE: 0xb48dd548 3029194056 (CYCLE 0x0001a206     107014)
+# CODE: 0xd6054d80 3590671744 (CYCLE 0x0001a208     107016)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001a220     107040)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/working_pipeline/miner_tb.sv line 402
+# Compile of core.sv was successful.
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xd5ad501e 3584905246 (CYCLE 0x000035dc      13788)
+# CODE: 0x9e02afa7 2650976167 (CYCLE 0x000035df      13791)
+# CODE: 0xc1bf8b20 3250555680 (CYCLE 0x000035e2      13794)
+# CODE: 0x19574c17  425151511 (CYCLE 0x000035e5      13797)
+# CODE: 0x935e9638 2472449592 (CYCLE 0x000035e8      13800)
+# CODE: 0x98f99ee6 2566495974 (CYCLE 0x000035eb      13803)
+# CODE: 0x6680e10f 1719722255 (CYCLE 0x000035ee      13806)
+# CODE: 0xba6ade5e 3127565918 (CYCLE 0x000035f1      13809)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xf4d5740a 4107629578 (CYCLE 0x00006b8e      27534)
+# CODE: 0x91e840ac 2447917228 (CYCLE 0x00006b91      27537)
+# CODE: 0xaaa6f72d 2863068973 (CYCLE 0x00006b94      27540)
+# CODE: 0x2037c059  540524633 (CYCLE 0x00006b97      27543)
+# CODE: 0xd5e545d2 3588572626 (CYCLE 0x00006b9a      27546)
+# CODE: 0xbe44f2e1 3192189665 (CYCLE 0x00006b9d      27549)
+# CODE: 0xd65f8ea3 3596586659 (CYCLE 0x00006ba0      27552)
+# CODE: 0x23b3bc17  598981655 (CYCLE 0x00006ba3      27555)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0x90ced284 2429473412 (CYCLE 0x0000a140      41280)
+# CODE: 0x64518cdf 1683066079 (CYCLE 0x0000a143      41283)
+# CODE: 0x2f5b07f2  794494962 (CYCLE 0x0000a146      41286)
+# CODE: 0x7fa1d611 2141312529 (CYCLE 0x0000a149      41289)
+# CODE: 0x6d855271 1837453937 (CYCLE 0x0000a14c      41292)
+# CODE: 0x86f7a41d 2264376349 (CYCLE 0x0000a14f      41295)
+# CODE: 0x972004ef 2535458031 (CYCLE 0x0000a152      41298)
+# CODE: 0x4d29ab7e 1294576510 (CYCLE 0x0000a155      41301)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x49de3aab 1239300779 (CYCLE 0x0000d6f2      55026)
+# CODE: 0x5c06062c 1543898668 (CYCLE 0x0000d6f5      55029)
+# CODE: 0x2b470201  726073857 (CYCLE 0x0000d6f8      55032)
+# CODE: 0xa4b9fc74 2763652212 (CYCLE 0x0000d6fb      55035)
+# CODE: 0xd7ef0a00 3622767104 (CYCLE 0x0000d6fe      55038)
+# CODE: 0xf1652a46 4049939014 (CYCLE 0x0000d701      55041)
+# CODE: 0x6654046d 1716782189 (CYCLE 0x0000d704      55044)
+# CODE: 0x45f51dd5 1173691861 (CYCLE 0x0000d707      55047)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0xac2ae175 2888491381 (CYCLE 0x00010ca4      68772)
+# CODE: 0xab2ea743 2871961411 (CYCLE 0x00010ca7      68775)
+# CODE: 0xb186ec7e 2978409598 (CYCLE 0x00010caa      68778)
+# CODE: 0xcf1b37b4 3474667444 (CYCLE 0x00010cad      68781)
+# CODE: 0xc468328a 3295163018 (CYCLE 0x00010cb0      68784)
+# CODE: 0x221156ab  571561643 (CYCLE 0x00010cb3      68787)
+# CODE: 0x4002670c 1073899276 (CYCLE 0x00010cb6      68790)
+# CODE: 0x62ba5e25 1656380965 (CYCLE 0x00010cb9      68793)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x9d3f88b1 2638186673 (CYCLE 0x00014256      82518)
+# CODE: 0x7821586e 2015451246 (CYCLE 0x00014259      82521)
+# CODE: 0xb1524fe9 2974961641 (CYCLE 0x0001425c      82524)
+# CODE: 0xe7ebacc4 3890982084 (CYCLE 0x0001425f      82527)
+# CODE: 0x482eb722 1211021090 (CYCLE 0x00014262      82530)
+# CODE: 0xf6d56bfc 4141181948 (CYCLE 0x00014265      82533)
+# CODE: 0x0c152a00  202713600 (CYCLE 0x00014268      82536)
+# CODE: 0x02e751cb   48714187 (CYCLE 0x0001426b      82539)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xe837f5c5 3895981509 (CYCLE 0x00017808      96264)
+# CODE: 0x1890bf4d  412139341 (CYCLE 0x0001780b      96267)
+# CODE: 0x3fa311f9 1067651577 (CYCLE 0x0001780e      96270)
+# CODE: 0x81e7e088 2179457160 (CYCLE 0x00017811      96273)
+# CODE: 0x678025c9 1736451529 (CYCLE 0x00017814      96276)
+# CODE: 0x92d3f42e 2463364142 (CYCLE 0x00017817      96279)
+# CODE: 0xf46f0c4c 4100918348 (CYCLE 0x0001781a      96282)
+# CODE: 0xed8ed1f7 3985560055 (CYCLE 0x0001781d      96285)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0xdd8a4202 3716825602 (CYCLE 0x0001adba     110010)
+# CODE: 0x6938108e 1765281934 (CYCLE 0x0001adbd     110013)
+# CODE: 0xbb3a7949 3141171529 (CYCLE 0x0001adc0     110016)
+# CODE: 0xd7cd6e3b 3620564539 (CYCLE 0x0001adc3     110019)
+# CODE: 0x823a28dc 2184849628 (CYCLE 0x0001adc6     110022)
+# CODE: 0x35ae6d30  900623664 (CYCLE 0x0001adc9     110025)
+# CODE: 0x047256d5   74602197 (CYCLE 0x0001adcc     110028)
+# CODE: 0x3e972ca2 1050094754 (CYCLE 0x0001adcf     110031)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x69e3a54b 1776526667 (CYCLE 0x0001e36c     123756)
+# CODE: 0x093377c6  154367942 (CYCLE 0x0001e36f     123759)
+# CODE: 0xa62cd4f0 2787955952 (CYCLE 0x0001e372     123762)
+# CODE: 0x07509377  122721143 (CYCLE 0x0001e375     123765)
+# CODE: 0xf32602e6 4079354598 (CYCLE 0x0001e378     123768)
+# CODE: 0x9d01a596 2634130838 (CYCLE 0x0001e37b     123771)
+# CODE: 0xf3b050f6 4088418550 (CYCLE 0x0001e37e     123774)
+# CODE: 0x4bf329b0 1274227120 (CYCLE 0x0001e381     123777)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001e3a0     123808)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/working_pipeline/miner_tb.sv line 402
+quit -sim
+vsim work.core_tb
+# vsim work.core_tb 
+# Loading sv_std.std
+# Loading work.core_tb_sv_unit
+# Loading work.core_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+# Loading work.net_packet_logger_s_sv_unit
+# Loading work.network_packet_s_logger
+run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../assembler/lab2/src/tester_i.hex" for reading.
+# 
+# No such file or directory. (errno = ENOENT)    : C:/cygwin64/home/jack/cse141L/core/working_pipeline/core_tb.sv(116)
+#    Time: 0 ns  Iteration: 0  Instance: /core_tb
+# 
+#######
+####### 
+# Can't open file ../../assembler/lab2/src/tester_i.hex
+#######
+#######
+#  
+# Break in Module core_tb at C:/cygwin64/home/jack/cse141L/core/working_pipeline/core_tb.sv line 116
+# Compile of core_tb.sv was successful.
+restart
+# Loading sv_std.std
+# Loading work.core_tb_sv_unit
+# Loading work.core_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+# Loading work.net_packet_logger_s_sv_unit
+# Loading work.network_packet_s_logger
+run -all
+# --------VANILLA HAS BOOTED---------
+# PASS: 0x00000001          1 (CYCLE 0x00000014         20)
+# PASS: 0x00000002          2 (CYCLE 0x0000001f         31)
+# PASS: 0x00000003          3 (CYCLE 0x00000028         40)
+# PASS: 0x00000004          4 (CYCLE 0x00000031         49)
+# PASS: 0x00000005          5 (CYCLE 0x0000003b         59)
+# PASS: 0x00000006          6 (CYCLE 0x0000004e         78)
+# PASS: 0x00000007          7 (CYCLE 0x0000005f         95)
+# PASS: 0x00000008          8 (CYCLE 0x00000075        117)
+# PASS: 0x00000009          9 (CYCLE 0x00000080        128)
+# PASS: 0x0000000a         10 (CYCLE 0x00000088        136)
+# PASS: 0x0000000b         11 (CYCLE 0x00000090        144)
+# PASS: 0x0000000c         12 (CYCLE 0x0000009e        158)
+# PASS: 0x0000000d         13 (CYCLE 0x000000af        175)
+# PASS: 0x0000000e         14 (CYCLE 0x000000c0        192)
+# PASS: 0x0000000f         15 (CYCLE 0x000000d1        209)
+# PASS: 0x00000010         16 (CYCLE 0x000000e2        226)
+# PASS: 0x00000011         17 (CYCLE 0x000000f2        242)
+# PASS: 0x00000012         18 (CYCLE 0x00000102        258)
+# PASS: 0x00000013         19 (CYCLE 0x00000112        274)
+# {00000117} barrier OR changed from        0 to        2
+# {00000118} barrier OR changed from        0 to        2
+# DONE: 0x00000013         19 (CYCLE 0x00000118        280)
+# Break in Module core_tb at C:/cygwin64/home/jack/cse141L/core/working_pipeline/core_tb.sv line 258
+quit -sim
+vsim work.miner_tb
+# vsim work.miner_tb 
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+# Compile of core.sv was successful.
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xd5ad501e 3584905246 (CYCLE 0x000035dc      13788)
+# CODE: 0x9e02afa7 2650976167 (CYCLE 0x000035df      13791)
+# CODE: 0xc1bf8b20 3250555680 (CYCLE 0x000035e2      13794)
+# CODE: 0x19574c17  425151511 (CYCLE 0x000035e5      13797)
+# CODE: 0x935e9638 2472449592 (CYCLE 0x000035e8      13800)
+# CODE: 0x98f99ee6 2566495974 (CYCLE 0x000035eb      13803)
+# CODE: 0x6680e10f 1719722255 (CYCLE 0x000035ee      13806)
+# CODE: 0xba6ade5e 3127565918 (CYCLE 0x000035f1      13809)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xf4d5740a 4107629578 (CYCLE 0x00006b8e      27534)
+# CODE: 0x91e840ac 2447917228 (CYCLE 0x00006b91      27537)
+# CODE: 0xaaa6f72d 2863068973 (CYCLE 0x00006b94      27540)
+# CODE: 0x2037c059  540524633 (CYCLE 0x00006b97      27543)
+# CODE: 0xd5e545d2 3588572626 (CYCLE 0x00006b9a      27546)
+# CODE: 0xbe44f2e1 3192189665 (CYCLE 0x00006b9d      27549)
+# CODE: 0xd65f8ea3 3596586659 (CYCLE 0x00006ba0      27552)
+# CODE: 0x23b3bc17  598981655 (CYCLE 0x00006ba3      27555)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0x90ced284 2429473412 (CYCLE 0x0000a140      41280)
+# CODE: 0x64518cdf 1683066079 (CYCLE 0x0000a143      41283)
+# CODE: 0x2f5b07f2  794494962 (CYCLE 0x0000a146      41286)
+# CODE: 0x7fa1d611 2141312529 (CYCLE 0x0000a149      41289)
+# CODE: 0x6d855271 1837453937 (CYCLE 0x0000a14c      41292)
+# CODE: 0x86f7a41d 2264376349 (CYCLE 0x0000a14f      41295)
+# CODE: 0x972004ef 2535458031 (CYCLE 0x0000a152      41298)
+# CODE: 0x4d29ab7e 1294576510 (CYCLE 0x0000a155      41301)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x49de3aab 1239300779 (CYCLE 0x0000d6f2      55026)
+# CODE: 0x5c06062c 1543898668 (CYCLE 0x0000d6f5      55029)
+# CODE: 0x2b470201  726073857 (CYCLE 0x0000d6f8      55032)
+# CODE: 0xa4b9fc74 2763652212 (CYCLE 0x0000d6fb      55035)
+# CODE: 0xd7ef0a00 3622767104 (CYCLE 0x0000d6fe      55038)
+# CODE: 0xf1652a46 4049939014 (CYCLE 0x0000d701      55041)
+# CODE: 0x6654046d 1716782189 (CYCLE 0x0000d704      55044)
+# CODE: 0x45f51dd5 1173691861 (CYCLE 0x0000d707      55047)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0xac2ae175 2888491381 (CYCLE 0x00010ca4      68772)
+# CODE: 0xab2ea743 2871961411 (CYCLE 0x00010ca7      68775)
+# CODE: 0xb186ec7e 2978409598 (CYCLE 0x00010caa      68778)
+# CODE: 0xcf1b37b4 3474667444 (CYCLE 0x00010cad      68781)
+# CODE: 0xc468328a 3295163018 (CYCLE 0x00010cb0      68784)
+# CODE: 0x221156ab  571561643 (CYCLE 0x00010cb3      68787)
+# CODE: 0x4002670c 1073899276 (CYCLE 0x00010cb6      68790)
+# CODE: 0x62ba5e25 1656380965 (CYCLE 0x00010cb9      68793)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x9d3f88b1 2638186673 (CYCLE 0x00014256      82518)
+# CODE: 0x7821586e 2015451246 (CYCLE 0x00014259      82521)
+# CODE: 0xb1524fe9 2974961641 (CYCLE 0x0001425c      82524)
+# CODE: 0xe7ebacc4 3890982084 (CYCLE 0x0001425f      82527)
+# CODE: 0x482eb722 1211021090 (CYCLE 0x00014262      82530)
+# CODE: 0xf6d56bfc 4141181948 (CYCLE 0x00014265      82533)
+# CODE: 0x0c152a00  202713600 (CYCLE 0x00014268      82536)
+# CODE: 0x02e751cb   48714187 (CYCLE 0x0001426b      82539)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xe837f5c5 3895981509 (CYCLE 0x00017808      96264)
+# CODE: 0x1890bf4d  412139341 (CYCLE 0x0001780b      96267)
+# CODE: 0x3fa311f9 1067651577 (CYCLE 0x0001780e      96270)
+# CODE: 0x81e7e088 2179457160 (CYCLE 0x00017811      96273)
+# CODE: 0x678025c9 1736451529 (CYCLE 0x00017814      96276)
+# CODE: 0x92d3f42e 2463364142 (CYCLE 0x00017817      96279)
+# CODE: 0xf46f0c4c 4100918348 (CYCLE 0x0001781a      96282)
+# CODE: 0xed8ed1f7 3985560055 (CYCLE 0x0001781d      96285)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0xdd8a4202 3716825602 (CYCLE 0x0001adba     110010)
+# CODE: 0x6938108e 1765281934 (CYCLE 0x0001adbd     110013)
+# CODE: 0xbb3a7949 3141171529 (CYCLE 0x0001adc0     110016)
+# CODE: 0xd7cd6e3b 3620564539 (CYCLE 0x0001adc3     110019)
+# CODE: 0x823a28dc 2184849628 (CYCLE 0x0001adc6     110022)
+# CODE: 0x35ae6d30  900623664 (CYCLE 0x0001adc9     110025)
+# CODE: 0x047256d5   74602197 (CYCLE 0x0001adcc     110028)
+# CODE: 0x3e972ca2 1050094754 (CYCLE 0x0001adcf     110031)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x69e3a54b 1776526667 (CYCLE 0x0001e36c     123756)
+# CODE: 0x093377c6  154367942 (CYCLE 0x0001e36f     123759)
+# CODE: 0xa62cd4f0 2787955952 (CYCLE 0x0001e372     123762)
+# CODE: 0x07509377  122721143 (CYCLE 0x0001e375     123765)
+# CODE: 0xf32602e6 4079354598 (CYCLE 0x0001e378     123768)
+# CODE: 0x9d01a596 2634130838 (CYCLE 0x0001e37b     123771)
+# CODE: 0xf3b050f6 4088418550 (CYCLE 0x0001e37e     123774)
+# CODE: 0x4bf329b0 1274227120 (CYCLE 0x0001e381     123777)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001e3a0     123808)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/working_pipeline/miner_tb.sv line 402
+# Compile of core.sv was successful.
+# Compile of core.sv was successful.
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xd5ad501e 3584905246 (CYCLE 0x000035dc      13788)
+# CODE: 0x9e02afa7 2650976167 (CYCLE 0x000035df      13791)
+# CODE: 0xc1bf8b20 3250555680 (CYCLE 0x000035e2      13794)
+# CODE: 0x19574c17  425151511 (CYCLE 0x000035e5      13797)
+# CODE: 0x935e9638 2472449592 (CYCLE 0x000035e8      13800)
+# CODE: 0x98f99ee6 2566495974 (CYCLE 0x000035eb      13803)
+# CODE: 0x6680e10f 1719722255 (CYCLE 0x000035ee      13806)
+# CODE: 0xba6ade5e 3127565918 (CYCLE 0x000035f1      13809)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xf4d5740a 4107629578 (CYCLE 0x00006b8e      27534)
+# CODE: 0x91e840ac 2447917228 (CYCLE 0x00006b91      27537)
+# CODE: 0xaaa6f72d 2863068973 (CYCLE 0x00006b94      27540)
+# CODE: 0x2037c059  540524633 (CYCLE 0x00006b97      27543)
+# CODE: 0xd5e545d2 3588572626 (CYCLE 0x00006b9a      27546)
+# CODE: 0xbe44f2e1 3192189665 (CYCLE 0x00006b9d      27549)
+# CODE: 0xd65f8ea3 3596586659 (CYCLE 0x00006ba0      27552)
+# CODE: 0x23b3bc17  598981655 (CYCLE 0x00006ba3      27555)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0x90ced284 2429473412 (CYCLE 0x0000a140      41280)
+# CODE: 0x64518cdf 1683066079 (CYCLE 0x0000a143      41283)
+# CODE: 0x2f5b07f2  794494962 (CYCLE 0x0000a146      41286)
+# CODE: 0x7fa1d611 2141312529 (CYCLE 0x0000a149      41289)
+# CODE: 0x6d855271 1837453937 (CYCLE 0x0000a14c      41292)
+# CODE: 0x86f7a41d 2264376349 (CYCLE 0x0000a14f      41295)
+# CODE: 0x972004ef 2535458031 (CYCLE 0x0000a152      41298)
+# CODE: 0x4d29ab7e 1294576510 (CYCLE 0x0000a155      41301)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x49de3aab 1239300779 (CYCLE 0x0000d6f2      55026)
+# CODE: 0x5c06062c 1543898668 (CYCLE 0x0000d6f5      55029)
+# CODE: 0x2b470201  726073857 (CYCLE 0x0000d6f8      55032)
+# CODE: 0xa4b9fc74 2763652212 (CYCLE 0x0000d6fb      55035)
+# CODE: 0xd7ef0a00 3622767104 (CYCLE 0x0000d6fe      55038)
+# CODE: 0xf1652a46 4049939014 (CYCLE 0x0000d701      55041)
+# CODE: 0x6654046d 1716782189 (CYCLE 0x0000d704      55044)
+# CODE: 0x45f51dd5 1173691861 (CYCLE 0x0000d707      55047)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0xac2ae175 2888491381 (CYCLE 0x00010ca4      68772)
+# CODE: 0xab2ea743 2871961411 (CYCLE 0x00010ca7      68775)
+# CODE: 0xb186ec7e 2978409598 (CYCLE 0x00010caa      68778)
+# CODE: 0xcf1b37b4 3474667444 (CYCLE 0x00010cad      68781)
+# CODE: 0xc468328a 3295163018 (CYCLE 0x00010cb0      68784)
+# CODE: 0x221156ab  571561643 (CYCLE 0x00010cb3      68787)
+# CODE: 0x4002670c 1073899276 (CYCLE 0x00010cb6      68790)
+# CODE: 0x62ba5e25 1656380965 (CYCLE 0x00010cb9      68793)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x9d3f88b1 2638186673 (CYCLE 0x00014256      82518)
+# CODE: 0x7821586e 2015451246 (CYCLE 0x00014259      82521)
+# CODE: 0xb1524fe9 2974961641 (CYCLE 0x0001425c      82524)
+# CODE: 0xe7ebacc4 3890982084 (CYCLE 0x0001425f      82527)
+# CODE: 0x482eb722 1211021090 (CYCLE 0x00014262      82530)
+# CODE: 0xf6d56bfc 4141181948 (CYCLE 0x00014265      82533)
+# CODE: 0x0c152a00  202713600 (CYCLE 0x00014268      82536)
+# CODE: 0x02e751cb   48714187 (CYCLE 0x0001426b      82539)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xe837f5c5 3895981509 (CYCLE 0x00017808      96264)
+# CODE: 0x1890bf4d  412139341 (CYCLE 0x0001780b      96267)
+# CODE: 0x3fa311f9 1067651577 (CYCLE 0x0001780e      96270)
+# CODE: 0x81e7e088 2179457160 (CYCLE 0x00017811      96273)
+# CODE: 0x678025c9 1736451529 (CYCLE 0x00017814      96276)
+# CODE: 0x92d3f42e 2463364142 (CYCLE 0x00017817      96279)
+# CODE: 0xf46f0c4c 4100918348 (CYCLE 0x0001781a      96282)
+# CODE: 0xed8ed1f7 3985560055 (CYCLE 0x0001781d      96285)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0xdd8a4202 3716825602 (CYCLE 0x0001adba     110010)
+# CODE: 0x6938108e 1765281934 (CYCLE 0x0001adbd     110013)
+# CODE: 0xbb3a7949 3141171529 (CYCLE 0x0001adc0     110016)
+# CODE: 0xd7cd6e3b 3620564539 (CYCLE 0x0001adc3     110019)
+# CODE: 0x823a28dc 2184849628 (CYCLE 0x0001adc6     110022)
+# CODE: 0x35ae6d30  900623664 (CYCLE 0x0001adc9     110025)
+# CODE: 0x047256d5   74602197 (CYCLE 0x0001adcc     110028)
+# CODE: 0x3e972ca2 1050094754 (CYCLE 0x0001adcf     110031)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x69e3a54b 1776526667 (CYCLE 0x0001e36c     123756)
+# CODE: 0x093377c6  154367942 (CYCLE 0x0001e36f     123759)
+# CODE: 0xa62cd4f0 2787955952 (CYCLE 0x0001e372     123762)
+# CODE: 0x07509377  122721143 (CYCLE 0x0001e375     123765)
+# CODE: 0xf32602e6 4079354598 (CYCLE 0x0001e378     123768)
+# CODE: 0x9d01a596 2634130838 (CYCLE 0x0001e37b     123771)
+# CODE: 0xf3b050f6 4088418550 (CYCLE 0x0001e37e     123774)
+# CODE: 0x4bf329b0 1274227120 (CYCLE 0x0001e381     123777)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001e3a0     123808)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/working_pipeline/miner_tb.sv line 402
+# Compile of reg_file.sv was successful.
+# Compile of core.sv was successful.
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000035a5      13733)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000035ab      13739)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000035b1      13745)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000035b7      13751)
+# [*] Trying a new Nonce = 0x000000001
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00006b1a      27418)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00006b20      27424)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00006b26      27430)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00006b2c      27436)
+# [*] Trying a new Nonce = 0x000000002
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0000a08f      41103)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0000a095      41109)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0000a09b      41115)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0000a0a1      41121)
+# [*] Trying a new Nonce = 0x000000003
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0000d604      54788)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0000d60a      54794)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0000d610      54800)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0000d616      54806)
+# [*] Trying a new Nonce = 0x000000004
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00010b79      68473)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00010b7f      68479)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00010b85      68485)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00010b8b      68491)
+# [*] Trying a new Nonce = 0x000000005
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000140ee      82158)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000140f4      82164)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000140fa      82170)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00014100      82176)
+# [*] Trying a new Nonce = 0x000000006
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00017663      95843)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00017669      95849)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0001766f      95855)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00017675      95861)
+# [*] Trying a new Nonce = 0x000000007
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0001abd8     109528)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0001abde     109534)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0001abe4     109540)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0001abea     109546)
+# [*] Trying a new Nonce = 0x000000008
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0001e14d     123213)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0001e153     123219)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0001e159     123225)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0001e15f     123231)
+# [*] Trying a new Nonce = 0x000000009
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000216c2     136898)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000216c8     136904)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000216ce     136910)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000216d4     136916)
+# [*] Trying a new Nonce = 0x00000000a
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00024c37     150583)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00024c3d     150589)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00024c43     150595)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00024c49     150601)
+# [*] Trying a new Nonce = 0x00000000b
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000281ac     164268)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000281b2     164274)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000281b8     164280)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x000281be     164286)
+# [*] Trying a new Nonce = 0x00000000c
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0002b721     177953)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0002b727     177959)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0002b72d     177965)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0002b733     177971)
+# [*] Trying a new Nonce = 0x00000000d
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0002ec96     191638)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0002ec9c     191644)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0002eca2     191650)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0002eca8     191656)
+# [*] Trying a new Nonce = 0x00000000e
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000049
+# 
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0003220b     205323)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00032211     205329)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x00032217     205335)
+# CODE: 0xxxxxxxxx          x (CYCLE 0x0003221d     205341)
+# [*] Trying a new Nonce = 0x00000000f
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# ERROR: unaligned word write of data xxxxxxxx to address 00000099
+# 
+# Compile of reg_file.sv was successful.
+restart
+# Loading sv_std.std
+# Loading work.miner_tb_sv_unit
+# Loading work.miner_tb
+# Loading work.data_mem_sv_unit
+# Loading work.data_mem
+# Loading work.core_flattened_sv_unit
+# Loading work.core_flattened
+# Loading work.core_sv_unit
+# Loading work.core
+# Loading work.instr_mem_sv_unit
+# Loading work.instr_mem
+# Loading work.cl_decode_sv_unit
+# Loading work.cl_decode
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cl_state_machine_sv_unit
+# Loading work.cl_state_machine
+run -all
+# [*] Finished Initializing Core and Memory
+# -------- START MINING ---------
+# [*] Finished loading Block Header and Midstate
+# [*] Initializing Miner with Nonce = 0x000000000
+# CODE: 0xd5ad501e 3584905246 (CYCLE 0x000035dc      13788)
+# CODE: 0x9e02afa7 2650976167 (CYCLE 0x000035df      13791)
+# CODE: 0xc1bf8b20 3250555680 (CYCLE 0x000035e2      13794)
+# CODE: 0x19574c17  425151511 (CYCLE 0x000035e5      13797)
+# CODE: 0x935e9638 2472449592 (CYCLE 0x000035e8      13800)
+# CODE: 0x98f99ee6 2566495974 (CYCLE 0x000035eb      13803)
+# CODE: 0x6680e10f 1719722255 (CYCLE 0x000035ee      13806)
+# CODE: 0xba6ade5e 3127565918 (CYCLE 0x000035f1      13809)
+# [*] Trying a new Nonce = 0x000000001
+# CODE: 0xf4d5740a 4107629578 (CYCLE 0x00006b8e      27534)
+# CODE: 0x91e840ac 2447917228 (CYCLE 0x00006b91      27537)
+# CODE: 0xaaa6f72d 2863068973 (CYCLE 0x00006b94      27540)
+# CODE: 0x2037c059  540524633 (CYCLE 0x00006b97      27543)
+# CODE: 0xd5e545d2 3588572626 (CYCLE 0x00006b9a      27546)
+# CODE: 0xbe44f2e1 3192189665 (CYCLE 0x00006b9d      27549)
+# CODE: 0xd65f8ea3 3596586659 (CYCLE 0x00006ba0      27552)
+# CODE: 0x23b3bc17  598981655 (CYCLE 0x00006ba3      27555)
+# [*] Trying a new Nonce = 0x000000002
+# CODE: 0x90ced284 2429473412 (CYCLE 0x0000a140      41280)
+# CODE: 0x64518cdf 1683066079 (CYCLE 0x0000a143      41283)
+# CODE: 0x2f5b07f2  794494962 (CYCLE 0x0000a146      41286)
+# CODE: 0x7fa1d611 2141312529 (CYCLE 0x0000a149      41289)
+# CODE: 0x6d855271 1837453937 (CYCLE 0x0000a14c      41292)
+# CODE: 0x86f7a41d 2264376349 (CYCLE 0x0000a14f      41295)
+# CODE: 0x972004ef 2535458031 (CYCLE 0x0000a152      41298)
+# CODE: 0x4d29ab7e 1294576510 (CYCLE 0x0000a155      41301)
+# [*] Trying a new Nonce = 0x000000003
+# CODE: 0x49de3aab 1239300779 (CYCLE 0x0000d6f2      55026)
+# CODE: 0x5c06062c 1543898668 (CYCLE 0x0000d6f5      55029)
+# CODE: 0x2b470201  726073857 (CYCLE 0x0000d6f8      55032)
+# CODE: 0xa4b9fc74 2763652212 (CYCLE 0x0000d6fb      55035)
+# CODE: 0xd7ef0a00 3622767104 (CYCLE 0x0000d6fe      55038)
+# CODE: 0xf1652a46 4049939014 (CYCLE 0x0000d701      55041)
+# CODE: 0x6654046d 1716782189 (CYCLE 0x0000d704      55044)
+# CODE: 0x45f51dd5 1173691861 (CYCLE 0x0000d707      55047)
+# [*] Trying a new Nonce = 0x000000004
+# CODE: 0xac2ae175 2888491381 (CYCLE 0x00010ca4      68772)
+# CODE: 0xab2ea743 2871961411 (CYCLE 0x00010ca7      68775)
+# CODE: 0xb186ec7e 2978409598 (CYCLE 0x00010caa      68778)
+# CODE: 0xcf1b37b4 3474667444 (CYCLE 0x00010cad      68781)
+# CODE: 0xc468328a 3295163018 (CYCLE 0x00010cb0      68784)
+# CODE: 0x221156ab  571561643 (CYCLE 0x00010cb3      68787)
+# CODE: 0x4002670c 1073899276 (CYCLE 0x00010cb6      68790)
+# CODE: 0x62ba5e25 1656380965 (CYCLE 0x00010cb9      68793)
+# [*] Trying a new Nonce = 0x000000005
+# CODE: 0x9d3f88b1 2638186673 (CYCLE 0x00014256      82518)
+# CODE: 0x7821586e 2015451246 (CYCLE 0x00014259      82521)
+# CODE: 0xb1524fe9 2974961641 (CYCLE 0x0001425c      82524)
+# CODE: 0xe7ebacc4 3890982084 (CYCLE 0x0001425f      82527)
+# CODE: 0x482eb722 1211021090 (CYCLE 0x00014262      82530)
+# CODE: 0xf6d56bfc 4141181948 (CYCLE 0x00014265      82533)
+# CODE: 0x0c152a00  202713600 (CYCLE 0x00014268      82536)
+# CODE: 0x02e751cb   48714187 (CYCLE 0x0001426b      82539)
+# [*] Trying a new Nonce = 0x000000006
+# CODE: 0xe837f5c5 3895981509 (CYCLE 0x00017808      96264)
+# CODE: 0x1890bf4d  412139341 (CYCLE 0x0001780b      96267)
+# CODE: 0x3fa311f9 1067651577 (CYCLE 0x0001780e      96270)
+# CODE: 0x81e7e088 2179457160 (CYCLE 0x00017811      96273)
+# CODE: 0x678025c9 1736451529 (CYCLE 0x00017814      96276)
+# CODE: 0x92d3f42e 2463364142 (CYCLE 0x00017817      96279)
+# CODE: 0xf46f0c4c 4100918348 (CYCLE 0x0001781a      96282)
+# CODE: 0xed8ed1f7 3985560055 (CYCLE 0x0001781d      96285)
+# [*] Trying a new Nonce = 0x000000007
+# CODE: 0xdd8a4202 3716825602 (CYCLE 0x0001adba     110010)
+# CODE: 0x6938108e 1765281934 (CYCLE 0x0001adbd     110013)
+# CODE: 0xbb3a7949 3141171529 (CYCLE 0x0001adc0     110016)
+# CODE: 0xd7cd6e3b 3620564539 (CYCLE 0x0001adc3     110019)
+# CODE: 0x823a28dc 2184849628 (CYCLE 0x0001adc6     110022)
+# CODE: 0x35ae6d30  900623664 (CYCLE 0x0001adc9     110025)
+# CODE: 0x047256d5   74602197 (CYCLE 0x0001adcc     110028)
+# CODE: 0x3e972ca2 1050094754 (CYCLE 0x0001adcf     110031)
+# [*] Trying a new Nonce = 0x000000008
+# CODE: 0x69e3a54b 1776526667 (CYCLE 0x0001e36c     123756)
+# CODE: 0x093377c6  154367942 (CYCLE 0x0001e36f     123759)
+# CODE: 0xa62cd4f0 2787955952 (CYCLE 0x0001e372     123762)
+# CODE: 0x07509377  122721143 (CYCLE 0x0001e375     123765)
+# CODE: 0xf32602e6 4079354598 (CYCLE 0x0001e378     123768)
+# CODE: 0x9d01a596 2634130838 (CYCLE 0x0001e37b     123771)
+# CODE: 0xf3b050f6 4088418550 (CYCLE 0x0001e37e     123774)
+# CODE: 0x4bf329b0 1274227120 (CYCLE 0x0001e381     123777)
+# [*] BTC Found!
+# DONE: 0x00000000          0 (CYCLE 0x0001e3a0     123808)
+# Break in Module miner_tb at C:/cygwin64/home/jack/cse141L/core/working_pipeline/miner_tb.sv line 402
+quit -sim
+cd C:/Users/jack/Desktop/pipelined141core

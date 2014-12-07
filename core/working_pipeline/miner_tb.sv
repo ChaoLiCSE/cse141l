@@ -35,6 +35,9 @@ reg [reg_packet_width_p-1:0] reg_packet [(2**rs_imm_size_gp)-1:0];
 
 instruction_s instruct_t;
 
+int inst_counter;
+
+
 // Data memory connected to core
 mem_in_s mem_in2,mem_in1, mem_in;
 logic [$bits(mem_in_s)-1:0] mem_in1_flat, mem_in_flat; 
@@ -407,6 +410,11 @@ always_ff @ (posedge clk)
     core_in <= packet;
   end
 
+//add this code towards the bottom of the test bench (like after clock generator section)
+always@(dut.core1.PC_r) begin
+inst_counter++;
+end  
+  
 //network_packet_s_logger #(.verbosity_p(0))
 //   np_log (
 //           .clk(clk)
