@@ -16,10 +16,10 @@ always_comb
   begin
     jump_now_o = 1'bx;
     result_o   = 32'dx;
-    A        = 32'dx;
-    B        = 32'dx;
-    C        = 32'dx;
-    D        = 32'dx;
+    A          = 32'dx;
+    B          = 32'dx;
+    C          = 32'dx;
+    D          = 32'dx;
 
     unique casez (op_i)
       `kADDU:  result_o   = rd_i +  rs_i;

@@ -9,14 +9,13 @@ module cl_decode (input instruction_s instruction_i
                  ,output logic is_byte_op_o
                  );
 
-
 // mem_to_reg signal, to determine whether instr 
 // xfers data from dmem to rf 
 always_comb
   unique casez (instruction_i)
     `kLW,`kLBU:
       is_load_op_o = 1'b1;
-
+        
     default:
       is_load_op_o = 1'b0;
   endcase
@@ -27,9 +26,10 @@ always_comb
   unique casez (instruction_i)
     `kADDU, `kSUBU, `kSLLV, `kSRAV, `kSRLV,
     `kAND,  `kOR,   `kNOR,  `kSLT,  `kSLTU, 
-    `kMOV,  `kJALR, `kLW,   `kLBU, `kXOR,
-    `kROR,  `kROL,  `kBS0,   `kBS1, `kSS0,  `kSS1:
-        op_writes_rf_o = 1'b1; 
+    `kMOV,  `kJALR, `kLW,   `kLBU,	`kXOR,
+	 `kROR,  `kROL,  `kBS0,	 `kBS1,	`kSS0,	`kSS1:
+      op_writes_rf_o = 1'b1; 
+    
     default:
       op_writes_rf_o = 1'b0;
   endcase
@@ -39,6 +39,7 @@ always_comb
   unique casez (instruction_i)
     `kLW, `kLBU, `kSW, `kSB:
       is_mem_op_o = 1'b1;
+    
     default:
       is_mem_op_o = 1'b0;
   endcase
@@ -48,6 +49,7 @@ always_comb
   unique casez (instruction_i)
     `kSW, `kSB:
       is_store_op_o = 1'b1;
+    
     default:
       is_store_op_o = 1'b0;
   endcase
@@ -58,8 +60,10 @@ always_comb
   unique casez (instruction_i)
     `kLBU,`kSB:
       is_byte_op_o = 1'b1;
+       
     default: 
       is_byte_op_o = 1'b0;
   endcase
 
 endmodule
+

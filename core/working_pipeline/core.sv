@@ -15,7 +15,7 @@ module core #(parameter imem_addr_width_p=10
              ,output logic [31:0]               data_mem_addr
              );
 
-//---- Adresses and Data ----//
+//---- Addresses and Data ----//
 // Ins. memory address signals
 logic [imem_addr_width_p-1:0] PC_r, PC_n,
                               pc_plus1, imem_addr,
@@ -33,7 +33,7 @@ logic [($bits(instruction.rs_imm))-1:0] rd_addr;
 logic [31:0] rf_wd;
 
 //---- Control signals ----//
-// ALU output to determin whether to jump or not
+// ALU output to determine whether to jump or not
 logic jump_now;
 
 // controller output signals
@@ -101,37 +101,40 @@ always_ff @(posedge clk)
          end
       else
          begin
-            if (PC_wen)
-               begin
-                  if (jump_now)
-                     begin
-                        fd_pipeline_r <= 0;
-                        dx_pipeline_r <= 0;
-                        xm_pipeline_r <= xm_pipeline_n;
-                        mw_pipeline_r <= mw_pipeline_n;
-                     end
-                  else if ( net_PC_write_cmd_IDLE )
-                     begin
-                        fd_pipeline_r <= 0;
-                        dx_pipeline_r <= 0;
-                        xm_pipeline_r <= 0;
-                        mw_pipeline_r <= 0;
-                     end
-                  else
-                     begin
-                        fd_pipeline_r <= fd_pipeline_n;
-                        dx_pipeline_r <= dx_pipeline_n;
-                        xm_pipeline_r <= xm_pipeline_n;
-                        mw_pipeline_r <= mw_pipeline_n;
-                     end
-               end
-            else if(bubble)
+			   if(bubble) // stalling for lw instruction
                begin
                   fd_pipeline_r <= fd_pipeline_r;
                   dx_pipeline_r <= 0;
                   xm_pipeline_r <= xm_pipeline_n;
                   mw_pipeline_r <= mw_pipeline_n;
                end
+            else if (PC_wen)
+               begin
+                  if (jump_now) // conditional jumps
+                     begin
+                        // flush the two fetched instructions
+                        fd_pipeline_r <= 0;
+                        dx_pipeline_r <= 0;
+                        // finish the previous two instructions
+                        xm_pipeline_r <= xm_pipeline_n;
+                        mw_pipeline_r <= mw_pipeline_n;
+                     end
+                  else if ( net_PC_write_cmd_IDLE )
+                     begin // reset pipeline for new nonce
+                        fd_pipeline_r <= 0;
+                        dx_pipeline_r <= 0;
+                        xm_pipeline_r <= 0;
+                        mw_pipeline_r <= 0;
+                     end
+                  else
+                     begin // normal pipeline forwarding
+                        fd_pipeline_r <= fd_pipeline_n;
+                        dx_pipeline_r <= dx_pipeline_n;
+                        xm_pipeline_r <= xm_pipeline_n;
+                        mw_pipeline_r <= mw_pipeline_n;
+                     end
+               end
+
          end
    end
    
@@ -227,22 +230,22 @@ assign control_pipeline.is_mem_op_o    = is_mem_op_c;
 assign control_pipeline.is_byte_op_o   = is_byte_op_c;
 
 // Register write could be from network or the controller
-assign rf_wen = net_reg_write_cmd || (mw_pipeline_r.control.op_writes_rf_o && (~stall || bubble));
+assign rf_wen = net_reg_write_cmd || (mw_pipeline_r.control.op_writes_rf_o && ~stall) || bubble;
 
 // Selection between network and address included in the instruction which is executed
 // Address for Reg. File is shorter than address of Ins. memory in network data
 // Since network can write into immediate registers, the address is wider
 // but for the destination register in an instruction the extra bits must be zero
 assign rd_addr = (net_reg_write_cmd)
-                 ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
-                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
+                 ? (net_packet_i.net_addr [0+:($bits(mw_pipeline_r.instruction.rs_imm))])
+                 : ({{($bits(mw_pipeline_r.instruction.rs_imm)-$bits(mw_pipeline_r.instruction.rd)){1'b0}}
                     ,{mw_pipeline_r.instruction.rd}});
 
 // Register file
-reg_file #(.addr_width_p($bits(instruction.rs_imm))) rf
+reg_file #(.addr_width_p($bits(fd_pipeline_r.instruction.rs_imm))) rf
           (.clk(clk)
           ,.rs_addr_i(fd_pipeline_r.instruction.rs_imm)
-          ,.rd_addr_i({{($bits(instruction_r.rs_imm)-$bits(instruction_r.rd)){1'b0}},{fd_pipeline_r.instruction.rd}})
+          ,.rd_addr_i({{($bits(fd_pipeline_r.instruction.rs_imm)-$bits(fd_pipeline_r.instruction.rd)){1'b0}},{fd_pipeline_r.instruction.rd}})
           ,.write_addr_i(rd_addr)
           ,.wen_i(rf_wen)
           ,.write_data_i(rf_wd) 
@@ -265,23 +268,19 @@ assign dx_pipeline_n.rd_val      = rd_val;
 
 always_comb
    begin
-      unique casez (forwardA)
-         2'b10:
-            rs_val_or_zero = xm_pipeline_r.alu_result;
-         2'b01:
-            rs_val_or_zero = rf_wd;
-         default: 
-            rs_val_or_zero = (dx_pipeline_r.instruction.rs_imm) ? dx_pipeline_r.rs_val : 32'b0;
-      endcase
-
-      unique casez (forwardB)
-         2'b10:
-            rd_val_or_zero = xm_pipeline_r.alu_result;
-         2'b01:
-            rd_val_or_zero = rf_wd;
-         default: 
-            rd_val_or_zero = (dx_pipeline_r.instruction.rd) ? dx_pipeline_r.rd_val : 32'b0;
-      endcase
+      if(forwardA == 2'b10)
+         rs_val_or_zero = xm_pipeline_r.alu_result;
+		else if(forwardA == 2'b01)
+         rs_val_or_zero = rf_wd;
+		else
+         rs_val_or_zero = (dx_pipeline_r.instruction.rs_imm) ? dx_pipeline_r.rs_val : 32'b0;
+	
+      if(forwardB == 2'b10)
+         rd_val_or_zero = xm_pipeline_r.alu_result;
+		else if(forwardB == 2'b01)
+         rd_val_or_zero = rf_wd;
+      else
+         rd_val_or_zero = (dx_pipeline_r.instruction.rd) ? dx_pipeline_r.rd_val : 32'b0;
    end
 
 // ALU
@@ -362,7 +361,7 @@ always_comb
     if (net_reg_write_cmd)
       rf_wd = net_packet_i.net_data;
     else if (mw_pipeline_r.instruction ==? `kJALR)
-      rf_wd = (mw_pipeline_r.instruction.rd == 0) ? 0 : mw_pipeline_r.pc + 1;
+      rf_wd = mw_pipeline_r.pc + 1;
     else if (mw_pipeline_r.control.is_load_op_o)
       rf_wd = mw_pipeline_r.from_mem_i.read_data;
     else
@@ -399,7 +398,7 @@ always_ff @ (posedge clk)
   end
 
 // State machine
-cl_state_machine state_machine (.instruction_i(xm_pipeline_r.instruction)
+cl_state_machine state_machine (.instruction_i(dx_pipeline_r.instruction)
                                ,.state_i(state_r)
                                ,.exception_i(exception_o)
                                ,.net_PC_write_cmd_IDLE_i(net_PC_write_cmd_IDLE)
@@ -419,13 +418,14 @@ assign stall_non_mem = (net_reg_write_cmd && mw_pipeline_r.control.op_writes_rf_
 // Stall if LD/ST still active; or in non-RUN state
 assign stall = stall_non_mem || (mem_stage_n != 0) || (state_r != RUN) || bubble;
 
+
+// logic from page 314
 always_comb
    begin
       bubble = 0;
       if((dx_pipeline_r.control.is_mem_op_o ) && 
          ((dx_pipeline_r.instruction.rd == fd_pipeline_r.instruction.rs_imm) || 
-         (dx_pipeline_r.instruction.rd == fd_pipeline_r.instruction.rd) || 
-            control_pipeline.is_load_op_o || control_pipeline.is_store_op_o))
+         (dx_pipeline_r.instruction.rd == fd_pipeline_r.instruction.rd)))
          bubble = 1;
    end
 
@@ -433,34 +433,36 @@ always_comb
 //-----------------------------------------------------------------------------
 // Forwarding Unit
 //----------------------------------------------------------------------------- 
+// logic from the online slides (04_Elsevier_pipeline.ppt.pdf): slide 40
+
 always_comb
    begin
      forwardA = 2'b00;
      forwardB = 2'b00;
      // mem hazard detection
-     if ( xm_pipeline_r.control.op_writes_rf_o == 1 && 
-        ( xm_pipeline_r.instruction.rd != 0 ) &&
-        ( xm_pipeline_r.instruction.rd == dx_pipeline_r.instruction.rs_imm ))
+     if (xm_pipeline_r.control.op_writes_rf_o == 1 && 
+         xm_pipeline_r.instruction.rd != 0  &&
+         xm_pipeline_r.instruction.rd == dx_pipeline_r.instruction.rs_imm )
        forwardA = 2'b10;
-     if ( xm_pipeline_r.control.op_writes_rf_o == 1 && 
-        ( xm_pipeline_r.instruction.rd != 0 ) &&
-        ( xm_pipeline_r.instruction.rd == dx_pipeline_r.instruction.rd ))
+     if (xm_pipeline_r.control.op_writes_rf_o == 1 && 
+         xm_pipeline_r.instruction.rd != 0 &&
+         xm_pipeline_r.instruction.rd == dx_pipeline_r.instruction.rd)
        forwardB = 2'b10;
 
-     //fwd from MEM/WB pipeline reg
-     if ( mw_pipeline_r.control.op_writes_rf_o == 1 && 
-         ( mw_pipeline_r.instruction.rd != 0 ) &&
-        ~( mw_pipeline_r.control.op_writes_rf_o == 1 && 
-         ( xm_pipeline_r.instruction.rd != 0 ) &&
-         ( xm_pipeline_r.instruction.rd === dx_pipeline_r.instruction.rs_imm ) ) &&
-         ( mw_pipeline_r.instruction.rd === dx_pipeline_r.instruction.rs_imm ) )
+     //forward alu result from data memory or earlier alu result
+     if (mw_pipeline_r.control.op_writes_rf_o == 1 && 
+         mw_pipeline_r.instruction.rd != 0  &&
+        !(xm_pipeline_r.control.op_writes_rf_o == 1 && 
+          xm_pipeline_r.instruction.rd != 0 &&
+          xm_pipeline_r.instruction.rd == dx_pipeline_r.instruction.rs_imm) &&
+         mw_pipeline_r.instruction.rd == dx_pipeline_r.instruction.rs_imm)
        forwardA = 2'b01;
-     if ( mw_pipeline_r.control.op_writes_rf_o == 1 && 
-        ( mw_pipeline_r.instruction.rd != 0 ) &&
-        ~( xm_pipeline_r.control.op_writes_rf_o == 1 && 
-         ( xm_pipeline_r.instruction.rd != 0 ) &&
-         ( xm_pipeline_r.instruction.rd === dx_pipeline_r.instruction.rd ) ) &&
-         ( mw_pipeline_r.instruction.rd === dx_pipeline_r.instruction.rd ) )
+     if (mw_pipeline_r.control.op_writes_rf_o == 1 && 
+         mw_pipeline_r.instruction.rd != 0 &&
+        !(xm_pipeline_r.control.op_writes_rf_o == 1 && 
+          xm_pipeline_r.instruction.rd != 0  &&
+          xm_pipeline_r.instruction.rd == dx_pipeline_r.instruction.rd) &&
+         mw_pipeline_r.instruction.rd == dx_pipeline_r.instruction.rd)
        forwardB =  2'b01;
    end
 

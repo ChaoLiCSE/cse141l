@@ -15,6 +15,8 @@ logic [31:0] rf [2**addr_width_p-1:0];
 assign rs_val_o = rf [rs_addr_i];
 assign rd_val_o = rf [rd_addr_i];
 
+
+// negedge for write before read 
 always_ff @ (negedge clk)
   begin
     if (wen_i)
