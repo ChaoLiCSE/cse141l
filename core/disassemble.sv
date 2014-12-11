@@ -20,8 +20,7 @@
 `ifdef DISASSEMBLE
      always @(negedge clk)
        begin
-          //if (reset &&  `ROOT.state_r != IDLE && `ROOT.mw_pipeline_r.instruction != 0) // low true
-          if (reset &&  `ROOT.state_r != IDLE ) // low true
+          if (reset &&  `ROOT.state_r != IDLE) // low true
             begin
 
                // s = stall, n = net stall, ? = unknown stall
@@ -36,8 +35,8 @@
                             : "?"
                             )
                          )
-                      , `ROOT.mw_pipeline_r.pc
-                      , `ROOT.mw_pipeline_r.instruction.opcode
+                      , `ROOT.PC_r
+                      , `ROOT.instruction.opcode
                       );
 
     // dissassembler
@@ -49,7 +48,7 @@
     `define C_Q3(E,F,G) `C_Q2(E,F); `C_Q(G)
     `define C_Q4(A,B,C,D)  `C_Q2(A,B); `C_Q2(C,D)
 
-               unique casez (`ROOT.mw_pipeline_r.instruction)
+               unique casez (`ROOT.instruction)
                     `C_Q2(ADDU,SUBU);
                     `C_Q4(SLLV,SRAV,SRLV,AND);
                     `C_Q4(OR, NOR, SLT, SLTU);
@@ -61,13 +60,13 @@
                endcase // unique casez (`ROOT.instruction)
 
                $write("%2.2x %2.2x; "
-                      , `ROOT.mw_pipeline_r.instruction.rd
-                      , `ROOT.mw_pipeline_r.instruction.rs_imm
+                      , `ROOT.instruction.rd
+                      , `ROOT.instruction.rs_imm
                       );
 
                if (`ROOT.rf_wen)
                  $write("RF[%2.2x] = %8.8x; "
-                        , `ROOT.mw_pipeline_r.instruction.rd
+                        , `ROOT.rd_addr
                         , `ROOT.rf_wd
                         );
                else

@@ -14,13 +14,21 @@ Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
 Top level modules:
 	data_mem
 
-} {} {}} C:/cygwin64/home/jack/cse141L/core/miner_tb.sv {1 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/miner_tb.sv
+} {} {}} C:/cygwin64/home/jack/cse141L/core/miner_tb.sv {1 {vlog -work work -sv {C:\cygwin64\home\jack\cse141L\core\miner_tb.sv}
 Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
 -- Compiling package miner_tb_sv_unit
 -- Compiling module miner_tb
 
 Top level modules:
 	miner_tb
+
+} {} {}} C:/cygwin64/home/jack/cse141L/core/core.sv {1 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/core.sv
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package core_sv_unit
+-- Compiling module core
+
+Top level modules:
+	core
 
 } {} {}} C:/cygwin64/home/jack/cse141L/core/cl_decode.sv {1 {vlog -work work -sv C:/cygwin64/home/jack/cse141L/core/cl_decode.sv
 Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013

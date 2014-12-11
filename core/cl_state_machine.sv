@@ -5,7 +5,6 @@ module cl_state_machine(input instruction_s instruction_i
                        ,input exception_i
                        ,input net_PC_write_cmd_IDLE_i
                        ,input stall_i
-
                        ,output state_e state_o
                        );
 

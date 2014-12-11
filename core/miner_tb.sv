@@ -22,6 +22,9 @@ module miner_tb();
 
 bit clk, reset, reset_r;
 integer i;
+int inst_counter;
+
+
 
 // 5 is the op-code size
 localparam instr_length_p = rd_size_gp + rs_imm_size_gp + 5; 
@@ -400,6 +403,13 @@ always @ (negedge clk)
        end // if (mem_out.valid)
   end
 
+  
+// get the instruction count
+always@(dut.core1.PC_r)
+   begin
+      inst_counter++;
+   end  
+  
 // The packets become available to the core at positive edge of the clock, to be synchronous 
 always_ff @ (posedge clk)
   begin
